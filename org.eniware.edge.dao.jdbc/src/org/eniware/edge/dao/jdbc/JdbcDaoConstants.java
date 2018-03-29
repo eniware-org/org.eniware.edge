@@ -9,7 +9,6 @@ package org.eniware.edge.dao.jdbc;
 /**
  * Constant definitions for JDBC DAO implementations to use.
  *
- * @author matt
  * @version $Revision$ $Date$
  */
 public final class JdbcDaoConstants {

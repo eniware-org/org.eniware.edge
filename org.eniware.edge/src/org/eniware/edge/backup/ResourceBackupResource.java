@@ -13,7 +13,6 @@ import org.springframework.core.io.Resource;
 /**
  * {@link BackupResource} implementation using a Spring {@link Resource}.
  * 
- * @author matt
  * @version 1.2
  */
 public class ResourceBackupResource implements BackupResource {

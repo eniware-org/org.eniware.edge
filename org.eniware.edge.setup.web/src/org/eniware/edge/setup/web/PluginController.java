@@ -38,7 +38,6 @@ import net.solarnetwork.web.domain.Response;
 /**
  * Controller to manage the installed bundles via an OBR.
  * 
- * @author matt
  * @version 1.1
  */
 @ServiceAwareController

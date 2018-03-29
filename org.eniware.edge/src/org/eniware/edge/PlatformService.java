@@ -13,7 +13,6 @@ import java.util.concurrent.Future;
 /**
  * API for SolarNode platform-wide support.
  * 
- * @author matt
  * @version 1.0
  * @since 1.56
  */

@@ -9,7 +9,6 @@ package org.eniware.edge.setup;
 /**
  * API for querying and filtering available plugins.
  * 
- * @author matt
  * @version 1.0
  */
 public interface PluginQuery {

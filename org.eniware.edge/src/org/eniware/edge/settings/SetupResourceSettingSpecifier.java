@@ -14,7 +14,6 @@ import org.eniware.edge.setup.SetupResourceProvider;
 /**
  * Setting that renders a custom UI via {@link SetupResource} instances.
  * 
- * @author matt
  * @version 1.0
  */
 public interface SetupResourceSettingSpecifier extends SettingSpecifier {

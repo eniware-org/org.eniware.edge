@@ -13,7 +13,6 @@ import ocpp.v15.cs.IdTagInfo;
  * Extension of {@link IdTagInfo} to associate an ID tag value with the info
  * itself.
  * 
- * @author matt
  * @version 1.0
  */
 public class Authorization extends IdTagInfo {

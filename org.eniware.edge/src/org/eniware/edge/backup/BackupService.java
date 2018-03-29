@@ -15,7 +15,6 @@ import org.eniware.edge.settings.SettingSpecifierProvider;
 /**
  * API for node backup.
  * 
- * @author matt
  * @version 1.3
  */
 public interface BackupService {

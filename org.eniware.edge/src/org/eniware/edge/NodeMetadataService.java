@@ -11,7 +11,6 @@ import net.solarnetwork.domain.GeneralDatumMetadata;
 /**
  * API for managing node metadata.
  * 
- * @author matt
  * @version 1.0
  * @since 1.50
  */

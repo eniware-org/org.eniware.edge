@@ -30,7 +30,6 @@ import ocpp.v15.support.ConfigurationKeys;
  * {@link #SETTING_KEY} and the {@code type} values are derived from the
  * {@link ConfigurationKeys#getKey()} values.
  * 
- * @author matt
  * @version 1.0
  * @since 0.6
  */

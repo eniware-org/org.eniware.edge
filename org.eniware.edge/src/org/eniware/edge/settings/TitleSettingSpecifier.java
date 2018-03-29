@@ -11,7 +11,6 @@ import java.util.Map;
 /**
  * A read-only string setting.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface TitleSettingSpecifier extends KeyedSettingSpecifier<String> {

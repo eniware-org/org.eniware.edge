@@ -30,7 +30,6 @@ import net.solarnetwork.node.setup.SetupService;
  * information.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.1
  */
 public class BaseSetupController {

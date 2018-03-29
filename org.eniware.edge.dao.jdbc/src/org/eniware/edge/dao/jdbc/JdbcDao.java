@@ -11,7 +11,6 @@ import org.springframework.context.MessageSource;
 /**
  * API for JDBC-based DAO implemtnations.
  * 
- * @author matt
  * @version $Revision$ $Date$
  */
 public interface JdbcDao {

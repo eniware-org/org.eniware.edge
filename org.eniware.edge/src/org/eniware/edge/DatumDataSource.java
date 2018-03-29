@@ -11,7 +11,6 @@ import org.eniware.edge.domain.Datum;
 /**
  * API for collecting {@link Datum} objects from some device.
  * 
- * @author matt
  * @version 1.3
  * @param <T>
  *        the Datum type

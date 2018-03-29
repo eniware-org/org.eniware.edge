@@ -11,7 +11,6 @@ import net.solarnetwork.domain.GeneralDatumMetadata;
 /**
  * Extension of {@link Location} to add general metadata support.
  * 
- * @author matt
  * @version 1.0
  */
 public interface GeneralLocation extends Location {

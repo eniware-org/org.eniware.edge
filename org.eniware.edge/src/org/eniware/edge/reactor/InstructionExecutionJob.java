@@ -47,8 +47,7 @@ import org.quartz.PersistJobDataAfterExecution;
  * method will be called instead, and if the returned status differs from the
  * instruction's previous status that new status will be persisted.
  * </p>
- * 
- * @author matt
+ *
  * @version 2.2
  */
 @PersistJobDataAfterExecution

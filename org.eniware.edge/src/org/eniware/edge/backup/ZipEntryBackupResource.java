@@ -14,7 +14,6 @@ import java.util.zip.ZipFile;
 /**
  * {@link BackupResource} for a file in a zip archive.
  * 
- * @author matt
  * @version 1.2
  */
 public class ZipEntryBackupResource implements BackupResource {

@@ -25,7 +25,6 @@ import net.wimpi.modbus.util.SerialParameters;
 /**
  * Jamod implementation of {@link ModbusNetwork}.
  * 
- * @author matt
  * @version 1.1
  * @since 2.0
  */

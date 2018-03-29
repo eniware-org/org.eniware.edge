@@ -23,7 +23,6 @@ import ocpp.v15.cs.HeartbeatResponse;
  * Job to post the {@link HeartbeatRequest} to let the OCPP system know the node
  * is alive and has network connectivity.
  * 
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

@@ -99,7 +99,6 @@ import org.springframework.context.support.ResourceBundleMessageSource;
  * {@link #PRICE_LOCATION_MESSAGE_BUNDLE}.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.5
  */
 public class LocationDatumDataSource<T extends Datum> implements DatumDataSource<T>,

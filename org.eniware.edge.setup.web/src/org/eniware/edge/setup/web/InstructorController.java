@@ -31,7 +31,6 @@ import net.solarnetwork.node.reactor.support.BasicInstruction;
 /**
  * Controller to act as a local Instructor to the local node.
  * 
- * @author matt
  * @version 1.0
  */
 @ServiceAwareController

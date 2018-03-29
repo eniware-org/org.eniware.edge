@@ -12,7 +12,6 @@ import java.util.Set;
 /**
  * Utility methods for dealing with classes at runtime.
  * 
- * @author matt
  * @version 1.3
  * @deprecated see {@link net.solarnetwork.util.ClassUtils}
  */

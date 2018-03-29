@@ -15,7 +15,6 @@ import java.io.File;
  * so this API provides a way for the SolarNode to access the information in a
  * generic way.
  * 
- * @author matt
  * @version 1.0
  * @since 1.19
  */

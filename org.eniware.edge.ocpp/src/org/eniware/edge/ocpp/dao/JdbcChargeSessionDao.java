@@ -39,7 +39,6 @@ import ocpp.v15.cs.UnitOfMeasure;
 /**
  * JDBC implementation of {@link ChargeSessionDao}.
  * 
- * @author matt
  * @version 1.0
  */
 public class JdbcChargeSessionDao extends AbstractOcppJdbcDao<ChargeSession>

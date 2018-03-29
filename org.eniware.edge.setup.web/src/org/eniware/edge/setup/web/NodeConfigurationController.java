@@ -20,7 +20,6 @@ import net.solarnetwork.web.domain.Response;
  * REST controller for node configuration.
  * 
  * 
- * @author matt
  * @version 1.0
  */
 @RequestMapping("/a")

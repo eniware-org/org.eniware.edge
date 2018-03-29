@@ -14,7 +14,6 @@ import org.springframework.core.io.Resource;
 /**
  * Abstract base class for static {@link SetupResource} implementations.
  * 
- * @author matt
  * @version 1.1
  */
 public abstract class BaseStaticSetupResource implements SetupResource {

@@ -33,7 +33,6 @@ import net.solarnetwork.node.setup.UserService;
 /**
  * {@link UserDetailsService} that uses {@link SettingDao} for users and roles.
  * 
- * @author matt
  * @version 1.0
  */
 public class SettingsUserService implements UserService, UserDetailsService {

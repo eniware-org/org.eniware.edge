@@ -21,7 +21,6 @@ import net.solarnetwork.web.domain.Response;
 /**
  * Controller to manage the initial home screen.
  * 
- * @author matt
  * @version 1.0
  * @since 1.23
  */

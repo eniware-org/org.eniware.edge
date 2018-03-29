@@ -10,7 +10,6 @@ import java.io.IOException;
 import net.solarnetwork.node.LockTimeoutException;
 
 /**
- * @author matt
  * @version 1.0
  */
 public interface SerialConnection {

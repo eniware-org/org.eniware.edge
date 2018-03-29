@@ -12,7 +12,6 @@ package org.eniware.edge.setup;
  * Some resources should only be applied once across the entire application,
  * while others might need different scope.
  * 
- * @author matt
  * @version 1.0
  * @since 1.49
  */

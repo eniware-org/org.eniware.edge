@@ -12,7 +12,6 @@ import net.solarnetwork.support.CertificateException;
 /**
  * API for managing the node's certificate infrastructure.
  * 
- * @author matt
  * @version 1.1
  */
 public interface PKIService {

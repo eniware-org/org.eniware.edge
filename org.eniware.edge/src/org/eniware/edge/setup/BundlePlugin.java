@@ -14,7 +14,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * Implementation of {@link Plugin} that wraps a {@link Bundle}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BundlePlugin implements Plugin {

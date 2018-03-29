@@ -17,7 +17,6 @@ import net.solarnetwork.node.settings.SettingsService;
 /**
  * Expose the current value of a setting.
  * 
- * @author matt
  * @version 1.1
  */
 public class SettingValueTag extends TagSupport {

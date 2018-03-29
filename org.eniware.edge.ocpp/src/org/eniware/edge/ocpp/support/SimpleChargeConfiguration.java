@@ -27,7 +27,6 @@ import org.eniware.edge.ocpp.ChargeConfiguration;
 /**
  * Basic implementation of {@link ChargeConfiguration}.
  * 
- * @author matt
  * @version 1.0
  * @since 0.6
  */

@@ -32,7 +32,6 @@ import org.slf4j.LoggerFactory;
  * <dd>A service group to use.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.0
  * @since 2.0
  */

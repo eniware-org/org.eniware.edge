@@ -17,7 +17,6 @@ import net.solarnetwork.util.StringUtils;
  * A base helper class to support {@link SerialNetwork} based
  * {@link DatumDataSource} implementations.
  * 
- * @author matt
  * @version 1.0
  * @since 1.3
  */

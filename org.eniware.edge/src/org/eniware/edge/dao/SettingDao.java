@@ -26,7 +26,6 @@ import org.eniware.edge.support.KeyValuePair;
  * and namespace to prevent key collisions across different packages.
  * </p>
  * 
- * @author matt
  * @version 1.2
  */
 public interface SettingDao extends BatchableDao<Setting> {

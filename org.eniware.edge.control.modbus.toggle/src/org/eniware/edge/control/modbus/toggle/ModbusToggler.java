@@ -51,7 +51,6 @@ import net.solarnetwork.util.OptionalService;
  * <dd>The {@link ModbusSerialConnectionFactory} to use.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.2
  */
 public class ModbusToggler extends ModbusDeviceSupport

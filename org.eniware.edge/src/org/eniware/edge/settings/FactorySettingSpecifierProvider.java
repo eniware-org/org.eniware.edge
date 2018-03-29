@@ -10,7 +10,6 @@ package org.eniware.edge.settings;
  * Extension of {@link SettingSpecifierProvider} that adds info about the
  * factory instance a provider is being managed under.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface FactorySettingSpecifierProvider extends SettingSpecifierProvider {

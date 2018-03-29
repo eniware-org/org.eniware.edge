@@ -31,7 +31,6 @@ import net.solarnetwork.node.domain.GeneralLocationDatum;
  * JDBC-based implementation of {@link net.solarnetwork.node.dao.DatumDao} for
  * {@link GeneralLocationDatum} domain objects.
  * 
- * @author matt
  * @version 1.2
  */
 public class JdbcGeneralLocationDatumDao extends AbstractJdbcDatumDao<GeneralLocationDatum> {

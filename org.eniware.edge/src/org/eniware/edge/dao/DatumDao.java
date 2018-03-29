@@ -14,7 +14,6 @@ import org.eniware.edge.domain.Datum;
 /**
  * Data Access Object (DAO) API for {@link Datum} objects.
  * 
- * @author matt
  * @version 1.2
  * @param <T>
  *        the type of Datum this DAO supports

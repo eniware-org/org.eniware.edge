@@ -24,7 +24,6 @@ import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
 /**
  * Utility methods for dealing with Quartz jobs.
  * 
- * @author matt
  * @version 2.0
  */
 public class JobUtils {

@@ -12,7 +12,6 @@ import java.util.Locale;
  * API for a system "plugin" that can be manipulated by the application at
  * runtime.
  * 
- * @author matt
  * @version 1.0
  */
 public interface Plugin {

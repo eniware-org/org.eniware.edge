@@ -12,7 +12,6 @@ import java.util.Map;
 /**
  * Basic persistable domain object API.
  * 
- * @author matt
  * @version 1.3
  */
 public interface Datum {

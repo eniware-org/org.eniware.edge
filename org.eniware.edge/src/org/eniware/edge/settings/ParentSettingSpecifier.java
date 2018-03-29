@@ -11,7 +11,6 @@ import java.util.List;
 /**
  * A placeholder setting for a list of "child" settings.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface ParentSettingSpecifier extends SettingSpecifier {

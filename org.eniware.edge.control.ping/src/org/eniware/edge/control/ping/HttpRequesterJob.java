@@ -94,7 +94,6 @@ import net.solarnetwork.util.OptionalService;
  * is between <b>200 - 399</b>.</dd>
  * </dl>
  * 
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

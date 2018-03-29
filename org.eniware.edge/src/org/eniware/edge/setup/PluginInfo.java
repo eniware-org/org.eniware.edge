@@ -11,7 +11,6 @@ import java.util.Locale;
 /**
  * Descriptive information about a plugin, designed to help users of the plugin.
  * 
- * @author matt
  * @version 1.0
  */
 public interface PluginInfo {

@@ -23,7 +23,6 @@ import java.net.URLStreamHandler;
  * 
  * <code>-Djava.protocol.handler.pkgs=net.solarnetwork.node.io.url</code>
  * 
- * @author matt
  * @version $Revision$ $Date$
  */
 public class Handler extends URLStreamHandler {

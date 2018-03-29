@@ -14,7 +14,6 @@ import org.eniware.edge.PlatformService.PlatformTaskInfo;
 /**
  * Simple implementation of {@link PlatformTaskInfo}.
  * 
- * @author matt
  * @version 1.0
  */
 public class SimplePlatformTaskInfo implements PlatformTaskInfo {

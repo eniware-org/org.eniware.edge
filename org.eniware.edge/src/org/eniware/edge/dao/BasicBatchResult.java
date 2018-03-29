@@ -10,8 +10,7 @@ import org.eniware.edge.dao.BatchableDao.BatchResult;
 
 /**
  * Basic implementation of {@link BatchResult}.
- * 
- * @author matt
+ *
  * @version 1.0
  */
 public class BasicBatchResult implements BatchResult {

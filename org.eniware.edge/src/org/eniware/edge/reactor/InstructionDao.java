@@ -13,7 +13,6 @@ import org.eniware.edge.reactor.InstructionStatus.InstructionState;
 /**
  * DAO API for Instructor entities.
  * 
- * @author matt
  * @version 1.0
  */
 public interface InstructionDao {

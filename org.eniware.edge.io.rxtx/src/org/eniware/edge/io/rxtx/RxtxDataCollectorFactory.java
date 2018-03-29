@@ -54,7 +54,6 @@ import org.springframework.context.support.ResourceBundleMessageSource;
  * <dd>The service group to use. Defaults to <em>null</em>.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.1
  */
 public class RxtxDataCollectorFactory implements DataCollectorFactory<SerialPortBeanParameters>,

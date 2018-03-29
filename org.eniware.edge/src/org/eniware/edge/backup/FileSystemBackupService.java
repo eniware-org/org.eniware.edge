@@ -66,7 +66,6 @@ import net.solarnetwork.util.OptionalService;
  * this service will maintain this many copies of past backups.
  * </dl>
  * 
- * @author matt
  * @version 1.2
  */
 public class FileSystemBackupService extends BackupServiceSupport implements SettingSpecifierProvider {

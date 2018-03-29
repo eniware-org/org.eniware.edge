@@ -19,8 +19,7 @@ import org.eniware.edge.reactor.InstructionStatus;
 
 /**
  * Basic implementation of {@link Instruction}.
- * 
- * @author matt
+ *
  * @version $Revision$
  */
 public class BasicInstruction implements Instruction, Serializable {

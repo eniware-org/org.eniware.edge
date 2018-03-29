@@ -13,8 +13,7 @@ import org.quartz.Trigger;
 /**
  * A bean that combines a trigger and a job, designed to be managed via
  * settings.
- * 
- * @author matt
+ *
  * @version 1.1
  */
 public interface ManagedTriggerAndJobDetail extends SettingSpecifierProvider, ServiceProvider {

@@ -8,7 +8,6 @@ package org.eniware.edge.setup.impl;
 /**
  * Request bean for the NetworkAssociation service.
  * 
- * @author matt
  * @version 1.0
  */
 public class NetworkAssociationRequest {

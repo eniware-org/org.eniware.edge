@@ -16,7 +16,6 @@ import org.eniware.edge.settings.SettingSpecifier;
 /**
  * Helper utilities for settings.
  * 
- * @author matt
  * @version 1.0
  */
 public final class SettingsUtil {

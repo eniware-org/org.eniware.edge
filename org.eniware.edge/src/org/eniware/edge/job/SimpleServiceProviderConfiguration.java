@@ -11,7 +11,6 @@ import java.util.Map;
 /**
  * Basic configuration bean for a service provider.
  * 
- * @author matt
  * @version 1.0
  */
 public class SimpleServiceProviderConfiguration implements ServiceProvider.ServiceConfiguration {

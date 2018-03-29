@@ -8,7 +8,6 @@ package org.eniware.edge.domain;
 /**
  * Base class for {@link EnergyDatum} implementations.
  * 
- * @author matt
  * @version 1.1
  * @deprecated use {@link GeneralNodeEnergyDatum}
  */

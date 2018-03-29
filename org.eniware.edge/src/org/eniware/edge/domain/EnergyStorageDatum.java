@@ -9,7 +9,6 @@ package org.eniware.edge.domain;
 /**
  * Standardized API for energy storage system related datum to implement.
  * 
- * @author matt
  * @version 1.0
  */
 public interface EnergyStorageDatum extends Datum {

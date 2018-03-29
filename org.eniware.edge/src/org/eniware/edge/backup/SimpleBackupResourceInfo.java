@@ -8,7 +8,6 @@ package org.eniware.edge.backup;
 /**
  * Basic implementation of {@link BackupResourceInfo}.
  * 
- * @author matt
  * @version 1.0
  * @since 1.46
  */

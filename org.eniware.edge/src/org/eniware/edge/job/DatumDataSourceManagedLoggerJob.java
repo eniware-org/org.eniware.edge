@@ -34,8 +34,7 @@ import net.solarnetwork.util.OptionalService;
  * This class implements {@link SettingSpecifierProvider} but delegates that API
  * to the configured {@link #getDatumDataSource()}.
  * </p>
- * 
- * @author matt
+ *
  * @version 2.0
  */
 @PersistJobDataAfterExecution

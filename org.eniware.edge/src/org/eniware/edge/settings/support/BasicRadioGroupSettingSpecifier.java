@@ -13,7 +13,6 @@ import org.eniware.edge.settings.SettingSpecifier;
 /**
  * Basic implementation of {@link RadioGroupSettingSpecifier}.
  * 
- * @author matt
  * @version 1.1
  */
 public class BasicRadioGroupSettingSpecifier extends BasicTextFieldSettingSpecifier implements

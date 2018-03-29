@@ -16,7 +16,6 @@ import net.solarnetwork.domain.GeneralLocationSourceMetadata;
 /**
  * API for querying for locations.
  * 
- * @author matt
  * @version 1.1
  */
 public interface LocationService {

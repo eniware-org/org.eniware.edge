@@ -11,7 +11,6 @@ import java.util.Map;
  * An API for batch processing domain objects.
  * 
  * @param <T> the domain object type
- * @author matt
  * @version 1.0
  */
 public interface BatchableDao<T> {

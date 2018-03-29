@@ -33,7 +33,6 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * JDBC implementation of {@link AuthorizationDao}.
  * 
- * @author matt
  * @version 1.0
  */
 public class JdbcAuthorizationDao extends AbstractOcppJdbcDao<Authorization> implements AuthorizationDao {

@@ -13,7 +13,6 @@ import org.eniware.edge.settings.SettingSpecifier;
 /**
  * Basic implementation of {@link MultiValueSettingSpecifier}.
  * 
- * @author matt
  * @version 1.2
  */
 public class BasicMultiValueSettingSpecifier extends BasicTextFieldSettingSpecifier implements

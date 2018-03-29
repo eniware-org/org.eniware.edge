@@ -12,7 +12,6 @@ import org.eniware.edge.settings.SettingSpecifier;
 /**
  * Base implementation of {@link KeyedSettingSpecifier}.
  * 
- * @author matt
  * @version 1.2
  */
 public abstract class BaseKeyedSettingSpecifier<T> extends BaseSettingSpecifier

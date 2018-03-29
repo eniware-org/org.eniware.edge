@@ -33,8 +33,7 @@ import org.slf4j.LoggerFactory;
  * @param <T>
  *        the service type
  * @param <R>
- *        the registered service type
- * @author matt
+ *
  * @version 1.0
  */
 public abstract class BaseServiceListener<T, R extends RegisteredService<T>> {

@@ -26,7 +26,6 @@ import net.wimpi.modbus.util.SerialParameters;
 /**
  * Default implementation of {@link ModbusSerialConnectionFactory}.
  * 
- * @author matt
  * @version 1.2
  */
 public class JamodModbusSerialConnectionFactory

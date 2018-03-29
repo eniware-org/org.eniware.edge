@@ -30,7 +30,6 @@ import net.solarnetwork.util.OptionalService;
  * Helper class for {@link org.eniware.edge.DatumDataSource} and
  * {@link org.eniware.edge.MultiDatumDataSource} implementations to extend.
  * 
- * @author matt
  * @version 1.0
  * @since 1.51
  */

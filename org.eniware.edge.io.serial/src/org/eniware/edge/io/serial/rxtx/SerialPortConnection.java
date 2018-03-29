@@ -36,7 +36,6 @@ import org.slf4j.LoggerFactory;
 /**
  * RXTX implementation of {@link SerialConnection}.
  * 
- * @author matt
  * @version 1.2
  */
 public class SerialPortConnection implements SerialConnection, SerialPortEventListener {

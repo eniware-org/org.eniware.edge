@@ -14,7 +14,6 @@ import org.joda.time.format.DateTimeFormatter;
 /**
  * Utility functions for dealing with dates and times.
  * 
- * @author matt
  * @version 1.0
  */
 public final class DateUtils {

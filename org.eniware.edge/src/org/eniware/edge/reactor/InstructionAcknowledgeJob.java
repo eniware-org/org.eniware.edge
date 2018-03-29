@@ -18,7 +18,6 @@ import org.quartz.PersistJobDataAfterExecution;
 /**
  * Job to look for instructions to update the acknowledgment status for.
  * 
- * @author matt
  * @version 2.1
  */
 @PersistJobDataAfterExecution

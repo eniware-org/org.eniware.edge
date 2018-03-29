@@ -34,7 +34,6 @@ import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
  * by the application.</dd>
  * </dl>
  * 
- * @author matt
  * @version $Revision$
  */
 public class SerialPortBeanParameters extends SerialPortBean {

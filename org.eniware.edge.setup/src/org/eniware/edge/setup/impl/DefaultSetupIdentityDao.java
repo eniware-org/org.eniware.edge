@@ -35,7 +35,6 @@ import net.solarnetwork.util.OptionalService;
  * Default implementation of {@link SetupIdentityDao} that saves data to a JSON
  * file.
  * 
- * @author matt
  * @version 1.0
  * @since 1.18
  */

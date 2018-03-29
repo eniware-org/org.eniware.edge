@@ -24,7 +24,6 @@ import org.supercsv.util.Util;
 /**
  * Implementation of {@link JdbcResultSetCsvWriter}.
  * 
- * @author matt
  * @version 1.0
  * @since 1.17
  */

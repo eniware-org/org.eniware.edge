@@ -33,7 +33,6 @@ import org.springframework.util.StringUtils;
  * This can be easier to configure a set of localized resources than using
  * {@link SimpleSetupResourceProvider}.
  * 
- * @author matt
  * @version 1.1
  */
 public class PatternMatchingSetupResourceProvider

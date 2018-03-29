@@ -74,7 +74,6 @@ import org.quartz.Trigger;
  * un-registered.</dd>
  * </dl>
  * 
- * @author matt
  * @version 2.0
  * @see ManagedJobServiceRegistrationListener for alternative using
  *      settings-based jobs

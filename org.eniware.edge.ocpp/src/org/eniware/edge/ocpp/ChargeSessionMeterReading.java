@@ -11,7 +11,6 @@ import ocpp.v15.cs.MeterValue;
 /**
  * Representation of a meter reading value.
  * 
- * @author matt
  * @version 1.0
  */
 public class ChargeSessionMeterReading extends MeterValue.Value {

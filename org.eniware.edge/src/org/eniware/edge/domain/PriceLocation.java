@@ -10,7 +10,6 @@ package org.eniware.edge.domain;
 /**
  * Information about a specific price location.
  * 
- * @author matt
  * @version 1.1
  */
 public class PriceLocation extends BasicLocation {

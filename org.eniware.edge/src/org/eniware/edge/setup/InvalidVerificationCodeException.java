@@ -10,7 +10,6 @@ package org.eniware.edge.setup;
  * Exception used to identify invalid verification codes, generally thrown when
  * an exception is encountered trying to decode a verification code.
  * 
- * @author maxieduncan
  * @version 1.0
  */
 public class InvalidVerificationCodeException extends Exception {

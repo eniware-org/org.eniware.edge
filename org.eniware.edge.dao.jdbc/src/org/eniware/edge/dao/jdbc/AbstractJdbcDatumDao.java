@@ -27,7 +27,6 @@ import net.solarnetwork.node.domain.Datum;
  * Abstract DAO implementation with support for DAOs that need to manage
  * "upload" tasks.
  * 
- * @author matt
  * @version 1.3
  * @param <T>
  *        the domain object type managed by this DAO

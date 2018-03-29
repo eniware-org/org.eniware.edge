@@ -14,7 +14,6 @@ import net.solarnetwork.domain.GeneralDatumSamples;
 /**
  * Base Datum implementation with {@link GeneralDatumSamples} support.
  * 
- * @author matt
  * @version 1.2
  */
 public abstract class GeneralDatumSupport extends BaseDatum implements Datum, Cloneable {

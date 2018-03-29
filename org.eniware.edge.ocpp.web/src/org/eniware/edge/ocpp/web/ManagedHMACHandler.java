@@ -18,7 +18,6 @@ import ocpp.v15.support.HMACHandler;
 /**
  * Extension of {@link HMACHandler} to support {@link SettingSpecifierProvider}.
  * 
- * @author matt
  * @version 1.0
  */
 public class ManagedHMACHandler extends HMACHandler implements SettingSpecifierProvider {

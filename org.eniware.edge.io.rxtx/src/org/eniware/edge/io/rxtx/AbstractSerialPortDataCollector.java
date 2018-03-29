@@ -45,7 +45,6 @@ import net.solarnetwork.node.DataCollector;
  * SerialPort. Defaults to {@code true}.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.0
  */
 public abstract class AbstractSerialPortDataCollector extends SerialPortSupport implements

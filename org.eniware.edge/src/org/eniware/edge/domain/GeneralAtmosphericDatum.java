@@ -13,7 +13,6 @@ import net.solarnetwork.util.SerializeIgnore;
 /**
  * GeneralLocationDatum that also implements {@link AtmosphericDatum}.
  * 
- * @author matt
  * @version 1.2
  */
 public class GeneralAtmosphericDatum extends GeneralLocationDatum implements AtmosphericDatum {

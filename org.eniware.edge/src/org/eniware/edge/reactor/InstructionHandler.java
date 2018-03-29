@@ -11,7 +11,6 @@ import org.eniware.edge.reactor.InstructionStatus.InstructionState;
 /**
  * API to be implemented by a service that can handle instructions.
  * 
- * @author matt
  * @version 1.2
  */
 public interface InstructionHandler {

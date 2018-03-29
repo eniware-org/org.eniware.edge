@@ -29,7 +29,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * JDBC-based implementation of {@link net.solarnetwork.node.dao.DatumDao} for
  * {@link GeneralNodeDatum} domain objects.
  * 
- * @author matt
  * @version 1.1
  */
 public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDatum> {

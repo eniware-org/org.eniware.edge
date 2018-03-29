@@ -22,7 +22,6 @@ import net.solarnetwork.web.domain.Response;
 /**
  * Web controller for platform service support.
  * 
- * @author matt
  * @version 1.0
  */
 @RestController

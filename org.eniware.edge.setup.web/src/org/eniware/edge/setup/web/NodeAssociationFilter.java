@@ -22,7 +22,6 @@ import net.solarnetwork.node.IdentityService;
  * Filter to force the user to the node association setup if not already
  * associated.
  * 
- * @author matt
  * @version 1.2
  */
 public class NodeAssociationFilter extends GenericFilterBean implements Filter {

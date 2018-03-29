@@ -35,7 +35,6 @@ import net.solarnetwork.util.OptionalService;
 /**
  * Recover from connection exceptions by restoring from backup.
  * 
- * @author matt
  * @version 1.1
  */
 public class RestoreFromBackupSQLExceptionHandler implements SQLExceptionHandler {

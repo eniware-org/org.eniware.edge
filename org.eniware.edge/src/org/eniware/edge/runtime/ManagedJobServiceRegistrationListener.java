@@ -97,7 +97,6 @@ import org.slf4j.LoggerFactory;
  * notifications with.</dd>
  * </dl>
  * 
- * @author matt
  * @version 2.1
  */
 public class ManagedJobServiceRegistrationListener implements ConfigurationListener {

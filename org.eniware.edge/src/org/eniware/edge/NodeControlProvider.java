@@ -15,7 +15,6 @@ import net.solarnetwork.domain.NodeControlInfo;
  * {@link Identifiable#getUID()} will return the <em>control ID</em> of that
  * control.
  * 
- * @author matt
  * @version 1.3
  */
 public interface NodeControlProvider extends Identifiable {

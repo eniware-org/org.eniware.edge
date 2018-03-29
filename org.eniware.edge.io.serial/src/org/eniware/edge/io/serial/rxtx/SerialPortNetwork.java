@@ -31,7 +31,6 @@ import org.springframework.context.MessageSource;
 /**
  * RXTX implementation of {@link SerialNetwork}.
  * 
- * @author matt
  * @version 1.1
  */
 public class SerialPortNetwork implements SerialNetwork, SettingSpecifierProvider {

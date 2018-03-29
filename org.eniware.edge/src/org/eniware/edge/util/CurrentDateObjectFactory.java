@@ -13,7 +13,6 @@ import org.springframework.beans.factory.ObjectFactory;
 /**
  * Factory for Date objects.
  * 
- * @author matt
  * @version $Id$
  */
 public class CurrentDateObjectFactory implements ObjectFactory<Date> {

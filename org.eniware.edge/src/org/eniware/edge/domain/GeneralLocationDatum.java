@@ -12,7 +12,6 @@ import net.solarnetwork.domain.GeneralLocationDatumSamples;
 /**
  * General location datum.
  * 
- * @author matt
  * @version 1.1
  */
 public class GeneralLocationDatum extends GeneralNodeDatum {

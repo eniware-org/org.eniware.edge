@@ -12,7 +12,6 @@ import ocpp.v15.cs.CentralSystemService;
 /**
  * A factory for {@link CentralSystemService} instances.
  * 
- * @author matt
  * @version 1.0
  */
 public interface CentralSystemServiceFactory extends Identifiable {

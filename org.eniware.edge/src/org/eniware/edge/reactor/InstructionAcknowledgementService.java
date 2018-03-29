@@ -11,7 +11,6 @@ import java.util.Collection;
 /**
  * API for acknowledging instructions to SolarNet.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface InstructionAcknowledgementService {

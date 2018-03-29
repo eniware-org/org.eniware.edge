@@ -9,7 +9,6 @@ package org.eniware.edge;
 /**
  * Constants for setup related settings.
  * 
- * @author matt
  * @version $Id$
  */
 public final class SetupSettings {

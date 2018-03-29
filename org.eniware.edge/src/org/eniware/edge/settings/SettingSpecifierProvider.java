@@ -14,7 +14,6 @@ import org.springframework.context.MessageSource;
  * API for a provider of {@link SettingSpecifier} instances, to 
  * publish application-managed settings.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface SettingSpecifierProvider {

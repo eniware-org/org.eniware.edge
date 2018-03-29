@@ -11,7 +11,6 @@ package org.eniware.edge;
  * links to specific instances of a service at runtime. Many managed services in
  * SolarNode allow any number of them to be deployed.
  * 
- * @author matt
  * @version 1.0
  */
 public interface Identifiable {

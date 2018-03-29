@@ -29,7 +29,6 @@ import org.slf4j.LoggerFactory;
 /**
  * A base class with properties to support {@link SerialPort} communication.
  * 
- * @author matt
  * @version 1.1
  */
 public abstract class SerialPortSupport extends SerialPortBean {

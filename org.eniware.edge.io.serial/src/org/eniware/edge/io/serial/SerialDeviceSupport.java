@@ -38,7 +38,6 @@ import net.solarnetwork.util.StringUtils;
  * <dd>A service group to use.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.1
  */
 public abstract class SerialDeviceSupport {

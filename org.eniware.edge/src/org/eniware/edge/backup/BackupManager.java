@@ -19,7 +19,6 @@ import org.eniware.edge.settings.SettingSpecifierProvider;
 /**
  * Manager API for node-level backups.
  * 
- * @author matt
  * @version 1.2
  */
 public interface BackupManager extends SettingSpecifierProvider {

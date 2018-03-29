@@ -17,7 +17,6 @@ import net.solarnetwork.util.ClassUtils;
 /**
  * Abstract base class for {@link Datum} implementations.
  * 
- * @author matt
  * @version 1.2
  */
 public abstract class BaseDatum implements Datum, Cloneable {

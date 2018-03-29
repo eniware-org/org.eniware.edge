@@ -9,7 +9,6 @@ package org.eniware.edge.setup.web.support;
 /**
  * A command object for associating a node with a SolarNet account.
  * 
- * @author maxieduncan
  * @version 1.1
  */
 public class AssociateNodeCommand {

@@ -19,7 +19,6 @@ import net.solarnetwork.dao.jdbc.SQLExceptionHandler;
 /**
  * Recover from connection exceptions by shutting down.
  * 
- * @author matt
  * @version 1.0
  */
 public class ShutdownSQLExceptionHandler implements SQLExceptionHandler {

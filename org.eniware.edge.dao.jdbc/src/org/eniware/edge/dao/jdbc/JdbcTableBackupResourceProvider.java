@@ -49,7 +49,6 @@ import net.solarnetwork.node.backup.SimpleBackupResourceProviderInfo;
 /**
  * Backup support for JDBC tables.
  * 
- * @author matt
  * @version 1.2
  * @since 1.17
  */

@@ -20,7 +20,6 @@ import org.slf4j.LoggerFactory;
 /**
  * Base class for factories for {@link SerialPortSupport} implementations.
  *
- * @author matt
  * @version $Revision$ $Date$
  */
 public abstract class AbstractSerialPortSupportFactory extends SerialPortBean {

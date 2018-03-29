@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 /**
  * Utilities for dealing with raw data.
  * 
- * @author matt
  * @version 1.0
  */
 public final class DataUtils {

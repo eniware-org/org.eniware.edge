@@ -21,7 +21,6 @@ import java.util.Set;
  * be <em>null</em>, but empty strings are allowed.
  * </p>
  * 
- * @author matt
  * @version 1.1
  */
 public class Setting {

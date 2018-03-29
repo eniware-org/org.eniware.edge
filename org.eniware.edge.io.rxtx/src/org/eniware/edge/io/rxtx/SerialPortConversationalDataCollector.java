@@ -25,7 +25,6 @@ import net.solarnetwork.node.DataCollector;
  * {@link #collectData(net.solarnetwork.node.ConversationalDataCollector.Moderator)}
  * should not be called by more than one thread at a time.</p>
  * 
- * @author matt
  * @version $Revision$ $Date$
  * @param <T> the datum type
  */

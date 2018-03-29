@@ -17,7 +17,6 @@ import org.springframework.core.io.ClassPathResource;
 /**
  * Static classpath based implementation of {@link SetupResource}.
  * 
- * @author matt
  * @version 1.1
  */
 public class ClasspathSetupResource extends BaseStaticSetupResource {

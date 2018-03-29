@@ -8,7 +8,6 @@ package org.eniware.edge.settings;
 /**
  * Options for importing settings.
  * 
- * @author matt
  * @version 1.0
  */
 public class SettingsImportOptions {

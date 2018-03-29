@@ -9,7 +9,6 @@ package org.eniware.edge;
 /**
  * Exception thrown when interacting with a remote service.
  * 
- * @author matt
  * @version 1.0
  */
 public class RemoteServiceException extends RuntimeException {

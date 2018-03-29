@@ -12,7 +12,6 @@ import java.util.Locale;
 /**
  * API for a centrally managed manager of {@link SetupResource} instances.
  * 
- * @author matt
  * @version 1.0
  */
 public interface SetupResourceService {

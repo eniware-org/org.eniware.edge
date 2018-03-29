@@ -30,7 +30,6 @@ import java.io.InputStream;
  * </dd>
  * </dl>
  * 
- * @author matt
  * @version 1.0
  */
 public class SerialPortVariableDataCollector extends AbstractSerialPortDataCollector {

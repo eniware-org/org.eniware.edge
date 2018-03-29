@@ -14,7 +14,6 @@ import org.eniware.edge.settings.CronExpressionSettingSpecifier;
 /**
  * Basic implementation of {@link CronExpressionSettingSpecifier}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BasicCronExpressionSettingSpecifier extends BasicTextFieldSettingSpecifier

@@ -11,7 +11,6 @@ import java.math.BigDecimal;
 /**
  * Standardized API for atmospheric related datum to implement.
  * 
- * @author matt
  * @version 1.2
  */
 public interface AtmosphericDatum extends Datum {

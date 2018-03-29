@@ -12,7 +12,6 @@ import java.util.Map;
 /**
  * Status information for a single Instruction.
  * 
- * @author matt
  * @version 1.1
  */
 public interface InstructionStatus {

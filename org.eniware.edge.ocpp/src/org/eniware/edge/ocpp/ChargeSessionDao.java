@@ -13,7 +13,6 @@ import ocpp.v15.cs.MeterValue;
 /**
  * DAO API for {@link ChargeSession} entities.
  * 
- * @author matt
  * @version 1.0
  */
 public interface ChargeSessionDao {

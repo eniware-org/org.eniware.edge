@@ -86,7 +86,6 @@ import net.solarnetwork.util.OptionalService;
  * {@link DEFAULT_SOLARIN_URL_PREFIX}.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.9
  */
 public class DefaultSetupService extends XmlServiceSupport

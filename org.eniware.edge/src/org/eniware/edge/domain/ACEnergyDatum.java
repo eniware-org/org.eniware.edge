@@ -10,7 +10,6 @@ package org.eniware.edge.domain;
  * This API represents a single phase, either a direct phase measurement or an
  * average or total measurement.
  * 
- * @author matt
  * @version 1.1
  */
 public interface ACEnergyDatum extends EnergyDatum {

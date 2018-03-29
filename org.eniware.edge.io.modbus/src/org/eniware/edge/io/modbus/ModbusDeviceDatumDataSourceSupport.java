@@ -18,7 +18,6 @@ import net.solarnetwork.util.StringUtils;
  * A base helper class to support {@link ModbusNetwork} based
  * {@link DatumDataSource} implementations.
  * 
- * @author matt
  * @version 1.0
  */
 public abstract class ModbusDeviceDatumDataSourceSupport extends DatumDataSourceSupport {

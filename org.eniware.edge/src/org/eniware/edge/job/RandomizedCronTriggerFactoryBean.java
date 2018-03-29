@@ -18,8 +18,7 @@ import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
  * The cron expression is only randomized if the
  * {@link #setCronExpression(String)} method is used to set the cron expression.
  * </p>
- * 
- * @author matt
+ *
  * @version 2.0
  */
 public class RandomizedCronTriggerFactoryBean extends CronTriggerFactoryBean {

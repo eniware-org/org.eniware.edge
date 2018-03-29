@@ -9,7 +9,6 @@ package org.eniware.edge.settings;
 /**
  * An individual setting value.
  * 
- * @author matt
  * @version 1.1
  */
 public class SettingValueBean {

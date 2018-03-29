@@ -28,7 +28,6 @@ import org.springframework.context.NoSuchMessageException;
  * <code>url</code>.
  * </p>
  * 
- * @author matt
  * @version 1.3
  */
 public class PrefixedMessageSource implements MessageSource, HierarchicalMessageSource {

@@ -9,7 +9,6 @@ package org.eniware.edge;
 /**
  * A marker interface to signal an object represents mock or test data.
  * 
- * @author matt
  * @version $Id$
  */
 public interface Mock {

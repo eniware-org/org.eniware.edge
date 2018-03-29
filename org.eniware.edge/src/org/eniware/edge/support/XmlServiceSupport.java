@@ -70,7 +70,6 @@ import net.solarnetwork.util.OptionalService;
  * with additional HTTP client and XML support.
  * </p>
  * 
- * @author matt
  * @version 1.5
  */
 public abstract class XmlServiceSupport extends HttpClientSupport {

@@ -22,7 +22,6 @@ import org.supercsv.cellprocessor.ift.CellProcessor;
 /**
  * Utilities to help with JDBC.
  * 
- * @author matt
  * @version 1.0
  * @since 1.17
  */

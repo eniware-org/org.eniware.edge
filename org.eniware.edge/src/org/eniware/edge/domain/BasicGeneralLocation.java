@@ -11,7 +11,6 @@ import net.solarnetwork.domain.GeneralLocationSourceMetadata;
 /**
  * Basic implementation of {@link GeneralLocation}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BasicGeneralLocation extends BasicLocation implements GeneralLocation {

@@ -35,7 +35,6 @@ import net.solarnetwork.util.OptionalService;
 /**
  * Supporting methods for HTTP client operations.
  * 
- * @author matt
  * @version 1.1
  */
 public abstract class HttpClientSupport {

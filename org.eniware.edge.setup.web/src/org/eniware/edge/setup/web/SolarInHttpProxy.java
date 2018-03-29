@@ -36,7 +36,6 @@ import net.solarnetwork.util.OptionalServiceTracker;
  * the SolarIn X.509 certificate.
  * </p>
  * 
- * @author matt
  * @version 1.1
  */
 @Controller

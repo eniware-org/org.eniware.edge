@@ -13,7 +13,6 @@ import java.util.Locale;
 /**
  * Service for managing dynamic "plugins" within the application.
  * 
- * @author matt
  * @version 1.0
  */
 public interface PluginService {

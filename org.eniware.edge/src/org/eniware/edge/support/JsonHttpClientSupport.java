@@ -37,7 +37,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * with.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.1
  */
 public abstract class JsonHttpClientSupport extends HttpClientSupport {

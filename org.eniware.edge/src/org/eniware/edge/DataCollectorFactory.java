@@ -9,7 +9,6 @@ package org.eniware.edge;
 /**
  * API for a service that manages data collector instances.
  * 
- * @author matt
  * @version 1.1
  */
 public interface DataCollectorFactory<T> extends Identifiable {

@@ -10,7 +10,6 @@ package org.eniware.edge.reactor;
  * Extension of {@link InstructionHandler} that provides feedback on the
  * instruction status.
  * 
- * @author matt
  * @version 1.0
  * @since 1.50
  */

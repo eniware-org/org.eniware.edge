@@ -20,7 +20,6 @@ import org.supercsv.util.CsvContext;
 /**
  * Format dates using a Joda {@link DateTimeFormatter}.
  * 
- * @author matt
  * @version 1.0
  */
 public class JdbcFmtDate extends CellProcessorAdaptor implements DateCellProcessor {

@@ -49,7 +49,6 @@ import net.solarnetwork.util.UnionIterator;
 /**
  * Default implementation of {@link BackupManager}.
  * 
- * @author matt
  * @version 1.5
  */
 public class DefaultBackupManager implements BackupManager {

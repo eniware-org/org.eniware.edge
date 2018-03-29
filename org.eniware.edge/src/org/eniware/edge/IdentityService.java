@@ -10,7 +10,6 @@ import java.security.Principal;
 /**
  * API for knowing information about the node's identity.
  * 
- * @author matt
  * @version 1.1
  */
 public interface IdentityService {

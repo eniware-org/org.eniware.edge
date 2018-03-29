@@ -23,7 +23,6 @@ import org.supercsv.prefs.CsvPreference;
 /**
  * Implementation of {@link JdbcPreparedStatementCsvReader}.
  * 
- * @author matt
  * @version 1.0
  * @since 1.17
  */

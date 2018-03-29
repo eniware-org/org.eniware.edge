@@ -27,7 +27,6 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * JDBC implementation of {@link SocketDao}.
  * 
- * @author matt
  * @version 1.0
  */
 public class JdbcSocketDao extends AbstractOcppJdbcDao<Socket> implements SocketDao {

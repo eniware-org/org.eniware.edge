@@ -20,7 +20,6 @@ import java.util.Set;
  * Basic implementation of {@link SetupResourceProvider} for serving static
  * content.
  * 
- * @author matt
  * @version 1.0
  */
 public class SimpleSetupResourceProvider implements SetupResourceProvider {

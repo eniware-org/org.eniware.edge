@@ -20,7 +20,6 @@ import org.apache.commons.io.input.TeeInputStream;
 /**
  * A zip input stream backup resource.
  * 
- * @author matt
  * @version 1.2
  * @since 1.46
  */

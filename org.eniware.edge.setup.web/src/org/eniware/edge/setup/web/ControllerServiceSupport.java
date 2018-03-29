@@ -19,7 +19,6 @@ import net.solarnetwork.util.OptionalService;
 /**
  * Add global services to all MVC controllers.
  * 
- * @author matt
  * @version 1.1
  * @since 1.23
  */

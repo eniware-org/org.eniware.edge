@@ -16,7 +16,6 @@ import net.solarnetwork.domain.NetworkIdentity;
 /**
  * API for node setup support.
  * 
- * @author matt
  * @version 1.3
  */
 public interface SetupService {

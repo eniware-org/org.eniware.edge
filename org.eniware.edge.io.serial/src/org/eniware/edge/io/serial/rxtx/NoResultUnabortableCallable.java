@@ -9,7 +9,6 @@ package org.eniware.edge.io.serial.rxtx;
 /**
  * {@link UnabortableCallable} that returns no result.
  * 
- * @author matt
  * @version 1.0
  */
 public abstract class NoResultUnabortableCallable extends UnabortableCallable<Object> {

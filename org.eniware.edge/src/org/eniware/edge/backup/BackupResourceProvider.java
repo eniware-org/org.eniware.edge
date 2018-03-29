@@ -15,7 +15,6 @@ import java.util.Locale;
  * include additional resources in backups.
  * </p>
  * 
- * @author matt
  * @version 1.1
  */
 public interface BackupResourceProvider {

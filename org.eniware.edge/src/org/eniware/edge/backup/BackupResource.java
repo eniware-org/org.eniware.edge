@@ -12,7 +12,6 @@ import java.io.InputStream;
 /**
  * API for a resource to take part in the backup system.
  * 
- * @author matt
  * @version 1.2
  */
 public interface BackupResource {

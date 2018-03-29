@@ -9,7 +9,6 @@ package org.eniware.edge;
 /**
  * SolarNode constants.
  * 
- * @author matt
  * @version 1.1
  */
 public final class Constants {

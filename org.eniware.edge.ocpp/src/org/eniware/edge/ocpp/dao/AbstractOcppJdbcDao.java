@@ -17,7 +17,6 @@ import net.solarnetwork.node.dao.jdbc.AbstractJdbcDao;
 /**
  * Abstract base class for OCPP related DAOs.
  * 
- * @author matt
  * @version 1.0
  * @param <T>
  *        the primary domain object type managed by this DAO

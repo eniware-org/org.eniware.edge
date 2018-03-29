@@ -63,7 +63,6 @@ import net.solarnetwork.support.ConfigurableSSLService;
  * trust store for SSL connections returned by that API.
  * </p>
  * 
- * @author matt
  * @version 1.4
  */
 public class DefaultKeystoreService extends ConfigurableSSLService

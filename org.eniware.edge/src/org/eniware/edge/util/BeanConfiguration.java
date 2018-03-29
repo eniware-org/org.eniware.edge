@@ -25,7 +25,6 @@ import java.util.Map;
  * services at runtime and dynamically publish services based on this
  * configuration.</p>
  * 
- * @author matt
  * @version $Id$
  * @see BeanConfigurationServiceRegistrationListener
  */

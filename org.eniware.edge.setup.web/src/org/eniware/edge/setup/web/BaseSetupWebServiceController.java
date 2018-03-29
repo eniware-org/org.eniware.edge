@@ -17,7 +17,6 @@ import net.solarnetwork.web.domain.Response;
 /**
  * Base class for web service support.
  * 
- * @author matt
  * @version 1.0
  */
 public class BaseSetupWebServiceController {

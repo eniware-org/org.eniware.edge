@@ -35,7 +35,6 @@ import net.solarnetwork.node.setup.SetupResourceService;
  * Similarly, any {@code data-} attributes added directly to the tag will be
  * added as well, as will any {@code id} attribute.
  * 
- * @author matt
  * @version 1.2
  */
 public class SetupResourcesTag extends HtmlEscapingAwareTag implements DynamicAttributes {

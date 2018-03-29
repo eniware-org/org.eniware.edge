@@ -31,7 +31,6 @@ import net.solarnetwork.util.StringUtils;
 /**
  * Bridge between OSGi EventAdmin events and a Spring Messaging.
  * 
- * @author matt
  * @version 1.1
  */
 public class EventMessageBridge implements EventHandler {

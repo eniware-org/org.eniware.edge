@@ -13,7 +13,6 @@ import org.eniware.edge.dao.BatchableDao.BatchOptions;
 /**
  * Basic implementation of {@link BatchOptions}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BasicBatchOptions implements BatchOptions {

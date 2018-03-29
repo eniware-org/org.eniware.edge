@@ -28,7 +28,6 @@ import net.solarnetwork.node.setup.SetupResourceService;
 /**
  * Controller for serving setup resources.
  * 
- * @author matt
  * @version 1.0
  */
 @Controller

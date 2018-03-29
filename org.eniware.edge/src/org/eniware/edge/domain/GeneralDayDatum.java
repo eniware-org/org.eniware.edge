@@ -17,7 +17,6 @@ import net.solarnetwork.util.SerializeIgnore;
 /**
  * Extension of {@link GeneralLocationDatum} with {@link DayDatum} support.
  * 
- * @author matt
  * @version 1.2
  */
 public class GeneralDayDatum extends GeneralLocationDatum implements DayDatum {

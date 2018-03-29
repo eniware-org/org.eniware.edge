@@ -11,7 +11,6 @@ import org.eniware.edge.domain.Datum;
 /**
  * API for posting local SolarNode data to a remote server.
  * 
- * @author matt.magoffin
  * @version 1.2
  */
 public interface UploadService {

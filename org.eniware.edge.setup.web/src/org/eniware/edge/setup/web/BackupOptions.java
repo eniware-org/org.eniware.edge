@@ -14,7 +14,6 @@ import net.solarnetwork.node.backup.BackupManager;
 /**
  * Options to pass to backup operations.
  * 
- * @author matt
  * @version 1.0
  */
 public class BackupOptions {

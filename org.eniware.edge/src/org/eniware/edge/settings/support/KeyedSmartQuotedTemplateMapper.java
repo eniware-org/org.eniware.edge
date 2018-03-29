@@ -30,7 +30,6 @@ import org.eniware.edge.settings.KeyedSettingSpecifier.Mapper;
  * template quote.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.0
  */
 @SuppressWarnings("deprecation")

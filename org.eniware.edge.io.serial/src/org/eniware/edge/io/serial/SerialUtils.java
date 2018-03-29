@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 /**
  * Utility methods for working with serial IO.
  * 
- * @author matt
  * @version 1.0
  */
 public final class SerialUtils {

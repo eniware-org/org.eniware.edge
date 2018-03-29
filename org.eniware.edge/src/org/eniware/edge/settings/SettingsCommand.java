@@ -11,7 +11,6 @@ import java.util.List;
 /**
  * Edit settings command object.
  * 
- * @author matt
  * @version $Revision$
  */
 public class SettingsCommand {

@@ -17,7 +17,6 @@ import net.solarnetwork.node.Identifiable;
  * direct dependency on RXTX (or any other serial implementation).
  * </p>
  * 
- * @author matt
  * @version 1.0
  */
 public interface SerialNetwork extends Identifiable {

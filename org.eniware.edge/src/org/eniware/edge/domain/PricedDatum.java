@@ -9,7 +9,6 @@ package org.eniware.edge.domain;
 /**
  * Standardized API for datum associated with a price to implement.
  * 
- * @author matt
  * @version 1.1
  */
 public interface PricedDatum {

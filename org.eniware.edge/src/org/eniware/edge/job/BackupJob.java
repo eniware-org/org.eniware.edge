@@ -16,7 +16,6 @@ import net.solarnetwork.util.OptionalService;
 /**
  * Scheduled backup job using {@link BackupManager}.
  * 
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

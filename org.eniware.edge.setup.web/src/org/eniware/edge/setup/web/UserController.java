@@ -20,7 +20,6 @@ import net.solarnetwork.web.domain.Response;
 /**
  * Controller for user related tasks.
  * 
- * @author matt
  * @version 1.1
  */
 @ServiceAwareController

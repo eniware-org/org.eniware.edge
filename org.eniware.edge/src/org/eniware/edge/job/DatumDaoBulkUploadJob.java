@@ -50,7 +50,6 @@ import org.quartz.PersistJobDataAfterExecution;
  * <dd>The {@link BulkUploadService} to upload the data with.</dd>
  * </dl>
  * 
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

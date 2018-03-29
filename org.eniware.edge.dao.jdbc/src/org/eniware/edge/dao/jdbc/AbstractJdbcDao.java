@@ -49,7 +49,6 @@ import net.solarnetwork.util.OptionalService;
  * version, etc.
  * </p>
  * 
- * @author matt
  * @version 1.5
  * @param <T>
  *        the domain object type managed by this DAO

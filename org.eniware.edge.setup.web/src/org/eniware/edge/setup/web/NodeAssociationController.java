@@ -58,7 +58,6 @@ import net.solarnetwork.web.domain.Response;
 /**
  * Controller used to associate a node with a SolarNet account.
  * 
- * @author maxieduncan
  * @version 1.3
  */
 @Controller

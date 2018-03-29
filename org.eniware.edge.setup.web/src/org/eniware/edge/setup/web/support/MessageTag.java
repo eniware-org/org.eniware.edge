@@ -39,7 +39,6 @@ import org.springframework.context.NoSuchMessageException;
  * <dd>An optional array of objects to pass to the message when formatting.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.3
  */
 public class MessageTag extends TagSupport {

@@ -9,7 +9,6 @@ package org.eniware.edge.setup;
 /**
  * General setup runtime exception.
  * 
- * @author matt
  * @version 1.0
  */
 public class SetupException extends RuntimeException {

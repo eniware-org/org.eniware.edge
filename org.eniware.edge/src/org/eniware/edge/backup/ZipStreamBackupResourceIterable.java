@@ -19,7 +19,6 @@ import net.solarnetwork.util.StringUtils;
 /**
  * Iterator over a zip stream of backup resources.
  * 
- * @author matt
  * @version 1.0
  * @since 1.46
  */

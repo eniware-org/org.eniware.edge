@@ -44,7 +44,6 @@ import net.solarnetwork.web.domain.Response;
 /**
  * Web controller for the settings UI.
  * 
- * @author matt
  * @version 1.2
  */
 @ServiceAwareController

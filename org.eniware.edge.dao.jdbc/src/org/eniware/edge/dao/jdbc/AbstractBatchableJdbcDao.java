@@ -27,8 +27,7 @@ import net.solarnetwork.node.dao.BatchableDao;
  * Base class for {@link BatchableDao} implementations.
  * 
  * @param <T>
- *        the type of domain object this DAO supports
- * @author matt
+ *  
  * @version 1.4
  */
 public abstract class AbstractBatchableJdbcDao<T> extends JdbcDaoSupport implements BatchableDao<T> {

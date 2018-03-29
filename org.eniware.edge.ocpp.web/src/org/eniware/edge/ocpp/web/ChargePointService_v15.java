@@ -74,7 +74,6 @@ import ocpp.v15.support.ConfigurationKeys;
 /**
  * SolarNode implementation of {@link ChargePointService}
  * 
- * @author matt
  * @version 1.1
  */
 @WebService(serviceName = "ChargePointService", targetNamespace = "urn://Ocpp/Cp/2012/06/")

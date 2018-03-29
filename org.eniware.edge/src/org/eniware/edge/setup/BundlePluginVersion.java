@@ -11,7 +11,6 @@ import org.osgi.framework.Version;
 /**
  * PluginVersion implementation that wraps an OSGi {@link Version}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BundlePluginVersion implements PluginVersion {

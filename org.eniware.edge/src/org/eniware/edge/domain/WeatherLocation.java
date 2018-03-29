@@ -10,7 +10,6 @@ package org.eniware.edge.domain;
 /**
  * Extension of {@link BasicLocation} for weather data.
  * 
- * @author matt
  * @version 1.0
  */
 public class WeatherLocation extends BasicLocation {

@@ -8,7 +8,6 @@ package org.eniware.edge.domain;
 /**
  * Base object for location datum, such as Price or Weather.
  * 
- * @author matt
  * @version 1.1
  * @deprecated use {@link GeneralLocationDatum}
  */

@@ -20,7 +20,6 @@ import org.springframework.context.MessageSource;
 /**
  * Simple stateful job to execute {@link JobService#executeJobService()}.
  * 
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

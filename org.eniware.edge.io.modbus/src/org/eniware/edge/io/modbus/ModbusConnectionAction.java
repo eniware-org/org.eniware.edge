@@ -18,8 +18,7 @@ import java.io.IOException;
  * </p>
  * 
  * @param <T>
- *        the action return type
- * @author matt
+ *  
  * @version 1.0
  * @since 2.0
  */

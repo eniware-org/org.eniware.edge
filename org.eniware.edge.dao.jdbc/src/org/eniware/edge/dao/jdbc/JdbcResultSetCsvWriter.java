@@ -19,7 +19,6 @@ import org.supercsv.io.ICsvWriter;
  * {@code ResultSet} itself, and their order matches the order of columns in the
  * {@code ResultSet}.
  * 
- * @author matt
  * @version 1.0
  * @since 1.17
  */

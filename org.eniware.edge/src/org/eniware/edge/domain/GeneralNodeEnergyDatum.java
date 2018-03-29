@@ -12,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * GeneralNodeDatum that also implements {@link EnergyDatum}.
  * 
- * @author matt
  * @version 1.0
  */
 public class GeneralNodeEnergyDatum extends GeneralNodeDatum implements EnergyDatum {

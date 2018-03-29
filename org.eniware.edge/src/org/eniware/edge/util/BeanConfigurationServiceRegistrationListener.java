@@ -83,8 +83,7 @@ import org.springframework.beans.PropertyAccessorFactory;
  * <dt>serviceProperties</dt>
  * <dd>An optional Map of properties to register the OSGi service with.</dd>
  * </dl>
- * 
- * @author matt
+ *
  * @version $Id$
  */
 public class BeanConfigurationServiceRegistrationListener extends

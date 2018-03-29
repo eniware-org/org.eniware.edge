@@ -16,7 +16,6 @@ import org.supercsv.io.ICsvReader;
 /**
  * Read a row of CSV data and set the values onto a {@link PreparedStatement}.
  * 
- * @author matt
  * @version 1.0
  * @since 1.17
  */

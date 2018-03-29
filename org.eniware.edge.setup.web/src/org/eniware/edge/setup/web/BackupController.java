@@ -35,7 +35,6 @@ import net.solarnetwork.web.domain.Response;
 /**
  * Controller for backup support.
  * 
- * @author matt
  * @version 1.0
  */
 @Controller

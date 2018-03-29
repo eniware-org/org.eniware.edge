@@ -11,7 +11,6 @@ import java.util.List;
 /**
  * A grouping of other settings.
  * 
- * @author matt
  * @version 1.1
  */
 public interface GroupSettingSpecifier extends SettingSpecifier, MappableSpecifier {

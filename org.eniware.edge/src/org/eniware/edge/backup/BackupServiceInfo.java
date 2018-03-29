@@ -10,7 +10,6 @@ import java.util.Date;
 /**
  * Information about the backup service.
  * 
- * @author matt
  * @version 1.0
  */
 public interface BackupServiceInfo {

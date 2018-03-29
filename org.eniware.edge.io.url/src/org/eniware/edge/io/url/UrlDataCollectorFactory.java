@@ -51,7 +51,6 @@ import org.springframework.beans.factory.ObjectFactory;
  *   Defaults to <em>false</em>.</dd>
  * </dl>
  * 
- * @author matt
  * @version $Id$
  */
 public class UrlDataCollectorFactory

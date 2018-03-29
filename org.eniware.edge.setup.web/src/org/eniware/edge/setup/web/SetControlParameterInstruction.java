@@ -10,7 +10,6 @@ package org.eniware.edge.setup.web;
 /**
  * Bean for a SetControlParameter instruction.
  * 
- * @author matt
  * @version 1.0
  */
 public class SetControlParameterInstruction {

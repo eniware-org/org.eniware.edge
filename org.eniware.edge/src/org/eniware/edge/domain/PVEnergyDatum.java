@@ -9,7 +9,6 @@ package org.eniware.edge.domain;
 /**
  * Standardized API for photovoltaic system related energy datum to implement.
  * 
- * @author matt
  * @version 1.0
  */
 public interface PVEnergyDatum extends EnergyDatum {

@@ -22,7 +22,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * JSON-based IO support for ReactorService.
  * 
- * @author matt
  * @version 1.1
  */
 public class JsonReactorSerializationService implements ReactorSerializationService {

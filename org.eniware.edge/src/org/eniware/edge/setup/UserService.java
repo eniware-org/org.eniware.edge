@@ -8,7 +8,6 @@ package org.eniware.edge.setup;
 /**
  * API for managing users and roles on the SolarNode system.
  * 
- * @author matt
  * @version 1.0
  * @since 1.48
  */

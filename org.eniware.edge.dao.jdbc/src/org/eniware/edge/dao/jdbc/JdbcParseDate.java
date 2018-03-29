@@ -16,7 +16,6 @@ import org.supercsv.util.CsvContext;
 /**
  * Format dates using a Joda {@link DateTimeFormatter}.
  * 
- * @author matt
  * @version 1.0
  */
 public abstract class JdbcParseDate extends CellProcessorAdaptor implements StringCellProcessor {

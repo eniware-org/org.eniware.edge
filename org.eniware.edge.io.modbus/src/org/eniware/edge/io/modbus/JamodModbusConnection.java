@@ -14,7 +14,6 @@ import net.wimpi.modbus.net.SerialConnection;
 /**
  * Jamod implementation of {@link ModbusConnection}.
  * 
- * @author matt
  * @version 1.0
  * @since 2.0
  */

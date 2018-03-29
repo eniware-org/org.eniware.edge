@@ -12,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * Information about a SolarNode setup identity.
  * 
- * @author matt
  * @version 1.0
  */
 public class SetupIdentityInfo {

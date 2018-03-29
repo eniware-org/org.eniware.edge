@@ -22,7 +22,6 @@ import java.util.Date;
  * {@code instructionId} and {@code instructorId} values are equal.
  * </p>
  * 
- * @author matt
  * @version $Revision$
  */
 public interface Instruction {

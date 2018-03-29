@@ -9,7 +9,6 @@ package org.eniware.edge.ocpp;
 /**
  * DAO for a global singleton {@link ChargeConfiguration} entity.
  * 
- * @author matt
  * @version 1.0
  * @since 0.6
  */

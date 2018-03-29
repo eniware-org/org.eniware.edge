@@ -15,7 +15,6 @@ import org.springframework.context.MessageSource;
 /**
  * Simple implementation of {@link TriggerAndJobDetail}.
  * 
- * @author matt
  * @version 1.1
  */
 @PersistJobDataAfterExecution

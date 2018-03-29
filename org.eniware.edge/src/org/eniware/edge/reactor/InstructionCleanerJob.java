@@ -14,7 +14,6 @@ import org.quartz.PersistJobDataAfterExecution;
 /**
  * Job to clean out old instructions so they don't build up.
  * 
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

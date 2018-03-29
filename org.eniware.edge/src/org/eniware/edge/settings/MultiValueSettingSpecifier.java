@@ -12,7 +12,6 @@ package org.eniware.edge.settings;
  * <p>The {@link #getValueTitles()} is required for this setting, and 
  * provides the list of possible setting values for the user to choose from.</p>
  * 
- * @author matt
  * @version $Revision$
  */
 public interface MultiValueSettingSpecifier extends TextFieldSettingSpecifier {

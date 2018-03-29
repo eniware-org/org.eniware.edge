@@ -13,7 +13,6 @@ import java.io.OutputStream;
  * Extension of {@link DataCollector} for two-way conversation based
  * data collecting.
  *
- * @author matt
  * @version $Revision$ $Date$
  * @param <T> the datum type
  */

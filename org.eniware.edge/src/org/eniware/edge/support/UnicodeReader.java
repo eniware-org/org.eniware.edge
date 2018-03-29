@@ -17,7 +17,6 @@ import java.io.Reader;
  * 
  * Adapted from Google Data API.
  * 
- * @author matt
  * @version $Revision$
  */
 public class UnicodeReader extends Reader {

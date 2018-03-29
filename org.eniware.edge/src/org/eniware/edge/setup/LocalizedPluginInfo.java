@@ -12,7 +12,6 @@ import java.util.Locale;
  * Localized version of {@link PluginInfo} so that calls to non-localized
  * JavaBean accessors return localized values.
  * 
- * @author matt
  * @version 1.0
  */
 public class LocalizedPluginInfo implements PluginInfo {

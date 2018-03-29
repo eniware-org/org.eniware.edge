@@ -9,7 +9,6 @@ package org.eniware.edge.settings;
 /**
  * A read-write string setting.
  * 
- * @author matt
  * @version 1.1
  */
 public interface TextFieldSettingSpecifier extends TitleSettingSpecifier {

@@ -12,7 +12,6 @@ import java.util.Map;
 /**
  * API for reacting to SolarNet service instruction requests.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface ReactorService {

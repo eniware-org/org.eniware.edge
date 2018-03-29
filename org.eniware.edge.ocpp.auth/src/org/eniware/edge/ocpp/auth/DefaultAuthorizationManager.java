@@ -24,7 +24,6 @@ import ocpp.v15.cs.AuthorizeResponse;
  * Default implementation of {@link AuthorizationManager}. This implementation
  * supports local caching of ID tags.
  * 
- * @author matt
  * @version 1.0
  */
 public class DefaultAuthorizationManager extends CentralSystemServiceFactorySupport

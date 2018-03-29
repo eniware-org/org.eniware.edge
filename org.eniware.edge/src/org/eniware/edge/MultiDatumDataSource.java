@@ -13,7 +13,6 @@ import org.eniware.edge.domain.Datum;
 /**
  * API for collecting multiple {@link Datum} objects from some device.
  * 
- * @author matt
  * @version $Id$
  */
 public interface MultiDatumDataSource<T extends Datum> extends Identifiable {

@@ -14,7 +14,6 @@ package org.eniware.edge.domain;
  * readings, and usually solar inverters can provide instantaneous generated
  * power and accumulated energy production readings.
  * 
- * @author matt
  * @version 1.1
  */
 public interface EnergyDatum extends Datum {

@@ -9,7 +9,6 @@ package org.eniware.edge.settings;
 /**
  * A floating point range setting between a minimum and maximum value.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface SliderSettingSpecifier extends KeyedSettingSpecifier<Double> {

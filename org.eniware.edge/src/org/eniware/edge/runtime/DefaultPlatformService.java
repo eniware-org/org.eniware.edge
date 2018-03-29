@@ -32,7 +32,6 @@ import net.solarnetwork.util.OptionalService;
 /**
  * Default implementation of {@link PlatformService}.
  * 
- * @author matt
  * @version 1.0
  */
 public class DefaultPlatformService implements PlatformService {

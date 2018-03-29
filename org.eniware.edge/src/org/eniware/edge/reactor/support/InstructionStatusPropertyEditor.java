@@ -14,7 +14,6 @@ import org.eniware.edge.reactor.InstructionStatus;
 /**
  * PropertyEditor for {@link InstructionStatus} objects.
  * 
- * @author matt
  * @version $Revision$
  */
 public class InstructionStatusPropertyEditor extends PropertyEditorSupport

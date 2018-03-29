@@ -12,7 +12,6 @@ import java.util.List;
  * API for status information and feedback during plugin provisioning
  * operations, that is, installing or removing plugins.
  * 
- * @author matt
  * @version 1.1
  */
 public interface PluginProvisionStatus {

@@ -17,7 +17,6 @@ import net.solarnetwork.node.Identifiable;
  * the energy used while charging, and unplugging the device from the socket,
  * and finally confirming that charging is complete.
  * 
- * @author matt
  * @version 1.2
  */
 public interface ChargeSessionManager extends Identifiable {

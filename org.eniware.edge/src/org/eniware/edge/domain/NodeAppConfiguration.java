@@ -13,7 +13,6 @@ import java.util.Map;
 /**
  * Bean for immutable node application configuration.
  * 
- * @author matt
  * @version 1.0
  * @since 1.53
  */

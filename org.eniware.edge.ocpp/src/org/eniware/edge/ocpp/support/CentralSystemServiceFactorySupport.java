@@ -69,7 +69,6 @@ import net.solarnetwork.util.FilterableService;
  * explicitly defined on this class.
  * </p>
  * 
- * @author matt
  * @version 1.1
  */
 public abstract class CentralSystemServiceFactorySupport

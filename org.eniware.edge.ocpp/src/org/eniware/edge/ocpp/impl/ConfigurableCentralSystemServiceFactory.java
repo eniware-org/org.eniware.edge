@@ -61,7 +61,6 @@ import ocpp.v15.support.WSAddressingFromHandler;
  * Implementation of {@link CentralSystemServiceFactory} that allows configuring
  * the service.
  * 
- * @author matt
  * @version 1.2
  */
 public class ConfigurableCentralSystemServiceFactory

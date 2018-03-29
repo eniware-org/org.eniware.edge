@@ -39,7 +39,6 @@ import org.springframework.beans.factory.FactoryBean;
  *   values if needed.</dd>
  * </dl>
  * 
- * @author matt
  * @version $Id$
  */
 public class BeanConfigurationFactoryBean<T> implements FactoryBean<T> {

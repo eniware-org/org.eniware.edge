@@ -45,7 +45,6 @@ import org.springframework.util.StringUtils;
  * are not supported.
  * </p>
  * 
- * @author matt
  * @version 2.0
  */
 public class JobSettingSpecifierProvider implements SettingSpecifierProvider {

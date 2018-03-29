@@ -31,7 +31,6 @@ import net.solarnetwork.node.setup.PKIService;
 /**
  * Controller for node certificate management.
  * 
- * @author matt
  * @version 1.1
  */
 @ServiceAwareController

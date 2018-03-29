@@ -14,7 +14,6 @@ import java.util.Iterator;
  * Simple implemenation of {@link BackupResourceIterable} that uses a
  * collection.
  * 
- * @author matt
  * @version 1.0
  */
 public class CollectionBackupResourceIterable implements BackupResourceIterable {

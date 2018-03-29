@@ -51,7 +51,6 @@ import net.solarnetwork.util.OptionalService;
  * store dates in the {@literal UTC} time zone.
  * </p>
  * 
- * @author matt
  * @version 1.0
  * @since 1.19
  */

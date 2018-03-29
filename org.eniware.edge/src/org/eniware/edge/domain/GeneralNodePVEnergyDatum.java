@@ -12,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * GeneralNodeDatum that also implements {@link PVEnergyDatum}.
  * 
- * @author matt
  * @version 1.0
  */
 public class GeneralNodePVEnergyDatum extends GeneralNodeEnergyDatum implements PVEnergyDatum {

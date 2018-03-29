@@ -18,7 +18,6 @@ import org.springframework.beans.factory.ObjectFactory;
  * return new instances of {@link SerialPortConversationalDataCollector} for each
  * invocation, configured with this object's property values.</p>
  * 
- * @author matt
  * @version $Revision$ $Date$
  */
 public class SerialPortConversationalDataCollectorFactory

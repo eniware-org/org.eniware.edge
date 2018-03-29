@@ -9,7 +9,6 @@ package org.eniware.edge.backup;
 /**
  * An individual backup.
  * 
- * @author matt
  * @version 1.2
  */
 public interface Backup extends BackupIdentity {

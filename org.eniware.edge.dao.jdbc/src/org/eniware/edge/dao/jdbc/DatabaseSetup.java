@@ -42,7 +42,6 @@ import net.solarnetwork.node.domain.Datum;
  * classpath-relative resource named {@link #DEFAULT_INIT_SQL_RESOURCE}.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.1
  */
 public class DatabaseSetup {

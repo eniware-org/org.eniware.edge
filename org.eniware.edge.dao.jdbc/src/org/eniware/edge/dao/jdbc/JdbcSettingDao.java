@@ -54,7 +54,6 @@ import net.solarnetwork.util.OptionalService;
  * parameter: the String primary key to delete.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.4
  */
 public class JdbcSettingDao extends AbstractBatchableJdbcDao<Setting> implements SettingDao {

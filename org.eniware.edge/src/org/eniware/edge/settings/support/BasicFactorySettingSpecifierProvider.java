@@ -17,7 +17,6 @@ import org.springframework.context.MessageSource;
  * Basic implementation of {@link FactorySettingSpecifierProvider} that
  * delegates all {@link SettingSpecifierProvider} methods to a delegate.
  * 
- * @author matt
  * @version $Revision$
  */
 public class BasicFactorySettingSpecifierProvider implements FactorySettingSpecifierProvider {
