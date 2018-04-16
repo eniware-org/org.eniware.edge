@@ -6,7 +6,7 @@
 
 package org.eniware.edge.setup.web;
 
-import static net.solarnetwork.web.domain.Response.response;
+import static org.eniware.web.domain.Response.response;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -28,12 +28,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import net.solarnetwork.node.setup.Plugin;
-import net.solarnetwork.node.setup.PluginProvisionStatus;
-import net.solarnetwork.node.setup.PluginService;
-import net.solarnetwork.node.setup.SimplePluginQuery;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.web.domain.Response;
+import org.eniware.edge.setup.Plugin;
+import org.eniware.edge.setup.PluginProvisionStatus;
+import org.eniware.edge.setup.PluginService;
+import org.eniware.edge.setup.SimplePluginQuery;
+import org.eniware.util.OptionalService;
+import org.eniware.web.domain.Response;
 
 /**
  * Controller to manage the installed bundles via an OBR.

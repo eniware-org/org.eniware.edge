@@ -15,8 +15,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import net.solarnetwork.node.ConversationalDataCollector;
-import net.solarnetwork.node.DataCollector;
+import org.eniware.edge.ConversationalDataCollector;
+import org.eniware.edge.DataCollector;
 
 /**
  * Serial port conversation-based {@link DataCollector} implementation.

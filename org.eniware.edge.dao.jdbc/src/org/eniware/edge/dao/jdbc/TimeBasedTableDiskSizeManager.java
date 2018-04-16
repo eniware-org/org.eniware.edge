@@ -28,7 +28,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ConnectionCallback;
 import org.springframework.jdbc.core.JdbcOperations;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.util.OptionalService;
 
 /**
  * Service that deletes rows from a database table when disk space is running

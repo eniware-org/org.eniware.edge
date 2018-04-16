@@ -6,8 +6,8 @@
 
 package org.eniware.edge.domain;
 
-import net.solarnetwork.domain.GeneralDatumSamples;
-import net.solarnetwork.domain.GeneralLocationDatumSamples;
+import org.eniware.domain.GeneralDatumSamples;
+import org.eniware.domain.GeneralLocationDatumSamples;
 
 /**
  * General location datum.

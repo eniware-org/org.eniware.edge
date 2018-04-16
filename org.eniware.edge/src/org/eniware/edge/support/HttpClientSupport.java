@@ -30,7 +30,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.FileCopyUtils;
 
-import net.solarnetwork.util.OptionalService;
+import org.eniware.util.OptionalService;
 
 /**
  * Supporting methods for HTTP client operations.

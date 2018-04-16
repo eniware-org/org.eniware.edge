@@ -6,7 +6,7 @@
 
 package org.eniware.edge.io.modbus;
 
-import net.solarnetwork.node.LockTimeoutException;
+import org.eniware.edge.LockTimeoutException;
 import net.wimpi.modbus.net.SerialConnection;
 
 /**

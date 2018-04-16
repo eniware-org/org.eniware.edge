@@ -26,8 +26,8 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
-import net.solarnetwork.domain.Result;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.domain.Result;
+import org.eniware.util.OptionalService;
 
 /**
  * Default implementation of {@link PlatformService}.

@@ -6,7 +6,7 @@
 
 package org.eniware.edge;
 
-import net.solarnetwork.domain.GeneralDatumMetadata;
+import org.eniware.domain.GeneralDatumMetadata;
 
 /**
  * API for managing node metadata.

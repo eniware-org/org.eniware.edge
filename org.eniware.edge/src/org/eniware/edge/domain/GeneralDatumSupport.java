@@ -9,7 +9,7 @@ package org.eniware.edge.domain;
 import java.math.BigDecimal;
 import java.util.Map;
 import java.util.Set;
-import net.solarnetwork.domain.GeneralDatumSamples;
+import org.eniware.domain.GeneralDatumSamples;
 
 /**
  * Base Datum implementation with {@link GeneralDatumSamples} support.

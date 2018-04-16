@@ -13,7 +13,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.util.OptionalService;
 import net.wimpi.modbus.ModbusException;
 import net.wimpi.modbus.io.ModbusSerialTransaction;
 import net.wimpi.modbus.msg.ReadCoilsRequest;

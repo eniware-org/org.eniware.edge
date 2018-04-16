@@ -6,7 +6,7 @@
 
 package org.eniware.edge.setup.impl;
 
-import static net.solarnetwork.node.SetupSettings.SETUP_TYPE_KEY;
+import static org.eniware.edge.SetupSettings.SETUP_TYPE_KEY;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -21,15 +21,15 @@ import org.springframework.context.MessageSource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.util.FileCopyUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.solarnetwork.node.backup.BackupResource;
-import net.solarnetwork.node.backup.BackupResourceInfo;
-import net.solarnetwork.node.backup.BackupResourceProvider;
-import net.solarnetwork.node.backup.BackupResourceProviderInfo;
-import net.solarnetwork.node.backup.ResourceBackupResource;
-import net.solarnetwork.node.backup.SimpleBackupResourceInfo;
-import net.solarnetwork.node.backup.SimpleBackupResourceProviderInfo;
-import net.solarnetwork.node.dao.SettingDao;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.edge.backup.BackupResource;
+import org.eniware.edge.backup.BackupResourceInfo;
+import org.eniware.edge.backup.BackupResourceProvider;
+import org.eniware.edge.backup.BackupResourceProviderInfo;
+import org.eniware.edge.backup.ResourceBackupResource;
+import org.eniware.edge.backup.SimpleBackupResourceInfo;
+import org.eniware.edge.backup.SimpleBackupResourceProviderInfo;
+import org.eniware.edge.dao.SettingDao;
+import org.eniware.util.OptionalService;
 
 /**
  * Default implementation of {@link SetupIdentityDao} that saves data to a JSON

@@ -5,7 +5,7 @@
 
 package org.eniware.edge.dao.jdbc;
 
-import net.solarnetwork.node.job.AbstractJob;
+import org.eniware.edge.job.AbstractJob;
 
 import org.quartz.JobExecutionContext;
 import org.springframework.jdbc.core.JdbcTemplate;

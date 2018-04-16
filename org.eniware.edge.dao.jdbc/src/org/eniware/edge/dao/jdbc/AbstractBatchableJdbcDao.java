@@ -20,8 +20,8 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
-import net.solarnetwork.node.dao.BasicBatchResult;
-import net.solarnetwork.node.dao.BatchableDao;
+import org.eniware.edge.dao.BasicBatchResult;
+import org.eniware.edge.dao.BatchableDao;
 
 /**
  * Base class for {@link BatchableDao} implementations.
@@ -95,7 +95,7 @@ public abstract class AbstractBatchableJdbcDao<T> extends JdbcDaoSupport impleme
 			return transactionTemplate.execute(new TransactionCallback<BatchResult>() {
 
 				@Override
-				public net.solarnetwork.node.dao.BatchableDao.BatchResult doInTransaction(
+				public org.eniware.edge.dao.BatchableDao.BatchResult doInTransaction(
 						TransactionStatus status) {
 					return batchProcessInternal(callback, options);
 				}
@@ -112,7 +112,7 @@ public abstract class AbstractBatchableJdbcDao<T> extends JdbcDaoSupport impleme
 		getJdbcTemplate().execute(new ConnectionCallback<Object>() {
 
 			@Override
-			public net.solarnetwork.node.dao.BatchableDao.BatchResult doInConnection(Connection con)
+			public org.eniware.edge.dao.BatchableDao.BatchResult doInConnection(Connection con)
 					throws SQLException, DataAccessException {
 				PreparedStatement queryStmt = null;
 				ResultSet queryResult = null;

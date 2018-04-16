@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-import net.solarnetwork.web.domain.Response;
+import org.eniware.web.domain.Response;
 
 /**
  * Base class for web service support.

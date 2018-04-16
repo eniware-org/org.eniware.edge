@@ -22,16 +22,16 @@ import org.quartz.JobExecutionContext;
 import org.quartz.PersistJobDataAfterExecution;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
-import net.solarnetwork.node.SSLService;
-import net.solarnetwork.node.job.AbstractJob;
-import net.solarnetwork.node.reactor.InstructionHandler;
-import net.solarnetwork.node.reactor.InstructionStatus.InstructionState;
-import net.solarnetwork.node.reactor.support.InstructionUtils;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicToggleSettingSpecifier;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.edge.SSLService;
+import org.eniware.edge.job.AbstractJob;
+import org.eniware.edge.reactor.InstructionHandler;
+import org.eniware.edge.reactor.InstructionStatus.InstructionState;
+import org.eniware.edge.reactor.support.InstructionUtils;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.settings.support.BasicToggleSettingSpecifier;
+import org.eniware.util.OptionalService;
 
 /**
  * Make a HTTP request to test for network connectivity, and toggle a control

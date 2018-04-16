@@ -8,10 +8,10 @@ package org.eniware.edge.setup;
 
 import org.eniware.edge.domain.NodeAppConfiguration;
 
-import net.solarnetwork.domain.NetworkAssociation;
-import net.solarnetwork.domain.NetworkAssociationDetails;
-import net.solarnetwork.domain.NetworkCertificate;
-import net.solarnetwork.domain.NetworkIdentity;
+import org.eniware.domain.NetworkAssociation;
+import org.eniware.domain.NetworkAssociationDetails;
+import org.eniware.domain.NetworkCertificate;
+import org.eniware.domain.NetworkIdentity;
 
 /**
  * API for node setup support.

@@ -11,9 +11,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-import net.solarnetwork.domain.GeneralLocationSourceMetadata;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.util.OptionalServiceTracker;
+import org.eniware.domain.GeneralLocationSourceMetadata;
+import org.eniware.util.OptionalService;
+import org.eniware.util.OptionalServiceTracker;
 
 import org.eniware.edge.DatumDataSource;
 import org.eniware.edge.LocationService;

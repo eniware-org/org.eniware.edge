@@ -15,10 +15,10 @@ import org.osgi.service.event.EventAdmin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.util.StringUtils;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.util.OptionalService;
+import org.eniware.util.StringUtils;
 
 /**
  * A base helper class to support {@link SerialNetwork} based services.

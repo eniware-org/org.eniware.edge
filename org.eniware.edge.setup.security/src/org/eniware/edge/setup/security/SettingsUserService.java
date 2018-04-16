@@ -21,14 +21,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import net.solarnetwork.node.IdentityService;
-import net.solarnetwork.node.Setting;
-import net.solarnetwork.node.dao.BasicBatchOptions;
-import net.solarnetwork.node.dao.BatchableDao.BatchCallback;
-import net.solarnetwork.node.dao.BatchableDao.BatchCallbackResult;
-import net.solarnetwork.node.dao.SettingDao;
-import net.solarnetwork.node.setup.UserProfile;
-import net.solarnetwork.node.setup.UserService;
+import org.eniware.edge.IdentityService;
+import org.eniware.edge.Setting;
+import org.eniware.edge.dao.BasicBatchOptions;
+import org.eniware.edge.dao.BatchableDao.BatchCallback;
+import org.eniware.edge.dao.BatchableDao.BatchCallbackResult;
+import org.eniware.edge.dao.SettingDao;
+import org.eniware.edge.setup.UserProfile;
+import org.eniware.edge.setup.UserService;
 
 /**
  * {@link UserDetailsService} that uses {@link SettingDao} for users and roles.

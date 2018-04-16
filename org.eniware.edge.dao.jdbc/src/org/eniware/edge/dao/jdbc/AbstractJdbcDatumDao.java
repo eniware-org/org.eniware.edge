@@ -19,9 +19,9 @@ import org.osgi.service.event.Event;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
-import net.solarnetwork.node.Mock;
-import net.solarnetwork.node.dao.DatumDao;
-import net.solarnetwork.node.domain.Datum;
+import org.eniware.edge.Mock;
+import org.eniware.edge.dao.DatumDao;
+import org.eniware.edge.domain.Datum;
 
 /**
  * Abstract DAO implementation with support for DAOs that need to manage

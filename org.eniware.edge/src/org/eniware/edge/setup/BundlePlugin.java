@@ -7,7 +7,7 @@
 package org.eniware.edge.setup;
 
 import java.util.Locale;
-import net.solarnetwork.util.SerializeIgnore;
+import org.eniware.util.SerializeIgnore;
 import org.osgi.framework.Bundle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

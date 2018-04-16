@@ -21,10 +21,10 @@ import javax.servlet.jsp.tagext.DynamicAttributes;
 import org.springframework.web.servlet.tags.HtmlEscapingAwareTag;
 import org.springframework.web.servlet.tags.form.TagWriter;
 import org.springframework.web.util.UriUtils;
-import net.solarnetwork.node.setup.SetupResource;
-import net.solarnetwork.node.setup.SetupResourceProvider;
-import net.solarnetwork.node.setup.SetupResourceScope;
-import net.solarnetwork.node.setup.SetupResourceService;
+import org.eniware.edge.setup.SetupResource;
+import org.eniware.edge.setup.SetupResourceProvider;
+import org.eniware.edge.setup.SetupResourceScope;
+import org.eniware.edge.setup.SetupResourceService;
 
 /**
  * Tag to generate HTML tags for supported {@link SetupResource} values.

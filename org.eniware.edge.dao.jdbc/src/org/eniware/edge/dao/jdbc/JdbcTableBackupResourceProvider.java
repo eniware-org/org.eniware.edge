@@ -39,12 +39,12 @@ import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.util.StringUtils;
 import org.supercsv.cellprocessor.ift.CellProcessor;
 import org.supercsv.prefs.CsvPreference;
-import net.solarnetwork.node.backup.BackupResource;
-import net.solarnetwork.node.backup.BackupResourceInfo;
-import net.solarnetwork.node.backup.BackupResourceProvider;
-import net.solarnetwork.node.backup.BackupResourceProviderInfo;
-import net.solarnetwork.node.backup.SimpleBackupResourceInfo;
-import net.solarnetwork.node.backup.SimpleBackupResourceProviderInfo;
+import org.eniware.edge.backup.BackupResource;
+import org.eniware.edge.backup.BackupResourceInfo;
+import org.eniware.edge.backup.BackupResourceProvider;
+import org.eniware.edge.backup.BackupResourceProviderInfo;
+import org.eniware.edge.backup.SimpleBackupResourceInfo;
+import org.eniware.edge.backup.SimpleBackupResourceProviderInfo;
 
 /**
  * Backup support for JDBC tables.

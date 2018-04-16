@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.WebRequest;
-import net.solarnetwork.node.setup.SetupResource;
-import net.solarnetwork.node.setup.SetupResourceService;
+import org.eniware.edge.setup.SetupResource;
+import org.eniware.edge.setup.SetupResourceService;
 
 /**
  * Controller for serving setup resources.

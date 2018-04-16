@@ -6,7 +6,7 @@
 
 package org.eniware.edge.ocpp;
 
-import net.solarnetwork.node.Identifiable;
+import org.eniware.edge.Identifiable;
 import ocpp.v15.cs.AuthorizationStatus;
 
 /**

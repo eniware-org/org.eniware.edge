@@ -12,9 +12,9 @@ import org.eniware.edge.setup.web.support.ServiceAwareController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import net.solarnetwork.node.IdentityService;
-import net.solarnetwork.node.SystemService;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.edge.IdentityService;
+import org.eniware.edge.SystemService;
+import org.eniware.util.OptionalService;
 
 /**
  * Add global services to all MVC controllers.

@@ -22,10 +22,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import net.solarnetwork.node.IdentityService;
-import net.solarnetwork.node.SSLService;
-import net.solarnetwork.node.support.HttpClientSupport;
-import net.solarnetwork.util.OptionalServiceTracker;
+import org.eniware.edge.IdentityService;
+import org.eniware.edge.SSLService;
+import org.eniware.edge.support.HttpClientSupport;
+import org.eniware.util.OptionalServiceTracker;
 
 /**
  * Proxy HTTP requests to SolarIn.

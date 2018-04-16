@@ -23,8 +23,8 @@ import org.osgi.service.event.EventAdmin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
-import net.solarnetwork.domain.GeneralDatumMetadata;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.domain.GeneralDatumMetadata;
+import org.eniware.util.OptionalService;
 
 /**
  * Helper class for {@link org.eniware.edge.DatumDataSource} and

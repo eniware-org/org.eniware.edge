@@ -7,7 +7,7 @@
 package org.eniware.edge.io.modbus;
 
 import java.io.IOException;
-import net.solarnetwork.node.Identifiable;
+import org.eniware.edge.Identifiable;
 
 /**
  * High level Modbus API.

@@ -23,9 +23,9 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.solarnetwork.domain.GeneralDatumSamples;
-import net.solarnetwork.domain.GeneralLocationDatumSamples;
-import net.solarnetwork.node.domain.GeneralLocationDatum;
+import org.eniware.domain.GeneralDatumSamples;
+import org.eniware.domain.GeneralLocationDatumSamples;
+import org.eniware.edge.domain.GeneralLocationDatum;
 
 /**
  * JDBC-based implementation of {@link net.solarnetwork.node.dao.DatumDao} for

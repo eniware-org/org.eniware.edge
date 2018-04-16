@@ -24,9 +24,9 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.core.MessageSendingOperations;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.support.GenericMessage;
-import net.solarnetwork.domain.Result;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.util.StringUtils;
+import org.eniware.domain.Result;
+import org.eniware.util.OptionalService;
+import org.eniware.util.StringUtils;
 
 /**
  * Bridge between OSGi EventAdmin events and a Spring Messaging.

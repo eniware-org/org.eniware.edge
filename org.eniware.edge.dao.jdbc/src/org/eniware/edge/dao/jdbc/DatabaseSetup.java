@@ -17,7 +17,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ConnectionCallback;
-import net.solarnetwork.node.domain.Datum;
+import org.eniware.edge.domain.Datum;
 
 /**
  * Class to initialize a database for first-time use by a Solar Node.

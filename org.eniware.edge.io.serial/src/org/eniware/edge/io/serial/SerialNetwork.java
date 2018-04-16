@@ -7,7 +7,7 @@
 package org.eniware.edge.io.serial;
 
 import java.io.IOException;
-import net.solarnetwork.node.Identifiable;
+import org.eniware.edge.Identifiable;
 
 /**
  * High level serial network API.

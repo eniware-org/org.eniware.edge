@@ -14,12 +14,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import net.solarnetwork.node.LockTimeoutException;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.support.SerialPortBean;
-import net.solarnetwork.node.support.SerialPortBeanParameters;
+import org.eniware.edge.LockTimeoutException;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.support.SerialPortBean;
+import org.eniware.edge.support.SerialPortBeanParameters;
 
 import org.eniware.edge.io.serial.SerialConnection;
 import org.eniware.edge.io.serial.SerialConnectionAction;

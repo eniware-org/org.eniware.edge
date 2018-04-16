@@ -47,12 +47,12 @@ import org.quartz.TriggerKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
-import net.solarnetwork.node.Identifiable;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicTitleSettingSpecifier;
-import net.solarnetwork.util.FilterableService;
+import org.eniware.edge.Identifiable;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.settings.support.BasicTitleSettingSpecifier;
+import org.eniware.util.FilterableService;
 
 /**
  * A base helper class for services that require use of

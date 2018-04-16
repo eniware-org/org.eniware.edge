@@ -6,7 +6,7 @@
 package org.eniware.edge;
 
 import java.util.List;
-import net.solarnetwork.domain.NodeControlInfo;
+import org.eniware.domain.NodeControlInfo;
 
 /**
  * API for control providers to implement.

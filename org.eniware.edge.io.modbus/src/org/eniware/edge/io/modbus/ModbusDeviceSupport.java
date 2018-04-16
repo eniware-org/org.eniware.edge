@@ -9,8 +9,8 @@ package org.eniware.edge.io.modbus;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.util.StringUtils;
+import org.eniware.util.OptionalService;
+import org.eniware.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

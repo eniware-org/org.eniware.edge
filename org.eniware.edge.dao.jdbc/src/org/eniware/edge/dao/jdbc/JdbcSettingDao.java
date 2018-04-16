@@ -31,11 +31,11 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
-import net.solarnetwork.node.Setting;
-import net.solarnetwork.node.Setting.SettingFlag;
-import net.solarnetwork.node.dao.SettingDao;
-import net.solarnetwork.node.support.KeyValuePair;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.edge.Setting;
+import org.eniware.edge.Setting.SettingFlag;
+import org.eniware.edge.dao.SettingDao;
+import org.eniware.edge.support.KeyValuePair;
+import org.eniware.util.OptionalService;
 
 /**
  * Simple JDBC-based implementation of {@link SettingDao}.

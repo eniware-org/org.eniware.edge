@@ -13,9 +13,9 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
-import net.solarnetwork.domain.GeneralDatumSamples;
-import net.solarnetwork.domain.GeneralNodeDatumSamples;
-import net.solarnetwork.node.domain.GeneralNodeDatum;
+import org.eniware.domain.GeneralDatumSamples;
+import org.eniware.domain.GeneralNodeDatumSamples;
+import org.eniware.edge.domain.GeneralNodeDatum;
 
 import org.eniware.edge.dao.jdbc.AbstractJdbcDatumDao;
 import org.springframework.core.io.ClassPathResource;

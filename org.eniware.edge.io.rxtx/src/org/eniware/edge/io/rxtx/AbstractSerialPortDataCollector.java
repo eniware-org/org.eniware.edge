@@ -12,7 +12,7 @@ import gnu.io.SerialPortEventListener;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import net.solarnetwork.node.DataCollector;
+import org.eniware.edge.DataCollector;
 
 /**
  * Abstract support for collecting data from a serial port stream.

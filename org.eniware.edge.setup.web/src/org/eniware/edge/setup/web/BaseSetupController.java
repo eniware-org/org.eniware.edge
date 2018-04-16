@@ -10,8 +10,8 @@ import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import net.solarnetwork.node.IdentityService;
-import net.solarnetwork.node.setup.SetupService;
+import org.eniware.edge.IdentityService;
+import org.eniware.edge.setup.SetupService;
 
 /**
  * Base class for setup controllers.

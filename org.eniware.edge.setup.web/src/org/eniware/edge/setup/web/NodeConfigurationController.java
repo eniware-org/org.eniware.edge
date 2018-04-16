@@ -6,15 +6,15 @@
 
 package org.eniware.edge.setup.web;
 
-import static net.solarnetwork.web.domain.Response.response;
+import static org.eniware.web.domain.Response.response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import net.solarnetwork.node.domain.NodeAppConfiguration;
-import net.solarnetwork.node.setup.SetupService;
-import net.solarnetwork.web.domain.Response;
+import org.eniware.edge.domain.NodeAppConfiguration;
+import org.eniware.edge.setup.SetupService;
+import org.eniware.web.domain.Response;
 
 /**
  * REST controller for node configuration.

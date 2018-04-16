@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import net.solarnetwork.node.setup.UserProfile;
-import net.solarnetwork.node.setup.UserService;
-import net.solarnetwork.web.domain.Response;
+import org.eniware.edge.setup.UserProfile;
+import org.eniware.edge.setup.UserService;
+import org.eniware.web.domain.Response;
 
 /**
  * Controller for user related tasks.

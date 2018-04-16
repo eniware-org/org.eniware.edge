@@ -37,7 +37,7 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StringUtils;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.util.OptionalService;
 
 /**
  * Base class for JDBC based DAO implementations.

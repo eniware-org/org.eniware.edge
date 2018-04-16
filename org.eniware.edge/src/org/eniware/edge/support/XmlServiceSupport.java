@@ -58,9 +58,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-import net.solarnetwork.domain.GeneralDatumMetadata;
-import net.solarnetwork.util.ClassUtils;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.domain.GeneralDatumMetadata;
+import org.eniware.util.ClassUtils;
+import org.eniware.util.OptionalService;
 
 /**
  * An abstract class to support services that use XML.

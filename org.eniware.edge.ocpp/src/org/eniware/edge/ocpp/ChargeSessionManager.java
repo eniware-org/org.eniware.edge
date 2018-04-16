@@ -8,7 +8,7 @@ package org.eniware.edge.ocpp;
 
 import java.util.Collection;
 import java.util.List;
-import net.solarnetwork.node.Identifiable;
+import org.eniware.edge.Identifiable;
 
 /**
  * API for managing charge sessions. A <em>charge session</em> is the process of

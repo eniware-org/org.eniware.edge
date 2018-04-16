@@ -7,7 +7,7 @@
 package org.eniware.edge.io.serial;
 
 import java.io.IOException;
-import net.solarnetwork.node.LockTimeoutException;
+import org.eniware.edge.LockTimeoutException;
 
 /**
  * @version 1.0

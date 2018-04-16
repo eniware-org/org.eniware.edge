@@ -9,7 +9,7 @@ package org.eniware.edge.setup.web;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.util.StringUtils;
-import net.solarnetwork.node.backup.BackupManager;
+import org.eniware.edge.backup.BackupManager;
 
 /**
  * Options to pass to backup operations.

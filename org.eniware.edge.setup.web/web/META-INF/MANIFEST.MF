@@ -73,6 +73,7 @@ Import-Package:
  org.apache.tiles.preparer;version="[3.0,4.0)",
  org.apache.tiles.renderer;version="[3.0,4.0)",
  org.apache.tiles.web.util;version="[3.0,4.0)",
+ org.eniware.web.domain;version="1.1.0",
  org.eniware.web.support;version="1.8",
  org.joda.time;version="[2.4,3.0)",
  org.joda.time.base;version="[2.4,3.0)",

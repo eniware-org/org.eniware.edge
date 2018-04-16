@@ -6,7 +6,7 @@
 
 package org.eniware.edge.domain;
 
-import net.solarnetwork.util.SerializeIgnore;
+import org.eniware.util.SerializeIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**

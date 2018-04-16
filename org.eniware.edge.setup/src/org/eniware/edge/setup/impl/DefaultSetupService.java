@@ -6,7 +6,7 @@
 
 package org.eniware.edge.setup.impl;
 
-import static net.solarnetwork.node.SetupSettings.KEY_NODE_ID;
+import static org.eniware.edge.SetupSettings.KEY_NODE_ID;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,26 +28,26 @@ import org.joda.time.format.ISODateTimeFormat;
 import org.osgi.service.event.Event;
 import org.springframework.beans.PropertyAccessorFactory;
 import org.springframework.util.FileCopyUtils;
-import net.solarnetwork.domain.NetworkAssociation;
-import net.solarnetwork.domain.NetworkAssociationDetails;
-import net.solarnetwork.domain.NetworkCertificate;
-import net.solarnetwork.node.IdentityService;
-import net.solarnetwork.node.SetupSettings;
-import net.solarnetwork.node.backup.BackupManager;
-import net.solarnetwork.node.dao.SettingDao;
-import net.solarnetwork.node.domain.NodeAppConfiguration;
-import net.solarnetwork.node.reactor.Instruction;
-import net.solarnetwork.node.reactor.InstructionHandler;
-import net.solarnetwork.node.reactor.InstructionStatus.InstructionState;
-import net.solarnetwork.node.setup.InvalidVerificationCodeException;
-import net.solarnetwork.node.setup.PKIService;
-import net.solarnetwork.node.setup.SetupException;
-import net.solarnetwork.node.setup.SetupService;
-import net.solarnetwork.node.support.XmlServiceSupport;
-import net.solarnetwork.support.CertificateException;
-import net.solarnetwork.util.JavaBeanXmlSerializer;
-import net.solarnetwork.util.JsonUtils;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.domain.NetworkAssociation;
+import org.eniware.domain.NetworkAssociationDetails;
+import org.eniware.domain.NetworkCertificate;
+import org.eniware.edge.IdentityService;
+import org.eniware.edge.SetupSettings;
+import org.eniware.edge.backup.BackupManager;
+import org.eniware.edge.dao.SettingDao;
+import org.eniware.edge.domain.NodeAppConfiguration;
+import org.eniware.edge.reactor.Instruction;
+import org.eniware.edge.reactor.InstructionHandler;
+import org.eniware.edge.reactor.InstructionStatus.InstructionState;
+import org.eniware.edge.setup.InvalidVerificationCodeException;
+import org.eniware.edge.setup.PKIService;
+import org.eniware.edge.setup.SetupException;
+import org.eniware.edge.setup.SetupService;
+import org.eniware.edge.support.XmlServiceSupport;
+import org.eniware.support.CertificateException;
+import org.eniware.util.JavaBeanXmlSerializer;
+import org.eniware.util.JsonUtils;
+import org.eniware.util.OptionalService;
 
 /**
  * Implementation of {@link SetupService}.

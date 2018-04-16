@@ -9,5 +9,14 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.edge"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.common.web"/>
+	<classpathentry kind="lib" path="/home/eniware/git/solarnetwork-build original/solarnetwork-osgi-target/spring/org.apache.servicemix.bundles.spring-security-core-4.1.0.RELEASE_1.jar"/>
+	<classpathentry kind="lib" path="/home/eniware/git/solarnetwork-build original/solarnetwork-osgi-target/spring/org.apache.servicemix.bundles.spring-security-web-4.1.0.RELEASE_1.jar"/>
+	<classpathentry kind="lib" path="/home/eniware/git/solarnetwork-build original/solarnetwork-osgi-target/spring/org.apache.servicemix.bundles.spring-messaging-4.2.9.RELEASE_1.jar"/>
+	<classpathentry kind="lib" path="/home/eniware/git/solarnetwork-build original/solarnetwork-osgi-target/spring/org.apache.servicemix.bundles.spring-web-4.2.9.RELEASE_1.jar"/>
+	<classpathentry kind="lib" path="/home/eniware/git/solarnetwork-build original/solarnetwork-osgi-target/platform/taglibs-standard-impl-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/eniware/git/solarnetwork-build original/solarnetwork-osgi-target/spring/org.apache.servicemix.bundles.spring-websocket-4.2.9.RELEASE_1.jar"/>
 	<classpathentry kind="output" path="web/WEB-INF/classes"/>
 </classpath>

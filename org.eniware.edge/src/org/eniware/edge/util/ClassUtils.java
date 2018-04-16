@@ -38,7 +38,7 @@ public final class ClassUtils {
 	 */
 	@Deprecated
 	public static <T> T instantiateClass(String className, Class<T> type) {
-		return net.solarnetwork.util.ClassUtils.instantiateClass(className, type);
+		return org.eniware.util.ClassUtils.instantiateClass(className, type);
 	}
 
 	/**
@@ -61,7 +61,7 @@ public final class ClassUtils {
 	 */
 	@Deprecated
 	public static <T> Class<? extends T> loadClass(String className, Class<T> type) {
-		return net.solarnetwork.util.ClassUtils.loadClass(className, type);
+		return org.eniware.util.ClassUtils.loadClass(className, type);
 	}
 
 	/**
@@ -77,7 +77,7 @@ public final class ClassUtils {
 	 */
 	@Deprecated
 	public static void setBeanProperties(Object o, Map<String, ?> values) {
-		net.solarnetwork.util.ClassUtils.setBeanProperties(o, values);
+		org.eniware.util.ClassUtils.setBeanProperties(o, values);
 	}
 
 	/**
@@ -96,7 +96,7 @@ public final class ClassUtils {
 	 */
 	@Deprecated
 	public static void setBeanProperties(Object o, Map<String, ?> values, boolean ignoreErrors) {
-		net.solarnetwork.util.ClassUtils.setBeanProperties(o, values, ignoreErrors);
+		org.eniware.util.ClassUtils.setBeanProperties(o, values, ignoreErrors);
 	}
 
 	/**
@@ -112,7 +112,7 @@ public final class ClassUtils {
 	 */
 	@Deprecated
 	public static Map<String, Object> getBeanProperties(Object o, Set<String> ignore) {
-		return net.solarnetwork.util.ClassUtils.getBeanProperties(o, ignore);
+		return org.eniware.util.ClassUtils.getBeanProperties(o, ignore);
 	}
 
 	/**
@@ -129,7 +129,7 @@ public final class ClassUtils {
 	 */
 	@Deprecated
 	public static Map<String, Object> getSimpleBeanProperties(Object o, Set<String> ignore) {
-		return net.solarnetwork.util.ClassUtils.getSimpleBeanProperties(o, ignore);
+		return org.eniware.util.ClassUtils.getSimpleBeanProperties(o, ignore);
 	}
 
 	/**
@@ -145,7 +145,7 @@ public final class ClassUtils {
 	 */
 	@Deprecated
 	public static String getResourceAsString(String resourceName, Class<?> clazz) {
-		return net.solarnetwork.util.ClassUtils.getResourceAsString(resourceName, clazz);
+		return org.eniware.util.ClassUtils.getResourceAsString(resourceName, clazz);
 	}
 
 }

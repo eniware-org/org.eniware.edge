@@ -7,7 +7,7 @@
 package org.eniware.edge.setup;
 
 import java.security.cert.X509Certificate;
-import net.solarnetwork.support.CertificateException;
+import org.eniware.support.CertificateException;
 
 /**
  * API for managing the node's certificate infrastructure.
