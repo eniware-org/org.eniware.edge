@@ -5,7 +5,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.edge"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.common"/>
-	<classpathentry kind="lib" path="/home/eniware/git/solarnetwork-external original/net.solarnetwork.gnu.trove"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.external.gnu.trove"/>
 	<classpathentry kind="output" path="build/eclipse"/>
 </classpath>

@@ -19,7 +19,7 @@
 		http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
 
 	<!-- Combine all /WEB-INF/**/messages.properties into a single message source. -->
-	<bean id="messageSource" class="net.solarnetwork.web.support.PatternMatchingResourceBundleMessagesSource"
+	<bean id="messageSource" class="org.eniware.web.support.PatternMatchingResourceBundleMessagesSource"
 		p:cacheSeconds="-1" p:basename="WEB-INF/**/messages"/>
 	
 	<ctx:annotation-config/>

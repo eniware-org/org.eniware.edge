@@ -13,23 +13,23 @@
 
 	<ctx:property-placeholder properties-ref="setup.web.cfg"/>
 
-	<bean id="settingsService" class="net.solarnetwork.util.OptionalServiceTracker">
+	<bean id="settingsService" class="org.eniware.util.OptionalServiceTracker">
 		<property name="service" ref="settingsServiceRef"/>
 	</bean>
 
-	<bean id="sslService" class="net.solarnetwork.util.OptionalServiceTracker">
+	<bean id="sslService" class="org.eniware.util.OptionalServiceTracker">
 		<property name="service" ref="sslServiceRef"/>
 	</bean>
 	
-	<bean id="backupManager" class="net.solarnetwork.util.OptionalServiceTracker">
+	<bean id="backupManager" class="org.eniware.util.OptionalServiceTracker">
 		<property name="service" ref="backupManagerRef"/>
 	</bean>
 
-	<bean id="pluginService" class="net.solarnetwork.util.OptionalServiceTracker">
+	<bean id="pluginService" class="org.eniware.util.OptionalServiceTracker">
 		<property name="service" ref="pluginServiceRef"/>
 	</bean>
 
-	<bean id="systemService" class="net.solarnetwork.util.OptionalServiceTracker">
+	<bean id="systemService" class="org.eniware.util.OptionalServiceTracker">
 		<property name="service" ref="systemServiceRef"/>
 	</bean>
 
@@ -37,7 +37,7 @@
 		<constructor-arg value="GMT"/>
 	</bean>
 	
-	<bean id="periodFormatter" class="net.solarnetwork.util.JodaPeriodPropertySerializer"/>
+	<bean id="periodFormatter" class="org.eniware.util.JodaPeriodPropertySerializer"/>
 
 	<!--bean id="mailService" class="net.solarnetwork.central.mail.support.DefaultMailService">
 		<constructor-arg ref="mailSender"/>
