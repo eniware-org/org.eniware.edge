@@ -4,7 +4,7 @@ Bundle-Name: RXTX Serial Port Support
 Bundle-SymbolicName: org.eniware.edge.io.rxtx
 Bundle-Description: Communication support for serial devices using the RXTX library.
 Bundle-Version: 1.6.0
-Bundle-Vendor: SolarNetwork
+Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: 
  org.eniware.edge.io.rxtx;version="1.5.0"

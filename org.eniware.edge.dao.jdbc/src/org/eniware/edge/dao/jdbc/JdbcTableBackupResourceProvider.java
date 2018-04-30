@@ -240,7 +240,7 @@ public class JdbcTableBackupResourceProvider implements BackupResourceProvider {
 	@Override
 	public BackupResourceProviderInfo providerInfo(Locale locale) {
 		String name = "Database Table Backup Provider";
-		String desc = "Backs up the SolarNode database tables.";
+		String desc = "Backs up the EniwareEdge database tables.";
 		MessageSource ms = messageSource;
 		if ( ms != null ) {
 			name = ms.getMessage("title", null, name, locale);

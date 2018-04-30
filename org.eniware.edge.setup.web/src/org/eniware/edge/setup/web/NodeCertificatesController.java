@@ -107,7 +107,7 @@ public class NodeCertificatesController extends BaseSetupController {
 		headers.setCacheControl("no-cache");
 
 		headers.set("Content-Disposition",
-				"attachment; filename=solarnode-" + getIdentityService().getNodeId() + ".pem");
+				"attachment; filename=eniwareedge-" + getIdentityService().getNodeId() + ".pem");
 
 		return new ResponseEntity<String>(cert, headers, HttpStatus.OK);
 	}

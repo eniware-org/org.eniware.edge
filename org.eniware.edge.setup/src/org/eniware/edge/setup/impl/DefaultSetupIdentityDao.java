@@ -45,12 +45,12 @@ public class DefaultSetupIdentityDao implements SetupIdentityDao, BackupResource
 
 	private static final String BACKUP_RESOURCE_NAME_DATA_FILE = "identity.json";
 
-	public static final String KEY_NODE_ID = "solarnode.id";
-	public static final String KEY_SOLARNETWORK_HOST_NAME = "solarnode.solarnet.host";
-	public static final String KEY_SOLARNETWORK_HOST_PORT = "solarnode.solarnet.port";
-	public static final String KEY_SOLARNETWORK_FORCE_TLS = "solarnode.solarnet.forceTLS";
-	public static final String KEY_CONFIRMATION_CODE = "solarnode.solarnet.confirmation";
-	public static final String KEY_KEY_STORE_PASSWORD = "solarnode.keystore.pw";
+	public static final String KEY_NODE_ID = "eniwareedge.id";
+	public static final String KEY_ENIWARENETWORK_HOST_NAME = "eniwareedge.eniwarenet.host";
+	public static final String KEY_ENIWARENETWORK_HOST_PORT = "eniwareedge.eniwarenet.port";
+	public static final String KEY_ENIWARENETWORK_FORCE_TLS = "eniwareedge.eniwarenet.forceTLS";
+	public static final String KEY_CONFIRMATION_CODE = "eniwareedge.eniwarenet.confirmation";
+	public static final String KEY_KEY_STORE_PASSWORD = "eniwareedge.keystore.pw";
 
 	private final ObjectMapper objectMapper;
 	private final AtomicReference<SetupIdentityInfo> cachedInfo = new AtomicReference<SetupIdentityInfo>(
@@ -113,9 +113,9 @@ public class DefaultSetupIdentityDao implements SetupIdentityDao, BackupResource
 		if ( dao != null ) {
 			String nodeId = dao.getSetting(KEY_NODE_ID, SETUP_TYPE_KEY);
 			String confCode = dao.getSetting(KEY_CONFIRMATION_CODE, SETUP_TYPE_KEY);
-			String hostName = dao.getSetting(KEY_SOLARNETWORK_HOST_NAME, SETUP_TYPE_KEY);
-			String hostPort = dao.getSetting(KEY_SOLARNETWORK_HOST_PORT, SETUP_TYPE_KEY);
-			String forceTls = dao.getSetting(KEY_SOLARNETWORK_FORCE_TLS, SETUP_TYPE_KEY);
+			String hostName = dao.getSetting(KEY_ENIWARENETWORK_HOST_NAME, SETUP_TYPE_KEY);
+			String hostPort = dao.getSetting(KEY_ENIWARENETWORK_HOST_PORT, SETUP_TYPE_KEY);
+			String forceTls = dao.getSetting(KEY_ENIWARENETWORK_FORCE_TLS, SETUP_TYPE_KEY);
 			String keyStorePw = dao.getSetting(KEY_KEY_STORE_PASSWORD, SETUP_TYPE_KEY);
 			if ( nodeId != null && confCode != null && hostName != null && hostPort != null
 					&& forceTls != null && keyStorePw != null ) {
@@ -200,7 +200,7 @@ public class DefaultSetupIdentityDao implements SetupIdentityDao, BackupResource
 	@Override
 	public BackupResourceProviderInfo providerInfo(Locale locale) {
 		String name = "Node Identity Provider";
-		String desc = "Backs up the SolarNode identity.";
+		String desc = "Backs up the EniwareEdge identity.";
 		MessageSource ms = messageSource;
 		if ( ms != null ) {
 			name = ms.getMessage("title", null, name, locale);

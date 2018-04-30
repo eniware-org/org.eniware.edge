@@ -75,7 +75,7 @@ public interface InstructionStatus {
 	 * Get the acknowledged instruction state.
 	 * 
 	 * <p>
-	 * This is the state that has been posted back to SolarNet.
+	 * This is the state that has been posted back to EniwareNet.
 	 * </p>
 	 * 
 	 * @return the acknowledged instruction state, or <em>null</em> if never

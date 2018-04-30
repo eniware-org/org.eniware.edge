@@ -29,37 +29,37 @@ public interface IdentityService {
 	Principal getNodePrincipal();
 
 	/**
-	 * Get the host name for the SolarNet central service.
+	 * Get the host name for the EniwareNet central service.
 	 * 
 	 * @return a host name
 	 */
-	String getSolarNetHostName();
+	String getEniwareNetHostName();
 
 	/**
-	 * Get the host port for the SolarNet central service.
+	 * Get the host port for the EniwareNet central service.
 	 * 
 	 * @return a host name
 	 */
-	Integer getSolarNetHostPort();
+	Integer getEniwareNetHostPort();
 
 	/**
-	 * Get the URL prefix for the SolarIn service.
+	 * Get the URL prefix for the EniwareIn service.
 	 * 
 	 * @return a URL prefix
 	 */
-	String getSolarNetSolarInUrlPrefix();
+	String getEniwareNetEniwareInUrlPrefix();
 
 	/**
-	 * Return an absolute URL to the SolarIn service.
+	 * Return an absolute URL to the EniwareIn service.
 	 * 
 	 * <p>
 	 * This is a convenience method for generating a URL for the correct
-	 * SolarNet host, SolarNet port, and SolarIn URL prefix as a single absolute
+	 * EniwareNet host, EniwareNet port, and EniwareIn URL prefix as a single absolute
 	 * URL string.
 	 * </p>
 	 * 
-	 * @return SolarIn base URL
+	 * @return EniwareIn base URL
 	 */
-	String getSolarInBaseUrl();
+	String getEniwareInBaseUrl();
 
 }

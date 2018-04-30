@@ -98,7 +98,7 @@ public class DefaultAuthorizationManager extends CentralSystemServiceFactorySupp
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.ocpp.auth";
+		return "org.eniware.edge.ocpp.auth";
 	}
 
 	@Override

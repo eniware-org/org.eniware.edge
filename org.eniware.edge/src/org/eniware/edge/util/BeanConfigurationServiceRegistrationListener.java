@@ -54,16 +54,16 @@ import org.springframework.beans.PropertyAccessorFactory;
  * 
  * <pre>
  * &lt;osgi:list id="myConfigurationList"
- * 		interface="net.solarnetwork.node.util.BeanConfiguration" cardinality="0..N">
+ * 		interface="org.eniware.edge.util.BeanConfiguration" cardinality="0..N">
  * 		&lt;osgi:listener bind-method="onBind" unbind-method="onUnbind" ref="myServiceBean"/>
  * &lt;/osgi:list>
  * 
  * &lt;bean id="myServiceBean" 
- * 		class="net.solarnetwork.node.util.BeanConfigurationServiceRegistrationListener">
+ * 		class="org.eniware.edge.util.BeanConfigurationServiceRegistrationListener">
  * 		&lt;property name="serviceClass"
- * 			value="net.solarnetwork.node.impl.MyServiceImplementation"/>
+ * 			value="org.eniware.edge.impl.MyServiceImplementation"/>
  * 		&lt;property name="serviceInterfaces"
- * 			value="net.solarnetwork.node.MyService"/>
+ * 			value="org.eniware.edge.MyService"/>
  * 		&lt;property name="bundleContext" ref="bundleContext"/>
  * &lt;/bean>
  * </pre>

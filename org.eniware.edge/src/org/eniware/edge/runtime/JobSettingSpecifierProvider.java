@@ -56,7 +56,7 @@ public class JobSettingSpecifierProvider implements SettingSpecifierProvider {
 	public static final String JOBS_PID_SUFFIX = ".JOBS";
 
 	/** The prefix to remove for display titles in setting UIDs. */
-	public static final String SN_NODE_PREFIX = "net.solarnetwork.node.";
+	public static final String SN_NODE_PREFIX = "org.eniware.edge.";
 
 	private String settingUID;
 	private MessageSource messageSource = null;
@@ -120,7 +120,7 @@ public class JobSettingSpecifierProvider implements SettingSpecifierProvider {
 	 * removing the {@link #SN_NODE_PREFIX} prefix and {@link #JOBS_PID_SUFFIX}
 	 * suffix, capitalizing the remaining value, and appending
 	 * {@link #TITLE_SUFFIX}. For example, the UID
-	 * <code>net.solarnetwork.node.power.JOBS</code> will result in
+	 * <code>org.eniware.edge.power.JOBS</code> will result in
 	 * <code>Power Jobs</code>.
 	 * </p>
 	 * 

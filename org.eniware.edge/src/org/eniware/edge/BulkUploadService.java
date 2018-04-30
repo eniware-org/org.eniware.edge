@@ -12,7 +12,7 @@ import java.util.List;
 import org.eniware.edge.domain.Datum;
 
 /**
- * API for posting local SolarNode data to a remote server in bulk.
+ * API for posting local EniwareEdge data to a remote server in bulk.
  * 
  * @version 1.2
  */

@@ -26,7 +26,7 @@ public class ResourceBackupResource implements BackupResource {
 	 * Constructor.
 	 * 
 	 * The {@code providerKey} will be set to
-	 * {@code net.solarnetwork.node.backup.FileBackupResourceProvider}.
+	 * {@code org.eniware.edge.backup.FileBackupResourceProvider}.
 	 * 
 	 * @param resource
 	 *        The resource.

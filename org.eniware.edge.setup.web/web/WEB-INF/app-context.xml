@@ -39,7 +39,7 @@
 	
 	<bean id="periodFormatter" class="org.eniware.util.JodaPeriodPropertySerializer"/>
 
-	<!--bean id="mailService" class="net.solarnetwork.central.mail.support.DefaultMailService">
+	<!--bean id="mailService" class="org.eniware.central.mail.support.DefaultMailService">
 		<constructor-arg ref="mailSender"/>
 		<property name="templateMessage">
 			<bean class="org.springframework.mail.SimpleMailMessage">
@@ -49,7 +49,7 @@
 	</bean-->
 	
 	<util:map id="networkLinks" key-type="java.lang.String" value-type="java.lang.String">
-		<entry key="solaruser" value="${link.solaruser}"/>
+		<entry key="eniwareuser" value="${link.eniwareuser}"/>
 	</util:map>
 	
 	<bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">

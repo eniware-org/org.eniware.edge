@@ -105,7 +105,7 @@ public class RestoreFromBackupSQLExceptionHandler implements SQLExceptionHandler
 			return null;
 		}
 		// Should we get database name from JDBC connection properties? For now, this is hard-coded.
-		return new File(dbDir, "solarnode");
+		return new File(dbDir, "eniwareedge");
 	}
 
 	private void cleanupExistingDatabase() {

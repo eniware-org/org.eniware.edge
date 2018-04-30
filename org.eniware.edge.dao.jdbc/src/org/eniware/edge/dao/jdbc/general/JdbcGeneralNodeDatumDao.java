@@ -26,7 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * JDBC-based implementation of {@link net.solarnetwork.node.dao.DatumDao} for
+ * JDBC-based implementation of {@link org.eniware.edge.dao.DatumDao} for
  * {@link GeneralNodeDatum} domain objects.
  * 
  * @version 1.1
@@ -43,8 +43,8 @@ public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDat
 	public static final String DEFAULT_INIT_SQL = "derby-generalnodedatum-init.sql";
 
 	/** The default value for the {@code sqlGetTablesVersion} property. */
-	public static final String DEFAULT_SQL_GET_TABLES_VERSION = "SELECT svalue FROM solarnode.sn_settings WHERE skey = "
-			+ "'solarnode.sn_general_node_datum.version'";
+	public static final String DEFAULT_SQL_GET_TABLES_VERSION = "SELECT svalue FROM eniwareedge.sn_settings WHERE skey = "
+			+ "'eniwareedge.sn_general_node_datum.version'";
 
 	private ObjectMapper objectMapper;
 

@@ -52,7 +52,7 @@ public interface Instruction {
 	Date getInstructionDate();
 
 	/**
-	 * Get the SolarNet-assigned unique ID for this instruction.
+	 * Get the EniwareNet-assigned unique ID for this instruction.
 	 * 
 	 * @return unique ID
 	 */

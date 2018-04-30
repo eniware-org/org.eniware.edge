@@ -2,9 +2,9 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Core Database Storage Support
 Bundle-SymbolicName: org.eniware.edge.dao.jdbc
-Bundle-Description: Provides standardized database storage infrastructure for the SolarNode application.
+Bundle-Description: Provides standardized database storage infrastructure for the EniwareEdge application.
 Bundle-Version: 1.22.1
-Bundle-Vendor: SolarNetwork
+Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eniware.edge.dao.jdbc;version="1.15.1"
 Import-Package: 

@@ -189,7 +189,7 @@ public class ModbusToggler extends ModbusDeviceSupport
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.control.modbus.toggle";
+		return "org.eniware.edge.control.modbus.toggle";
 	}
 
 	@Override

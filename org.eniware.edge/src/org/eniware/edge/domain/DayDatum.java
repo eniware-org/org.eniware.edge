@@ -9,26 +9,26 @@ import java.math.BigDecimal;
 import org.joda.time.LocalTime;
 
 /**
- * Solar day related datum.
+ * Eniware day related datum.
  * 
  * @version 1.2
  */
 public interface DayDatum extends Datum {
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link DayDatum#getSunrise()} values.
 	 */
 	static final String SUNRISE_KEY = "sunrise";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link DayDatum#getSunset()} values.
 	 */
 	static final String SUNSET_KEY = "sunset";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link DayDatum#getSunrise()} values.
 	 * 
 	 * @since 1.1
@@ -36,7 +36,7 @@ public interface DayDatum extends Datum {
 	static final String MOONRISE_KEY = "moonrise";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link DayDatum#getSunset()} values.
 	 * 
 	 * @since 1.1
@@ -44,7 +44,7 @@ public interface DayDatum extends Datum {
 	static final String MOONSET_KEY = "moonset";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link DayDatum#getTemperatureMaximum()} values.
 	 * 
 	 * @since 1.1
@@ -52,7 +52,7 @@ public interface DayDatum extends Datum {
 	static final String TEMPERATURE_MAXIMUM_KEY = "tempMax";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link DayDatum#getTemperatureMinimum()} values.
 	 * 
 	 * @since 1.1
@@ -60,13 +60,13 @@ public interface DayDatum extends Datum {
 	static final String TEMPERATURE_MINIMUM_KEY = "tempMin";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link DayDatum#getSkyConditions()} values.
 	 */
 	static final String SKY_CONDITIONS_KEY = "sky";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link DayDatum#getBriefOverview()} values.
 	 * 
 	 * @since 1.2
@@ -74,7 +74,7 @@ public interface DayDatum extends Datum {
 	static final String BRIEF_OVERVIEW_KEY = "brief";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link AtmosphericDatum#getWindSpeed()} values.
 	 * 
 	 * @since 1.2
@@ -82,7 +82,7 @@ public interface DayDatum extends Datum {
 	static final String WIND_SPEED_KEY = "wspeed";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link AtmosphericDatum#getWindDirection()} values.
 	 * 
 	 * @since 1.2
@@ -90,7 +90,7 @@ public interface DayDatum extends Datum {
 	static final String WIND_DIRECTION_KEY = "wdir";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link AtmosphericDatum#getRain()} values.
 	 * 
 	 * @since 1.2
@@ -98,7 +98,7 @@ public interface DayDatum extends Datum {
 	static final String RAIN_KEY = "rain";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link AtmosphericDatum#getSnow()} values.
 	 * 
 	 * @since 1.2

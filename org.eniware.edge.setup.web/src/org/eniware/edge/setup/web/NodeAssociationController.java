@@ -56,7 +56,7 @@ import org.eniware.util.OptionalService;
 import org.eniware.web.domain.Response;
 
 /**
- * Controller used to associate a node with a SolarNet account.
+ * Controller used to associate a node with a EniwareNet account.
  * 
  * @version 1.3
  */
@@ -199,7 +199,7 @@ public class NodeAssociationController extends BaseSetupController {
 	}
 
 	/**
-	 * Confirms the node association with the SolarNet server supplied in the
+	 * Confirms the node association with the EniwareNet server supplied in the
 	 * verification code.
 	 * 
 	 * @param command
@@ -233,7 +233,7 @@ public class NodeAssociationController extends BaseSetupController {
 				model.addAttribute("csr", pkiService.generateNodePKCS10CertificateRequestString());
 			}
 			if ( !userService.someUserExists() ) {
-				// create a new user now, using the username from SolarNet and a random password
+				// create a new user now, using the username from EniwareNet and a random password
 				UserProfile user = new UserProfile();
 				user.setUsername(details.getUsername());
 				user.setPassword(KeyGenerators.string().generateKey());

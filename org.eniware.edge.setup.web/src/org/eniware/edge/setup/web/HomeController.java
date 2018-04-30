@@ -43,7 +43,7 @@ public class HomeController {
 	}
 
 	/**
-	 * Restart or reboot SolarNode.
+	 * Restart or reboot EniwareEdge.
 	 * 
 	 * @param reboot
 	 *        If {@code true} then call {@link SystemService#reboot()},

@@ -7,7 +7,7 @@
 package org.eniware.edge.ocpp;
 
 /**
- * Configuration properties supported by SolarNode.
+ * Configuration properties supported by EniwareEdge.
  * 
  * @version 1.0
  * @since 0.6

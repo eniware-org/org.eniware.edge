@@ -1,3 +1,3 @@
-UPDATE solarnode.ocpp_socket
+UPDATE eniwareedge.ocpp_socket
 SET enabled = ?
 WHERE socketid = ?

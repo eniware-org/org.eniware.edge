@@ -4,7 +4,7 @@ Bundle-Name: Serial Communication Support
 Bundle-SymbolicName: org.eniware.edge.io.serial
 Bundle-Description: Communication support for serial networks.
 Bundle-Version: 1.3.0
-Bundle-Vendor: SolarNetwork
+Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Eclipse-ExtensibleAPI: true
 Export-Package: 

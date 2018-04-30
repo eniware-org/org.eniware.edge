@@ -183,7 +183,7 @@ public class SerialPortNetwork implements SerialNetwork, SettingSpecifierProvide
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.io.serial";
+		return "org.eniware.edge.io.serial";
 	}
 
 	@Override

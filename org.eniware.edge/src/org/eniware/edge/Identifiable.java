@@ -9,7 +9,7 @@ package org.eniware.edge;
 /**
  * API for a standardized way of identifying services, to support configuring
  * links to specific instances of a service at runtime. Many managed services in
- * SolarNode allow any number of them to be deployed.
+ * EniwareEdge allow any number of them to be deployed.
  * 
  * @version 1.0
  */

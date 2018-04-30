@@ -20,7 +20,7 @@ public interface PKIService {
 	 * Save the trusted CA certificate.
 	 * 
 	 * <p>
-	 * The node maintains a root CA certificate for the SolarNet network it is
+	 * The node maintains a root CA certificate for the EniwareNet network it is
 	 * associated with.
 	 * </p>
 	 * 

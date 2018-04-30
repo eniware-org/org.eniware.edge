@@ -33,12 +33,12 @@ $(document).ready(function() {
 				modal.find('.start').hide();
 				modal.find('.success').show();
 			} else {
-				SolarNode.error(json.message, $('#renew-cert-modal .modal-body.start'));
+				EniwareEdge.error(json.message, $('#renew-cert-modal .modal-body.start'));
 			}
 		},
 		error: function(xhr, status, statusText) {
 			var json = $.parseJSON(xhr.responseText);
-			SolarNode.error(json.message, $('#renew-cert-modal .modal-body.start'));
+			EniwareEdge.error(json.message, $('#renew-cert-modal .modal-body.start'));
 		}
 	}).on('shown', function() {
 		$('#renew-cert-password').focus();
@@ -71,7 +71,7 @@ $(document).ready(function() {
 			form.modal('hide');
 		},
 		error: function(xhr, status, statusText) {
-			SolarNode.errorAlert(statusText);
+			EniwareEdge.errorAlert(statusText);
 		}
 	});
 	*/

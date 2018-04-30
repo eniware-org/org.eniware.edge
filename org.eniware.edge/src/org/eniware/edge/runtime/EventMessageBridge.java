@@ -36,7 +36,7 @@ import org.eniware.util.StringUtils;
 public class EventMessageBridge implements EventHandler {
 
 	/** A prefix automatically stripped from event topic values. */
-	public static final String NODE_EVENT_PREFIX = "net/solarnetwork/node/";
+	public static final String NODE_EVENT_PREFIX = "net/eniwarenetwork/node/";
 
 	/** The prefix automatically added to every message topic value. */
 	public static final String MESSAGE_TOPIC_PREFIX = "/topic/";

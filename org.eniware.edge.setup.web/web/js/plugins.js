@@ -1,10 +1,10 @@
-SolarNode.Plugins = {
+EniwareEdge.Plugins = {
 		
 };
 
-SolarNode.Plugins.runtime = {};
+EniwareEdge.Plugins.runtime = {};
 
-SolarNode.Plugins.compareVersions = function(v1, v2) {
+EniwareEdge.Plugins.compareVersions = function(v1, v2) {
 	var result = v1.major - v2.major;
 	if ( result !== 0 ) {
 		return result;
@@ -21,20 +21,20 @@ SolarNode.Plugins.compareVersions = function(v1, v2) {
 	return 0;
 };
 
-SolarNode.Plugins.refreshPluginList = function(url, container, upgradeContainer, installedContainer) {
-	SolarNode.showLoading($('#plugins-refresh'));
+EniwareEdge.Plugins.refreshPluginList = function(url, container, upgradeContainer, installedContainer) {
+	EniwareEdge.showLoading($('#plugins-refresh'));
 	$.getJSON(url, function(data) {
 		if ( data === undefined || data.success !== true || data.data === undefined ) {
-			SolarNode.hideLoading($('#plugins-refresh'));
+			EniwareEdge.hideLoading($('#plugins-refresh'));
 			// TODO: l10n
-			SolarNode.warn('Error!', 'An error occured refreshing plugin information.', list);
+			EniwareEdge.warn('Error!', 'An error occured refreshing plugin information.', list);
 			return;
 		}
-		SolarNode.Plugins.populateUI(container, upgradeContainer, installedContainer);
+		EniwareEdge.Plugins.populateUI(container, upgradeContainer, installedContainer);
 	});
 };
 
-SolarNode.Plugins.versionLabel = function(plugin) {
+EniwareEdge.Plugins.versionLabel = function(plugin) {
 	var version = plugin.version.major + '.' + plugin.version.minor;
 	if ( plugin.version.micro > 0 ) {
 		version += '.' + plugin.version.micro;
@@ -42,14 +42,14 @@ SolarNode.Plugins.versionLabel = function(plugin) {
 	return version;
 };
 
-SolarNode.Plugins.populateUI = function(availableSection, upgradeSection, installedSection) {
-	var url = SolarNode.context.path('/a/plugins/list');
+EniwareEdge.Plugins.populateUI = function(availableSection, upgradeSection, installedSection) {
+	var url = EniwareEdge.context.path('/a/plugins/list');
 	var availableContainer = availableSection.children('.list-content');
 	var upgradeContainer = upgradeSection.children('.list-content');
 	var installedContainer = installedSection.children('.list-content');
 	
 	var groupNameForPlugin = function(plugin) {
-		var match = plugin.uid.match(/^net\.solarnetwork\.node\.(\w+)/);
+		var match = plugin.uid.match(/^net\.eniwarenetwork\.node\.(\w+)/);
 		if ( match == null ) {
 			return plugin.uid;
 		}
@@ -100,7 +100,7 @@ SolarNode.Plugins.populateUI = function(availableSection, upgradeSection, instal
 			}
 			result.groups[groupName].push(plugin);
 			installedPlugin = result.installed[plugin.uid];
-			if ( installedPlugin !== undefined && SolarNode.Plugins.compareVersions(plugin.version, installedPlugin.version) > 0 ) {
+			if ( installedPlugin !== undefined && EniwareEdge.Plugins.compareVersions(plugin.version, installedPlugin.version) > 0 ) {
 				result.upgradable.push({uid:plugin.uid, name:plugin.info.name, plugin:plugin});
 				result.upToDate.some(function(pluginRef, idx, array) {
 					if ( plugin.uid === pluginRef.uid ) {
@@ -146,15 +146,15 @@ SolarNode.Plugins.populateUI = function(availableSection, upgradeSection, instal
 		descContainer.appendTo(row);
 		if ( showVersions === true ) {
 			var versionContainer = $('<div class="version span1"/>').appendTo(row);
-			var versionLabel = $('<span class="label">' +SolarNode.Plugins.versionLabel(plugin) +'</span>');
+			var versionLabel = $('<span class="label">' +EniwareEdge.Plugins.versionLabel(plugin) +'</span>');
 			if ( installedPlugin === undefined ) {
 				// not installed... leave default style
-			} else if ( SolarNode.Plugins.compareVersions(plugin.version, installedPlugin.version) > 0 ) {
+			} else if ( EniwareEdge.Plugins.compareVersions(plugin.version, installedPlugin.version) > 0 ) {
 				// update available
 				//versionLabel.addClass('label-info');
 				
 				// also add existing version to title
-				$('<span class="label suffix">' +SolarNode.Plugins.versionLabel(installedPlugin) +'</span>').appendTo(titleContainer);
+				$('<span class="label suffix">' +EniwareEdge.Plugins.versionLabel(installedPlugin) +'</span>').appendTo(titleContainer);
 			} else {
 				// installed
 				//versionLabel.addClass('label-important');
@@ -163,12 +163,12 @@ SolarNode.Plugins.populateUI = function(availableSection, upgradeSection, instal
 		}
 		var actionContainer = $('<div class="action span2"/>').appendTo(row);
 		var button = undefined;
-		var action = SolarNode.Plugins.previewInstall;
+		var action = EniwareEdge.Plugins.previewInstall;
 		if ( installedPlugin === undefined ) {
 			// not installed; offer to install it
 			button = $('<button type="button" class="btn btn-small btn-primary">').text(availableSection.data('msg-install'));
 			actionContainer.append(button);
-		} else if ( SolarNode.Plugins.compareVersions(plugin.version, installedPlugin.version) > 0 ) {
+		} else if ( EniwareEdge.Plugins.compareVersions(plugin.version, installedPlugin.version) > 0 ) {
 			// update available
 			button = $('<button type="button" class="btn btn-small btn-info">').text(availableSection.data('msg-upgrade'));
 			actionContainer.append(button);
@@ -176,7 +176,7 @@ SolarNode.Plugins.populateUI = function(availableSection, upgradeSection, instal
 			// installed, and not a core feature
 			button = $('<button type="button" class="btn btn-small btn-danger"/>').text(availableSection.data('msg-remove'));
 			actionContainer.append(button);
-			action = SolarNode.Plugins.previewRemove;
+			action = EniwareEdge.Plugins.previewRemove;
 		} else if ( showVersions === true ) {
 			// core, cannot remove
 			$('<span class="label"/>').text(installedSection.data('msg-unremovable')).appendTo(actionContainer);
@@ -187,14 +187,14 @@ SolarNode.Plugins.populateUI = function(availableSection, upgradeSection, instal
 		return row;
 	};
 	
-	SolarNode.showLoading($('#plugins-refresh'));
+	EniwareEdge.showLoading($('#plugins-refresh'));
 	$.getJSON(url, function(data) {
-		SolarNode.hideLoading($('#plugins-refresh'));
+		EniwareEdge.hideLoading($('#plugins-refresh'));
 		if ( data === undefined || data.success !== true || data.data === undefined ) {
 			availableContainer.empty();
 			upgradeContainer.empty();
 			// TODO: l10n
-			SolarNode.warn('Error!', 'An error occured loading plugin information.', availableContainer);
+			EniwareEdge.warn('Error!', 'An error occured loading plugin information.', availableContainer);
 			return;
 		}
 		var i, iMax;
@@ -274,10 +274,10 @@ SolarNode.Plugins.populateUI = function(availableSection, upgradeSection, instal
 	});
 };
 
-SolarNode.Plugins.renderInstallPreview = function(data) {
+EniwareEdge.Plugins.renderInstallPreview = function(data) {
 	if ( data === undefined || data.success !== true || data.data === undefined ) {
 		// TODO: l10n
-		SolarNode.warn('Error!', 'An error occured loading plugin information.', list);
+		EniwareEdge.warn('Error!', 'An error occured loading plugin information.', list);
 		return;
 	}
 	var form = $('#plugin-preview-install-modal');
@@ -289,7 +289,7 @@ SolarNode.Plugins.renderInstallPreview = function(data) {
 	var version;
 	for ( i = 0, len = data.data.pluginsToInstall.length; i < len; i++ ) {
 		pluginToInstall = data.data.pluginsToInstall[i];
-		version = SolarNode.Plugins.versionLabel(pluginToInstall);
+		version = EniwareEdge.Plugins.versionLabel(pluginToInstall);
 		$('<li/>').html('<b>' +pluginToInstall.info.name  
 				+'</b> <span class="label">' +version +'</span>').appendTo(list);
 	}
@@ -298,7 +298,7 @@ SolarNode.Plugins.renderInstallPreview = function(data) {
 	installBtn.removeAttr('disabled');
 };
 
-SolarNode.Plugins.previewInstall = function(plugin) {
+EniwareEdge.Plugins.previewInstall = function(plugin) {
 	var form = $('#plugin-preview-install-modal');
 	var previewURL = form.attr('action') + '?uid=' +encodeURIComponent(plugin.uid);
 	var container = $('#plugin-preview-install-list').empty();
@@ -308,10 +308,10 @@ SolarNode.Plugins.previewInstall = function(plugin) {
 	title.text(title.data('msg-install') +' ' +plugin.info.name);
 	form.find('input[name=uid]').prop('disabled', false).val(plugin.uid);
 	form.modal('show');
-	$.getJSON(previewURL, SolarNode.Plugins.renderInstallPreview);
+	$.getJSON(previewURL, EniwareEdge.Plugins.renderInstallPreview);
 };
 
-SolarNode.Plugins.previewUpgradeAll = function(previewURL) {
+EniwareEdge.Plugins.previewUpgradeAll = function(previewURL) {
 	var form = $('#plugin-preview-install-modal');
 	var container = $('#plugin-preview-install-list').empty();
 	var title = form.find('h3');
@@ -320,10 +320,10 @@ SolarNode.Plugins.previewUpgradeAll = function(previewURL) {
 	title.text(title.data('msg-install'));
 	form.find('input[name=uid]').val('').prop('disabled', true);
 	form.modal('show');
-	$.getJSON(previewURL, SolarNode.Plugins.renderInstallPreview);
+	$.getJSON(previewURL, EniwareEdge.Plugins.renderInstallPreview);
 };
 
-SolarNode.Plugins.previewRemove = function(plugin) {
+EniwareEdge.Plugins.previewRemove = function(plugin) {
 	var form = $('#plugin-preview-remove-modal');
 	var container = $('#plugin-preview-remove-list').empty();
 	var title = form.find('h3');
@@ -332,13 +332,13 @@ SolarNode.Plugins.previewRemove = function(plugin) {
 	form.find('.restart-required').toggleClass('hide', false);
 	form.modal('show');
 	var list = $('<ul/>');
-	var	version = SolarNode.Plugins.versionLabel(plugin);
+	var	version = EniwareEdge.Plugins.versionLabel(plugin);
 	$('<li/>').html('<b>' +plugin.info.name  
 			+'</b> <span class="label">' +version +'</span>').appendTo(list);
 	container.append(list);
 };
 
-SolarNode.Plugins.handleInstall = function(form) {
+EniwareEdge.Plugins.handleInstall = function(form) {
 	var progressBar = form.find('.progress');
 	var progressFill = progressBar.find('.bar');
 	var installBtn = form.find('button[type=submit]');
@@ -347,19 +347,19 @@ SolarNode.Plugins.handleInstall = function(form) {
 	var keepPollingForStatus = true;
 	
 	var showAlert = function(msg) {
-		SolarNode.hideLoading(installBtn);
+		EniwareEdge.hideLoading(installBtn);
 		progressBar.addClass('hide');
-		SolarNode.error(SolarNode.i18n(installBtn.data('msg-error'), [msg]), errorContainer);
+		EniwareEdge.error(EniwareEdge.i18n(installBtn.data('msg-error'), [msg]), errorContainer);
 	};
 	form.on('hidden', function() {
 		// tidy up in case closed before completed
-		SolarNode.hideLoading(installBtn);
+		EniwareEdge.hideLoading(installBtn);
 		progressBar.addClass('hide');
 		installBtn.removeClass('hide');
 		
 		// refresh the plugin list, if we've installed/removed anything
 		if ( refreshPluginListOnModalClose === true ) {
-			SolarNode.Plugins.populateUI($('#plugins'), $('#plugin-upgrades'), $('#plugin-installed'));
+			EniwareEdge.Plugins.populateUI($('#plugins'), $('#plugin-upgrades'), $('#plugin-installed'));
 			refreshPluginListOnModalClose = false;
 		}
 		
@@ -377,17 +377,17 @@ SolarNode.Plugins.handleInstall = function(form) {
 			progressFill.css('width', '0%');
 			keepPollingForStatus = true;
 			errorContainer.empty();
-			SolarNode.showLoading(installBtn);
+			EniwareEdge.showLoading(installBtn);
 		},
 		success: function(json, status, xhr, form) {
 			if ( json.success !== true ) {
-				SolarNode.hideLoading(installBtn);
+				EniwareEdge.hideLoading(installBtn);
 				showAlert(json.message);
 				return;
 			}
 			// TODO: support message? var message = json.data.statusMessage;
 			var progress = Math.round(json.data.overallProgress * 100);
-			var pollURL = SolarNode.context.path('/a/plugins/provisionStatus') +'?id=' 
+			var pollURL = EniwareEdge.context.path('/a/plugins/provisionStatus') +'?id=' 
 					+encodeURIComponent(json.data.provisionID) +'&p=';
 			var restartRequired = json.data.restartRequired;
 			
@@ -396,12 +396,12 @@ SolarNode.Plugins.handleInstall = function(form) {
 			}
 			
 			function handleRestart() {
-				SolarNode.hideLoading(installBtn);
+				EniwareEdge.hideLoading(installBtn);
     				progressFill.css('width', '100%');
 				form.find('.restarting').removeClass('hide');
 				form.find('.hide-while-restarting').addClass('hide');
 				setTimeout(function() {
-					SolarNode.tryGotoURL(SolarNode.context.path('/a/home'));
+					EniwareEdge.tryGotoURL(EniwareEdge.context.path('/a/home'));
 				}, 10000);
 			}
 			
@@ -429,12 +429,12 @@ SolarNode.Plugins.handleInstall = function(form) {
 				    				showAlert(xhr.statusText);
 				    			}
 				    		} else if ( !(progress < 100) ) {
-							SolarNode.hideLoading(installBtn);
+							EniwareEdge.hideLoading(installBtn);
 				    			installBtn.addClass('hide');
 				    			if ( restartRequired ) {
 				    				handleRestart();
 				    			} else {
-					    			SolarNode.info(SolarNode.i18n(installBtn.data('msg-success')), errorContainer);
+					    			EniwareEdge.info(EniwareEdge.i18n(installBtn.data('msg-success')), errorContainer);
 					    			errorContainer.removeClass('hide');
 				    				progressBar.addClass('hide');
 					    			refreshPluginListOnModalClose = true;
@@ -448,7 +448,7 @@ SolarNode.Plugins.handleInstall = function(form) {
 			})();
 		},
 		error: function(xhr, status, statusText) {
-			SolarNode.hideLoading(installBtn);
+			EniwareEdge.hideLoading(installBtn);
 			showAlert(statusText);
 		}
 	});
@@ -459,20 +459,20 @@ $(document).ready(function() {
 	var upgradeSection = $('#plugin-upgrades').first();
 	var installedSection = $('#plugin-installed').first();
 	if ( pluginsSection.size() === 1 && upgradeSection.size() === 1 ) {
-		SolarNode.Plugins.populateUI(pluginsSection, upgradeSection, installedSection);
+		EniwareEdge.Plugins.populateUI(pluginsSection, upgradeSection, installedSection);
 	};
 	$('#plugins-refresh').click(function(event) {
 		event.preventDefault();
-		SolarNode.Plugins.refreshPluginList($(this).attr('href'), pluginsSection, upgradeSection, installedSection);
+		EniwareEdge.Plugins.refreshPluginList($(this).attr('href'), pluginsSection, upgradeSection, installedSection);
 	});
 	$('#plugins-upgrade-all').click(function(event) {
 		event.preventDefault();
-		SolarNode.Plugins.previewUpgradeAll($(this).attr('href'));
+		EniwareEdge.Plugins.previewUpgradeAll($(this).attr('href'));
 	});
 	$('#plugin-preview-install-modal').first().each(function() {
-		SolarNode.Plugins.handleInstall($(this));
+		EniwareEdge.Plugins.handleInstall($(this));
 	});
 	$('#plugin-preview-remove-modal').first().each(function() {
-		SolarNode.Plugins.handleInstall($(this));
+		EniwareEdge.Plugins.handleInstall($(this));
 	});
 });

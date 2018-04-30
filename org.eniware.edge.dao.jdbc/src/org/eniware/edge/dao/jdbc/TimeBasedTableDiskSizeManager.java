@@ -58,7 +58,7 @@ public class TimeBasedTableDiskSizeManager {
 
 	private JdbcOperations jdbcOperations;
 	private OptionalService<DatabaseSystemService> dbSystemService;
-	private String schemaName = "SOLARNODE";
+	private String schemaName = "ENIWARENODE";
 	private String tableName = "SN_GENERAL_NODE_DATUM";
 	private String dateColumnName = "CREATED";
 	private float maxFileSystemUseThreshold = 90.0f;
@@ -290,7 +290,7 @@ public class TimeBasedTableDiskSizeManager {
 	 * Set the name of the schema of the database table to manage.
 	 * 
 	 * <p>
-	 * This defaults to {@literal SOLARNODE}.
+	 * This defaults to {@literal ENIWARENODE}.
 	 * </p>
 	 * 
 	 * @param schemaName

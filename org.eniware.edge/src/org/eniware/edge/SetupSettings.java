@@ -14,21 +14,21 @@ package org.eniware.edge;
 public final class SetupSettings {
 
 	/** A type key for setup settings. */
-	public static final String SETUP_TYPE_KEY = "solarnode.setup";
+	public static final String SETUP_TYPE_KEY = "eniwareedge.setup";
 
 	/** The node ID. */
-	public static final String KEY_NODE_ID = "solarnode.id";
+	public static final String KEY_NODE_ID = "eniwareedge.id";
 
-	/** The SolarNetwork server host name. */
-	public static final String KEY_SOLARNETWORK_HOST_NAME = "solarnode.solarnet.host";
+	/** The EniwareNetwork server host name. */
+	public static final String KEY_ENIWARENETWORK_HOST_NAME = "eniwareedge.eniwarenet.host";
 
-	/** The SolarNetwork server host port. */
-	public static final String KEY_SOLARNETWORK_HOST_PORT = "solarnode.solarnet.port";
+	/** The EniwareNetwork server host port. */
+	public static final String KEY_ENIWARENETWORK_HOST_PORT = "eniwareedge.eniwarenet.port";
 
-	/** The SolarNetwork force TLS status. */
-	public static final String KEY_SOLARNETWORK_FORCE_TLS = "solarnode.solarnet.forceTLS";
+	/** The EniwareNetwork force TLS status. */
+	public static final String KEY_ENIWARENETWORK_FORCE_TLS = "eniwareedge.eniwarenet.forceTLS";
 
-	/** The confirmation code supplied by the SolarNetwork server. */
-	public static final String KEY_CONFIRMATION_CODE = "solarnode.solarnet.confirmation";
+	/** The confirmation code supplied by the EniwareNetwork server. */
+	public static final String KEY_CONFIRMATION_CODE = "eniwareedge.eniwarenet.confirmation";
 
 }

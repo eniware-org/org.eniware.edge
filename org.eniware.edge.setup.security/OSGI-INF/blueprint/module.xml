@@ -14,13 +14,13 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 	
-	<reference id="settingDao" interface="net.solarnetwork.node.dao.SettingDao" availability="optional"/>
+	<reference id="settingDao" interface="org.eniware.edge.dao.SettingDao" availability="optional"/>
 
-	<reference id="identityService" interface="net.solarnetwork.node.IdentityService" availability="optional"/>
+	<reference id="identityService" interface="org.eniware.edge.IdentityService" availability="optional"/>
 	
 	<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
-	<bean id="settingsUserService" class="net.solarnetwork.node.setup.security.SettingsUserService">
+	<bean id="settingsUserService" class="org.eniware.edge.setup.security.SettingsUserService">
 		<argument ref="settingDao"/>
 		<argument ref="identityService"/>
 		<argument ref="passwordEncoder"/>
@@ -36,7 +36,7 @@
 
 	<service ref="settingsUserService">
 		<interfaces>
-			<value>net.solarnetwork.node.setup.UserService</value>
+			<value>org.eniware.edge.setup.UserService</value>
 			<value>org.springframework.security.core.userdetails.UserDetailsService</value>
 		</interfaces>
 		<service-properties>

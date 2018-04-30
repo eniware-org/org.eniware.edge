@@ -20,7 +20,7 @@ import org.springframework.jdbc.core.ConnectionCallback;
 import org.eniware.edge.domain.Datum;
 
 /**
- * Class to initialize a database for first-time use by a Solar Node.
+ * Class to initialize a database for first-time use by a Eniware Node.
  * 
  * <p>
  * The {@link DatabaseSetup#init()} method should be called once during
@@ -54,7 +54,7 @@ public class DatabaseSetup {
 	/** The default value for the {@code sqlGetTablesVersion} property. */
 	public static final String DEFAULT_SQL_GET_TABLES_VERSION = "SELECT svalue FROM "
 			+ JdbcDaoConstants.SCHEMA_NAME + "." + JdbcDaoConstants.TABLE_SETTINGS + " WHERE skey = "
-			+ "'solarnode.sn_settings.version'";
+			+ "'eniwareedge.sn_settings.version'";
 
 	private static final int TABLES_VERSION = 5;
 

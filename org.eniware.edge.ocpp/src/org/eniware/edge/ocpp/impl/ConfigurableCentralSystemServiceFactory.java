@@ -82,8 +82,8 @@ public class ConfigurableCentralSystemServiceFactory
 	private String url = "http://localhost:9000/";
 	private String uid = "OCPP Central System";
 	private String groupUID;
-	private String chargePointModel = "SolarNode";
-	private String chargePointVendor = "SolarNetwork";
+	private String chargePointModel = "EniwareEdge";
+	private String chargePointVendor = "EniwareNetwork";
 	private String firmwareVersion;
 
 	private MessageSource messageSource;
@@ -406,7 +406,7 @@ public class ConfigurableCentralSystemServiceFactory
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.ocpp.central";
+		return "org.eniware.edge.ocpp.central";
 	}
 
 	@Override
@@ -539,7 +539,7 @@ public class ConfigurableCentralSystemServiceFactory
 	}
 
 	/**
-	 * Set the {@link IdentityService} to use for identifying the SolarNode to
+	 * Set the {@link IdentityService} to use for identifying the EniwareEdge to
 	 * the OCPP server.
 	 * 
 	 * @param identityService

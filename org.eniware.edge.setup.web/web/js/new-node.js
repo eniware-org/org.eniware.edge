@@ -42,7 +42,7 @@ $(document).ready(function() {
 		var form = $(event.target),
 			submitBtn = form.find('button[type=submit]');
 		submitBtn.attr('disabled', 'disabled');
-		SolarNode.showSpinner(submitBtn);
+		EniwareEdge.showSpinner(submitBtn);
 	});
 
 	$('#associate-restore-list-container').on('click', 'div.menu-item', function(event) {
@@ -61,40 +61,40 @@ $(document).ready(function() {
 	$('#associate-restore-backup-form').ajaxForm({
 		dataType : 'json',
 		beforeSubmit : function(dataArray, form, options) {
-			var providers = SolarNode.Backups.selectedProviders($('#associate-restore-list-container')),
+			var providers = EniwareEdge.Backups.selectedProviders($('#associate-restore-list-container')),
 				submitBtn = form.find('button[type=submit]');
 			Array.prototype.splice.apply(dataArray, [dataArray.length, 0].concat(providers));
 			submitBtn.attr('disabled', 'disabled');
-			SolarNode.showSpinner(submitBtn);
+			EniwareEdge.showSpinner(submitBtn);
 		},
 		success : function(json, status, xhr, form) {
 			if ( json.success !== true ) {
-				SolarNode.error(json.message, $('#associate-restore-backup-form'));
+				EniwareEdge.error(json.message, $('#associate-restore-backup-form'));
 				return;
 			}
 			var form = $('#associate-restore-backup-form');
-			SolarNode.info(json.message, $('#associate-restore-list-container').empty());
+			EniwareEdge.info(json.message, $('#associate-restore-list-container').empty());
 			form.find('button, p').remove();
 			form.find('.progress.hide').removeClass('hide');
 			setTimeout(function() {
-				SolarNode.tryGotoURL(SolarNode.context.path('/a/settings'));
+				EniwareEdge.tryGotoURL(EniwareEdge.context.path('/a/settings'));
 			}, 10000);
 		},
 		error : function(xhr, status, statusText) {
-			SolarNode.error("Error restoring backup: " +statusText, $('#associate-restore-backup-form'));
+			EniwareEdge.error("Error restoring backup: " +statusText, $('#associate-restore-backup-form'));
 		},
 		complete : function() {
 			var submitBtn = $('#associate-restore-backup-form button[type=submit]');
 			submitBtn.removeAttr('disabled');
-			SolarNode.hideSpinner(submitBtn);
+			EniwareEdge.hideSpinner(submitBtn);
 		}
 	}).each(function(idx, el) {
-		$.getJSON(SolarNode.context.path('/associate/importedBackup'), function(json) {
+		$.getJSON(EniwareEdge.context.path('/associate/importedBackup'), function(json) {
 			if ( json.success !== true ) {
-				SolarNode.error(json.message, $('#associate-restore-backup-form'));
+				EniwareEdge.error(json.message, $('#associate-restore-backup-form'));
 				return;
 			}
-			SolarNode.Backups.generateBackupList(json.data, $('#associate-restore-list-container'));
+			EniwareEdge.Backups.generateBackupList(json.data, $('#associate-restore-list-container'));
 		});
 	});
 	
@@ -105,7 +105,7 @@ $(document).ready(function() {
 		
 		// delay for settings logic to get applied
 		setTimeout(function() {
-			SolarNode.Settings.saveUpdates(SolarNode.context.path('/associate/configure'), undefined, delayedReload);
+			EniwareEdge.Settings.saveUpdates(EniwareEdge.context.path('/associate/configure'), undefined, delayedReload);
 		}, 100);
 
 		event.preventDefault();
@@ -113,7 +113,7 @@ $(document).ready(function() {
 	});
 	
 	$('#associate-choose-backup-apply-settings').on('click', function() {
-		SolarNode.Settings.saveUpdates(SolarNode.context.path('/associate/configure'), undefined, delayedReload);
+		EniwareEdge.Settings.saveUpdates(EniwareEdge.context.path('/associate/configure'), undefined, delayedReload);
 	});
 });
 

@@ -1,4 +1,4 @@
-CREATE TABLE solarnode.sn_settings (
+CREATE TABLE eniwareedge.sn_settings (
 	skey	  VARCHAR(255) NOT NULL,
 	tkey	  VARCHAR(255) NOT NULL WITH DEFAULT '',
 	svalue	  VARCHAR(255) NOT NULL,
@@ -7,8 +7,8 @@ CREATE TABLE solarnode.sn_settings (
 	PRIMARY KEY (skey, tkey)
 );
 
-INSERT INTO solarnode.sn_settings (skey, svalue) 
-VALUES ('solarnode.sn_settings.version', '5');
+INSERT INTO eniwareedge.sn_settings (skey, svalue) 
+VALUES ('eniwareedge.sn_settings.version', '5');
 
-INSERT INTO solarnode.sn_settings (skey, svalue) 
-VALUES ('solarnode.db.create.time', CAST(CURRENT_TIMESTAMP AS VARCHAR(255)));
+INSERT INTO eniwareedge.sn_settings (skey, svalue) 
+VALUES ('eniwareedge.db.create.time', CAST(CURRENT_TIMESTAMP AS VARCHAR(255)));

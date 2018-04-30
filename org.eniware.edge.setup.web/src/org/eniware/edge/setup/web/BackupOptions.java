@@ -38,7 +38,7 @@ public class BackupOptions {
 	}
 
 	/**
-	 * Get the {@link net.solarnetwork.node.backup.Backup} key.
+	 * Get the {@link org.eniware.edge.backup.Backup} key.
 	 * 
 	 * @return The backup key.
 	 */
@@ -47,7 +47,7 @@ public class BackupOptions {
 	}
 
 	/**
-	 * Set the {@link net.solarnetwork.node.backup.Backup} key.
+	 * Set the {@link org.eniware.edge.backup.Backup} key.
 	 * 
 	 * @param key
 	 *        The backup key.
@@ -58,7 +58,7 @@ public class BackupOptions {
 
 	/**
 	 * Get the list of
-	 * {@link net.solarnetwork.node.backup.BackupResourceProvider} keys to limit
+	 * {@link org.eniware.edge.backup.BackupResourceProvider} keys to limit
 	 * the backup to.
 	 * 
 	 * @return The list of provider keys to limit the backup to, or {@code null}
@@ -70,7 +70,7 @@ public class BackupOptions {
 
 	/**
 	 * Set the list of
-	 * {@link net.solarnetwork.node.backup.BackupResourceProvider} keys to limit
+	 * {@link org.eniware.edge.backup.BackupResourceProvider} keys to limit
 	 * the backup to.
 	 * 
 	 * @param providers

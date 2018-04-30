@@ -66,24 +66,24 @@ import org.eniware.util.OptionalService;
  * information.</dd>
  * 
  * <dt>hostName</dt>
- * <dd>The host name to use for the SolarNet remote service. Defaults to
+ * <dd>The host name to use for the EniwareNet remote service. Defaults to
  * {@link #DEFAULT_HOST_NAME}. This will be overridden by the application
  * setting value for the key
- * {@link SetupSettings#KEY_SOLARNETWORK_HOST_NAME}.</dd>
+ * {@link SetupSettings#KEY_ENIWARENETWORK_HOST_NAME}.</dd>
  * 
  * <dt>hostPort</dt>
- * <dd>The host port to use for the SolarNet remote service. Defaults to
+ * <dd>The host port to use for the EniwareNet remote service. Defaults to
  * {@link #DEFAULT_HOST_PORT}. This will be overridden by the application
  * setting value for the key
- * {@link SetupSettings#KEY_SOLARNETWORK_HOST_PORT}.</dd>
+ * {@link SetupSettings#KEY_ENIWARENETWORK_HOST_PORT}.</dd>
  * 
  * <dt>forceTLS</dt>
  * <dd>If <em>true</em> then use TLS (SSL) even on a port other than {@code 443}
  * (the default TLS port). Defaults to <em>false</em>.</dd>
  * 
- * <dt>solarInUrlPrefix</dt>
- * <dd>The URL prefix for the SolarIn service. Defaults to
- * {@link DEFAULT_SOLARIN_URL_PREFIX}.</dd>
+ * <dt>eniwareInUrlPrefix</dt>
+ * <dd>The URL prefix for the EniwareIn service. Defaults to
+ * {@link DEFAULT_ENIWAREIN_URL_PREFIX}.</dd>
  * </dl>
  * 
  * @version 1.9
@@ -92,13 +92,13 @@ public class DefaultSetupService extends XmlServiceSupport
 		implements SetupService, IdentityService, InstructionHandler {
 
 	/** The default value for the {@code hostName} property. */
-	public static final String DEFAULT_HOST_NAME = "in.solarnetwork.net";
+	public static final String DEFAULT_HOST_NAME = "in.network.eniware.org";
 
 	/** The default value for the {@code hostPort} property. */
 	public static final Integer DEFAULT_HOST_PORT = 443;
 
-	/** The default value for the {@code solarInUrlPrefix} property. */
-	public static final String DEFAULT_SOLARIN_URL_PREFIX = "/solarin";
+	/** The default value for the {@code eniwareInUrlPrefix} property. */
+	public static final String DEFAULT_ENIWAREIN_URL_PREFIX = "/eniwarein";
 
 	/**
 	 * Instruction topic for sending a renewed certificate to a node.
@@ -142,18 +142,18 @@ public class DefaultSetupService extends XmlServiceSupport
 	private static final String VERIFICATION_CODE_NODE_CERT_DN_KEY = "networkCertificateSubjectDN";
 	private static final String VERIFICATION_CODE_USER_NAME_KEY = "username";
 	private static final String VERIFICATION_CODE_FORCE_TLS = "forceTLS";
-	private static final String VERIFICATION_URL_SOLARUSER = "solarUserServiceURL";
-	private static final String VERIFICATION_URL_SOLARQUERY = "solarQueryServiceURL";
+	private static final String VERIFICATION_URL_ENIWAREUSER = "eniwareUserServiceURL";
+	private static final String VERIFICATION_URL_ENIWAREQUERY = "eniwareQueryServiceURL";
 
-	private static final String SOLAR_NET_IDENTITY_PATH = "/identity.do";
-	private static final String SOLAR_NET_IDENTITY_URL = "/solarin" + SOLAR_NET_IDENTITY_PATH;
-	private static final String SOLAR_NET_REG_URL = "/solaruser/associate.xml";
-	private static final String SOLAR_IN_RENEW_CERT_URL = "/api/v1/sec/cert/renew";
+	private static final String ENIWARE_NET_IDENTITY_PATH = "/identity.do";
+	private static final String ENIWARE_NET_IDENTITY_URL = "/eniwarein" + ENIWARE_NET_IDENTITY_PATH;
+	private static final String ENIWARE_NET_REG_URL = "/eniwareuser/associate.xml";
+	private static final String ENIWARE_IN_RENEW_CERT_URL = "/api/v1/sec/cert/renew";
 
 	private final SetupIdentityDao setupIdentityDao;
 	private OptionalService<BackupManager> backupManager;
 	private PKIService pkiService;
-	private String solarInUrlPrefix = DEFAULT_SOLARIN_URL_PREFIX;
+	private String eniwareInUrlPrefix = DEFAULT_ENIWAREIN_URL_PREFIX;
 
 	private NodeAppConfiguration appConfiguration = new NodeAppConfiguration();
 
@@ -188,19 +188,19 @@ public class DefaultSetupService extends XmlServiceSupport
 		identityXpathMap.put(VERIFICATION_CODE_IDENTITY_KEY, "/*/@identityKey");
 		identityXpathMap.put(VERIFICATION_CODE_TERMS_OF_SERVICE, "/*/@termsOfService");
 		identityXpathMap.put(VERIFICATION_CODE_SECURITY_PHRASE, "/*/@securityPhrase");
-		identityXpathMap.put(VERIFICATION_URL_SOLARUSER,
-				"/*/networkServiceURLs/entry[@key='solaruser']/value/@value");
-		identityXpathMap.put(VERIFICATION_URL_SOLARQUERY,
-				"/*/networkServiceURLs/entry[@key='solarquery']/value/@value");
+		identityXpathMap.put(VERIFICATION_URL_ENIWAREUSER,
+				"/*/networkServiceURLs/entry[@key='eniwareuser']/value/@value");
+		identityXpathMap.put(VERIFICATION_URL_ENIWAREQUERY,
+				"/*/networkServiceURLs/entry[@key='eniwarequery']/value/@value");
 		return getXPathExpressionMap(identityXpathMap);
 	}
 
 	private boolean isForceTLS() {
-		return setupIdentityDao.getSetupIdentityInfo().isSolarNetForceTls();
+		return setupIdentityDao.getSetupIdentityInfo().isEniwareNetForceTls();
 	}
 
 	private int getPort() {
-		Integer port = getSolarNetHostPort();
+		Integer port = getEniwareNetHostPort();
 		if ( port == null ) {
 			return 443;
 		}
@@ -226,31 +226,31 @@ public class DefaultSetupService extends XmlServiceSupport
 	}
 
 	@Override
-	public String getSolarNetHostName() {
-		return setupIdentityDao.getSetupIdentityInfo().getSolarNetHostName();
+	public String getEniwareNetHostName() {
+		return setupIdentityDao.getSetupIdentityInfo().getEniwareNetHostName();
 	}
 
 	@Override
-	public Integer getSolarNetHostPort() {
-		Integer port = setupIdentityDao.getSetupIdentityInfo().getSolarNetHostPort();
+	public Integer getEniwareNetHostPort() {
+		Integer port = setupIdentityDao.getSetupIdentityInfo().getEniwareNetHostPort();
 		return (port == null ? 443 : port);
 	}
 
 	@Override
-	public String getSolarNetSolarInUrlPrefix() {
-		return solarInUrlPrefix;
+	public String getEniwareNetEniwareInUrlPrefix() {
+		return eniwareInUrlPrefix;
 	}
 
 	@Override
-	public String getSolarInBaseUrl() {
+	public String getEniwareInBaseUrl() {
 		final int port = getPort();
-		final String host = getSolarNetHostName();
+		final String host = getEniwareNetHostName();
 		if ( host == null ) {
 			throw new SetupException(
-					"SolarNet host not configured. Perhaps this node is not yet set up?");
+					"EniwareNet host not configured. Perhaps this node is not yet set up?");
 		}
 		return "http" + (port == 443 || isForceTLS() ? "s" : "") + "://" + host
-				+ (port == 443 || port == 80 ? "" : (":" + port)) + solarInUrlPrefix;
+				+ (port == 443 || port == 80 ? "" : (":" + port)) + eniwareInUrlPrefix;
 	}
 
 	@Override
@@ -343,7 +343,7 @@ public class DefaultSetupService extends XmlServiceSupport
 		req.setUsername(details.getUsername());
 		req.setKey(details.getConfirmationKey());
 		webFormGetForBean(PropertyAccessorFactory.forBeanPropertyAccess(req), association,
-				getAbsoluteUrl(details, SOLAR_NET_IDENTITY_URL), null, getIdentityPropertyMapping());
+				getAbsoluteUrl(details, ENIWARE_NET_IDENTITY_URL), null, getIdentityPropertyMapping());
 		return association;
 	}
 
@@ -355,7 +355,7 @@ public class DefaultSetupService extends XmlServiceSupport
 	@Override
 	public NetworkCertificate acceptNetworkAssociation(final NetworkAssociationDetails details)
 			throws SetupException {
-		log.debug("Associating with SolarNet service {}", details);
+		log.debug("Associating with EniwareNet service {}", details);
 
 		try {
 			// Get confirmation code from the server
@@ -363,7 +363,7 @@ public class DefaultSetupService extends XmlServiceSupport
 					details.getConfirmationKey(), details.getKeystorePassword());
 			final NetworkCertificate result = new NetworkAssociationDetails();
 			webFormPostForBean(PropertyAccessorFactory.forBeanPropertyAccess(req), result,
-					getAbsoluteUrl(details, SOLAR_NET_REG_URL), null,
+					getAbsoluteUrl(details, ENIWARE_NET_REG_URL), null,
 					getNodeAssociationPropertyMapping());
 
 			SetupIdentityInfo oldInfo = setupIdentityDao.getSetupIdentityInfo();
@@ -449,7 +449,7 @@ public class DefaultSetupService extends XmlServiceSupport
 	@Override
 	public void renewNetworkCertificate(String password) throws SetupException {
 		final String keystore = pkiService.generatePKCS12KeystoreString(password);
-		final String url = getSolarInBaseUrl() + SOLAR_IN_RENEW_CERT_URL;
+		final String url = getEniwareInBaseUrl() + ENIWARE_IN_RENEW_CERT_URL;
 		Map<String, String> data = new HashMap<String, String>(2);
 		data.put("keystore", keystore);
 		data.put("password", password);
@@ -468,7 +468,7 @@ public class DefaultSetupService extends XmlServiceSupport
 				throw new SetupException(message);
 			}
 		} catch ( IOException e ) {
-			throw new SetupException("Error communicating with SolarNet: " + e.getMessage());
+			throw new SetupException("Error communicating with EniwareNet: " + e.getMessage());
 		}
 	}
 
@@ -511,39 +511,39 @@ public class DefaultSetupService extends XmlServiceSupport
 		// try to refresh from network
 		try {
 			NetworkAssociationDetails association = new NetworkAssociationDetails();
-			webFormGetForBean(null, association, getSolarInBaseUrl() + SOLAR_NET_IDENTITY_PATH, null,
+			webFormGetForBean(null, association, getEniwareInBaseUrl() + ENIWARE_NET_IDENTITY_PATH, null,
 					getIdentityPropertyMapping());
 
 			Map<String, String> networkServiceUrls = new LinkedHashMap<String, String>();
-			if ( association.getSolarQueryServiceURL() != null ) {
+			if ( association.getEniwareQueryServiceURL() != null ) {
 				try {
 					Map<String, String> urls = fetchNetworkServiceUrls(
-							association.getSolarQueryServiceURL());
+							association.getEniwareQueryServiceURL());
 					networkServiceUrls.putAll(urls);
 				} catch ( IOException e ) {
-					log.warn("Network error fetching SolarUser app configuration: " + e.getMessage());
+					log.warn("Network error fetching EniwareUser app configuration: " + e.getMessage());
 				}
 			}
-			if ( association.getSolarUserServiceURL() != null ) {
+			if ( association.getEniwareUserServiceURL() != null ) {
 				try {
 					Map<String, String> urls = fetchNetworkServiceUrls(
-							association.getSolarUserServiceURL());
+							association.getEniwareUserServiceURL());
 					networkServiceUrls.putAll(urls);
 				} catch ( IOException e ) {
-					log.warn("Network error fetching SolarUser app configuration: " + e.getMessage());
+					log.warn("Network error fetching EniwareUser app configuration: " + e.getMessage());
 				}
 			}
 			config = new NodeAppConfiguration(networkServiceUrls);
 			this.appConfiguration = config;
 		} catch ( Exception e ) {
 			// don't re-throw from here
-			log.warn("Error retrieving SolarIn identity info: " + e.getMessage());
+			log.warn("Error retrieving EniwareIn identity info: " + e.getMessage());
 		}
 		return config;
 	}
 
-	public void setSolarInUrlPrefix(String solarInUrlPrefix) {
-		this.solarInUrlPrefix = solarInUrlPrefix;
+	public void setEniwareInUrlPrefix(String eniwareInUrlPrefix) {
+		this.eniwareInUrlPrefix = eniwareInUrlPrefix;
 	}
 
 	public void setPkiService(PKIService pkiService) {

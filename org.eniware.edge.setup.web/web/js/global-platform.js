@@ -1,11 +1,11 @@
 'use strict';
-SolarNode.Platform = (function() {
+EniwareEdge.Platform = (function() {
 	var self = {};
 	var subscribedToTask = false;
 	var waitingForRestart = false;
 	
 	function getActivePlatformTaskInfo(callback) {
-		$.getJSON(SolarNode.context.path('/pub/platform/task'), function(json) {
+		$.getJSON(EniwareEdge.context.path('/pub/platform/task'), function(json) {
 			callback(json && json.data ? json.data : null);
 		}).fail(function() {
 			callback(null);
@@ -32,7 +32,7 @@ SolarNode.Platform = (function() {
 		modal.find('.restarting').removeClass('hide');
 		modal.find('.hide-while-restarting').addClass('hide');
 		setTimeout(function() {
-			SolarNode.tryGotoURL(SolarNode.context.path('/a/home'));
+			EniwareEdge.tryGotoURL(EniwareEdge.context.path('/a/home'));
 		}, 10000);
 		setPlatformLockModalVisible(modal, true);
 	}
@@ -41,7 +41,7 @@ SolarNode.Platform = (function() {
 		if ( subscribedToTask ) {
 			return;
 		}
-		SolarNode.WebSocket.subscribeToTopic('/pub/topic/platform/task', function(msg) {
+		EniwareEdge.WebSocket.subscribeToTopic('/pub/topic/platform/task', function(msg) {
 			var body = (msg && msg.body ? JSON.parse(msg.body) : null);
 			var info = (body ? body.data : null);
 			if ( info ) {
@@ -67,7 +67,7 @@ SolarNode.Platform = (function() {
 		
 		$.getJSON(checkStateUrl, function(data) {
 			if ( data === undefined || data.success !== true ) {
-				SolarNode.warn('Error!', 'An error occured checking the platform state.');
+				EniwareEdge.warn('Error!', 'An error occured checking the platform state.');
 				return;
 			}
 			var lockActive = data.data === 'UserBlockingSystemTask';
@@ -100,19 +100,19 @@ $(document).ready(function() {
 				console.info('Got platform/state change from %s \u2192 %s', msg.data.oldPlatformState, currState);
 				var lockActive = msg.data.platformState === 'UserBlockingSystemTask';
 				if ( currState === 'UserBlockingSystemTask' ) {
-					SolarNode.Platform.subscribeToTask(modal);
+					EniwareEdge.Platform.subscribeToTask(modal);
 				} else if ( currState === 'Restarting' ) {
-					SolarNode.Platform.handleRestart(modal);
+					EniwareEdge.Platform.handleRestart(modal);
 				} else {
-					SolarNode.Platform.setPlatformLockModalVisible(modal, false);
+					EniwareEdge.Platform.setPlatformLockModalVisible(modal, false);
 				}
 			}
 		};
 
 		// subscribe for state change messages
-		SolarNode.WebSocket.subscribeToTopic('/pub/topic/platform/state', handlePlatformStateMessage);
+		EniwareEdge.WebSocket.subscribeToTopic('/pub/topic/platform/state', handlePlatformStateMessage);
 		
 		// check the current state
-		SolarNode.Platform.checkPlatformState(modal);
+		EniwareEdge.Platform.checkPlatformState(modal);
 	});
 });

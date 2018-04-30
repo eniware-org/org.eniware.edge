@@ -17,20 +17,20 @@
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">
 			<list>
-				<value>net.solarnetwork.node.control.modbus.toggle.ModbusToggler</value>
-				<value>net.solarnetwork.node.io.modbus.ModbusDeviceSupport</value>
+				<value>org.eniware.edge.control.modbus.toggle.ModbusToggler</value>
+				<value>org.eniware.edge.io.modbus.ModbusDeviceSupport</value>
 			</list>
 		</property>
 	</bean>
 	
 	<bean id="settingsFactory" 
-		class="net.solarnetwork.node.settings.support.BasicSettingSpecifierProviderFactory">
+		class="org.eniware.edge.settings.support.BasicSettingSpecifierProviderFactory">
 		<property name="displayName" value="Modbus Toggler"/>
-		<property name="factoryUID" value="net.solarnetwork.node.control.modbus.toggle"/>
+		<property name="factoryUID" value="org.eniware.edge.control.modbus.toggle"/>
 		<property name="messageSource" ref="messageSource"/>
 	</bean>
 
-	<bean id="eventAdmin" class="net.solarnetwork.util.DynamicServiceTracker">
+	<bean id="eventAdmin" class="org.eniware.util.DynamicServiceTracker">
 		<property name="bundleContext" ref="bundleContext"/>
 		<property name="serviceClassName" value="org.osgi.service.event.EventAdmin"/>
 	</bean>
@@ -38,16 +38,16 @@
 	<!-- Published Services -->
 	
 	<service ref="settingsFactory" 
-		interface="net.solarnetwork.node.settings.SettingSpecifierProviderFactory"/>
+		interface="org.eniware.edge.settings.SettingSpecifierProviderFactory"/>
 	
-	<osgix:managed-service-factory factory-pid="net.solarnetwork.node.control.modbus.toggle" autowire-on-update="true">
+	<osgix:managed-service-factory factory-pid="org.eniware.edge.control.modbus.toggle" autowire-on-update="true">
 		<osgix:interfaces>
-			<beans:value>net.solarnetwork.node.NodeControlProvider</beans:value>
-			<beans:value>net.solarnetwork.node.reactor.InstructionHandler</beans:value>
-			<beans:value>net.solarnetwork.node.settings.SettingSpecifierProvider</beans:value>
+			<beans:value>org.eniware.edge.NodeControlProvider</beans:value>
+			<beans:value>org.eniware.edge.reactor.InstructionHandler</beans:value>
+			<beans:value>org.eniware.edge.settings.SettingSpecifierProvider</beans:value>
 		</osgix:interfaces>
 		<osgix:service-properties>
-			<beans:entry key="settingPid" value="net.solarnetwork.node.control.modbus.toggle"/>
+			<beans:entry key="settingPid" value="org.eniware.edge.control.modbus.toggle"/>
 			<beans:entry key="instruction">
 				<beans:list>
 					<beans:value>SetControlParameter</beans:value>
@@ -55,14 +55,14 @@
 				</beans:list>
 			</beans:entry>
 		</osgix:service-properties>
-		<bean id="controller" class="net.solarnetwork.node.control.modbus.toggle.ModbusToggler">
+		<bean id="controller" class="org.eniware.edge.control.modbus.toggle.ModbusToggler">
 			<property name="messageSource" ref="messageSource"/>
 			<property name="eventAdmin" ref="eventAdmin"/>
 			<property name="modbusNetwork">
-				<bean class="net.solarnetwork.util.DynamicServiceTracker">
+				<bean class="org.eniware.util.DynamicServiceTracker">
 					<property name="bundleContext" ref="bundleContext"/>
 					<property name="serviceClassName" 
-						value="net.solarnetwork.node.io.modbus.ModbusNetwork"/>
+						value="org.eniware.edge.io.modbus.ModbusNetwork"/>
 					<property name="propertyFilters">
 						<map>
 							<entry key="UID" value="Serial Port"/>

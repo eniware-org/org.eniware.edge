@@ -28,18 +28,18 @@ import org.eniware.edge.support.HttpClientSupport;
 import org.eniware.util.OptionalServiceTracker;
 
 /**
- * Proxy HTTP requests to SolarIn.
+ * Proxy HTTP requests to EniwareIn.
  * 
  * <p>
- * This is designed to be used by the Settings app, to support calling SolarIn
+ * This is designed to be used by the Settings app, to support calling EniwareIn
  * web services without relying on the user's browser be configured to support
- * the SolarIn X.509 certificate.
+ * the EniwareIn X.509 certificate.
  * </p>
  * 
  * @version 1.1
  */
 @Controller
-public class SolarInHttpProxy extends HttpClientSupport {
+public class EniwareInHttpProxy extends HttpClientSupport {
 
 	private static final String[] DEFAULT_PROXY_HEADERS_IGNORE = new String[] {
 			"strict-transport-security", "transfer-encoding" };
@@ -48,7 +48,7 @@ public class SolarInHttpProxy extends HttpClientSupport {
 			Arrays.asList(DEFAULT_PROXY_HEADERS_IGNORE));
 
 	@Autowired
-	public SolarInHttpProxy(@Qualifier("identityService") IdentityService identityService,
+	public EniwareInHttpProxy(@Qualifier("identityService") IdentityService identityService,
 			@Qualifier("sslService") OptionalServiceTracker<SSLService> sslService) {
 		super();
 		setIdentityService(identityService);
@@ -56,7 +56,7 @@ public class SolarInHttpProxy extends HttpClientSupport {
 	}
 
 	/**
-	 * Proxy an HTTP request to SolarIn and return the result on a given HTTP
+	 * Proxy an HTTP request to EniwareIn and return the result on a given HTTP
 	 * response.
 	 * 
 	 * @param request
@@ -75,7 +75,7 @@ public class SolarInHttpProxy extends HttpClientSupport {
 			path = path.substring(context.length());
 		}
 		String query = request.getQueryString();
-		String url = getIdentityService().getSolarInBaseUrl() + path;
+		String url = getIdentityService().getEniwareInBaseUrl() + path;
 		if ( query != null ) {
 			url += '?' + query;
 		}
@@ -88,7 +88,7 @@ public class SolarInHttpProxy extends HttpClientSupport {
 			if ( conn instanceof HttpURLConnection ) {
 				final HttpURLConnection httpConn = (HttpURLConnection) conn;
 				final Map<String, List<String>> headers = httpConn.getHeaderFields();
-				log.debug("Proxying SolarIn headers: {}", headers);
+				log.debug("Proxying EniwareIn headers: {}", headers);
 				for ( Map.Entry<String, List<String>> me : headers.entrySet() ) {
 					final String headerName = me.getKey();
 					if ( headerName == null || proxyHeadersIgnore.contains(headerName.toLowerCase()) ) {
@@ -104,8 +104,8 @@ public class SolarInHttpProxy extends HttpClientSupport {
 			FileCopyUtils.copy(conn.getInputStream(), response.getOutputStream());
 			response.flushBuffer();
 		} catch ( IOException e ) {
-			log.debug("Error proxying SolarIn URL [{}]", url, e);
-			response.sendError(502, "Problem communicating with SolarIn: " + e.getMessage());
+			log.debug("Error proxying EniwareIn URL [{}]", url, e);
+			response.sendError(502, "Problem communicating with EniwareIn: " + e.getMessage());
 		}
 	}
 

@@ -9,7 +9,7 @@ package org.eniware.edge.reactor;
 import java.util.Collection;
 
 /**
- * API for acknowledging instructions to SolarNet.
+ * API for acknowledging instructions to EniwareNet.
  * 
  * @version $Revision$
  */

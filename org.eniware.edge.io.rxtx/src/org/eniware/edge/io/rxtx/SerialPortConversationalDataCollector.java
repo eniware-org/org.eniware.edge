@@ -22,7 +22,7 @@ import org.eniware.edge.DataCollector;
  * Serial port conversation-based {@link DataCollector} implementation.
  * 
  * <p>Note this class is not thread-safe, in that
- * {@link #collectData(net.solarnetwork.node.ConversationalDataCollector.Moderator)}
+ * {@link #collectData(org.eniware.edge.ConversationalDataCollector.Moderator)}
  * should not be called by more than one thread at a time.</p>
  * 
  * @version $Revision$ $Date$

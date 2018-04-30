@@ -21,7 +21,7 @@ import java.net.URLStreamHandler;
  * 
  * <p>To enable this handler, pass the following property to the JVM:</p>
  * 
- * <code>-Djava.protocol.handler.pkgs=net.solarnetwork.node.io.url</code>
+ * <code>-Djava.protocol.handler.pkgs=org.eniware.edge.io.url</code>
  * 
  * @version $Revision$ $Date$
  */

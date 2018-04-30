@@ -19,17 +19,17 @@
 	<!-- Configuration -->
 
 	<osgix:cm-properties id="dao.jdbc.cfg"
-		persistent-id="net.solarnetwork.node.dao.jdbc">
-		<beans:prop key="DatabaseSetup.initSqlResource">classpath:/net/solarnetwork/node/dao/jdbc/derby-init.sql</beans:prop>
+		persistent-id="org.eniware.edge.dao.jdbc">
+		<beans:prop key="DatabaseSetup.initSqlResource">classpath:/net/eniwarenetwork/node/dao/jdbc/derby-init.sql</beans:prop>
 		<beans:prop key="restoreFromBackup.exceptionThreshold">1</beans:prop>
 		<beans:prop key="restoreFromBackup.secondsDelay">30</beans:prop>
-		<beans:prop key="restoreFromBackup.resourceProviderFilter">net.solarnetwork.node.settings.ca.CASettingsService</beans:prop>
+		<beans:prop key="restoreFromBackup.resourceProviderFilter">org.eniware.edge.settings.ca.CASettingsService</beans:prop>
 		<beans:prop key="restoreFromBackup.sqlStateRegex">XS(?!DB6).*</beans:prop>
 		<beans:prop key="shutdown.sqlStateRegex">XSDB6</beans:prop>
 		<beans:prop key="jdbc.driver">org.apache.derby.jdbc.EmbeddedDriver</beans:prop>
-		<beans:prop key="jdbc.url">jdbc:derby:solarnode;create=true;upgrade=true</beans:prop>
-		<beans:prop key="jdbc.user">solarnode</beans:prop>
-		<beans:prop key="jdbc.pass">solarnode</beans:prop>
+		<beans:prop key="jdbc.url">jdbc:derby:eniwareedge;create=true;upgrade=true</beans:prop>
+		<beans:prop key="jdbc.user">eniwareedge</beans:prop>
+		<beans:prop key="jdbc.pass">eniwareedge</beans:prop>
 		<beans:prop key="jdbc.pool.maxIdle">0</beans:prop>
 		<beans:prop key="jdbc.pool.maxActive">3</beans:prop>
 		<beans:prop key="jdbc.pool.maxWait">20000</beans:prop>
@@ -44,9 +44,9 @@
 		<beans:prop key="jdbc.pool.interceptors">ConnectionState;StatementCache(prepared=true,callable=true,max=50);ResetAbandonedTimer</beans:prop>
 		<beans:prop key="jdbc.pool.jmxEnabled">true</beans:prop>
 		<beans:prop key="JdbcDatumDao.maxFetchForUpload">240</beans:prop>
-		<beans:prop key="JdbcGeneralNodeDatumDao.initSqlResource">classpath:/net/solarnetwork/node/dao/jdbc/general/derby-generalnodedatum-init.sql</beans:prop>
+		<beans:prop key="JdbcGeneralNodeDatumDao.initSqlResource">classpath:/net/eniwarenetwork/node/dao/jdbc/general/derby-generalnodedatum-init.sql</beans:prop>
 		<beans:prop key="JdbcGeneralNodeDatumDao.sqlResourcePrefix">derby-generalnodedatum</beans:prop>
-		<beans:prop key="JdbcGeneralLocationDatumDao.initSqlResource">classpath:/net/solarnetwork/node/dao/jdbc/general/derby-generallocdatum-init.sql</beans:prop>
+		<beans:prop key="JdbcGeneralLocationDatumDao.initSqlResource">classpath:/net/eniwarenetwork/node/dao/jdbc/general/derby-generallocdatum-init.sql</beans:prop>
 		<beans:prop key="JdbcGeneralLocationDatumDao.sqlResourcePrefix">derby-generallocdatum</beans:prop>
 		<beans:prop key="job.generalNodeDatumCleaner.cron">35 0 0/2 ? * *</beans:prop>
 		<beans:prop key="job.generalNodeDatumCleaner.uploadedTrimHours">4</beans:prop>
@@ -67,25 +67,25 @@
 	<reference id="dataSourceFactory" interface="org.osgi.service.jdbc.DataSourceFactory"
 		filter="(osgi.jdbc.driver.class=${jdbc.driver})" />
 
-	<bean id="eventAdmin" class="net.solarnetwork.util.DynamicServiceTracker">
+	<bean id="eventAdmin" class="org.eniware.util.DynamicServiceTracker">
 		<property name="bundleContext" ref="bundleContext" />
 		<property name="serviceClassName" value="org.osgi.service.event.EventAdmin" />
 	</bean>
 	
-	<bean id="databaseSystemService" class="net.solarnetwork.util.DynamicServiceTracker">
+	<bean id="databaseSystemService" class="org.eniware.util.DynamicServiceTracker">
 		<property name="bundleContext" ref="bundleContext" />
-		<property name="serviceClassName" value="net.solarnetwork.node.dao.jdbc.DatabaseSystemService" />
+		<property name="serviceClassName" value="org.eniware.edge.dao.jdbc.DatabaseSystemService" />
 		<property name="serviceFilter" value="(db=node)"/>
 	</bean>
 
-	<bean id="identityService" class="net.solarnetwork.util.DynamicServiceTracker">
+	<bean id="identityService" class="org.eniware.util.DynamicServiceTracker">
 		<property name="bundleContext" ref="bundleContext" />
-		<property name="serviceClassName" value="net.solarnetwork.node.IdentityService" />
+		<property name="serviceClassName" value="org.eniware.edge.IdentityService" />
 	</bean>
 
 	<!-- Published Services -->
 
-	<service ref="settingDao" interface="net.solarnetwork.node.dao.SettingDao"
+	<service ref="settingDao" interface="org.eniware.edge.dao.SettingDao"
 		depends-on="databaseSetup" />
 
 	<service ref="dataSource" interface="javax.sql.DataSource"
@@ -111,40 +111,40 @@
 
 	<service ref="generalNodeDatumDao" ranking="1" depends-on="databaseSetup">
 		<interfaces>
-			<value>net.solarnetwork.node.dao.DatumDao</value>
-			<value>net.solarnetwork.node.dao.jdbc.JdbcDao</value>
+			<value>org.eniware.edge.dao.DatumDao</value>
+			<value>org.eniware.edge.dao.jdbc.JdbcDao</value>
 		</interfaces>
 		<service-properties>
 			<beans:entry key="datumClassName"
-				value="net.solarnetwork.node.domain.GeneralNodeDatum" />
+				value="org.eniware.edge.domain.GeneralNodeDatum" />
 		</service-properties>
 	</service>
 
-	<service ref="generalNodeDatumCleaner" interface="net.solarnetwork.node.job.TriggerAndJobDetail" />
+	<service ref="generalNodeDatumCleaner" interface="org.eniware.edge.job.TriggerAndJobDetail" />
 
-	<service ref="generalNodeDatumTrimmer" interface="net.solarnetwork.node.job.TriggerAndJobDetail" />
+	<service ref="generalNodeDatumTrimmer" interface="org.eniware.edge.job.TriggerAndJobDetail" />
 
 	<service ref="generalLocationDatumDao" ranking="1" depends-on="databaseSetup">
 		<interfaces>
-			<value>net.solarnetwork.node.dao.DatumDao</value>
-			<value>net.solarnetwork.node.dao.jdbc.JdbcDao</value>
+			<value>org.eniware.edge.dao.DatumDao</value>
+			<value>org.eniware.edge.dao.jdbc.JdbcDao</value>
 		</interfaces>
 		<service-properties>
 			<beans:entry key="datumClassName"
-				value="net.solarnetwork.node.domain.GeneralLocationDatum" />
+				value="org.eniware.edge.domain.GeneralLocationDatum" />
 		</service-properties>
 	</service>
 
-	<service ref="generalLocationDatumCleaner" interface="net.solarnetwork.node.job.TriggerAndJobDetail" />
+	<service ref="generalLocationDatumCleaner" interface="org.eniware.edge.job.TriggerAndJobDetail" />
 
-	<service ref="generalLocationDatumTrimmer" interface="net.solarnetwork.node.job.TriggerAndJobDetail" />
+	<service ref="generalLocationDatumTrimmer" interface="org.eniware.edge.job.TriggerAndJobDetail" />
 
 	<!-- Supporting Services -->
 
 	<ctx:property-placeholder properties-ref="dao.jdbc.cfg" />
 
 	<bean id="dataSource"
-		class="net.solarnetwork.dao.jdbc.TomcatJdbcPoolDataSourceFactoryBean">
+		class="org.eniware.dao.jdbc.TomcatJdbcPoolDataSourceFactoryBean">
 		<property name="poolProperties">
 			<bean class="org.apache.tomcat.jdbc.pool.PoolProperties">
 				<property name="jmxEnabled" value="${jdbc.pool.jmxEnabled}" />
@@ -180,7 +180,7 @@
 		<property name="bundleContext" ref="bundleContext" />
 		<property name="sqlExceptionHandlerSupport" value="true" />
 		<property name="registerJmx" value="${jdbc.pool.jmxEnabled}"/>
-		<property name="jmxName" value="SolarNode"/>
+		<property name="jmxName" value="EniwareEdge"/>
 	</bean>
 
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
@@ -193,9 +193,9 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<service id="restoreFromBackupHandler" interface="net.solarnetwork.dao.jdbc.SQLExceptionHandler">
+	<service id="restoreFromBackupHandler" interface="org.eniware.dao.jdbc.SQLExceptionHandler">
 		<bean
-			class="net.solarnetwork.node.dao.jdbc.RestoreFromBackupSQLExceptionHandler">
+			class="org.eniware.edge.dao.jdbc.RestoreFromBackupSQLExceptionHandler">
 			<argument ref="bundleContext" />
 			<argument value="${restoreFromBackup.exceptionThreshold}" />
 			<property name="restoreDelaySeconds" value="${restoreFromBackup.secondsDelay}" />
@@ -205,19 +205,19 @@
 		</bean>
 	</service>
 
-	<service id="shutdownHandler" interface="net.solarnetwork.dao.jdbc.SQLExceptionHandler">
-		<bean class="net.solarnetwork.node.dao.jdbc.ShutdownSQLExceptionHandler">
+	<service id="shutdownHandler" interface="org.eniware.dao.jdbc.SQLExceptionHandler">
+		<bean class="org.eniware.edge.dao.jdbc.ShutdownSQLExceptionHandler">
 			<property name="sqlStateRegex" value="${shutdown.sqlStateRegex}" />
 		</bean>
 	</service>
 
-	<bean id="databaseSetup" class="net.solarnetwork.node.dao.jdbc.DatabaseSetup"
+	<bean id="databaseSetup" class="org.eniware.edge.dao.jdbc.DatabaseSetup"
 		init-method="init" depends-on="restoreFromBackupHandler shutdownHandler">
 		<property name="dataSource" ref="dataSource" />
 		<property name="initSqlResource" value="${DatabaseSetup.initSqlResource}" />
 	</bean>
 
-	<bean id="settingDao" class="net.solarnetwork.node.dao.jdbc.JdbcSettingDao">
+	<bean id="settingDao" class="org.eniware.edge.dao.jdbc.JdbcSettingDao">
 		<property name="dataSource" ref="dataSource" />
 		<property name="eventAdmin" ref="eventAdmin" />
 		<property name="transactionTemplate">
@@ -227,7 +227,7 @@
 		</property>
 	</bean>
 
-	<bean id="objectMapper" class="net.solarnetwork.util.ObjectMapperFactoryBean">
+	<bean id="objectMapper" class="org.eniware.util.ObjectMapperFactoryBean">
 		<property name="featuresToEnable">
 			<list>
 				<value>#{T(com.fasterxml.jackson.databind.DeserializationFeature).USE_BIG_DECIMAL_FOR_FLOATS}
@@ -241,13 +241,13 @@
 
 	<bean id="jobMessageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basenames" value="net.solarnetwork.node.dao.jdbc.general.JOBS" />
+		<property name="basenames" value="org.eniware.edge.dao.jdbc.general.JOBS" />
 	</bean>
 	
 	<!-- General Node Datum -->
 
 	<bean id="generalNodeDatumDao"
-		class="net.solarnetwork.node.dao.jdbc.general.JdbcGeneralNodeDatumDao"
+		class="org.eniware.edge.dao.jdbc.general.JdbcGeneralNodeDatumDao"
 		init-method="init">
 		<property name="objectMapper" ref="objectMapper" />
 		<property name="dataSource" ref="dataSource" />
@@ -257,7 +257,7 @@
 		<property name="maxFetchForUpload" value="${JdbcDatumDao.maxFetchForUpload}" />
 	</bean>
 
-	<bean id="generalNodeDatumCleaner" class="net.solarnetwork.node.job.SimpleTriggerAndJobDetail">
+	<bean id="generalNodeDatumCleaner" class="org.eniware.edge.job.SimpleTriggerAndJobDetail">
 		<property name="trigger" ref="generalNodeDatumCleanerTrigger"/>
 		<property name="jobDetail" ref="generalNodeDatumCleanerJob"/>
 		<property name="messageSource" ref="jobMessageSource"/>
@@ -272,7 +272,7 @@
 
 	<bean id="generalNodeDatumCleanerJob"
 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
-		<property name="jobClass" value="net.solarnetwork.node.job.DatumDaoCleanerJob" />
+		<property name="jobClass" value="org.eniware.edge.job.DatumDaoCleanerJob" />
 		<property name="jobDataAsMap">
 			<map>
 				<entry key="datumDao" value-ref="generalNodeDatumDao" />
@@ -281,7 +281,7 @@
 		</property>
 	</bean>
 	
-	<bean id="generalNodeDatumTrimManager" class="net.solarnetwork.node.dao.jdbc.TimeBasedTableDiskSizeManager">
+	<bean id="generalNodeDatumTrimManager" class="org.eniware.edge.dao.jdbc.TimeBasedTableDiskSizeManager">
 		<property name="jdbcOperations" ref="jdbcTemplate"/>
 		<property name="dbSystemService" ref="databaseSystemService"/>
 		<property name="tableName" value="SN_GENERAL_NODE_DATUM"/>
@@ -290,7 +290,7 @@
 		<property name="minTableSizeThreshold" value="${job.generalNodeDatumTrimmer.tableSizeThreshold}"/>
 	</bean>
 
-	<bean id="generalNodeDatumTrimmer" class="net.solarnetwork.node.job.SimpleTriggerAndJobDetail">
+	<bean id="generalNodeDatumTrimmer" class="org.eniware.edge.job.SimpleTriggerAndJobDetail">
 		<property name="trigger" ref="generalNodeDatumTrimmerTrigger"/>
 		<property name="jobDetail" ref="generalNodeDatumTrimmerJob"/>
 		<property name="messageSource" ref="jobMessageSource"/>
@@ -313,7 +313,7 @@
 	<!-- General Location Datum -->
 
 	<bean id="generalLocationDatumDao"
-		class="net.solarnetwork.node.dao.jdbc.general.JdbcGeneralLocationDatumDao"
+		class="org.eniware.edge.dao.jdbc.general.JdbcGeneralLocationDatumDao"
 		init-method="init">
 		<property name="objectMapper" ref="objectMapper" />
 		<property name="dataSource" ref="dataSource" />
@@ -325,7 +325,7 @@
 		<property name="maxFetchForUpload" value="${JdbcDatumDao.maxFetchForUpload}" />
 	</bean>
 
-	<bean id="generalLocationDatumCleaner" class="net.solarnetwork.node.job.SimpleTriggerAndJobDetail">
+	<bean id="generalLocationDatumCleaner" class="org.eniware.edge.job.SimpleTriggerAndJobDetail">
 		<property name="trigger" ref="generalLocationDatumCleanerTrigger" />
 		<property name="jobDetail" ref="generalLocationDatumCleanerJob" />
 		<property name="messageSource" ref="jobMessageSource" />
@@ -340,7 +340,7 @@
 
 	<bean id="generalLocationDatumCleanerJob"
 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
-		<property name="jobClass" value="net.solarnetwork.node.job.DatumDaoCleanerJob" />
+		<property name="jobClass" value="org.eniware.edge.job.DatumDaoCleanerJob" />
 		<property name="jobDataAsMap">
 			<map>
 				<entry key="datumDao" value-ref="generalLocationDatumDao" />
@@ -349,7 +349,7 @@
 		</property>
 	</bean>
 	
-	<bean id="generalLocationDatumTrimManager" class="net.solarnetwork.node.dao.jdbc.TimeBasedTableDiskSizeManager">
+	<bean id="generalLocationDatumTrimManager" class="org.eniware.edge.dao.jdbc.TimeBasedTableDiskSizeManager">
 		<property name="jdbcOperations" ref="jdbcTemplate"/>
 		<property name="dbSystemService" ref="databaseSystemService"/>
 		<property name="tableName" value="SN_GENERAL_LOC_DATUM"/>
@@ -358,7 +358,7 @@
 		<property name="minTableSizeThreshold" value="${job.generalLocationDatumTrimmer.tableSizeThreshold}"/>
 	</bean>
 
-	<bean id="generalLocationDatumTrimmer" class="net.solarnetwork.node.job.SimpleTriggerAndJobDetail">
+	<bean id="generalLocationDatumTrimmer" class="org.eniware.edge.job.SimpleTriggerAndJobDetail">
 		<property name="trigger" ref="generalLocationDatumTrimmerTrigger" />
 		<property name="jobDetail" ref="generalLocationDatumTrimmerJob" />
 		<property name="messageSource" ref="jobMessageSource" />

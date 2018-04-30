@@ -49,7 +49,7 @@ public interface Plugin {
 
 	/**
 	 * Return "core feature" flag. Core features are those plugins that are
-	 * central to SolarNode functionality, and should not be removed by users.
+	 * central to EniwareEdge functionality, and should not be removed by users.
 	 * They can be upgraded, however.
 	 * 
 	 * @return core feature flag

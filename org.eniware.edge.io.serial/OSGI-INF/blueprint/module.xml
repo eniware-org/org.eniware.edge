@@ -12,15 +12,15 @@
 		http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 	
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basenames" value="net.solarnetwork.node.io.serial.rxtx.SerialPortNetwork"/>
+		<property name="basenames" value="org.eniware.edge.io.serial.rxtx.SerialPortNetwork"/>
 		<property name="parentMessageSource">
-			<bean class="net.solarnetwork.node.util.PrefixedMessageSource">
+			<bean class="org.eniware.edge.util.PrefixedMessageSource">
 				<property name="prefix" value="serialParams."/>
 				<property name="delegate">
 					<bean class="org.springframework.context.support.ResourceBundleMessageSource">
 						<property name="basenames">
 							<list>
-								<value>net.solarnetwork.node.support.SerialPortBeanParameters</value>
+								<value>org.eniware.edge.support.SerialPortBeanParameters</value>
 							</list>
 						</property>
 					</bean>
@@ -29,25 +29,25 @@
 		</property>
 	</bean>
 	
-	<bean id="settingsFactory" class="net.solarnetwork.node.settings.support.BasicSettingSpecifierProviderFactory">
+	<bean id="settingsFactory" class="org.eniware.edge.settings.support.BasicSettingSpecifierProviderFactory">
 		<property name="displayName" value="Serial port"/>
-		<property name="factoryUID" value="net.solarnetwork.node.io.serial"/>
+		<property name="factoryUID" value="org.eniware.edge.io.serial"/>
 		<property name="messageSource" ref="messageSource"/>
 	</bean>
 
 	<!-- Published Services -->
 	
-	<service ref="settingsFactory" interface="net.solarnetwork.node.settings.SettingSpecifierProviderFactory"/>
+	<service ref="settingsFactory" interface="org.eniware.edge.settings.SettingSpecifierProviderFactory"/>
 	
-	<osgix:managed-service-factory factory-pid="net.solarnetwork.node.io.serial" autowire-on-update="true">
+	<osgix:managed-service-factory factory-pid="org.eniware.edge.io.serial" autowire-on-update="true">
 		<osgix:interfaces>
-			<beans:value>net.solarnetwork.node.io.serial.SerialNetwork</beans:value>
-			<beans:value>net.solarnetwork.node.settings.SettingSpecifierProvider</beans:value>
+			<beans:value>org.eniware.edge.io.serial.SerialNetwork</beans:value>
+			<beans:value>org.eniware.edge.settings.SettingSpecifierProvider</beans:value>
 		</osgix:interfaces>
 		<osgix:service-properties>
-			<beans:entry key="settingPid" value="net.solarnetwork.node.io.serial"/>
+			<beans:entry key="settingPid" value="org.eniware.edge.io.serial"/>
 		</osgix:service-properties>
-		<bean class="net.solarnetwork.node.io.serial.rxtx.SerialPortNetwork" destroy-method="shutdown">
+		<bean class="org.eniware.edge.io.serial.rxtx.SerialPortNetwork" destroy-method="shutdown">
 			<property name="messageSource" ref="messageSource"/>
 		</bean>
 	</osgix:managed-service-factory>

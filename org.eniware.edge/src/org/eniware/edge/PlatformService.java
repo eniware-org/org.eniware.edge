@@ -11,7 +11,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
 
 /**
- * API for SolarNode platform-wide support.
+ * API for EniwareEdge platform-wide support.
  * 
  * @version 1.0
  * @since 1.56
@@ -30,7 +30,7 @@ public interface PlatformService {
 	 * the name of the <em>core</em> class name of the datum type.
 	 * </p>
 	 */
-	String EVENT_TOPIC_PLATFORM_STATE_CHANGED = "net/solarnetwork/node/PlatformService/STATE_CHANGED";
+	String EVENT_TOPIC_PLATFORM_STATE_CHANGED = "net/eniwarenetwork/node/PlatformService/STATE_CHANGED";
 
 	/**
 	 * A {@link org.osgi.service.event.Event} property name for a
@@ -48,7 +48,7 @@ public interface PlatformService {
 	 * A message topic for task info updates.
 	 * 
 	 * <p>
-	 * The message body will contain a {@link new.solarnetwork.domain.Result}
+	 * The message body will contain a {@link new.eniwarenetwork.domain.Result}
 	 * with {@link PlatformTaskInfo} content.
 	 * </p>
 	 */

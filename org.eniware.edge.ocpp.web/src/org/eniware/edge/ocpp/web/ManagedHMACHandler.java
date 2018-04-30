@@ -26,7 +26,7 @@ public class ManagedHMACHandler extends HMACHandler implements SettingSpecifierP
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.ocpp.web";
+		return "org.eniware.edge.ocpp.web";
 	}
 
 	@Override

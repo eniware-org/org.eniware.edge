@@ -13,7 +13,7 @@ import java.util.Set;
  * Utility methods for dealing with classes at runtime.
  * 
  * @version 1.3
- * @deprecated see {@link net.solarnetwork.util.ClassUtils}
+ * @deprecated see {@link org.eniware.util.ClassUtils}
  */
 @Deprecated
 public final class ClassUtils {
@@ -34,7 +34,7 @@ public final class ClassUtils {
 	 *        the desired interface
 	 * @return new instance of the desired type
 	 * @deprecated see
-	 *             {@link net.solarnetwork.util.ClassUtils#instantiateClass(String, Class)}
+	 *             {@link org.eniware.util.ClassUtils#instantiateClass(String, Class)}
 	 */
 	@Deprecated
 	public static <T> T instantiateClass(String className, Class<T> type) {
@@ -57,7 +57,7 @@ public final class ClassUtils {
 	 *        the desired interface
 	 * @return the class
 	 * @deprecated see
-	 *             {@link net.solarnetwork.util.ClassUtils#loadClass(String, Class)}
+	 *             {@link org.eniware.util.ClassUtils#loadClass(String, Class)}
 	 */
 	@Deprecated
 	public static <T> Class<? extends T> loadClass(String className, Class<T> type) {
@@ -73,7 +73,7 @@ public final class ClassUtils {
 	 *        a Map of JavaBean property names and their corresponding values to
 	 *        set
 	 * @deprecated see
-	 *             {@link net.solarnetwork.util.ClassUtils#setBeanProperties(Object, Map)}
+	 *             {@link org.eniware.util.ClassUtils#setBeanProperties(Object, Map)}
 	 */
 	@Deprecated
 	public static void setBeanProperties(Object o, Map<String, ?> values) {
@@ -92,7 +92,7 @@ public final class ClassUtils {
 	 *        Flag to ignore unknown and invalid properties.
 	 * @since 1.2
 	 * @deprecated see
-	 *             {@link net.solarnetwork.util.ClassUtils#setBeanProperties(Object, Map, boolean)}
+	 *             {@link org.eniware.util.ClassUtils#setBeanProperties(Object, Map, boolean)}
 	 */
 	@Deprecated
 	public static void setBeanProperties(Object o, Map<String, ?> values, boolean ignoreErrors) {
@@ -108,7 +108,7 @@ public final class ClassUtils {
 	 *        a set of property names to ignore (optional)
 	 * @return Map (never null)
 	 * @deprecated see
-	 *             {@link net.solarnetwork.util.ClassUtils#getBeanProperties(Object, Set)}
+	 *             {@link org.eniware.util.ClassUtils#getBeanProperties(Object, Set)}
 	 */
 	@Deprecated
 	public static Map<String, Object> getBeanProperties(Object o, Set<String> ignore) {
@@ -125,7 +125,7 @@ public final class ClassUtils {
 	 * @return Map (never <em>null</em>)
 	 * @since 1.1
 	 * @deprecated see
-	 *             {@link net.solarnetwork.util.ClassUtils#getSimpleBeanProperties(Object, Set)}
+	 *             {@link org.eniware.util.ClassUtils#getSimpleBeanProperties(Object, Set)}
 	 */
 	@Deprecated
 	public static Map<String, Object> getSimpleBeanProperties(Object o, Set<String> ignore) {
@@ -141,7 +141,7 @@ public final class ClassUtils {
 	 *        the Class to load the resource from
 	 * @return the String
 	 * @deprecated see
-	 *             {@link net.solarnetwork.util.ClassUtils#getResourceAsString}
+	 *             {@link org.eniware.util.ClassUtils#getResourceAsString}
 	 */
 	@Deprecated
 	public static String getResourceAsString(String resourceName, Class<?> clazz) {

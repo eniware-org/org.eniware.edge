@@ -28,7 +28,7 @@ public interface DatumDataSource<T extends Datum> extends Identifiable {
 	 * 
 	 * @since 1.2
 	 */
-	public static final String EVENT_TOPIC_DATUM_CAPTURED = "net/solarnetwork/node/DatumDataSource/DATUM_CAPTURED";
+	public static final String EVENT_TOPIC_DATUM_CAPTURED = "net/eniwarenetwork/node/DatumDataSource/DATUM_CAPTURED";
 
 	/**
 	 * An {@link org.osgi.service.event.Event} property for the string name of

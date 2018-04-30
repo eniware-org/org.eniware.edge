@@ -17,20 +17,20 @@
 	<!-- DataCollectorFactory service -->
 
 	<reference-list id="dataCollectorFactoryConfigurationList"
-		interface="net.solarnetwork.node.util.BeanConfiguration" availability="optional"
-		filter="(&amp;(beanConfigurationTarget=org.springframework.beans.factory.ObjectFactory)(factoryObjectClassName=net.solarnetwork.node.DataCollector)(io=url))">
+		interface="org.eniware.edge.util.BeanConfiguration" availability="optional"
+		filter="(&amp;(beanConfigurationTarget=org.springframework.beans.factory.ObjectFactory)(factoryObjectClassName=org.eniware.edge.DataCollector)(io=url))">
 		<reference-listener bind-method="onBind" unbind-method="onUnbind" ref="dataCollectorFactory"/>
 	</reference-list>
 	
 	<bean id="dataCollectorFactory" 
-		class="net.solarnetwork.node.util.BeanConfigurationServiceRegistrationListener">
+		class="org.eniware.edge.util.BeanConfigurationServiceRegistrationListener">
 		<property name="serviceClass"
-			value="net.solarnetwork.node.io.url.UrlDataCollectorFactory"/>
+			value="org.eniware.edge.io.url.UrlDataCollectorFactory"/>
 		<property name="serviceInterfaces"
 			value="org.springframework.beans.factory.ObjectFactory"/>
 		<property name="serviceProperties">
 			<map>
-				<entry key="factoryObjectClassName" value="net.solarnetwork.node.DataCollector"/>
+				<entry key="factoryObjectClassName" value="org.eniware.edge.DataCollector"/>
 			</map>
 		</property>
 		<property name="bundleContext" ref="bundleContext"/>

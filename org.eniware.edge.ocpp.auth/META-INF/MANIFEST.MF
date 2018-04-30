@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: SolarNode OCPP Authorization Support
+Bundle-Name: EniwareEdge OCPP Authorization Support
 Bundle-SymbolicName: org.eniware.edge.ocpp.auth
 Bundle-Version: 0.3.0
-Bundle-Vendor: SolarNetwork
+Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: 
  org.eniware.edge.ocpp;version="0.1.0",

@@ -215,7 +215,7 @@ public class HttpRequesterJob extends AbstractJob implements SettingSpecifierPro
 			if ( sslService != null && connection instanceof HttpsURLConnection ) {
 				SSLService service = sslService.service();
 				if ( service != null ) {
-					SSLSocketFactory factory = service.getSolarInSocketFactory();
+					SSLSocketFactory factory = service.getEniwareInSocketFactory();
 					if ( factory != null ) {
 						HttpsURLConnection sslConnection = (HttpsURLConnection) connection;
 						sslConnection.setSSLSocketFactory(factory);
@@ -254,7 +254,7 @@ public class HttpRequesterJob extends AbstractJob implements SettingSpecifierPro
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.control.ping.http";
+		return "org.eniware.edge.control.ping.http";
 	}
 
 	@Override

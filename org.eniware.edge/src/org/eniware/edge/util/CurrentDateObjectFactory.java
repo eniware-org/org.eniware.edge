@@ -18,7 +18,7 @@ import org.springframework.beans.factory.ObjectFactory;
 public class CurrentDateObjectFactory implements ObjectFactory<Date> {
 
 	/* (non-Javadoc)
-	 * @see net.solarnetwork.node.util.GenericObjectFactory#getObject()
+	 * @see org.eniware.edge.util.GenericObjectFactory#getObject()
 	 */
 	public Date getObject() {
 		return new Date();

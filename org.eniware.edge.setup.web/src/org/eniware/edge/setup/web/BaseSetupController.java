@@ -46,11 +46,11 @@ public class BaseSetupController {
 	private BundleContext bundleContext;
 
 	/**
-	 * Shutdown SolarNode in the near future.
+	 * Shutdown EniwareEdge in the near future.
 	 * 
 	 * This can be used during the setup process, when restoring backups for
 	 * example. By shutting down we assume some external watchdog process will
-	 * bring SolarNode back up, such as {@code systemd} or Monit.
+	 * bring EniwareEdge back up, such as {@code systemd} or Monit.
 	 * 
 	 * @since 1.1
 	 */

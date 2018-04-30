@@ -1,4 +1,4 @@
-var SolarNode = {
+var EniwareEdge = {
 	
 	/**
 	 * Namespace for classes. 
@@ -103,15 +103,15 @@ var SolarNode = {
 	 },
 	 
 	 info : function(message, container) {
-		 SolarNode.alert(null, message, 'alert-info', container);
+		 EniwareEdge.alert(null, message, 'alert-info', container);
 	 },
 	 
 	 warn : function(title, message, container) {
-		 SolarNode.alert(title, message, null, container);
+		 EniwareEdge.alert(title, message, null, container);
 	 },
 	 
 	 error : function(message, container) {
-		 SolarNode.alert(null, message, 'alert-error', container);
+		 EniwareEdge.alert(null, message, 'alert-error', container);
 	 },
 	 
 	 csrfData : (function() {
@@ -132,21 +132,21 @@ var SolarNode = {
  * @param {XMLHttpRequest} [xhr] The XHR object to set the CSR request header on.
  * @return The CSRF value.
  */
-SolarNode.csrf = function(xhr) {
+EniwareEdge.csrf = function(xhr) {
 	 if ( xhr && typeof xhr.setRequestHeader === 'function' ) {
-		 xhr.setRequestHeader(SolarNode.csrfData.headerName, SolarNode.csrfData.token);
+		 xhr.setRequestHeader(EniwareEdge.csrfData.headerName, EniwareEdge.csrfData.token);
 	 }
-	 return SolarNode.csrfData.token;
+	 return EniwareEdge.csrfData.token;
 };
 
 
-SolarNode.touchEventNames = (function() {
-	return SolarNode.hasTouchSupport ? {
+EniwareEdge.touchEventNames = (function() {
+	return EniwareEdge.hasTouchSupport ? {
 			start: "touchstart",
 			move: "touchmove",
 			end: "touchend",
 			cancel: "touchcancel"
-		} : SolarNode.touchEventNames;
+		} : EniwareEdge.touchEventNames;
 }());
 
 
@@ -154,7 +154,7 @@ SolarNode.touchEventNames = (function() {
  * A UI slider.
  * @class
  */
-SolarNode.Class.Slider = function(el, config) {
+EniwareEdge.Class.Slider = function(el, config) {
 	var min = (isNaN(config.min) ? 0 : config.min);
 	var max = (isNaN(config.max) ? 100 : config.max);
 	var step = (isNaN(config.step) ? 1 : config.step);
@@ -230,23 +230,23 @@ SolarNode.Class.Slider = function(el, config) {
 	};
 	
 	// bind events
-	ui.bind(SolarNode.touchEventNames.start, function() {
+	ui.bind(EniwareEdge.touchEventNames.start, function() {
 		setTracking(true);
-	}).bind(SolarNode.touchEventNames.cancel, function() {
+	}).bind(EniwareEdge.touchEventNames.cancel, function() {
 		setTracking(false);
-	}).bind(SolarNode.touchEventNames.end, function() {
+	}).bind(EniwareEdge.touchEventNames.end, function() {
 		setTracking(false);
-	}).bind(SolarNode.touchEventNames.move, handleEventMove);
+	}).bind(EniwareEdge.touchEventNames.move, handleEventMove);
 	
 	// initial layout
 	layoutSubviews();
 };
 
-SolarNode.Class.Slider.prototype = {
+EniwareEdge.Class.Slider.prototype = {
 	
 };
 
-SolarNode.context = (function() {
+EniwareEdge.context = (function() {
 	var basePath = undefined;
 	
 	var contextPath = function() {
@@ -276,19 +276,19 @@ SolarNode.context = (function() {
 	return helper;
 })();
 
-SolarNode.isAuthenticated = function() {
+EniwareEdge.isAuthenticated = function() {
 	return !!$('meta[name=authenticated]').attr('content');
 }
 
-SolarNode.showLoading = function(button) {
-	SolarNode.showSpinner(button, true);
+EniwareEdge.showLoading = function(button) {
+	EniwareEdge.showSpinner(button, true);
 };
 
-SolarNode.hideLoading = function(button) {
-	SolarNode.hideSpinner(button, true);
+EniwareEdge.hideLoading = function(button) {
+	EniwareEdge.hideSpinner(button, true);
 };
 
-SolarNode.showSpinner = function(button, showLoading) {
+EniwareEdge.showSpinner = function(button, showLoading) {
 	var ladda = button.data('ladda');
 	if ( ladda === undefined ) {
 		if ( showLoading ) {
@@ -300,7 +300,7 @@ SolarNode.showSpinner = function(button, showLoading) {
 	}
 };
 
-SolarNode.hideSpinner = function(button, hideLoading) {
+EniwareEdge.hideSpinner = function(button, hideLoading) {
 	var ladda = button.data('ladda');
 	if ( ladda !== undefined ) {
 		if ( hideLoading ) {
@@ -319,7 +319,7 @@ SolarNode.hideSpinner = function(button, hideLoading) {
  * @param {String} path - The key path to extract.
  * @returns {Object} The value associated with the given {@code path}, or <em>undefined</em> if not available. 
  */
-SolarNode.extractJSONPath = function(root, path) {
+EniwareEdge.extractJSONPath = function(root, path) {
 	var child;
 	if ( path === undefined ) {
 		return undefined;
@@ -337,10 +337,10 @@ SolarNode.extractJSONPath = function(root, path) {
 	if ( path.length === 1 ) {
 		return child;
 	}
-	return SolarNode.extractJSONPath(child, path.slice(1));
+	return EniwareEdge.extractJSONPath(child, path.slice(1));
 };
 
-SolarNode.tryGotoURL = function(destURL) {
+EniwareEdge.tryGotoURL = function(destURL) {
 	function tryLoadUrl(url) {
 		function retry(error) {
 			setTimeout(function() {
@@ -361,7 +361,7 @@ SolarNode.tryGotoURL = function(destURL) {
 			}, retry);
 		}, retry);
 	}
-	tryLoadUrl(SolarNode.context.path('/csrf'));
+	tryLoadUrl(EniwareEdge.context.path('/csrf'));
 };
 
 $(document).ready(function() {
@@ -388,15 +388,15 @@ $(document).ready(function() {
 				modal.find('.start').hide();
 				modal.find('.success').show();
 				setTimeout(function() {
-					SolarNode.tryGotoURL(SolarNode.context.path('/a/home'));
+					EniwareEdge.tryGotoURL(EniwareEdge.context.path('/a/home'));
 				}, 10000);
 			} else {
-				SolarNode.error(json.message, $('#restart-modal .modal-body.start'));
+				EniwareEdge.error(json.message, $('#restart-modal .modal-body.start'));
 			}
 		},
 		error: function(xhr, status, statusText) {
 			var json = $.parseJSON(xhr.responseText);
-			SolarNode.error(json.message, $('#restart-modal .modal-body.start'));
+			EniwareEdge.error(json.message, $('#restart-modal .modal-body.start'));
 		}
 	}).find('button.reboot').on('click', function(event) {
 		var btn = event.target,

@@ -201,7 +201,7 @@ public class JamodModbusSerialConnectionFactory
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.io.modbus";
+		return "org.eniware.edge.io.modbus";
 	}
 
 	@Override

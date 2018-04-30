@@ -2,9 +2,9 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Core Setup Support
 Bundle-SymbolicName: org.eniware.edge.setup
-Bundle-Description: Provides core SolarNode setup infrastructure support.
+Bundle-Description: Provides core EniwareEdge setup infrastructure support.
 Bundle-Version: 1.18.1
-Bundle-Vendor: SolarNetwork
+Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: 
  com.fasterxml.jackson.annotation;version="[2.4,3.0)",

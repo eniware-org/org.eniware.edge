@@ -75,7 +75,7 @@ public class JdbcSettingDao extends AbstractBatchableJdbcDao<Setting> implements
 
 	private static final String DEFAULT_SQL_GET_MOST_RECENT_DATE = "SELECT modified FROM " + SCHEMA_NAME
 			+ '.' + TABLE_SETTINGS
-			+ " WHERE SOLARNODE.BITWISE_AND(flags, ?) <> ? ORDER BY modified DESC";
+			+ " WHERE ENIWARENODE.BITWISE_AND(flags, ?) <> ? ORDER BY modified DESC";
 
 	private final String sqlGet = DEFAULT_SQL_GET;
 	private final String sqlFind = DEFAULT_SQL_FIND;

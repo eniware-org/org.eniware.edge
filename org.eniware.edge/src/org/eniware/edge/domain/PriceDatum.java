@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 public interface PriceDatum extends Datum {
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link PriceDatum#getPrice()} values.
 	 */
 	static final String PRICE_KEY = "price";

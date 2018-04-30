@@ -93,7 +93,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 		this.setupIdentityDao = setupIdentityDao;
 		this.certificateService = certificateService;
 		setKeyStorePath(DefaultKeystoreService.DEFAULT_KEY_STORE_PATH);
-		setTrustStorePassword("solarnode");
+		setTrustStorePassword("eniwareedge");
 		setKeyStorePassword(null);
 	}
 
@@ -144,7 +144,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	@Override
 	public BackupResourceProviderInfo providerInfo(Locale locale) {
 		String name = "Certificate Backup Provider";
-		String desc = "Backs up the SolarNode certificates.";
+		String desc = "Backs up the EniwareEdge certificates.";
 		MessageSource ms = messageSource;
 		if ( ms != null ) {
 			name = ms.getMessage("title", null, name, locale);
@@ -563,7 +563,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	@Override
-	public synchronized SSLSocketFactory getSolarInSocketFactory() {
+	public synchronized SSLSocketFactory getEniwareInSocketFactory() {
 		return getSSLSocketFactory();
 	}
 

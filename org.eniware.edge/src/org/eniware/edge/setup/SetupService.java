@@ -21,15 +21,15 @@ import org.eniware.domain.NetworkIdentity;
 public interface SetupService {
 
 	/** Topic for when a network association has been accepted. */
-	public static final String TOPIC_NETWORK_ASSOCIATION_ACCEPTED = "net/solarnetwork/node/setup/NETWORK_ASSOCIATION_ACCEPTED";
+	public static final String TOPIC_NETWORK_ASSOCIATION_ACCEPTED = "net/eniwarenetwork/node/setup/NETWORK_ASSOCIATION_ACCEPTED";
 
 	/**
-	 * Decode a SolarNet verification code to determine the service that the
+	 * Decode a EniwareNet verification code to determine the service that the
 	 * node should register itself with.
 	 * 
 	 * @param verificationCode
-	 *        The verification code supplied by SolarNet to decode.
-	 * @return details for the given SolarNet host
+	 *        The verification code supplied by EniwareNet to decode.
+	 * @return details for the given EniwareNet host
 	 * @throws InvalidVerificationCodeException
 	 *         thrown if an error is encountered decoding the verification code.
 	 */
@@ -49,7 +49,7 @@ public interface SetupService {
 	NetworkAssociation retrieveNetworkAssociation(NetworkAssociationDetails details);
 
 	/**
-	 * Associate this node with a SolarNet central service, using details
+	 * Associate this node with a EniwareNet central service, using details
 	 * previously obtained via {@link #decodeVerificationCode(String)}.
 	 * 
 	 * @param details
@@ -67,7 +67,7 @@ public interface SetupService {
 	 * future.
 	 * 
 	 * @param password
-	 *        A password to encrypt the keystore with when passing to SolarNet.
+	 *        A password to encrypt the keystore with when passing to EniwareNet.
 	 * @throws SetupException
 	 *         if an error is encountered renewing the certificate
 	 * @since 1.2
@@ -79,7 +79,7 @@ public interface SetupService {
 	 * 
 	 * <p>
 	 * The application configuration includes network service URLs returned by
-	 * the SolarUser and SolarQuery applications.
+	 * the EniwareUser and EniwareQuery applications.
 	 * </p>
 	 * 
 	 * @return the app configuration, never {@code null}

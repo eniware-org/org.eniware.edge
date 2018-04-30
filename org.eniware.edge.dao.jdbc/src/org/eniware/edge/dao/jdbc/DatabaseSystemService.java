@@ -12,7 +12,7 @@ import java.io.File;
  * An API to expose system administration functions to the database.
  * 
  * The implementation of these methods are most often database vendor specific,
- * so this API provides a way for the SolarNode to access the information in a
+ * so this API provides a way for the EniwareEdge to access the information in a
  * generic way.
  * 
  * @version 1.0

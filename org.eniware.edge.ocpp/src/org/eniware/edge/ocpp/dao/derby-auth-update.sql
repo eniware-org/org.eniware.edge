@@ -1,3 +1,3 @@
-UPDATE solarnode.ocpp_auth
+UPDATE eniwareedge.ocpp_auth
 SET parent_idtag = ?, auth_status = ?, expires = ?
 WHERE idtag = ?

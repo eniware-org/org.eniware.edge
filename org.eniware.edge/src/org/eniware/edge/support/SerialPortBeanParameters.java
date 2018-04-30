@@ -41,7 +41,7 @@ public class SerialPortBeanParameters extends SerialPortBean {
 	private static final SerialPortBeanParameters DEFAULTS = new SerialPortBeanParameters();
 	
 	private String serialPort = "/dev/ttyUSB0";
-	private String commPortAppName = "SolarNode";
+	private String commPortAppName = "EniwareEdge";
 	private long maxWait = 0;
 
 	/**

@@ -4,7 +4,7 @@ Bundle-Name: Modbus Communication Support
 Bundle-SymbolicName: org.eniware.edge.io.modbus
 Bundle-Description: Communication support for the Modbus network protocol.
 Bundle-Version: 2.2.0
-Bundle-Vendor: SolarNetwork
+Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.eniware.edge.io.modbus;version="2.1.0"
 Import-Package: 

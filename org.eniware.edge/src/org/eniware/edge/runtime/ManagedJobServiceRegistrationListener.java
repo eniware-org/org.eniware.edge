@@ -57,9 +57,9 @@ import org.slf4j.LoggerFactory;
  * </p>
  * 
  * <pre>
- * &lt;reference-list id="managedJobs" interface="net.solarnetwork.node.job.ManagedTriggerAndJobDetail">
+ * &lt;reference-list id="managedJobs" interface="org.eniware.edge.job.ManagedTriggerAndJobDetail">
  * 		&lt;reference-listener bind-method="onBind" unbind-method="onUnbind">
- * 			&lt;bean class="net.solarnetwork.node.runtime.ManagedJobServiceRegistrationListener">
+ * 			&lt;bean class="org.eniware.edge.runtime.ManagedJobServiceRegistrationListener">
  * 				&lt;property name="scheduler" ref="scheduler"/>
  *              &lt;property name="bundleContext" ref="bundleContext"/>
  * 			&lt;/bean>

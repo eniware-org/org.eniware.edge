@@ -7,7 +7,7 @@
 package org.eniware.edge;
 
 /**
- * SolarNode constants.
+ * EniwareEdge constants.
  * 
  * @version 1.1
  */
@@ -23,7 +23,7 @@ public final class Constants {
 	 * 
 	 * @since 1.1
 	 */
-	public static final String EVENT_TOPIC_CONFIGURATION_CHANGED = "net/solarnetwork/node/CONFIGURATION_CHANGED";
+	public static final String EVENT_TOPIC_CONFIGURATION_CHANGED = "net/eniwarenetwork/node/CONFIGURATION_CHANGED";
 
 	private Constants() {
 		// don't construct me

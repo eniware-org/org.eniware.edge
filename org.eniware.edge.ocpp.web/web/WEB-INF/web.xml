@@ -4,11 +4,11 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
 	id="OCPP_ChargePoint"
 	version="3.0">
-	<display-name>SolarNode OCPP ChargePoint Service</display-name>
+	<display-name>EniwareEdge OCPP ChargePoint Service</display-name>
 	
 	<context-param>
 		<param-name>contextClass</param-name>
-		<param-value>net.solarnetwork.web.gemini.NonValidatingServerOsgiBundleXmlWebApplicationContext</param-value>
+		<param-value>org.eniware.web.gemini.NonValidatingServerOsgiBundleXmlWebApplicationContext</param-value>
 	</context-param>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>

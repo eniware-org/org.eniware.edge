@@ -181,7 +181,7 @@ public abstract class HttpClientSupport {
 		if ( sslService != null && conn instanceof HttpsURLConnection ) {
 			SSLService service = sslService.service();
 			if ( service != null ) {
-				SSLSocketFactory factory = service.getSolarInSocketFactory();
+				SSLSocketFactory factory = service.getEniwareInSocketFactory();
 				if ( factory != null ) {
 					HttpsURLConnection hConn = (HttpsURLConnection) conn;
 					hConn.setSSLSocketFactory(factory);

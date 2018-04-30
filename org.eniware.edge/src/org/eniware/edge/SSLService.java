@@ -16,11 +16,11 @@ import javax.net.ssl.SSLSocketFactory;
 public interface SSLService {
 
 	/**
-	 * Get a SSLSocketFactory configured appropriately for the SolarIn
+	 * Get a SSLSocketFactory configured appropriately for the EniwareIn
 	 * application.
 	 * 
 	 * @return
 	 */
-	SSLSocketFactory getSolarInSocketFactory();
+	SSLSocketFactory getEniwareInSocketFactory();
 
 }

@@ -166,7 +166,7 @@ public class RxtxDataCollectorFactory implements DataCollectorFactory<SerialPort
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.io.rxtx";
+		return "org.eniware.edge.io.rxtx";
 	}
 
 	@Override

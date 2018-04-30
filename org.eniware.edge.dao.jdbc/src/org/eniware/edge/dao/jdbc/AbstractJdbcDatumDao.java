@@ -60,9 +60,9 @@ public abstract class AbstractJdbcDatumDao<T extends Datum> extends AbstractJdbc
 	 * </p>
 	 * 
 	 * <pre>
-	 * DELETE FROM solarnode.sn_some_datum p WHERE p.id IN 
-	 * (SELECT pd.id FROM solarnode.sn_some_datum pd 
-	 * INNER JOIN solarnode.sn_some_datum_upload u 
+	 * DELETE FROM eniwareedge.sn_some_datum p WHERE p.id IN 
+	 * (SELECT pd.id FROM eniwareedge.sn_some_datum pd 
+	 * INNER JOIN eniwareedge.sn_some_datum_upload u 
 	 * ON u.power_datum_id = pd.id WHERE pd.created < ?)
 	 * </pre>
 	 * 

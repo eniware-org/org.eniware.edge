@@ -11,7 +11,7 @@ package org.eniware.edge.domain;
  * mean this datum represents information tracked during the production or
  * consumption of energy. For example current sensors can provide approximate
  * instantaneous watt readings, watt-hour meters can provide accumulated Wh
- * readings, and usually solar inverters can provide instantaneous generated
+ * readings, and usually eniware inverters can provide instantaneous generated
  * power and accumulated energy production readings.
  * 
  * @version 1.1
@@ -19,13 +19,13 @@ package org.eniware.edge.domain;
 public interface EnergyDatum extends Datum {
 
 	/**
-	 * The {@link net.solarnetwork.domain.GeneralNodeDatumSamples} accumulating
+	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} accumulating
 	 * sample key for {@link #getWattHourReading()} values.
 	 */
 	public static final String WATT_HOUR_READING_KEY = "wattHours";
 
 	/**
-	 * The {@link net.solarnetwork.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
 	 * sample key for {@link #getWatts()} values.
 	 */
 	public static final String WATTS_KEY = "watts";

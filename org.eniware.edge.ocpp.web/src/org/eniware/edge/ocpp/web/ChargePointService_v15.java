@@ -72,7 +72,7 @@ import ocpp.v15.cp.UpdateFirmwareResponse;
 import ocpp.v15.support.ConfigurationKeys;
 
 /**
- * SolarNode implementation of {@link ChargePointService}
+ * EniwareEdge implementation of {@link ChargePointService}
  * 
  * @version 1.1
  */
@@ -331,7 +331,7 @@ public class ChargePointService_v15 implements ChargePointService, SettingSpecif
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.ocpp.web.chargepoint";
+		return "org.eniware.edge.ocpp.web.chargepoint";
 	}
 
 	@Override

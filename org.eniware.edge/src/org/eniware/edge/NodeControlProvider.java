@@ -29,7 +29,7 @@ public interface NodeControlProvider extends Identifiable {
 	 * 
 	 * @since 1.2
 	 */
-	String EVENT_TOPIC_CONTROL_INFO_CAPTURED = "net/solarnetwork/node/NodeControlProvider/CONTROL_INFO_CAPTURED";
+	String EVENT_TOPIC_CONTROL_INFO_CAPTURED = "net/eniwarenetwork/node/NodeControlProvider/CONTROL_INFO_CAPTURED";
 
 	/**
 	 * An {@code org.osgi.service.event.Event} topic for when a
@@ -40,7 +40,7 @@ public interface NodeControlProvider extends Identifiable {
 	 * 
 	 * @since 1.3
 	 */
-	String EVENT_TOPIC_CONTROL_INFO_CHANGED = "net/solarnetwork/node/NodeControlProvider/CONTROL_INFO_CHANGED";
+	String EVENT_TOPIC_CONTROL_INFO_CHANGED = "net/eniwarenetwork/node/NodeControlProvider/CONTROL_INFO_CHANGED";
 
 	/**
 	 * Get a list of available controls this provider supports.

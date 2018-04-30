@@ -1,7 +1,7 @@
 /* ==================================================================
  * CentralSystemServiceFactorySupport.java - 9/06/2015 11:05:18 am
  * 
- * Copyright 2007-2015 SolarNetwork.net Dev Team
+ * Copyright 2007-2015 EniwareNetwork.net Dev Team
  * 
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 

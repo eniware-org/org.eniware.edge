@@ -111,7 +111,7 @@ public class LocationDatumDataSource<T extends Datum> implements DatumDataSource
 	public static final String DEFAULT_SOURCE_ID_PROP_NAME = "locationSourceId";
 
 	/** Bundle name for price location lookup messages. */
-	public static final String PRICE_LOCATION_MESSAGE_BUNDLE = "net.solarnetwork.node.support.PriceLocationDatumDataSource";
+	public static final String PRICE_LOCATION_MESSAGE_BUNDLE = "org.eniware.edge.support.PriceLocationDatumDataSource";
 
 	private DatumDataSource<T> delegate;
 	private OptionalService<LocationService> locationService;

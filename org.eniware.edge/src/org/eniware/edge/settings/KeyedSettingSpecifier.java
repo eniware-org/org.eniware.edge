@@ -36,7 +36,7 @@ public interface KeyedSettingSpecifier<T> extends SettingSpecifier, MappableSpec
 	 *        the mapper
 	 * @return the new instance
 	 * @deprecated Use
-	 *             {@link MappableSpecifier#mappedWithMapper(net.solarnetwork.node.settings.MappableSpecifier.Mapper)}
+	 *             {@link MappableSpecifier#mappedWithMapper(org.eniware.edge.settings.MappableSpecifier.Mapper)}
 	 *             directly.
 	 */
 	@Deprecated

@@ -14,13 +14,13 @@ package org.eniware.edge.domain;
 public interface EnergyStorageDatum extends Datum {
 
 	/**
-	 * The {@link net.solarnetwork.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
 	 * sample key for {@link #getAvailableEnergyPercentage()} values.
 	 */
 	String PERCENTAGE_KEY = "percent";
 
 	/**
-	 * The {@link net.solarnetwork.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
 	 * sample key for {@link #getAvailableEnergy()} values.
 	 */
 	String AVAILABLE_WATT_HOURS_KEY = "availWattHours";

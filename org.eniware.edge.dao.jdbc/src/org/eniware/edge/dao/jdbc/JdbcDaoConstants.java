@@ -14,7 +14,7 @@ package org.eniware.edge.dao.jdbc;
 public final class JdbcDaoConstants {
 
 	/** The database schema name to use. */
-	public static final String SCHEMA_NAME = "solarnode";
+	public static final String SCHEMA_NAME = "eniwareedge";
 	
 	/** The table name for settings. */
 	public static final String TABLE_SETTINGS = "sn_settings";
