@@ -31,11 +31,11 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
-import net.solarnetwork.node.Setting;
-import net.solarnetwork.node.Setting.SettingFlag;
-import net.solarnetwork.node.dao.SettingDao;
-import net.solarnetwork.node.support.KeyValuePair;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.edge.Setting;
+import org.eniware.edge.Setting.SettingFlag;
+import org.eniware.edge.dao.SettingDao;
+import org.eniware.edge.support.KeyValuePair;
+import org.eniware.util.OptionalService;
 
 /**
  * Simple JDBC-based implementation of {@link SettingDao}.
@@ -54,7 +54,6 @@ import net.solarnetwork.util.OptionalService;
  * parameter: the String primary key to delete.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.4
  */
 public class JdbcSettingDao extends AbstractBatchableJdbcDao<Setting> implements SettingDao {
@@ -76,7 +75,7 @@ public class JdbcSettingDao extends AbstractBatchableJdbcDao<Setting> implements
 
 	private static final String DEFAULT_SQL_GET_MOST_RECENT_DATE = "SELECT modified FROM " + SCHEMA_NAME
 			+ '.' + TABLE_SETTINGS
-			+ " WHERE SOLARNODE.BITWISE_AND(flags, ?) <> ? ORDER BY modified DESC";
+			+ " WHERE ENIWARENODE.BITWISE_AND(flags, ?) <> ? ORDER BY modified DESC";
 
 	private final String sqlGet = DEFAULT_SQL_GET;
 	private final String sqlFind = DEFAULT_SQL_FIND;

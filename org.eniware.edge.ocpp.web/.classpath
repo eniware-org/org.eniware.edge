@@ -9,5 +9,9 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.edge"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.external.ocpp.client"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.edge.ocpp"/>
 	<classpathentry kind="output" path="web/WEB-INF/classes"/>
 </classpath>

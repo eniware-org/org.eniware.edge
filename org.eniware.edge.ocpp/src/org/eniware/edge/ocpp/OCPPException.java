@@ -11,7 +11,6 @@ import ocpp.v15.cs.AuthorizationStatus;
 /**
  * Generic exception for OCPP specific conditions.
  * 
- * @author matt
  * @version 1.0
  */
 public class OCPPException extends RuntimeException {

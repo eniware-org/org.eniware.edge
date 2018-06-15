@@ -11,49 +11,48 @@ import java.math.BigDecimal;
 /**
  * Standardized API for atmospheric related datum to implement.
  * 
- * @author matt
  * @version 1.2
  */
 public interface AtmosphericDatum extends Datum {
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralNodeDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
 	 * sample key for {@link AtmosphericDatum#getTemperature()} values.
 	 */
 	static final String TEMPERATURE_KEY = "temp";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link AtmosphericDatum#getHumidity()} values.
 	 */
 	static final String HUMIDITY_KEY = "humidity";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link AtmosphericDatum#getDewPoint()} values.
 	 */
 	static final String DEW_POINT_KEY = "dew";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link AtmosphericDatum#getAtmosphericPressure()} values.
 	 */
 	static final String ATMOSPHERIC_PRESSURE_KEY = "atm";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link AtmosphericDatum#getAtmosphericPressure()} values.
 	 */
 	static final String VISIBILITY_KEY = "visibility";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link AtmosphericDatum#getSkyConditions()} values.
 	 */
 	static final String SKY_CONDITIONS_KEY = "sky";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link AtmosphericDatum#getWindSpeed()} values.
 	 * 
 	 * @since 1.2
@@ -61,7 +60,7 @@ public interface AtmosphericDatum extends Datum {
 	static final String WIND_SPEED_KEY = "wspeed";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link AtmosphericDatum#getWindDirection()} values.
 	 * 
 	 * @since 1.2
@@ -69,7 +68,7 @@ public interface AtmosphericDatum extends Datum {
 	static final String WIND_DIRECTION_KEY = "wdir";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link AtmosphericDatum#getRain()} values.
 	 * 
 	 * @since 1.2
@@ -77,7 +76,7 @@ public interface AtmosphericDatum extends Datum {
 	static final String RAIN_KEY = "rain";
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} status sample key
+	 * A {@link org.eniware.domain.GeneralDatumSamples} status sample key
 	 * for {@link AtmosphericDatum#getSnow()} values.
 	 * 
 	 * @since 1.2

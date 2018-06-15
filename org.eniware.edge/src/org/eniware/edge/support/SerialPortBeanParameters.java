@@ -34,7 +34,6 @@ import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
  * by the application.</dd>
  * </dl>
  * 
- * @author matt
  * @version $Revision$
  */
 public class SerialPortBeanParameters extends SerialPortBean {
@@ -42,7 +41,7 @@ public class SerialPortBeanParameters extends SerialPortBean {
 	private static final SerialPortBeanParameters DEFAULTS = new SerialPortBeanParameters();
 	
 	private String serialPort = "/dev/ttyUSB0";
-	private String commPortAppName = "SolarNode";
+	private String commPortAppName = "EniwareEdge";
 	private long maxWait = 0;
 
 	/**

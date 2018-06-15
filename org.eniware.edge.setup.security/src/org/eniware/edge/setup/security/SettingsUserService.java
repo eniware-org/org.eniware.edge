@@ -21,25 +21,24 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import net.solarnetwork.node.IdentityService;
-import net.solarnetwork.node.Setting;
-import net.solarnetwork.node.dao.BasicBatchOptions;
-import net.solarnetwork.node.dao.BatchableDao.BatchCallback;
-import net.solarnetwork.node.dao.BatchableDao.BatchCallbackResult;
-import net.solarnetwork.node.dao.SettingDao;
-import net.solarnetwork.node.setup.UserProfile;
-import net.solarnetwork.node.setup.UserService;
+import org.eniware.edge.IdentityService;
+import org.eniware.edge.Setting;
+import org.eniware.edge.dao.BasicBatchOptions;
+import org.eniware.edge.dao.BatchableDao.BatchCallback;
+import org.eniware.edge.dao.BatchableDao.BatchCallbackResult;
+import org.eniware.edge.dao.SettingDao;
+import org.eniware.edge.setup.UserProfile;
+import org.eniware.edge.setup.UserService;
 
 /**
  * {@link UserDetailsService} that uses {@link SettingDao} for users and roles.
  * 
- * @author matt
  * @version 1.0
  */
 public class SettingsUserService implements UserService, UserDetailsService {
 
-	public static final String SETTING_TYPE_USER = "solarnode.user";
-	public static final String SETTING_TYPE_ROLE = "solarnode.role";
+	public static final String SETTING_TYPE_USER = "eniwareedge.user";
+	public static final String SETTING_TYPE_ROLE = "eniwareedge.role";
 	public static final String GRANTED_AUTH_USER = "ROLE_USER";
 
 	private final SettingDao settingDao;
@@ -73,7 +72,7 @@ public class SettingsUserService implements UserService, UserDetailsService {
 			// for backwards-compat with nodes created before user auth, provide a default
 			Long nodeId = identityService.getNodeId();
 			if ( nodeId != null && nodeId.toString().equalsIgnoreCase(username) ) {
-				password = passwordEncoder.encode("solar");
+				password = passwordEncoder.encode("eniware");
 				GrantedAuthority auth = new SimpleGrantedAuthority(GRANTED_AUTH_USER);
 				result = new User(username, password, Collections.singleton(auth));
 			}
@@ -202,11 +201,11 @@ public class SettingsUserService implements UserService, UserDetailsService {
 			}
 		}, new BasicBatchOptions("UpdateUser", BasicBatchOptions.DEFAULT_BATCH_SIZE, true, null));
 		if ( !updatedUsername.get() ) {
-			// no username exists, treat as a legacy node whose password was "solar"
+			// no username exists, treat as a legacy node whose password was "eniware"
 			UserProfile newProfile = new UserProfile();
 			newProfile.setUsername(newUsername);
-			newProfile.setPassword("solar");
-			newProfile.setPasswordAgain("solar");
+			newProfile.setPassword("eniware");
+			newProfile.setPasswordAgain("eniware");
 			storeUserProfile(newProfile);
 		}
 

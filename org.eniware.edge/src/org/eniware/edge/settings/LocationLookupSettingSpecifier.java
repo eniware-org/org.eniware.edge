@@ -11,7 +11,6 @@ import org.eniware.edge.domain.Location;
 /**
  * A setting for a location ID.
  * 
- * @author matt
  * @version 1.1
  */
 public interface LocationLookupSettingSpecifier extends KeyedSettingSpecifier<Long>, Location {

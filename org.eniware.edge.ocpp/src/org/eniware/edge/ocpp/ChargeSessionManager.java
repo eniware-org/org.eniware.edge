@@ -8,7 +8,7 @@ package org.eniware.edge.ocpp;
 
 import java.util.Collection;
 import java.util.List;
-import net.solarnetwork.node.Identifiable;
+import org.eniware.edge.Identifiable;
 
 /**
  * API for managing charge sessions. A <em>charge session</em> is the process of
@@ -17,7 +17,6 @@ import net.solarnetwork.node.Identifiable;
  * the energy used while charging, and unplugging the device from the socket,
  * and finally confirming that charging is complete.
  * 
- * @author matt
  * @version 1.2
  */
 public interface ChargeSessionManager extends Identifiable {
@@ -27,14 +26,14 @@ public interface ChargeSessionManager extends Identifiable {
 	 * activated, that is when a plug is plugged into a device to start
 	 * charging.
 	 */
-	String EVENT_TOPIC_SOCKET_ACTIVATED = "net/solarnetwork/node/ocpp/SOCKET_ACTIVATED";
+	String EVENT_TOPIC_SOCKET_ACTIVATED = "net/eniwarenetwork/node/ocpp/SOCKET_ACTIVATED";
 
 	/**
 	 * The EventAdmin topic used to post events when a socket has been
 	 * deactivated, that is when a plug is unplugged from a device when charging
 	 * ends.
 	 */
-	String EVENT_TOPIC_SOCKET_DEACTIVATED = "net/solarnetwork/node/ocpp/SOCKET_DEACTIVATED";
+	String EVENT_TOPIC_SOCKET_DEACTIVATED = "net/eniwarenetwork/node/ocpp/SOCKET_DEACTIVATED";
 
 	/**
 	 * The EventAdmin topic used to post events when a charge session has been
@@ -42,14 +41,14 @@ public interface ChargeSessionManager extends Identifiable {
 	 * 
 	 * @since 1.1
 	 */
-	String EVENT_TOPIC_SESSION_STARTED = "net/solarnetwork/node/ocpp/SESSION_STARTED";
+	String EVENT_TOPIC_SESSION_STARTED = "net/eniwarenetwork/node/ocpp/SESSION_STARTED";
 
 	/**
 	 * The EventAdmin topic used to post events when a charge session has ended.
 	 * 
 	 * @since 1.1
 	 */
-	String EVENT_TOPIC_SESSION_ENDED = "net/solarnetwork/node/ocpp/SESSION_ENDED";
+	String EVENT_TOPIC_SESSION_ENDED = "net/eniwarenetwork/node/ocpp/SESSION_ENDED";
 
 	/**
 	 * The EventAdmin topic used to post events for captured meter reading data
@@ -57,7 +56,7 @@ public interface ChargeSessionManager extends Identifiable {
 	 * 
 	 * @since 1.1
 	 */
-	String EVENT_TOPIC_SESSION_METER_READING = "net/solarnetwork/node/ocpp/METER_READING";
+	String EVENT_TOPIC_SESSION_METER_READING = "net/eniwarenetwork/node/ocpp/METER_READING";
 
 	/**
 	 * The Event property used to convey a String socket ID.

@@ -11,9 +11,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-import net.solarnetwork.domain.GeneralLocationSourceMetadata;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.util.OptionalServiceTracker;
+import org.eniware.domain.GeneralLocationSourceMetadata;
+import org.eniware.util.OptionalService;
+import org.eniware.util.OptionalServiceTracker;
 
 import org.eniware.edge.DatumDataSource;
 import org.eniware.edge.LocationService;
@@ -99,7 +99,6 @@ import org.springframework.context.support.ResourceBundleMessageSource;
  * {@link #PRICE_LOCATION_MESSAGE_BUNDLE}.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.5
  */
 public class LocationDatumDataSource<T extends Datum> implements DatumDataSource<T>,
@@ -112,7 +111,7 @@ public class LocationDatumDataSource<T extends Datum> implements DatumDataSource
 	public static final String DEFAULT_SOURCE_ID_PROP_NAME = "locationSourceId";
 
 	/** Bundle name for price location lookup messages. */
-	public static final String PRICE_LOCATION_MESSAGE_BUNDLE = "net.solarnetwork.node.support.PriceLocationDatumDataSource";
+	public static final String PRICE_LOCATION_MESSAGE_BUNDLE = "org.eniware.edge.support.PriceLocationDatumDataSource";
 
 	private DatumDataSource<T> delegate;
 	private OptionalService<LocationService> locationService;

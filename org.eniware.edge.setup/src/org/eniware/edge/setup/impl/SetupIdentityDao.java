@@ -9,7 +9,6 @@ package org.eniware.edge.setup.impl;
 /**
  * API for accessing the singleton {@link SetupIdentityInfo}.
  * 
- * @author matt
  * @version 1.0
  */
 public interface SetupIdentityDao {

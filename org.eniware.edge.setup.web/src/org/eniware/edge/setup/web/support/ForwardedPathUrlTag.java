@@ -20,7 +20,6 @@ import org.springframework.web.servlet.tags.UrlTag;
  * property of the tag automatically.
  * </p>
  * 
- * @author matt
  * @version 1.0
  */
 public class ForwardedPathUrlTag extends UrlTag {

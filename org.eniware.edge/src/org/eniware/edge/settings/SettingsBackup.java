@@ -12,7 +12,6 @@ import java.util.Date;
 /**
  * A backup domain object.
  * 
- * @author matt
  * @version $Revision$
  */
 public class SettingsBackup {

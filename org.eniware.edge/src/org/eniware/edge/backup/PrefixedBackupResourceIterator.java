@@ -14,7 +14,6 @@ import java.util.Iterator;
  * An iterator of {@link BackupResource} objects that adds a prefix to each
  * resource path.
  * 
- * @author matt
  * @version 1.1
  * @since 1.46
  */

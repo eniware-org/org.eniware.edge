@@ -26,12 +26,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import net.solarnetwork.node.setup.PKIService;
+import org.eniware.edge.setup.PKIService;
 
 /**
  * Controller for node certificate management.
  * 
- * @author matt
  * @version 1.1
  */
 @ServiceAwareController
@@ -108,7 +107,7 @@ public class NodeCertificatesController extends BaseSetupController {
 		headers.setCacheControl("no-cache");
 
 		headers.set("Content-Disposition",
-				"attachment; filename=solarnode-" + getIdentityService().getNodeId() + ".pem");
+				"attachment; filename=eniwareedge-" + getIdentityService().getNodeId() + ".pem");
 
 		return new ResponseEntity<String>(cert, headers, HttpStatus.OK);
 	}

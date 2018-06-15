@@ -61,7 +61,6 @@ import org.springframework.dao.DuplicateKeyException;
  * 
  * @param <T>
  *        the Datum type for this job
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

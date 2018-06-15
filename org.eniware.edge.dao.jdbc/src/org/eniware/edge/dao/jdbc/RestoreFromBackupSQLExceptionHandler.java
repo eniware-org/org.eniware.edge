@@ -25,17 +25,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.util.StringUtils;
-import net.solarnetwork.dao.jdbc.SQLExceptionHandler;
-import net.solarnetwork.node.IdentityService;
-import net.solarnetwork.node.backup.Backup;
-import net.solarnetwork.node.backup.BackupManager;
-import net.solarnetwork.node.backup.BackupService;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.dao.jdbc.SQLExceptionHandler;
+import org.eniware.edge.IdentityService;
+import org.eniware.edge.backup.Backup;
+import org.eniware.edge.backup.BackupManager;
+import org.eniware.edge.backup.BackupService;
+import org.eniware.util.OptionalService;
 
 /**
  * Recover from connection exceptions by restoring from backup.
  * 
- * @author matt
  * @version 1.1
  */
 public class RestoreFromBackupSQLExceptionHandler implements SQLExceptionHandler {
@@ -106,7 +105,7 @@ public class RestoreFromBackupSQLExceptionHandler implements SQLExceptionHandler
 			return null;
 		}
 		// Should we get database name from JDBC connection properties? For now, this is hard-coded.
-		return new File(dbDir, "solarnode");
+		return new File(dbDir, "eniwareedge");
 	}
 
 	private void cleanupExistingDatabase() {

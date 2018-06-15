@@ -14,7 +14,6 @@ import java.util.Map;
  * scenario where a managed job wants to expose a service that is used by the
  * job instance as a registered service itself.
  * 
- * @author matt
  * @version 1.0
  */
 public interface ServiceProvider {

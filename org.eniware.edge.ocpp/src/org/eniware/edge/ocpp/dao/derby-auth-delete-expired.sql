@@ -1,2 +1,2 @@
-DELETE FROM solarnode.ocpp_auth
+DELETE FROM eniwareedge.ocpp_auth
 WHERE expires <= ?

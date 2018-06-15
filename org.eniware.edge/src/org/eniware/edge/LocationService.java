@@ -11,12 +11,11 @@ import java.util.Set;
 
 import org.eniware.edge.domain.Location;
 
-import net.solarnetwork.domain.GeneralLocationSourceMetadata;
+import org.eniware.domain.GeneralLocationSourceMetadata;
 
 /**
  * API for querying for locations.
  * 
- * @author matt
  * @version 1.1
  */
 public interface LocationService {

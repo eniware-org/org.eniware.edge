@@ -22,7 +22,7 @@
 	</c:if>
 </table>
 
-<c:set var="myNodesURL" value="${association.solarUserServiceURL}/u/sec/my-nodes"/>
+<c:set var="myNodesURL" value="${association.eniwareUserServiceURL}/u/sec/my-nodes"/>
 <c:choose>
 	<c:when test="${empty details.networkCertificateStatus}">
 		<p>

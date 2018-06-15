@@ -17,7 +17,7 @@ import java.net.URLConnection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import net.solarnetwork.node.DataCollector;
+import org.eniware.edge.DataCollector;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -69,7 +69,6 @@ import org.springframework.beans.factory.ObjectFactory;
  *   Defaults to <em>false</em>.</dd>
  * </dl>
  * 
- * @author matt
  * @version $Id$
  */
 public class UrlDataCollector implements DataCollector {

@@ -15,7 +15,6 @@ import java.io.InputStream;
  * Read the serial port stream, looking for a "magic" byte sequence, and then
  * collecting a fixed number of bytes after that.
  * 
- * @author matt
  * @version 1.1
  */
 public class SerialPortDataCollector extends AbstractSerialPortDataCollector {

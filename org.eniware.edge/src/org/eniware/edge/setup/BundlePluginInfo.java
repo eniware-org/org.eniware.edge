@@ -11,7 +11,6 @@ import org.osgi.framework.Bundle;
 /**
  * PluginInfo implementation that wraps a {@link Bundle}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BundlePluginInfo implements PluginInfo {

@@ -17,7 +17,6 @@ import org.eniware.edge.domain.Datum;
  * objects as a receipt for the upload transaction.
  * </p>
  * 
- * @author matt
  * @version 1.1
  */
 public class BulkUploadResult {

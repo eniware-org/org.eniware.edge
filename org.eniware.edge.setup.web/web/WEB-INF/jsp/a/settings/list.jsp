@@ -69,14 +69,14 @@
 	<script>
 	$(function() {
 		$('#submit').click(function() {
-			SolarNode.Settings.saveUpdates($(this.form).attr('action'), {
+			EniwareEdge.Settings.saveUpdates($(this.form).attr('action'), {
 				success: '<fmt:message key="settings.save.success.msg"/>',
 				error: '<fmt:message key="settings.save.error.msg"/>',
 				title: '<fmt:message key="settings.save.result.title"/>',
 				button: '<fmt:message key="ok.label"/>'
 			});
 		});
-		SolarNode.Settings.reset();
+		EniwareEdge.Settings.reset();
 	});
 	</script>
 </c:if>

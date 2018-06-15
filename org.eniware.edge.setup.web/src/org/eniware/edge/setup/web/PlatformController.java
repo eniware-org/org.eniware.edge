@@ -16,13 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.socket.messaging.SessionSubscribeEvent;
-import net.solarnetwork.node.PlatformService;
-import net.solarnetwork.web.domain.Response;
+import org.eniware.edge.PlatformService;
+import org.eniware.web.domain.Response;
 
 /**
  * Web controller for platform service support.
  * 
- * @author matt
  * @version 1.0
  */
 @RestController

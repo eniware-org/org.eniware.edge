@@ -19,7 +19,6 @@ import java.util.Deque;
  * the deque.
  * </p>
  * 
- * @author matt
  * @version 1.0
  * @since 1.51
  */

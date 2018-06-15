@@ -16,7 +16,6 @@ import java.util.Map;
 /**
  * Service API for settings.
  * 
- * @author matt
  * @version 1.2
  */
 public interface SettingsService {

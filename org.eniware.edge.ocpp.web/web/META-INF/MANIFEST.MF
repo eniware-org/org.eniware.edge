@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: SolarNode OCPP ChargePoint Web Service
+Bundle-Name: EniwareEdge OCPP ChargePoint Web Service
 Bundle-SymbolicName: org.eniware.edge.ocpp.web
 Bundle-Version: 0.5.0
 Bundle-ClassPath: WEB-INF/classes/
-Bundle-Vendor: SolarNetwork
+Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Web-ContextPath: /ocpp
 Import-Package: 
@@ -21,23 +21,23 @@ Import-Package:
  javax.xml.soap,
  javax.xml.ws,
  javax.xml.ws.handler.soap,
- net.solarnetwork.node;version="1.16",
- net.solarnetwork.node.ocpp;version="0.4.0",
- net.solarnetwork.node.ocpp.support;version="0.3.0",
- net.solarnetwork.node.ocpp.web.config;resolution:="optional",
- net.solarnetwork.node.settings;version="1.5",
- net.solarnetwork.node.settings.support;version="1.4.0",
- net.solarnetwork.node.util;version="1.6.0",
- net.solarnetwork.util;version="1.20.0",
- net.solarnetwork.web.domain;version="1.0",
- net.solarnetwork.web.gemini;version="1.0.0",
- net.solarnetwork.web.support;version="1.7",
+ org.eniware.edge;version="1.16",
+ org.eniware.edge.ocpp;version="0.4.0",
+ org.eniware.edge.ocpp.support;version="0.3.0",
+ org.eniware.edge.ocpp.web.config;resolution:=optional,
+ org.eniware.edge.settings;version="1.5",
+ org.eniware.edge.settings.support;version="1.4.0",
+ org.eniware.edge.util;version="1.6.0",
+ org.eniware.util;version="1.20.0",
+ org.eniware.web.domain;version="1.0",
+ org.eniware.web.gemini;version="1.0.0",
  ocpp.v15.cp;version="1.5.0",
  ocpp.v15.support;version="1.6.0",
  org.aopalliance.aop;version="1.0",
  org.apache.cxf.bus.extension;version="[3.0,4.0)",
  org.apache.cxf.bus.spring;version="[3.0,4.0)",
  org.apache.cxf.transport.servlet;version="[3.0,4.0)",
+ org.eniware.web.support;version="1.7",
  org.joda.time;version="[2.4,3.0)",
  org.joda.time.base;version="[2.4,3.0)",
  org.osgi.framework;version="[1.7,2.0)",

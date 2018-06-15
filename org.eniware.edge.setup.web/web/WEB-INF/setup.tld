@@ -5,15 +5,15 @@
 		http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
 	version="2.1">
 
-	<description>SolarNetwork Setup Taglib</description>
+	<description>EniwareNetwork Setup Taglib</description>
 	<tlib-version>1.6</tlib-version>
 	<short-name>setup</short-name>
-	<uri>http://solarnetwork.net/taglib/setup</uri>
+	<uri>http://network.eniware.org/taglib/setup</uri>
 
 	<tag>
 		<description>TODO</description>
 		<name>message</name>
-		<tag-class>net.solarnetwork.node.setup.web.support.MessageTag</tag-class>
+		<tag-class>org.eniware.edge.setup.web.support.MessageTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>
@@ -60,7 +60,7 @@
 	<tag>
 		<description>TODO</description>
 		<name>settingValue</name>
-		<tag-class>net.solarnetwork.node.setup.web.support.SettingValueTag</tag-class>
+		<tag-class>org.eniware.edge.setup.web.support.SettingValueTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>The SettingService.</description>
@@ -91,7 +91,7 @@
 	<tag>
 		<description>Render SetupResource values for web consumer</description>
 		<name>resources</name>
-		<tag-class>net.solarnetwork.node.setup.web.support.SetupResourcesTag</tag-class>
+		<tag-class>org.eniware.edge.setup.web.support.SetupResourcesTag</tag-class>
 		<body-content>JSP</body-content>
 		<attribute>
 			<description>
@@ -169,7 +169,7 @@
 		for URL template parameters and reverse proxy context support via the
 		X-Forwarded-Path header.</description>
 		<name>url</name>
-		<tag-class>net.solarnetwork.node.setup.web.support.ForwardedPathUrlTag</tag-class>
+		<tag-class>org.eniware.edge.setup.web.support.ForwardedPathUrlTag</tag-class>
 		<body-content>JSP</body-content>
 		<attribute>
 			<description>The URL to build. This value can include template place holders
@@ -220,7 +220,7 @@
 	<function>
 		<description>instanceof function</description>
 		<name>instanceOf</name>
-		<function-class>net.solarnetwork.node.setup.web.support.TagFunctions</function-class>
+		<function-class>org.eniware.edge.setup.web.support.TagFunctions</function-class>
 		<function-signature>
 			boolean instanceOf(java.lang.Object, java.lang.String)
 		</function-signature>
@@ -229,7 +229,7 @@
 	<function>
 		<description>JavaScript escape function</description>
 		<name>js</name>
-		<function-class>net.solarnetwork.node.setup.web.support.TagFunctions</function-class>
+		<function-class>org.eniware.edge.setup.web.support.TagFunctions</function-class>
 		<function-signature>
 			String jsString(java.lang.String)
 		</function-signature>

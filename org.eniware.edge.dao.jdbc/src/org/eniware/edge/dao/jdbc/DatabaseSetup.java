@@ -17,10 +17,10 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ConnectionCallback;
-import net.solarnetwork.node.domain.Datum;
+import org.eniware.edge.domain.Datum;
 
 /**
- * Class to initialize a database for first-time use by a Solar Node.
+ * Class to initialize a database for first-time use by a Eniware Node.
  * 
  * <p>
  * The {@link DatabaseSetup#init()} method should be called once during
@@ -42,7 +42,6 @@ import net.solarnetwork.node.domain.Datum;
  * classpath-relative resource named {@link #DEFAULT_INIT_SQL_RESOURCE}.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.1
  */
 public class DatabaseSetup {
@@ -55,7 +54,7 @@ public class DatabaseSetup {
 	/** The default value for the {@code sqlGetTablesVersion} property. */
 	public static final String DEFAULT_SQL_GET_TABLES_VERSION = "SELECT svalue FROM "
 			+ JdbcDaoConstants.SCHEMA_NAME + "." + JdbcDaoConstants.TABLE_SETTINGS + " WHERE skey = "
-			+ "'solarnode.sn_settings.version'";
+			+ "'eniwareedge.sn_settings.version'";
 
 	private static final int TABLES_VERSION = 5;
 

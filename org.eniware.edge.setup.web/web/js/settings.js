@@ -1,12 +1,12 @@
 (function() {
 'use strict';
 
-SolarNode.Settings = {
+EniwareEdge.Settings = {
 		
 };
 
-SolarNode.Settings.runtime = {};
-SolarNode.Settings.updates = {};
+EniwareEdge.Settings.runtime = {};
+EniwareEdge.Settings.updates = {};
 
 function delayedReload() {
 	setTimeout(function() {
@@ -14,8 +14,8 @@ function delayedReload() {
 	}, 500);
 }
 
-SolarNode.Settings.reset = function() {
-	SolarNode.Settings.updates = {};
+EniwareEdge.Settings.reset = function() {
+	EniwareEdge.Settings.updates = {};
 	$('#submit').attr('disabled', 'disabled');
 };
 
@@ -24,9 +24,9 @@ SolarNode.Settings.reset = function() {
  * 
  * <p>This method is used to cache locally a changed setting value.</p>
  */
-SolarNode.Settings.updateSetting = function(params, value) {
+EniwareEdge.Settings.updateSetting = function(params, value) {
 	//providerKey, key, domID, value) {
-	var updates = SolarNode.Settings.updates;
+	var updates = EniwareEdge.Settings.updates;
 	var instance = (params.instance !== undefined && params.instance !== '' ? params.instance : undefined);
 	var providerKey = params.provider;
 	if ( instance !== undefined ) {
@@ -58,12 +58,12 @@ SolarNode.Settings.updateSetting = function(params, value) {
  * @param params.provider {String} the provider key
  * @param params.setting {String} the setting key
  */
-SolarNode.Settings.addSlider = function(params) {
+EniwareEdge.Settings.addSlider = function(params) {
 	var el = $('#'+params.key);
-	if ( SolarNode.Settings.runtime.sliders === undefined ) {
-		SolarNode.Settings.runtime.sliders = [];
+	if ( EniwareEdge.Settings.runtime.sliders === undefined ) {
+		EniwareEdge.Settings.runtime.sliders = [];
 	}
-	var slider = new SolarNode.Class.Slider(el, {
+	var slider = new EniwareEdge.Class.Slider(el, {
 		min: (params.min != '' ? Number(params.min) : 0),
 		max: (params.max != '' ? Number(params.max) : 1),
 		step: (params.step != '' ? Number(params.step) : 1),
@@ -71,10 +71,10 @@ SolarNode.Settings.addSlider = function(params) {
 		handleWidth: 42,
 		showValue: true,
 		change: function(event, ui) {
-				SolarNode.Settings.updateSetting(params, ui.value);
+				EniwareEdge.Settings.updateSetting(params, ui.value);
 			}
 	});
-	SolarNode.Settings.runtime.sliders.push(slider);
+	EniwareEdge.Settings.runtime.sliders.push(slider);
 };
 
 /**
@@ -87,7 +87,7 @@ SolarNode.Settings.addSlider = function(params) {
  * @param params.off {String} the "off" value
  * @param params.value {Number} the initial value
  */
-SolarNode.Settings.addToggle = function(params) {	
+EniwareEdge.Settings.addToggle = function(params) {	
 	var toggle = $('#'+params.key);
 	toggle.button();
 	toggle.click(function() {
@@ -100,7 +100,7 @@ SolarNode.Settings.addToggle = function(params) {
 		} else {
 			$(this).removeClass('btn-success');
 		}
-		SolarNode.Settings.updateSetting(params, value);
+		EniwareEdge.Settings.updateSetting(params, value);
 	});
 };
 
@@ -111,12 +111,12 @@ SolarNode.Settings.addToggle = function(params) {
  * @param params.setting {String} the setting key
  * @param params.key {String} the DOM element ID for the radio buttons
  */
-SolarNode.Settings.addRadio = function(params) {
+EniwareEdge.Settings.addRadio = function(params) {
 	var radios = $('input:radio[name='+params.key+']');
 	//radios.filter('[value='+params.value+']').attr('checked', 'checked');
 	radios.change(function() {
 			var value = radios.filter(':checked').val();
-			SolarNode.Settings.updateSetting(params, value);
+			EniwareEdge.Settings.updateSetting(params, value);
 		});
 };
 
@@ -127,11 +127,11 @@ SolarNode.Settings.addRadio = function(params) {
  * @param params.setting {String} the setting key
  * @param params.key {String} the DOM element ID for the select element
  */
-SolarNode.Settings.addSelect = function(params) {
+EniwareEdge.Settings.addSelect = function(params) {
 	var select = $('select[name='+params.key+']');
 	select.change(function() {
 			var value = select.val();
-			SolarNode.Settings.updateSetting(params, value);
+			EniwareEdge.Settings.updateSetting(params, value);
 		});
 };
 
@@ -143,11 +143,11 @@ SolarNode.Settings.addSelect = function(params) {
  * @param params.key {String} the DOM element ID for the text field
  * @param params.value {String} the initial value
  */
-SolarNode.Settings.addTextField = function(params) {
+EniwareEdge.Settings.addTextField = function(params) {
 	var field = $('#'+params.key);
 	field.change(function() {
 			var value = field.val();
-			SolarNode.Settings.updateSetting(params, value);
+			EniwareEdge.Settings.updateSetting(params, value);
 		});
 };
 
@@ -159,7 +159,7 @@ SolarNode.Settings.addTextField = function(params) {
  * @param params.key {String} the DOM element ID for the control
  * @param params.value {String} the initial value
  */
-SolarNode.Settings.addLocationFinder = function(params) {
+EniwareEdge.Settings.addLocationFinder = function(params) {
 	var label = $('#'+params.key);
 	var labelSpan = label.find('.setting-value');
 	var btn = label.find('.btn');
@@ -171,20 +171,20 @@ SolarNode.Settings.addLocationFinder = function(params) {
 	var templateRow = modal.find('tr.template');
 	var searchBtn = modal.find('button[type=submit]');
 		
-	if ( SolarNode.Settings.runtime[modalRuntimeKey] === undefined ) {
-		SolarNode.Settings.runtime[modalRuntimeKey] = modal.modal({show:false});
+	if ( EniwareEdge.Settings.runtime[modalRuntimeKey] === undefined ) {
+		EniwareEdge.Settings.runtime[modalRuntimeKey] = modal.modal({show:false});
 		modal.ajaxForm({
 			dataType: 'json',
 			beforeSubmit: function(dataArray, form, options) {
 				// start a spinner on the search button so we know a search is happening
-				SolarNode.showLoading(searchBtn);
+				EniwareEdge.showLoading(searchBtn);
 				chooseBtn.removeData('locationMeta'); // clear any previous selection
 				//searchBtn.attr('disabled', 'disabled');
 			},
 			success: function(json, status, xhr, form) {
 				//searchBtn.removeAttr('disabled');
 				if ( json.success !== true ) {
-					SolarNode.errorAlert("Error querying SolarNetwork for locations: " +json.message);
+					EniwareEdge.errorAlert("Error querying EniwareNetwork for locations: " +json.message);
 					return;
 				}
 				var results = json.data.results;
@@ -201,7 +201,7 @@ SolarNode.Settings.addLocationFinder = function(params) {
 					tr.children('td').each(function(idx, el) {
 						var td = $(el);
 						var prop = td.data('tprop');
-						var val = SolarNode.extractJSONPath(meta, prop);
+						var val = EniwareEdge.extractJSONPath(meta, prop);
 						if ( val ) {
 							td.text(val);
 						}
@@ -212,11 +212,11 @@ SolarNode.Settings.addLocationFinder = function(params) {
 				tbody.parent().removeClass('hidden');
 			},
 			error: function(xhr, status, statusText) {
-				SolarNode.errorAlert("Error querying SolarNetwork for locations: " +statusText);
+				EniwareEdge.errorAlert("Error querying EniwareNetwork for locations: " +statusText);
 			},
 			complete: function() {
 				//searchBtn.removeAttr('disabled', 'disabled');
-				SolarNode.hideLoading(searchBtn);
+				EniwareEdge.hideLoading(searchBtn);
 			}
 		});
 	}
@@ -240,7 +240,7 @@ SolarNode.Settings.addLocationFinder = function(params) {
 	});
 };
 
-SolarNode.Settings.addGroupedSetting = function(params) {
+EniwareEdge.Settings.addGroupedSetting = function(params) {
 	var groupCount = $('#'+params.key),
 		count = Number(groupCount.val()),
 		container = groupCount.parent(),
@@ -250,8 +250,8 @@ SolarNode.Settings.addGroupedSetting = function(params) {
 	container.find('button.group-item-add').click(function() {
 		var newCount = count + 1;
 		container.find('button').attr('disabled', 'disabled');
-		SolarNode.Settings.updateSetting(params, newCount);
-		SolarNode.Settings.saveUpdates(url, undefined, delayedReload);
+		EniwareEdge.Settings.updateSetting(params, newCount);
+		EniwareEdge.Settings.saveUpdates(url, undefined, delayedReload);
 	});
 	// dynamic grouped items remove support
 	container.find('.group-item-remove').click(function() {
@@ -260,8 +260,8 @@ SolarNode.Settings.addGroupedSetting = function(params) {
 		}
 		var newCount = count - 1;
 		container.find('button').attr('disabled', 'disabled');
-		SolarNode.Settings.updateSetting(params, newCount);
-		SolarNode.Settings.saveUpdates(url, undefined, delayedReload);
+		EniwareEdge.Settings.updateSetting(params, newCount);
+		EniwareEdge.Settings.saveUpdates(url, undefined, delayedReload);
 	}).each(function() {
 		if ( count < 1 ) {
 			$(this).attr('disabled', 'disabled');
@@ -279,8 +279,8 @@ SolarNode.Settings.addGroupedSetting = function(params) {
  * @param msg.error {String} the message to display for an error post
  * @param resultCallback {Function} optional callback to invoke after updates saved, passed error as parameter
  */
-SolarNode.Settings.saveUpdates = function(url, msg, resultCallback) {
-	var updates = SolarNode.Settings.updates;
+EniwareEdge.Settings.saveUpdates = function(url, msg, resultCallback) {
+	var updates = EniwareEdge.Settings.updates;
 	var formData = '';
 	var i = 0;
 	var providerKey = undefined, key = undefined;
@@ -311,7 +311,7 @@ SolarNode.Settings.saveUpdates = function(url, msg, resultCallback) {
 			url: url,
 			data: formData,
 	    	beforeSend: function(xhr) {
-	    		SolarNode.csrf(xhr);
+	    		EniwareEdge.csrf(xhr);
 	    	},
 			success: function(data, textStatus, xhr) {
 				var providerKey = undefined, key = undefined, domID = undefined;
@@ -325,7 +325,7 @@ SolarNode.Settings.saveUpdates = function(url, msg, resultCallback) {
 							$('#cg-'+domID+' span.active-value').addClass('clean').find('.value').text(updates[providerKey][key].value);
 						}
 					}
-					SolarNode.Settings.reset();
+					EniwareEdge.Settings.reset();
 					$('<div class="alert alert-info fade in"><button class="close" data-dismiss="alert" type="button">×</button>'
 							+'<strong>'+msg.title+':</strong> ' +msg.success +'</div>').insertBefore('#settings form div.actions');
 				}
@@ -344,14 +344,14 @@ SolarNode.Settings.saveUpdates = function(url, msg, resultCallback) {
 	return false;
 };
 
-SolarNode.Settings.addFactoryConfiguration = function(params) {
+EniwareEdge.Settings.addFactoryConfiguration = function(params) {
 	$(params.button).attr('disabled', 'disabled');
 	$.ajax({
 		type : 'POST',
 		url : params.url,
 		data : {uid:params.factoryUID},
 		beforeSend: function(xhr) {
-			SolarNode.csrf(xhr);
+			EniwareEdge.csrf(xhr);
         },
 		success: delayedReload
 	});
@@ -362,7 +362,7 @@ SolarNode.Settings.addFactoryConfiguration = function(params) {
  * the selected factory configuration, and allow them to dismiss the alert
  * or confirm the deletion by clicking another button.
  */
-SolarNode.Settings.deleteFactoryConfiguration = function(params) {
+EniwareEdge.Settings.deleteFactoryConfiguration = function(params) {
 	var origButton = $(params.button);
 	origButton.attr('disabled', 'disabled');
 	var alert = $('#alert-delete').clone();
@@ -375,7 +375,7 @@ SolarNode.Settings.deleteFactoryConfiguration = function(params) {
 			url : params.url,
 			data : {uid: params.factoryUID, instance: params.instanceUID},
 			beforeSend: function(xhr) {
-				SolarNode.csrf(xhr);
+				EniwareEdge.csrf(xhr);
 	        },
 			success: delayedReload
 		});
@@ -397,9 +397,9 @@ function formatTimestamp(date) {
 }
 
 function refreshBackupList() {
-	$.getJSON(SolarNode.context.path('/a/backups'), function(json) {
+	$.getJSON(EniwareEdge.context.path('/a/backups'), function(json) {
 		if ( json.success !== true ) {
-			SolarNode.error(json.message, $('#backup-list-form'));
+			EniwareEdge.error(json.message, $('#backup-list-form'));
 			return;
 		}
 		var optionEl = $('#backup-backups').get(0);
@@ -424,34 +424,34 @@ function setupBackups() {
 		dataType : 'json',
 		
 		beforeSubmit : function(dataArray, form, options) {
-			SolarNode.showSpinner(createBackupSubmitButton);
+			EniwareEdge.showSpinner(createBackupSubmitButton);
 			createBackupSubmitButton.attr('disabled', 'disabled');
 		},
 		success : function(json, status, xhr, form) {
 			if ( json.success !== true || json.data === undefined || json.data.key === undefined ) {
-				SolarNode.errorAlert("Error creating backup: " +json.message);
+				EniwareEdge.errorAlert("Error creating backup: " +json.message);
 				return;
 			}
 			refreshBackupList();
 		},
 		error : function(xhr, status, statusText) {
-			SolarNode.errorAlert("Error creating new backup: " +statusText);
+			EniwareEdge.errorAlert("Error creating new backup: " +statusText);
 		},
 		complete : function() {
 			createBackupSubmitButton.removeAttr('disabled');
-			SolarNode.hideSpinner(createBackupSubmitButton);
+			EniwareEdge.hideSpinner(createBackupSubmitButton);
 		}
 	});
 	
 	$('#backup-restore-button').on('click', function(event) {
 		var form = event.target.form,
 			backupKey = form.elements['backup-backups'].value;
-		$.getJSON(SolarNode.context.path('/a/backups/inspect')+'?key='+encodeURIComponent(backupKey), function(json) {
+		$.getJSON(EniwareEdge.context.path('/a/backups/inspect')+'?key='+encodeURIComponent(backupKey), function(json) {
 			if ( json.success !== true ) {
-				SolarNode.error(json.message, $('#backup-list-form'));
+				EniwareEdge.error(json.message, $('#backup-list-form'));
 				return;
 			}
-			SolarNode.Backups.generateBackupList(json.data, $('#backup-restore-list-container'));
+			EniwareEdge.Backups.generateBackupList(json.data, $('#backup-restore-list-container'));
 			var form = $('#backup-restore-modal');
 			form.find('input[name=key]').val(backupKey);
 			form.modal('show');
@@ -474,32 +474,32 @@ function setupBackups() {
 	$('#backup-restore-modal').ajaxForm({
 		dataType : 'json',
 		beforeSubmit : function(dataArray, form, options) {
-			var providers = SolarNode.Backups.selectedProviders($('#backup-restore-list-container')),
+			var providers = EniwareEdge.Backups.selectedProviders($('#backup-restore-list-container')),
 				form = $('#backup-restore-modal'),
 				submitBtn = form.find('button[type=submit]');
 			Array.prototype.splice.apply(dataArray, [dataArray.length, 0].concat(providers));
 			submitBtn.attr('disabled', 'disabled');
-			SolarNode.showSpinner(submitBtn);
+			EniwareEdge.showSpinner(submitBtn);
 		},
 		success : function(json, status, xhr, form) {
 			if ( json.success !== true ) {
-				SolarNode.error(json.message, $('#backup-restore-modal div.modal-body'));
+				EniwareEdge.error(json.message, $('#backup-restore-modal div.modal-body'));
 				return;
 			}
 			var form = $('#backup-restore-modal');
-			SolarNode.info(json.message, $('#backup-restore-list-container').empty());
+			EniwareEdge.info(json.message, $('#backup-restore-list-container').empty());
 			form.find('button, .modal-body p').remove();
 			form.find('.progress.hide').removeClass('hide');
 			setTimeout(function() {
-				SolarNode.tryGotoURL(SolarNode.context.path('/a/settings'));
+				EniwareEdge.tryGotoURL(EniwareEdge.context.path('/a/settings'));
 			}, 10000);
 		},
 		error : function(xhr, status, statusText) {
-			SolarNode.error("Error restoring backup: " +statusText, $('#backup-restore-modal div.modal-body'));
+			EniwareEdge.error("Error restoring backup: " +statusText, $('#backup-restore-modal div.modal-body'));
 		},
 		complete : function() {
 			createBackupSubmitButton.removeAttr('disabled');
-			SolarNode.hideSpinner(createBackupSubmitButton);
+			EniwareEdge.hideSpinner(createBackupSubmitButton);
 		}
 	}).on('show', function() {
 		$(this).find('button[type=submit]').removeAttr('disabled');
@@ -540,10 +540,10 @@ $(document).ready(function() {
 		var currParams = me.data('params');
 		var nameSpan = me.data('label');
 		if ( selectedLocation !== undefined ) {
-			var msg = SolarNode.i18n(currParams.valueLabel, [SolarNode.extractJSONPath(selectedLocation, 'm.name'),
-			                                                 SolarNode.extractJSONPath(selectedLocation, 'sourceId')]);
+			var msg = EniwareEdge.i18n(currParams.valueLabel, [EniwareEdge.extractJSONPath(selectedLocation, 'm.name'),
+			                                                 EniwareEdge.extractJSONPath(selectedLocation, 'sourceId')]);
 			nameSpan.text(msg);
-			SolarNode.Settings.updateSetting(currParams, selectedLocation.locationId + ':' +selectedLocation.sourceId);
+			EniwareEdge.Settings.updateSetting(currParams, selectedLocation.locationId + ':' +selectedLocation.sourceId);
 		}
 		modal.modal('hide');
 	});

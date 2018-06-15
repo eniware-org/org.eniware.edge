@@ -12,7 +12,7 @@ import org.eniware.edge.ocpp.AuthorizationDao;
 import org.quartz.DisallowConcurrentExecution;
 import org.quartz.JobExecutionContext;
 import org.quartz.PersistJobDataAfterExecution;
-import net.solarnetwork.node.job.AbstractJob;
+import org.eniware.edge.job.AbstractJob;
 
 /**
  * Job to purge expired authorizations by calling
@@ -20,7 +20,6 @@ import net.solarnetwork.node.job.AbstractJob;
  * maximum expired date to delete is derived from
  * {@link #getMinPurgeExpiredAuthorizationDays()}.
  * 
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

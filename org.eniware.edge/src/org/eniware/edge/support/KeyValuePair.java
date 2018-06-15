@@ -11,7 +11,6 @@ import java.io.Serializable;
 /**
  * A key and value pair.
  * 
- * @author matt
  * @version $Id$
  */
 public class KeyValuePair implements Serializable, Comparable<KeyValuePair> {

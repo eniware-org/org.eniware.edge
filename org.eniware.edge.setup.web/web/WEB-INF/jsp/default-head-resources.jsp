@@ -7,7 +7,7 @@
 	/css/bootstrap.css
 	/css/bootstrap-responsive.css
 	/css/ladda.css
-	/css/solarnode.css
+	/css/eniwareedge.css
 	/css/fonts.css
 	/css/font-awesome.css
 </pack:style>

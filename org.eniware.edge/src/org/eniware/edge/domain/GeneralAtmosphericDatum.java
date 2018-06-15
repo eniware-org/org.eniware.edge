@@ -8,12 +8,11 @@ package org.eniware.edge.domain;
 
 import java.math.BigDecimal;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import net.solarnetwork.util.SerializeIgnore;
+import org.eniware.util.SerializeIgnore;
 
 /**
  * GeneralLocationDatum that also implements {@link AtmosphericDatum}.
  * 
- * @author matt
  * @version 1.2
  */
 public class GeneralAtmosphericDatum extends GeneralLocationDatum implements AtmosphericDatum {

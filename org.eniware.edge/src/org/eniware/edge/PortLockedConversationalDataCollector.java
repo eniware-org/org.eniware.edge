@@ -19,8 +19,7 @@ import org.slf4j.LoggerFactory;
  * <p>The {@link Lock} passed to the constructor is assumed to be locked,
  * and the code using this class <b>must</b> call {@link #stopCollecting()}
  * to release the lock.</p>
- * 
- * @author matt
+ *
  * @version $Revision$
  */
 public class PortLockedConversationalDataCollector implements ConversationalDataCollector {

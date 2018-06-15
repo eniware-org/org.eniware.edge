@@ -14,8 +14,8 @@ import java.util.Map;
  * <p>This API can be used to publish configuration information from one OSGi
  * bundle to another, without knowing the actual implementation of any 
  * target service. For example, imagine two serial IO implementation bundles
- * exist, but the SolarNode application does not know which one the user
- * will choose to use. In this case, the SolarNode application bundle need
+ * exist, but the EniwareEdge application does not know which one the user
+ * will choose to use. In this case, the EniwareEdge application bundle need
  * not import either of the IO implementation bundles directly. Instead it
  * can publish a {@code BeanConfiguration} service that the IO implementations
  * can register to use to configure itself.</p>
@@ -25,7 +25,6 @@ import java.util.Map;
  * services at runtime and dynamically publish services based on this
  * configuration.</p>
  * 
- * @author matt
  * @version $Id$
  * @see BeanConfigurationServiceRegistrationListener
  */

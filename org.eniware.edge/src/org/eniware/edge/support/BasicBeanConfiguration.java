@@ -26,7 +26,6 @@ import org.eniware.edge.util.BeanConfiguration;
  *   <dd>An ordering value. Defaults to {@link #DEFAULT_ORDERING}.</dd>
  * </dl>
  * 
- * @author matt
  * @version $Id$
  */
 public class BasicBeanConfiguration implements BeanConfiguration {

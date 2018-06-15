@@ -20,7 +20,6 @@ import org.slf4j.LoggerFactory;
  * and the code using this class <b>must</b> call {@link #stopCollecting()}
  * to release the lock.</p>
  * 
- * @author matt
  * @version $Revision$
  */
 public class PortLockedDataCollector implements DataCollector {

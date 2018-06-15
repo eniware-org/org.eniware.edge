@@ -38,18 +38,18 @@ import org.apache.commons.codec.binary.Base64OutputStream;
 import org.springframework.context.MessageSource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.util.FileCopyUtils;
-import net.solarnetwork.node.SSLService;
-import net.solarnetwork.node.backup.BackupResource;
-import net.solarnetwork.node.backup.BackupResourceInfo;
-import net.solarnetwork.node.backup.BackupResourceProvider;
-import net.solarnetwork.node.backup.BackupResourceProviderInfo;
-import net.solarnetwork.node.backup.ResourceBackupResource;
-import net.solarnetwork.node.backup.SimpleBackupResourceInfo;
-import net.solarnetwork.node.backup.SimpleBackupResourceProviderInfo;
-import net.solarnetwork.node.setup.PKIService;
-import net.solarnetwork.support.CertificateException;
-import net.solarnetwork.support.CertificateService;
-import net.solarnetwork.support.ConfigurableSSLService;
+import org.eniware.edge.SSLService;
+import org.eniware.edge.backup.BackupResource;
+import org.eniware.edge.backup.BackupResourceInfo;
+import org.eniware.edge.backup.BackupResourceProvider;
+import org.eniware.edge.backup.BackupResourceProviderInfo;
+import org.eniware.edge.backup.ResourceBackupResource;
+import org.eniware.edge.backup.SimpleBackupResourceInfo;
+import org.eniware.edge.backup.SimpleBackupResourceProviderInfo;
+import org.eniware.edge.setup.PKIService;
+import org.eniware.support.CertificateException;
+import org.eniware.support.CertificateService;
+import org.eniware.support.ConfigurableSSLService;
 
 /**
  * Service for managing a {@link KeyStore}.
@@ -63,7 +63,6 @@ import net.solarnetwork.support.ConfigurableSSLService;
  * trust store for SSL connections returned by that API.
  * </p>
  * 
- * @author matt
  * @version 1.4
  */
 public class DefaultKeystoreService extends ConfigurableSSLService
@@ -94,7 +93,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 		this.setupIdentityDao = setupIdentityDao;
 		this.certificateService = certificateService;
 		setKeyStorePath(DefaultKeystoreService.DEFAULT_KEY_STORE_PATH);
-		setTrustStorePassword("solarnode");
+		setTrustStorePassword("eniwareedge");
 		setKeyStorePassword(null);
 	}
 
@@ -145,7 +144,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	@Override
 	public BackupResourceProviderInfo providerInfo(Locale locale) {
 		String name = "Certificate Backup Provider";
-		String desc = "Backs up the SolarNode certificates.";
+		String desc = "Backs up the EniwareEdge certificates.";
 		MessageSource ms = messageSource;
 		if ( ms != null ) {
 			name = ms.getMessage("title", null, name, locale);
@@ -564,7 +563,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	@Override
-	public synchronized SSLSocketFactory getSolarInSocketFactory() {
+	public synchronized SSLSocketFactory getEniwareInSocketFactory() {
 		return getSSLSocketFactory();
 	}
 

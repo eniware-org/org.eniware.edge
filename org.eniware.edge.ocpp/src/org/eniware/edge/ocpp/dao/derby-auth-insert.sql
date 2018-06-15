@@ -1,3 +1,3 @@
-INSERT INTO solarnode.ocpp_auth
+INSERT INTO eniwareedge.ocpp_auth
 	(created, idtag, parent_idtag, auth_status, expires)
 VALUES (?,?,?,?,?)

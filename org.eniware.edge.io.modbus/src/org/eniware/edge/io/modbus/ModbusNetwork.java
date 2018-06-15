@@ -7,7 +7,7 @@
 package org.eniware.edge.io.modbus;
 
 import java.io.IOException;
-import net.solarnetwork.node.Identifiable;
+import org.eniware.edge.Identifiable;
 
 /**
  * High level Modbus API.
@@ -17,7 +17,6 @@ import net.solarnetwork.node.Identifiable;
  * direct dependency on Jamod (or any other Modbus implementation).
  * </p>
  * 
- * @author matt
  * @version 1.0
  * @since 2.0
  */

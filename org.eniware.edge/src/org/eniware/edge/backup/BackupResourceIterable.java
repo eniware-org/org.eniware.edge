@@ -20,7 +20,6 @@ import java.util.Iterator;
  * valid.
  * </p>
  * 
- * @author matt
  * @version 1.0
  */
 public interface BackupResourceIterable extends Iterable<BackupResource>, Closeable {

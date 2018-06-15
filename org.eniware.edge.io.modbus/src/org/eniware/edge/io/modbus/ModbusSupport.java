@@ -11,8 +11,8 @@ package org.eniware.edge.io.modbus;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.util.StringUtils;
+import org.eniware.util.OptionalService;
+import org.eniware.util.StringUtils;
 import net.wimpi.modbus.net.SerialConnection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +35,6 @@ import org.slf4j.LoggerFactory;
  * <dd>A service group to use.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.0
  */
 public abstract class ModbusSupport {

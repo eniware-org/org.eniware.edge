@@ -12,7 +12,6 @@ import java.util.concurrent.Callable;
  * Extension of {@link Callable} to provide a way to notify between blocking IO
  * operations.
  * 
- * @author matt
  * @version 1.0
  * @param <T>
  */

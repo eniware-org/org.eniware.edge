@@ -17,7 +17,6 @@ import org.springframework.util.StringUtils;
 /**
  * Utility methods for setup resources.
  * 
- * @author matt
  * @version 1.0
  */
 public final class SetupResourceUtils {

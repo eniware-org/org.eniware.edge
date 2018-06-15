@@ -15,7 +15,6 @@ import org.eniware.edge.setup.SetupResourceProvider;
 /**
  * Basic implementation of {@link SetupResourceSettingSpecifier}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BasicSetupResourceSettingSpecifier extends BaseSettingSpecifier

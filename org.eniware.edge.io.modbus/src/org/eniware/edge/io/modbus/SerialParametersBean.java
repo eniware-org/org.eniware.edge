@@ -22,7 +22,6 @@ import net.wimpi.modbus.util.SerialParameters;
  * some JVMs.
  * </p>
  * 
- * @author matt
  * @version 1.0
  */
 public class SerialParametersBean extends SerialParameters {

@@ -9,7 +9,6 @@ package org.eniware.edge.setup;
 /**
  * Command object for a user profile.
  * 
- * @author matt
  * @version 1.0
  * @since 1.48
  */

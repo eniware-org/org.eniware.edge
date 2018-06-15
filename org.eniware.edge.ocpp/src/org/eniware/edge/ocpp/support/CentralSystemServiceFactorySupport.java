@@ -1,7 +1,7 @@
 /* ==================================================================
  * CentralSystemServiceFactorySupport.java - 9/06/2015 11:05:18 am
  * 
- * Copyright 2007-2015 SolarNetwork.net Dev Team
+ * Copyright 2007-2015 EniwareNetwork.net Dev Team
  * 
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
@@ -47,12 +47,12 @@ import org.quartz.TriggerKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
-import net.solarnetwork.node.Identifiable;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicTitleSettingSpecifier;
-import net.solarnetwork.util.FilterableService;
+import org.eniware.edge.Identifiable;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.settings.support.BasicTitleSettingSpecifier;
+import org.eniware.util.FilterableService;
 
 /**
  * A base helper class for services that require use of
@@ -69,7 +69,6 @@ import net.solarnetwork.util.FilterableService;
  * explicitly defined on this class.
  * </p>
  * 
- * @author matt
  * @version 1.1
  */
 public abstract class CentralSystemServiceFactorySupport

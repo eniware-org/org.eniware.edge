@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Reactor JSON Support
 Bundle-SymbolicName: org.eniware.edge.reactor.io.json
-Bundle-Description: Communication support for SolarNet JSON based Reactor messages.
+Bundle-Description: Communication support for EniwareNet JSON based Reactor messages.
 Bundle-Version: 1.2.0
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: 
@@ -11,6 +11,6 @@ Import-Package:
  com.fasterxml.jackson.databind;version="[2.4,3.0)",
  com.fasterxml.jackson.databind.deser.std;version="[2.4,3.0)",
  com.fasterxml.jackson.databind.ser.std;version="[2.4,3.0)",
- net.solarnetwork.node.reactor;version="1.1.0",
- net.solarnetwork.node.reactor.support;version="1.2.0",
- net.solarnetwork.node.support;version="1.13.0"
+ org.eniware.edge.reactor;version="1.1.0",
+ org.eniware.edge.reactor.support;version="1.2.0",
+ org.eniware.edge.support;version="1.13.0"

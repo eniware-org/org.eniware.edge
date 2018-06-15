@@ -5,12 +5,11 @@
  */
 package org.eniware.edge.ocpp;
 
-import net.solarnetwork.node.Identifiable;
+import org.eniware.edge.Identifiable;
 
 /**
  * API for something that manages the on/off state of OCPP sockets.
  * 
- * @author matt
  * @version 1.0
  */
 public interface SocketManager extends Identifiable {

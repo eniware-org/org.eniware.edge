@@ -14,7 +14,7 @@
 	<setup:settingValue service='${settingsService}' provider='${provider}' setting='${setting}'/>
 </c:set>
 <c:choose>
-	<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.SetupResourceSettingSpecifier')}">
+	<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.SetupResourceSettingSpecifier')}">
 		<setup:resources role="USER" type="text/html" inline="true"
 			provider="${setting.setupResourceProvider}" 
 			properties="${setting.setupResourceProperties}"
@@ -27,18 +27,18 @@
 			data-group-index="${groupIndex}"
 			/>
 	</c:when>
-	<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.KeyedSettingSpecifier')}">
+	<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.KeyedSettingSpecifier')}">
 		<div class="control-group" id="cg-${settingId}">
 			<label class="control-label" for="${settingId}">
 				<setup:message key="${setting.key}.key" messageSource="${provider.messageSource}" text="${setting.key}" index="${groupIndex}"/>
 			</label>
-			<div class="controls ${setup:instanceOf(setting, 'net.solarnetwork.node.settings.TitleSettingSpecifier') ? 'static' : ''}">
+			<div class="controls ${setup:instanceOf(setting, 'org.eniware.edge.settings.TitleSettingSpecifier') ? 'static' : ''}">
 				<c:choose>
-					<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.SliderSettingSpecifier')}">
+					<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.SliderSettingSpecifier')}">
 						<div id="${settingId}" class="setting slider span5"></div>
 						<script>
 						$(function() {
-							SolarNode.Settings.addSlider({
+							EniwareEdge.Settings.addSlider({
 								key: '${settingId}',
 								min: '${setting.minimumValue}',
 								max: '${setting.maximumValue}',
@@ -52,7 +52,7 @@
 						});
 						</script>
 					</c:when>
-					<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.ToggleSettingSpecifier')}">
+					<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.ToggleSettingSpecifier')}">
 					    <button type="button" class="toggle btn<c:if test='${settingValue eq  setting.trueValue}'> btn-success active</c:if>" 
 					    	id="${settingId}">
 					    	<c:choose>
@@ -66,7 +66,7 @@
 					    </button>
 						<script>
 						$(function() {
-							SolarNode.Settings.addToggle({
+							EniwareEdge.Settings.addToggle({
 								key: '${settingId}',
 								on: '${setting.trueValue}',
 								onLabel: '<fmt:message key="settings.toggle.on"/>',
@@ -81,7 +81,7 @@
 						});
 						</script>
 					</c:when>
-					<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.RadioGroupSettingSpecifier')}">
+					<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.RadioGroupSettingSpecifier')}">
 						<c:forEach items="${setting.valueTitles}" var="entry">
 							<label class="radio inline">
 								<input type="radio" name="${settingId}" id="${settingId}" value="${entry.key}"
@@ -104,7 +104,7 @@
 						</c:forEach>
 						<script>
 						$(function() {
-							SolarNode.Settings.addRadio({
+							EniwareEdge.Settings.addRadio({
 								key: '${settingId}',
 								xint: '${setting["transient"]}',
 								provider: '${provider.settingUID}',
@@ -114,7 +114,7 @@
 						});
 						</script>
 					</c:when>
-					<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.MultiValueSettingSpecifier')}">
+					<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.MultiValueSettingSpecifier')}">
 						<select name="${settingId}" id="${settingId}">
 							<c:forEach items="${setting.valueTitles}" var="entry">
 								<option value="${entry.key}"
@@ -126,7 +126,7 @@
 						</select>
 						<script>
 						$(function() {
-							SolarNode.Settings.addSelect({
+							EniwareEdge.Settings.addSelect({
 								key: '${settingId}',
 								xint: '${setting["transient"]}',
 								provider: '${provider.settingUID}',
@@ -136,7 +136,7 @@
 						});
 						</script>
 					</c:when>
-					<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.TextFieldSettingSpecifier')}">
+					<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.TextFieldSettingSpecifier')}">
 						<input type="${setting.secureTextEntry == true ? 'password' : 'text' }" name="${settingId}" id="${settingId}" 
 							class="span5" maxLength="255"
 							<c:choose>
@@ -150,7 +150,7 @@
 							/>
 						<script>
 						$(function() {
-							SolarNode.Settings.addTextField({
+							EniwareEdge.Settings.addTextField({
 								key: '${settingId}',
 								xint: '${setting["transient"]}',
 								provider: '${provider.settingUID}',
@@ -160,10 +160,10 @@
 						});
 						</script>
 					</c:when>
-					<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.TitleSettingSpecifier')}">
+					<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.TitleSettingSpecifier')}">
 						<span class="title">${fn:escapeXml(settingValue)}</span>
 					</c:when>
-					<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.LocationLookupSettingSpecifier')}">
+					<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.LocationLookupSettingSpecifier')}">
 						<span id="${settingId}">
 							<span class="setting-value">
 								<c:if test="${not empty setting.sourceName}">
@@ -179,7 +179,7 @@
 						</span>
 						<script>
 						$(function() {
-							SolarNode.Settings.addLocationFinder({
+							EniwareEdge.Settings.addLocationFinder({
 								key: '${settingId}',
 								locationType: '${setting.locationTypeKey}',
 								sourceName: '${setup:js(setting.sourceName)}',
@@ -210,14 +210,14 @@
 				
 				<span class="help-inline active-value clean"><span class="text-info">
 					<c:choose>
-						<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.TextFieldSettingSpecifier') and setting.secureTextEntry == true}">
+						<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.TextFieldSettingSpecifier') and setting.secureTextEntry == true}">
 							<fmt:message key="settings.changed.value.label"/>
 						</c:when>
 						<c:otherwise>
 							<fmt:message key="settings.current.value.label"/>:
 							<code class="value">
 								<c:choose>
-									<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.ToggleSettingSpecifier')}">
+									<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.ToggleSettingSpecifier')}">
 								    	<c:choose>
 								    		<c:when test="${settingValue eq  setting.trueValue}">
 								    			<fmt:message key="settings.toggle.on"/>
@@ -238,7 +238,7 @@
 			</div>
 		</div>
 	</c:when>
-	<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.GroupSettingSpecifier') and not empty setting.key}">
+	<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.GroupSettingSpecifier') and not empty setting.key}">
 		<div class="control-group grouped">
 			<label class="control-label">
 				<setup:message key="${setting.key}.key" messageSource="${provider.messageSource}" text="${setting.key}"/>
@@ -267,7 +267,7 @@
 					<input type="hidden" name="${settingId}Count" id="${settingId}" value="${fn:length(setting.groupSettings)}" />
 					<script>
 					$(function() {
-						SolarNode.Settings.addGroupedSetting({
+						EniwareEdge.Settings.addGroupedSetting({
 							key: '${settingId}',
 							provider: '${provider.settingUID}',
 							setting: '${setup:js(setting.key)}Count',
@@ -298,7 +298,7 @@
 			</c:if>
 		</fieldset>
 	</c:when>
-	<c:when test="${setup:instanceOf(setting, 'net.solarnetwork.node.settings.GroupSettingSpecifier')}">
+	<c:when test="${setup:instanceOf(setting, 'org.eniware.edge.settings.GroupSettingSpecifier')}">
 		<c:if test="${not empty setting.groupSettings}">
 			<fieldset>
 				<c:set var="origSetting" value="${setting}"/>

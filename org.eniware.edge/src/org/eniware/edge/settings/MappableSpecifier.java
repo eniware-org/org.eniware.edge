@@ -9,7 +9,6 @@ package org.eniware.edge.settings;
 /**
  * API for a specifier that can be mapped to some other specifier.
  * 
- * @author matt
  * @version 1.0
  */
 public interface MappableSpecifier {

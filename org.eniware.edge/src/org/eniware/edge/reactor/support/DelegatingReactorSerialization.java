@@ -40,7 +40,6 @@ import org.slf4j.LoggerFactory;
  *   <dd>Collection of {@link ReactorSerializationService} to delegate to.</dd>
  * </dl>
  * 
- * @author matt
  * @version $Revision$
  */
 public class DelegatingReactorSerialization implements ReactorSerializationService {

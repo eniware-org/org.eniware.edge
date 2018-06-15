@@ -9,7 +9,6 @@ package org.eniware.edge.setup;
 /**
  * Simple implementation of {@link PluginQuery}.
  * 
- * @author matt
  * @version 1.0
  */
 public class SimplePluginQuery implements PluginQuery {

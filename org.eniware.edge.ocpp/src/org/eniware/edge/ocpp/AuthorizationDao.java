@@ -14,7 +14,6 @@ import ocpp.v15.cs.IdTagInfo;
 /**
  * DAO for a local authorization list.
  * 
- * @author matt
  * @version 1.0
  */
 public interface AuthorizationDao {

@@ -13,7 +13,6 @@ import java.util.Map;
 /**
  * API for parsing instruction data encoded in some way back into an Instruction instance.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface ReactorSerializationService {

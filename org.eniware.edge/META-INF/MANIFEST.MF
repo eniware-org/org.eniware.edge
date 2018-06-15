@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Core SolarNode Framework
+Bundle-Name: Core EniwareEdge Framework
 Bundle-SymbolicName: org.eniware.edge
-Bundle-Description: The core of the SolarNode framework that provides basic 
- infrastructure for all of the SolarNode application.
+Bundle-Description: The core of the EniwareEdge framework that provides basic 
+ infrastructure for all of the EniwareEdge application.
 Bundle-Version: 1.56.0
-Bundle-Vendor: SolarNetwork
+Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: 
  org.eniware.edge;version="1.23.0",
@@ -33,9 +33,9 @@ Import-Package:
  javax.xml.transform.dom,
  javax.xml.transform.stream,
  javax.xml.xpath,
- net.solarnetwork.domain;version="1.4.0",
- net.solarnetwork.support;version="1.0.0",
- net.solarnetwork.util;version="1.26.0",
+ org.eniware.domain;version="1.4.0",
+ org.eniware.support;version="1.0.0",
+ org.eniware.util;version="1.26.0",
  org.apache.commons.codec;version="[1.7,2.0)",
  org.apache.commons.codec.binary;version="[1.7,2.0)",
  org.apache.commons.codec.digest;version="[1.7,2.0)",

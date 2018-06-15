@@ -58,7 +58,6 @@ import org.springframework.beans.factory.ObjectFactory;
  * <p>The other configurable properties are the same as available on the
  * {@link SerialPortDataCollector} class, see that class for more information.</p>
  *
- * @author matt
  * @see SerialPortDataCollector
  * @version $Revision$ $Date$
  */

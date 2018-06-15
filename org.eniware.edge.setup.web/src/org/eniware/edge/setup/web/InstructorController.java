@@ -22,16 +22,15 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import net.solarnetwork.domain.NodeControlInfo;
-import net.solarnetwork.node.NodeControlProvider;
-import net.solarnetwork.node.reactor.InstructionHandler;
-import net.solarnetwork.node.reactor.InstructionStatus;
-import net.solarnetwork.node.reactor.support.BasicInstruction;
+import org.eniware.domain.NodeControlInfo;
+import org.eniware.edge.NodeControlProvider;
+import org.eniware.edge.reactor.InstructionHandler;
+import org.eniware.edge.reactor.InstructionStatus;
+import org.eniware.edge.reactor.support.BasicInstruction;
 
 /**
  * Controller to act as a local Instructor to the local node.
  * 
- * @author matt
  * @version 1.0
  */
 @ServiceAwareController

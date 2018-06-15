@@ -12,8 +12,7 @@ import org.eniware.edge.settings.TextFieldSettingSpecifier;
 
 /**
  * Basic implementation of {@link TextFieldSettingSpecifier}.
- * 
- * @author matt
+ * s
  * @version 1.3
  */
 public class BasicTextFieldSettingSpecifier extends BasicTitleSettingSpecifier

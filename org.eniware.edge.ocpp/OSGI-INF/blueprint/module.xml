@@ -16,7 +16,7 @@
 	
 	<!-- Configuration -->
 	
-	<osgix:cm-properties id="cfg" persistent-id="net.solarnetwork.node.ocpp">
+	<osgix:cm-properties id="cfg" persistent-id="org.eniware.edge.ocpp">
 		<beans:prop key="purgeExpiredJob.cronExpression">5 15 3 * * ?</beans:prop>
 		<beans:prop key="purgeExpiredJob.minPurgeExpiredAuthorizationDays">1</beans:prop>
 	</osgix:cm-properties>
@@ -25,81 +25,81 @@
 	
 	<!-- Support -->
 
-	<bean id="eventAdmin" class="net.solarnetwork.util.DynamicServiceTracker">
+	<bean id="eventAdmin" class="org.eniware.util.DynamicServiceTracker">
 		<property name="bundleContext" ref="bundleContext"/>
 		<property name="serviceClassName" value="org.osgi.service.event.EventAdmin"/>
 	</bean>
 
-	<bean id="identityService" class="net.solarnetwork.util.DynamicServiceTracker">
+	<bean id="identityService" class="org.eniware.util.DynamicServiceTracker">
 		<property name="bundleContext" ref="bundleContext"/>
-		<property name="serviceClassName" value="net.solarnetwork.node.IdentityService"/>
+		<property name="serviceClassName" value="org.eniware.edge.IdentityService"/>
 	</bean>
 
-	<bean id="pkiService" class="net.solarnetwork.util.DynamicServiceTracker">
+	<bean id="pkiService" class="org.eniware.util.DynamicServiceTracker">
 		<property name="bundleContext" ref="bundleContext"/>
-		<property name="serviceClassName" value="net.solarnetwork.node.IdentityService"/>
+		<property name="serviceClassName" value="org.eniware.edge.IdentityService"/>
 	</bean>
 
 	<reference id="scheduler" interface="org.quartz.Scheduler" filter="(function=node)"/>
 
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basenames" value="net.solarnetwork.node.ocpp.impl.ConfigurableCentralSystemServiceFactory"/>
+		<property name="basenames" value="org.eniware.edge.ocpp.impl.ConfigurableCentralSystemServiceFactory"/>
 	</bean>
 	
-	<bean id="settingsFactory" class="net.solarnetwork.node.settings.support.BasicSettingSpecifierProviderFactory">
+	<bean id="settingsFactory" class="org.eniware.edge.settings.support.BasicSettingSpecifierProviderFactory">
 		<property name="displayName" value="OCPP Central System"/>
-		<property name="factoryUID" value="net.solarnetwork.node.ocpp.central"/>
+		<property name="factoryUID" value="org.eniware.edge.ocpp.central"/>
 		<property name="messageSource" ref="messageSource"/>
 	</bean>
 	
 	<reference id="dataSource" interface="javax.sql.DataSource" filter="(db=node)"/>
 	
-	<bean id="authDao" class="net.solarnetwork.node.ocpp.dao.JdbcAuthorizationDao" init-method="init">
+	<bean id="authDao" class="org.eniware.edge.ocpp.dao.JdbcAuthorizationDao" init-method="init">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	
-	<reference id="settingDao" interface="net.solarnetwork.node.dao.SettingDao"/>
+	<reference id="settingDao" interface="org.eniware.edge.dao.SettingDao"/>
 	
-	<bean id="chargeConfigurationDao" class="net.solarnetwork.node.ocpp.dao.SettingsChargeConfigurationDao">
+	<bean id="chargeConfigurationDao" class="org.eniware.edge.ocpp.dao.SettingsChargeConfigurationDao">
 		<argument ref="settingDao"/>
 		<argument ref="eventAdmin"/>
 	</bean>
 
-	<bean id="chargeSessionDao" class="net.solarnetwork.node.ocpp.dao.JdbcChargeSessionDao" init-method="init">
+	<bean id="chargeSessionDao" class="org.eniware.edge.ocpp.dao.JdbcChargeSessionDao" init-method="init">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 
-	<bean id="socketDao" class="net.solarnetwork.node.ocpp.dao.JdbcSocketDao" init-method="init">
+	<bean id="socketDao" class="org.eniware.edge.ocpp.dao.JdbcSocketDao" init-method="init">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 
 	<!-- Published Services -->
 	
-	<service ref="authDao" interface="net.solarnetwork.node.ocpp.AuthorizationDao"/>
+	<service ref="authDao" interface="org.eniware.edge.ocpp.AuthorizationDao"/>
 	
-	<service ref="chargeConfigurationDao" interface="net.solarnetwork.node.ocpp.ChargeConfigurationDao"/>
+	<service ref="chargeConfigurationDao" interface="org.eniware.edge.ocpp.ChargeConfigurationDao"/>
 
-	<service ref="chargeSessionDao" interface="net.solarnetwork.node.ocpp.ChargeSessionDao"/>
+	<service ref="chargeSessionDao" interface="org.eniware.edge.ocpp.ChargeSessionDao"/>
 
-	<service ref="socketDao" interface="net.solarnetwork.node.ocpp.SocketDao"/>
+	<service ref="socketDao" interface="org.eniware.edge.ocpp.SocketDao"/>
 
-	<service ref="settingsFactory" interface="net.solarnetwork.node.settings.SettingSpecifierProviderFactory"/>
+	<service ref="settingsFactory" interface="org.eniware.edge.settings.SettingSpecifierProviderFactory"/>
 	
-	<osgix:managed-service-factory factory-pid="net.solarnetwork.node.ocpp.central" autowire-on-update="true">
+	<osgix:managed-service-factory factory-pid="org.eniware.edge.ocpp.central" autowire-on-update="true">
 		<osgix:interfaces>
-			<beans:value>net.solarnetwork.node.ocpp.CentralSystemServiceFactory</beans:value>
-			<beans:value>net.solarnetwork.node.settings.SettingSpecifierProvider</beans:value>
+			<beans:value>org.eniware.edge.ocpp.CentralSystemServiceFactory</beans:value>
+			<beans:value>org.eniware.edge.settings.SettingSpecifierProvider</beans:value>
 			<beans:value>org.osgi.service.event.EventHandler</beans:value>
 		</osgix:interfaces>
 		<osgix:service-properties>
-			<beans:entry key="settingPid" value="net.solarnetwork.node.ocpp.central"/>
+			<beans:entry key="settingPid" value="org.eniware.edge.ocpp.central"/>
 			<beans:entry key="#{T(org.osgi.service.event.EventConstants).EVENT_TOPIC}">
 				<beans:array value-type="java.lang.String">
-					<beans:value>#{T(net.solarnetwork.node.ocpp.ChargeConfigurationDao).EVENT_TOPIC_CHARGE_CONFIGURATION_UPDATED}</beans:value>
+					<beans:value>#{T(org.eniware.edge.ocpp.ChargeConfigurationDao).EVENT_TOPIC_CHARGE_CONFIGURATION_UPDATED}</beans:value>
 				</beans:array>
 			</beans:entry>
 		</osgix:service-properties>
-		<bean class="net.solarnetwork.node.ocpp.impl.ConfigurableCentralSystemServiceFactory" init-method="startup" destroy-method="shutdown">
+		<bean class="org.eniware.edge.ocpp.impl.ConfigurableCentralSystemServiceFactory" init-method="startup" destroy-method="shutdown">
 			<property name="chargeConfigurationDao" ref="chargeConfigurationDao"/>
 			<property name="messageSource" ref="messageSource"/>
 			<property name="identityService" ref="identityService"/>
@@ -111,14 +111,14 @@
 	<bean id="jobMessageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">
 			<list>
-				<value>net.solarnetwork.node.ocpp.dao.Job</value>
+				<value>org.eniware.edge.ocpp.dao.Job</value>
 			</list>
 		</property>
 	</bean>
 	
-	<bean id="purgeExpiredAuthorizationsJob" class="net.solarnetwork.node.job.SimpleTriggerAndJobDetail">
+	<bean id="purgeExpiredAuthorizationsJob" class="org.eniware.edge.job.SimpleTriggerAndJobDetail">
 		<property name="trigger">
-			<bean class="net.solarnetwork.node.job.RandomizedCronTriggerFactoryBean">
+			<bean class="org.eniware.edge.job.RandomizedCronTriggerFactoryBean">
 				<property name="name" value="purgeExpiredAuthorizationsTrigger"/>
 				<property name="cronExpression" value="${purgeExpiredJob.cronExpression}"/>
 				<property name="misfireInstructionName" value="MISFIRE_INSTRUCTION_DO_NOTHING"/>
@@ -128,7 +128,7 @@
 		<property name="jobDetail">
 			<bean class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
 				<property name="name" value="purgeExpiredAuthorizationsJob"/>
-				<property name="jobClass" value="net.solarnetwork.node.ocpp.dao.PurgeExpiredAuthorizationsJob"/>
+				<property name="jobClass" value="org.eniware.edge.ocpp.dao.PurgeExpiredAuthorizationsJob"/>
 				<property name="jobDataAsMap">
 					<map>
 						<entry key="authorizationDao" value-ref="authDao"/>
@@ -141,6 +141,6 @@
 		<property name="messageSource" ref="jobMessageSource"/>
 	</bean>
 	
-	<service ref="purgeExpiredAuthorizationsJob" interface="net.solarnetwork.node.job.TriggerAndJobDetail"/>
+	<service ref="purgeExpiredAuthorizationsJob" interface="org.eniware.edge.job.TriggerAndJobDetail"/>
 	
 </blueprint>

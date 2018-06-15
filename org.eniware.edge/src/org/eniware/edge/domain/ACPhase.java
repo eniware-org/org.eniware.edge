@@ -9,7 +9,6 @@ package org.eniware.edge.domain;
 /**
  * Enumeration of AC phase values.
  * 
- * @author matt
  * @version 1.0
  */
 public enum ACPhase {

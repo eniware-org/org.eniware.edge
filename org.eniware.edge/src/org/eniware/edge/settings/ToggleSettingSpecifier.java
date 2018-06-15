@@ -9,7 +9,6 @@ package org.eniware.edge.settings;
 /**
  * A logically boolean toggle setting.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface ToggleSettingSpecifier extends KeyedSettingSpecifier<Object> {

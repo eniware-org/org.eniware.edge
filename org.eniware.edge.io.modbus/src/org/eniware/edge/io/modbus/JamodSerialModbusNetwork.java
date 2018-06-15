@@ -15,17 +15,16 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
-import net.solarnetwork.node.LockTimeoutException;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.LockTimeoutException;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
 import net.wimpi.modbus.net.SerialConnection;
 import net.wimpi.modbus.util.SerialParameters;
 
 /**
  * Jamod implementation of {@link ModbusNetwork}.
  * 
- * @author matt
  * @version 1.1
  * @since 2.0
  */
@@ -172,7 +171,7 @@ public class JamodSerialModbusNetwork implements ModbusNetwork, SettingSpecifier
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.io.modbus";
+		return "org.eniware.edge.io.modbus";
 	}
 
 	@Override

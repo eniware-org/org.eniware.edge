@@ -15,7 +15,6 @@ import org.eniware.edge.reactor.InstructionStatus.InstructionState;
 /**
  * Utilities for dealing with common Instruction patterns.
  * 
- * @author matt
  * @version 1.1
  */
 public final class InstructionUtils {

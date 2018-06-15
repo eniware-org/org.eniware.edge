@@ -3,8 +3,6 @@
  *  Apache License 2.0
  * ==================================================================
  */
- * ==================================================================
- */
 
 package org.eniware.edge.ocpp.impl;
 
@@ -41,14 +39,14 @@ import org.quartz.TriggerKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
-import net.solarnetwork.node.IdentityService;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicTitleSettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicToggleSettingSpecifier;
-import net.solarnetwork.support.SSLService;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.edge.IdentityService;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.settings.support.BasicTitleSettingSpecifier;
+import org.eniware.edge.settings.support.BasicToggleSettingSpecifier;
+import org.eniware.support.SSLService;
+import org.eniware.util.OptionalService;
 import ocpp.v15.cs.BootNotificationRequest;
 import ocpp.v15.cs.BootNotificationResponse;
 import ocpp.v15.cs.CentralSystemService;
@@ -61,7 +59,6 @@ import ocpp.v15.support.WSAddressingFromHandler;
  * Implementation of {@link CentralSystemServiceFactory} that allows configuring
  * the service.
  * 
- * @author matt
  * @version 1.2
  */
 public class ConfigurableCentralSystemServiceFactory
@@ -85,8 +82,8 @@ public class ConfigurableCentralSystemServiceFactory
 	private String url = "http://localhost:9000/";
 	private String uid = "OCPP Central System";
 	private String groupUID;
-	private String chargePointModel = "SolarNode";
-	private String chargePointVendor = "SolarNetwork";
+	private String chargePointModel = "EniwareEdge";
+	private String chargePointVendor = "EniwareNetwork";
 	private String firmwareVersion;
 
 	private MessageSource messageSource;
@@ -409,7 +406,7 @@ public class ConfigurableCentralSystemServiceFactory
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.ocpp.central";
+		return "org.eniware.edge.ocpp.central";
 	}
 
 	@Override
@@ -542,7 +539,7 @@ public class ConfigurableCentralSystemServiceFactory
 	}
 
 	/**
-	 * Set the {@link IdentityService} to use for identifying the SolarNode to
+	 * Set the {@link IdentityService} to use for identifying the EniwareEdge to
 	 * the OCPP server.
 	 * 
 	 * @param identityService

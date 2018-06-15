@@ -69,7 +69,6 @@ import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
  *   
  * </dl>
  *
- * @author matt
  * @version $Revision$
  */
 public class SerialPortBean implements Cloneable {

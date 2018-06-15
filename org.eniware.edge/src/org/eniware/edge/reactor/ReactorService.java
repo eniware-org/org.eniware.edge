@@ -10,9 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API for reacting to SolarNet service instruction requests.
+ * API for reacting to EniwareNet service instruction requests.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface ReactorService {

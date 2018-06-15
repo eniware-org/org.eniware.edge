@@ -12,12 +12,11 @@ import org.eniware.edge.util.DateUtils;
 import org.joda.time.LocalTime;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import net.solarnetwork.util.SerializeIgnore;
+import org.eniware.util.SerializeIgnore;
 
 /**
  * Extension of {@link GeneralLocationDatum} with {@link DayDatum} support.
  * 
- * @author matt
  * @version 1.2
  */
 public class GeneralDayDatum extends GeneralLocationDatum implements DayDatum {

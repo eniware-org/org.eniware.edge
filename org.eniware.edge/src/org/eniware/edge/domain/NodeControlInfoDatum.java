@@ -8,13 +8,12 @@ package org.eniware.edge.domain;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import net.solarnetwork.domain.NodeControlInfo;
-import net.solarnetwork.domain.NodeControlPropertyType;
+import org.eniware.domain.NodeControlInfo;
+import org.eniware.domain.NodeControlPropertyType;
 
 /**
  * Implementation of {@link NodeControlInfo} and {@link Datum}.
  * 
- * @author matt
  * @version 1.1
  */
 public class NodeControlInfoDatum extends BaseDatum implements NodeControlInfo {

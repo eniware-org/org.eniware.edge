@@ -1,5 +1,5 @@
 'use strict';
-SolarNode.Datum = (function() {
+EniwareEdge.Datum = (function() {
 	var DATUM_KNOWN_PROPERTIES = Object.freeze({
 		'_DatumType' : true,
 		'_DatumTypes' : true,
@@ -17,8 +17,8 @@ SolarNode.Datum = (function() {
 	 * @param {function} msgHandler the callback function that accepts error and message arguments
 	 */
 	function subscribeDatumCreated(sourceId, msgHandler) {
-		var topic = SolarNode.WebSocket.topicNameWithWildcardSuffix('/topic/datum/created', sourceId);
-		SolarNode.WebSocket.subscribeToTopic(topic, msgHandler);
+		var topic = EniwareEdge.WebSocket.topicNameWithWildcardSuffix('/topic/datum/created', sourceId);
+		EniwareEdge.WebSocket.subscribeToTopic(topic, msgHandler);
 	}
 	
 	/**
@@ -28,8 +28,8 @@ SolarNode.Datum = (function() {
 	 * @param {function} msgHandler the callback function that accepts error and message arguments
 	 */
 	function subscribeDatumStored(sourceId, msgHandler) {
-		var topic = SolarNode.WebSocket.topicNameWithWildcardSuffix('/topic/datum/stored', sourceId);
-		SolarNode.WebSocket.subscribeToTopic(topic, msgHandler);
+		var topic = EniwareEdge.WebSocket.topicNameWithWildcardSuffix('/topic/datum/stored', sourceId);
+		EniwareEdge.WebSocket.subscribeToTopic(topic, msgHandler);
 	}
 
 	/**
@@ -39,8 +39,8 @@ SolarNode.Datum = (function() {
 	 * @param {function} msgHandler the callback function that accepts error and message arguments
 	 */
 	function subscribeDatum(sourceId, msgHandler) {
-		var topic = SolarNode.WebSocket.topicNameWithWildcardSuffix('/topic/datum/*', sourceId);
-		SolarNode.WebSocket.subscribeToTopic(topic, msgHandler);
+		var topic = EniwareEdge.WebSocket.topicNameWithWildcardSuffix('/topic/datum/*', sourceId);
+		EniwareEdge.WebSocket.subscribeToTopic(topic, msgHandler);
 	}
 
 	/**
@@ -50,8 +50,8 @@ SolarNode.Datum = (function() {
 	 * @param {function} msgHandler the callback function that accepts error and message arguments
 	 */
 	function subscribeControl(controlId, msgHandler) {
-		var topic = SolarNode.WebSocket.topicNameWithWildcardSuffix('/topic/control/*', controlId);
-		SolarNode.WebSocket.subscribeToTopic(topic, msgHandler);
+		var topic = EniwareEdge.WebSocket.topicNameWithWildcardSuffix('/topic/control/*', controlId);
+		EniwareEdge.WebSocket.subscribeToTopic(topic, msgHandler);
 	}
 
 	function replaceTemplateProperties(el, obj, prefix) {
@@ -170,12 +170,12 @@ SolarNode.Datum = (function() {
 	}
 	
 	function updateExternalNodeLinks(container) {
-		$.getJSON(SolarNode.context.path('/a/config')).then(function(json) {
+		$.getJSON(EniwareEdge.context.path('/a/config')).then(function(json) {
 			var replaced = false; 
 			if ( json && json.data && json.data.networkServiceUrls ) {
 				var urls = json.data.networkServiceUrls;
 				Object.keys(urls).forEach(function(name) {
-					var url = urls[name].replace(/\{nodeId\}/, SolarNode.nodeId);
+					var url = urls[name].replace(/\{nodeId\}/, EniwareEdge.nodeId);
 					var els = container.find('.'+name);
 					if ( els.length > 0 ) {
 						els.find('a.external-link').attr('href', url);
@@ -206,7 +206,7 @@ SolarNode.Datum = (function() {
 }());
 
 $(document).ready(function() {
-	if ( !SolarNode.isAuthenticated() ) {
+	if ( !EniwareEdge.isAuthenticated() ) {
 		return;
 	}
 	
@@ -220,17 +220,17 @@ $(document).ready(function() {
 		
 		var handler = function handleMessage(msg) {
 			var datum = JSON.parse(msg.body).data,
-				activity = SolarNode.Datum.datumActivityForDatum(datum);
+				activity = EniwareEdge.Datum.datumActivityForDatum(datum);
 			console.info('Got %o message: %o', activity.event, activity);
-			SolarNode.Datum.addDatumActivityTableRow(activityTableBody, activityTableTemplateRow, activity);
+			EniwareEdge.Datum.addDatumActivityTableRow(activityTableBody, activityTableTemplateRow, activity);
 			activityTableBody.find('tr:gt(9)').remove();
 			if ( activity.event !== 'DATUM_UPLOADED' ) {
-				SolarNode.Datum.updateDatumActivitySeenPropsTableRow(seenPropsTableBody, seenPropsTableTemplateRow, activity);
+				EniwareEdge.Datum.updateDatumActivitySeenPropsTableRow(seenPropsTableBody, seenPropsTableTemplateRow, activity);
 			}
 		};
 		
-		SolarNode.Datum.subscribeDatum(null, handler);
-		SolarNode.Datum.subscribeControl(null, handler);
+		EniwareEdge.Datum.subscribeDatum(null, handler);
+		EniwareEdge.Datum.subscribeControl(null, handler);
 
 		activityContainer.removeClass('hide');
 		seenPropsContainer.removeClass('hide');
@@ -238,6 +238,6 @@ $(document).ready(function() {
 	
 	$('#external-node-links').first().each(function() {
 		var container = $(this);
-		SolarNode.Datum.updateExternalNodeLinks(container);
+		EniwareEdge.Datum.updateExternalNodeLinks(container);
 	});
 });

@@ -6,13 +6,12 @@
 
 package org.eniware.edge.ocpp;
 
-import net.solarnetwork.node.Identifiable;
+import org.eniware.edge.Identifiable;
 import ocpp.v15.cs.CentralSystemService;
 
 /**
  * A factory for {@link CentralSystemService} instances.
  * 
- * @author matt
  * @version 1.0
  */
 public interface CentralSystemServiceFactory extends Identifiable {

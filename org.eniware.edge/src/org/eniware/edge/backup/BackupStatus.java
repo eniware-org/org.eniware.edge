@@ -9,7 +9,6 @@ package org.eniware.edge.backup;
 /**
  * Status of the backup service.
  * 
- * @author matt
  * @version 1.0
  */
 public enum BackupStatus {

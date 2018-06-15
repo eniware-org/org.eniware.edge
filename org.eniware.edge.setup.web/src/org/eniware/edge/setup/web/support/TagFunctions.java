@@ -12,7 +12,6 @@ import java.util.regex.Pattern;
 /**
  * Static JSP function methods.
  * 
- * @author matt
  * @version $Revision$
  */
 public final class TagFunctions {

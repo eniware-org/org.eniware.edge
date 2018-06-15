@@ -6,14 +6,13 @@
 
 package org.eniware.edge.ocpp;
 
-import net.solarnetwork.node.Identifiable;
+import org.eniware.edge.Identifiable;
 import ocpp.v15.cs.AuthorizationStatus;
 
 /**
  * API to handle OCPP authorization functionality, which may include local
  * caching and/or synchronization with the OCPP central system.
  * 
- * @author matt
  * @version 1.1
  */
 public interface AuthorizationManager extends Identifiable {

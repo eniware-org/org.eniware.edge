@@ -18,7 +18,6 @@ import org.eniware.edge.settings.support.BasicToggleSettingSpecifier;
 /**
  * Configuration bean for {@link DataCollector}.
  * 
- * @author matt
  * @version 1.0
  */
 public class DataCollectorSerialPortBeanParameters extends SerialPortBeanParameters {

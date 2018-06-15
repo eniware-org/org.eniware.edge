@@ -13,7 +13,6 @@ import org.eniware.edge.settings.ToggleSettingSpecifier;
 /**
  * Basic implementation of {@link ToggleSettingSpecifier}.
  * 
- * @author matt
  * @version 1.2
  */
 public class BasicToggleSettingSpecifier extends BaseKeyedSettingSpecifier<Object> implements

@@ -31,7 +31,6 @@ import org.springframework.util.StringUtils;
  * {@link BackupResourceProvider} for node files, such as installed application
  * bundle JARs.
  * 
- * @author matt
  * @version 1.2
  */
 public class FileBackupResourceProvider implements BackupResourceProvider {

@@ -14,7 +14,6 @@ import org.eniware.edge.domain.Datum;
 /**
  * Data Access Object (DAO) API for {@link Datum} objects.
  * 
- * @author matt
  * @version 1.2
  * @param <T>
  *        the type of Datum this DAO supports
@@ -35,7 +34,7 @@ public interface DatumDao<T extends Datum> {
 	 * 
 	 * @since 1.2
 	 */
-	public static final String EVENT_TOPIC_DATUM_STORED = "net/solarnetwork/node/dao/DATUM_STORED";
+	public static final String EVENT_TOPIC_DATUM_STORED = "net/eniwarenetwork/node/dao/DATUM_STORED";
 
 	/**
 	 * Get the class supported by this Dao.

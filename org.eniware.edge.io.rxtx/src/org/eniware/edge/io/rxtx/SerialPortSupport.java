@@ -21,7 +21,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
-import net.solarnetwork.node.support.SerialPortBean;
+import org.eniware.edge.support.SerialPortBean;
 import org.apache.commons.codec.binary.Hex;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +29,6 @@ import org.slf4j.LoggerFactory;
 /**
  * A base class with properties to support {@link SerialPort} communication.
  * 
- * @author matt
  * @version 1.1
  */
 public abstract class SerialPortSupport extends SerialPortBean {

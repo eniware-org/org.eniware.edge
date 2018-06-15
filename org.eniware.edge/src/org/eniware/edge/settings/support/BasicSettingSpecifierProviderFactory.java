@@ -12,7 +12,6 @@ import org.springframework.context.MessageSource;
 /**
  * Basic implementation of {@link SettingSpecifierProviderFactory}.
  * 
- * @author matt
  * @version $Revision$
  */
 public class BasicSettingSpecifierProviderFactory implements SettingSpecifierProviderFactory {

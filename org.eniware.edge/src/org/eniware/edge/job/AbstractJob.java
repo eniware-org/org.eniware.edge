@@ -16,7 +16,6 @@ import org.springframework.util.ClassUtils;
 /**
  * Abstract Quartz job to handle exceptions in consistent fashion.
  * 
- * @author matt
  * @version 1.2
  */
 public abstract class AbstractJob implements Job {

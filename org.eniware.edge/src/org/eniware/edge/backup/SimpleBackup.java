@@ -11,7 +11,6 @@ import java.util.Date;
 /**
  * Simple implementation of {@link Backup}.
  * 
- * @author matt
  * @version 1.2
  */
 public class SimpleBackup implements Backup {

@@ -12,12 +12,11 @@ import java.util.TimeZone;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-import net.solarnetwork.node.dao.jdbc.AbstractJdbcDao;
+import org.eniware.edge.dao.jdbc.AbstractJdbcDao;
 
 /**
  * Abstract base class for OCPP related DAOs.
  * 
- * @author matt
  * @version 1.0
  * @param <T>
  *        the primary domain object type managed by this DAO

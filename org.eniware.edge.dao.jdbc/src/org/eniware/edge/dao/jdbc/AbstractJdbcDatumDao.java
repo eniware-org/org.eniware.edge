@@ -19,15 +19,14 @@ import org.osgi.service.event.Event;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
-import net.solarnetwork.node.Mock;
-import net.solarnetwork.node.dao.DatumDao;
-import net.solarnetwork.node.domain.Datum;
+import org.eniware.edge.Mock;
+import org.eniware.edge.dao.DatumDao;
+import org.eniware.edge.domain.Datum;
 
 /**
  * Abstract DAO implementation with support for DAOs that need to manage
  * "upload" tasks.
  * 
- * @author matt
  * @version 1.3
  * @param <T>
  *        the domain object type managed by this DAO
@@ -61,9 +60,9 @@ public abstract class AbstractJdbcDatumDao<T extends Datum> extends AbstractJdbc
 	 * </p>
 	 * 
 	 * <pre>
-	 * DELETE FROM solarnode.sn_some_datum p WHERE p.id IN 
-	 * (SELECT pd.id FROM solarnode.sn_some_datum pd 
-	 * INNER JOIN solarnode.sn_some_datum_upload u 
+	 * DELETE FROM eniwareedge.sn_some_datum p WHERE p.id IN 
+	 * (SELECT pd.id FROM eniwareedge.sn_some_datum pd 
+	 * INNER JOIN eniwareedge.sn_some_datum_upload u 
 	 * ON u.power_datum_id = pd.id WHERE pd.created < ?)
 	 * </pre>
 	 * 

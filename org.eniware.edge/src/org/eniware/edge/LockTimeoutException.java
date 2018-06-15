@@ -8,7 +8,6 @@ package org.eniware.edge;
 /**
  * Runtime lock timeout exception.
  * 
- * @author matt
  * @version $Revision$
  */
 public class LockTimeoutException extends RuntimeException {

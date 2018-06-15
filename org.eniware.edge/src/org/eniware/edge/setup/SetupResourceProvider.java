@@ -14,7 +14,6 @@ import org.eniware.edge.settings.SettingSpecifier;
  * API for a provider of resource(s) to support {@link SettingSpecifier}
  * clients.
  * 
- * @author matt
  * @version 1.0
  */
 public interface SetupResourceProvider {

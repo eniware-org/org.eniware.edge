@@ -47,7 +47,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
 import org.springframework.util.FileCopyUtils;
 
-import net.solarnetwork.util.OptionalService;
+import org.eniware.util.OptionalService;
 
 /**
  * {@link BackupService} implementation that copies files to another location in
@@ -66,7 +66,6 @@ import net.solarnetwork.util.OptionalService;
  * this service will maintain this many copies of past backups.
  * </dl>
  * 
- * @author matt
  * @version 1.2
  */
 public class FileSystemBackupService extends BackupServiceSupport implements SettingSpecifierProvider {

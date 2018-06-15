@@ -39,7 +39,6 @@ import ocpp.v15.cs.UnitOfMeasure;
 /**
  * JDBC implementation of {@link ChargeSessionDao}.
  * 
- * @author matt
  * @version 1.0
  */
 public class JdbcChargeSessionDao extends AbstractOcppJdbcDao<ChargeSession>
@@ -55,8 +54,8 @@ public class JdbcChargeSessionDao extends AbstractOcppJdbcDao<ChargeSession>
 	public static final String INIT_SQL = "derby-charge-init.sql";
 
 	/** The default value for the {@code sqlGetTablesVersion} property. */
-	public static final String SQL_GET_TABLES_VERSION = "SELECT svalue FROM solarnode.sn_settings WHERE skey = "
-			+ "'solarnode.ocpp_charge.version'";
+	public static final String SQL_GET_TABLES_VERSION = "SELECT svalue FROM eniwareedge.sn_settings WHERE skey = "
+			+ "'eniwareedge.ocpp_charge.version'";
 
 	public static final String SQL_INSERT = "insert";
 	public static final String SQL_UPDATE = "update";

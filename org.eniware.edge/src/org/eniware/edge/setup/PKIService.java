@@ -7,12 +7,11 @@
 package org.eniware.edge.setup;
 
 import java.security.cert.X509Certificate;
-import net.solarnetwork.support.CertificateException;
+import org.eniware.support.CertificateException;
 
 /**
  * API for managing the node's certificate infrastructure.
  * 
- * @author matt
  * @version 1.1
  */
 public interface PKIService {
@@ -21,7 +20,7 @@ public interface PKIService {
 	 * Save the trusted CA certificate.
 	 * 
 	 * <p>
-	 * The node maintains a root CA certificate for the SolarNet network it is
+	 * The node maintains a root CA certificate for the EniwareNet network it is
 	 * associated with.
 	 * </p>
 	 * 

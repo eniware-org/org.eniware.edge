@@ -11,7 +11,6 @@ import org.eniware.edge.settings.SettingSpecifierProvider;
 /**
  * API for a simple job service that extends {@link SettingSpecifierProvider}.
  * 
- * @author matt
  * @version 1.0
  */
 public interface JobService extends SettingSpecifierProvider {

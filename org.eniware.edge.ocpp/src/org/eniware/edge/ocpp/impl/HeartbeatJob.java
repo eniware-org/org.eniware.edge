@@ -1,10 +1,11 @@
 /* ==================================================================
- *  Eniware Open sorce:Nikolai Manchev
+ * 
+ Eniware Open sorce:Nikolai Manchev
  *  Apache License 2.0
  * ==================================================================
  */
- * ==================================================================
- */
+ 
+ 
 
 package org.eniware.edge.ocpp.impl;
 
@@ -14,7 +15,7 @@ import org.eniware.edge.ocpp.CentralSystemServiceFactory;
 import org.quartz.DisallowConcurrentExecution;
 import org.quartz.JobExecutionContext;
 import org.quartz.PersistJobDataAfterExecution;
-import net.solarnetwork.node.job.AbstractJob;
+import org.eniware.edge.job.AbstractJob;
 import ocpp.v15.cs.CentralSystemService;
 import ocpp.v15.cs.HeartbeatRequest;
 import ocpp.v15.cs.HeartbeatResponse;
@@ -23,7 +24,6 @@ import ocpp.v15.cs.HeartbeatResponse;
  * Job to post the {@link HeartbeatRequest} to let the OCPP system know the node
  * is alive and has network connectivity.
  * 
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

@@ -13,7 +13,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.util.OptionalService;
 import net.wimpi.modbus.ModbusException;
 import net.wimpi.modbus.io.ModbusSerialTransaction;
 import net.wimpi.modbus.msg.ReadCoilsRequest;
@@ -30,7 +30,6 @@ import net.wimpi.modbus.procimg.InputRegister;
 /**
  * Helper methods for working with Modbus.
  * 
- * @author matt
  * @version 1.4
  */
 public final class ModbusHelper {

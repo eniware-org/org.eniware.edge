@@ -12,8 +12,7 @@ import org.eniware.edge.settings.SliderSettingSpecifier;
 
 /**
  * Basic implementation of {@link SliderSettingSpecifier}.
- * 
- * @author matt
+ * s
  * @version 1.2
  */
 public class BasicSliderSettingSpecifier extends BaseKeyedSettingSpecifier<Double> implements

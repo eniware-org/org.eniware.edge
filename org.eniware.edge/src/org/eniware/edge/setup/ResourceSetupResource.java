@@ -17,7 +17,6 @@ import org.springframework.core.io.Resource;
 /**
  * A {@link SetupResource} that delegates to a {@link Resource}.
  * 
- * @author matt
  * @version 1.1
  */
 public class ResourceSetupResource extends BaseStaticSetupResource {

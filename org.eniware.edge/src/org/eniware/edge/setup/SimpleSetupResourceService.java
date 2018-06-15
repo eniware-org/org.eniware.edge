@@ -14,7 +14,6 @@ import java.util.Locale;
 /**
  * Basic implementation of {@link SetupResourceService}.
  * 
- * @author matt
  * @version 1.0
  */
 public class SimpleSetupResourceService implements SetupResourceService {

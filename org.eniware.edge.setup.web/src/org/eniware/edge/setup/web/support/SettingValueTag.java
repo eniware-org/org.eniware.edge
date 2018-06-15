@@ -10,14 +10,13 @@ import java.io.IOException;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
 import org.apache.taglibs.standard.util.EscapeXML;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.SettingsService;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.SettingsService;
 
 /**
  * Expose the current value of a setting.
  * 
- * @author matt
  * @version 1.1
  */
 public class SettingValueTag extends TagSupport {

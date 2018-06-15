@@ -12,7 +12,6 @@ import java.util.Locale;
  * API for a system "plugin" that can be manipulated by the application at
  * runtime.
  * 
- * @author matt
  * @version 1.0
  */
 public interface Plugin {
@@ -50,7 +49,7 @@ public interface Plugin {
 
 	/**
 	 * Return "core feature" flag. Core features are those plugins that are
-	 * central to SolarNode functionality, and should not be removed by users.
+	 * central to EniwareEdge functionality, and should not be removed by users.
 	 * They can be upgraded, however.
 	 * 
 	 * @return core feature flag

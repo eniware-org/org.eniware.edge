@@ -16,22 +16,22 @@ import java.util.Map;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventAdmin;
 import org.springframework.context.MessageSource;
-import net.solarnetwork.domain.NodeControlInfo;
-import net.solarnetwork.domain.NodeControlPropertyType;
-import net.solarnetwork.node.NodeControlProvider;
-import net.solarnetwork.node.domain.NodeControlInfoDatum;
-import net.solarnetwork.node.io.modbus.ModbusConnection;
-import net.solarnetwork.node.io.modbus.ModbusConnectionAction;
-import net.solarnetwork.node.io.modbus.ModbusDeviceSupport;
-import net.solarnetwork.node.io.modbus.ModbusSerialConnectionFactory;
-import net.solarnetwork.node.reactor.Instruction;
-import net.solarnetwork.node.reactor.InstructionHandler;
-import net.solarnetwork.node.reactor.InstructionStatus.InstructionState;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicTitleSettingSpecifier;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.domain.NodeControlInfo;
+import org.eniware.domain.NodeControlPropertyType;
+import org.eniware.edge.NodeControlProvider;
+import org.eniware.edge.domain.NodeControlInfoDatum;
+import org.eniware.edge.io.modbus.ModbusConnection;
+import org.eniware.edge.io.modbus.ModbusConnectionAction;
+import org.eniware.edge.io.modbus.ModbusDeviceSupport;
+import org.eniware.edge.io.modbus.ModbusSerialConnectionFactory;
+import org.eniware.edge.reactor.Instruction;
+import org.eniware.edge.reactor.InstructionHandler;
+import org.eniware.edge.reactor.InstructionStatus.InstructionState;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.settings.support.BasicTitleSettingSpecifier;
+import org.eniware.util.OptionalService;
 
 /**
  * Control a Modbus "coil" type register to turn a switch on or off.
@@ -51,7 +51,6 @@ import net.solarnetwork.util.OptionalService;
  * <dd>The {@link ModbusSerialConnectionFactory} to use.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.2
  */
 public class ModbusToggler extends ModbusDeviceSupport
@@ -190,7 +189,7 @@ public class ModbusToggler extends ModbusDeviceSupport
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.control.modbus.toggle";
+		return "org.eniware.edge.control.modbus.toggle";
 	}
 
 	@Override

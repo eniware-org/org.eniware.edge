@@ -11,7 +11,6 @@ import java.math.BigDecimal;
 /**
  * Extension of {@link GeneralLocationDatum} that implements {@link PriceDatum}.
  * 
- * @author matt
  * @version 1.0
  */
 public class GeneralPriceDatum extends GeneralLocationDatum implements PriceDatum {

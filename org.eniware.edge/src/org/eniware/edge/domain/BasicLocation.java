@@ -9,7 +9,6 @@ package org.eniware.edge.domain;
 /**
  * Basic implementation of {@link Location}.
  * 
- * @author matt
  * @version 1.1
  */
 public class BasicLocation implements Location {

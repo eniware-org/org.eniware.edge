@@ -11,7 +11,6 @@ import java.util.Collection;
 /**
  * Metadata about a {@link Backup}.
  * 
- * @author matt
  * @version 1.1
  * @since 1.46
  */

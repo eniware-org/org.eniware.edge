@@ -1,3 +1,3 @@
 SELECT created, socketid, enabled
-FROM solarnode.ocpp_socket
+FROM eniwareedge.ocpp_socket
 WHERE socketid = ?

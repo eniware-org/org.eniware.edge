@@ -26,8 +26,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
-import net.solarnetwork.node.LockTimeoutException;
-import net.solarnetwork.node.support.SerialPortBeanParameters;
+import org.eniware.edge.LockTimeoutException;
+import org.eniware.edge.support.SerialPortBeanParameters;
 import org.apache.commons.codec.binary.Hex;
 import org.eniware.edge.io.serial.SerialConnection;
 import org.slf4j.Logger;
@@ -36,7 +36,6 @@ import org.slf4j.LoggerFactory;
 /**
  * RXTX implementation of {@link SerialConnection}.
  * 
- * @author matt
  * @version 1.2
  */
 public class SerialPortConnection implements SerialConnection, SerialPortEventListener {

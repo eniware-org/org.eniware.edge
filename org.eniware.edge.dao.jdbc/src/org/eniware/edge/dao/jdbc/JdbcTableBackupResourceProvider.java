@@ -39,17 +39,16 @@ import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.util.StringUtils;
 import org.supercsv.cellprocessor.ift.CellProcessor;
 import org.supercsv.prefs.CsvPreference;
-import net.solarnetwork.node.backup.BackupResource;
-import net.solarnetwork.node.backup.BackupResourceInfo;
-import net.solarnetwork.node.backup.BackupResourceProvider;
-import net.solarnetwork.node.backup.BackupResourceProviderInfo;
-import net.solarnetwork.node.backup.SimpleBackupResourceInfo;
-import net.solarnetwork.node.backup.SimpleBackupResourceProviderInfo;
+import org.eniware.edge.backup.BackupResource;
+import org.eniware.edge.backup.BackupResourceInfo;
+import org.eniware.edge.backup.BackupResourceProvider;
+import org.eniware.edge.backup.BackupResourceProviderInfo;
+import org.eniware.edge.backup.SimpleBackupResourceInfo;
+import org.eniware.edge.backup.SimpleBackupResourceProviderInfo;
 
 /**
  * Backup support for JDBC tables.
  * 
- * @author matt
  * @version 1.2
  * @since 1.17
  */
@@ -241,7 +240,7 @@ public class JdbcTableBackupResourceProvider implements BackupResourceProvider {
 	@Override
 	public BackupResourceProviderInfo providerInfo(Locale locale) {
 		String name = "Database Table Backup Provider";
-		String desc = "Backs up the SolarNode database tables.";
+		String desc = "Backs up the EniwareEdge database tables.";
 		MessageSource ms = messageSource;
 		if ( ms != null ) {
 			name = ms.getMessage("title", null, name, locale);

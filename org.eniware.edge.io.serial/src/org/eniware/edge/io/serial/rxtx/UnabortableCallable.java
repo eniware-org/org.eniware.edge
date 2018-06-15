@@ -10,7 +10,6 @@ package org.eniware.edge.io.serial.rxtx;
  * Abstract implementation of {@link AbortableCallable} that ignores the call to
  * {@link #abort()}.
  * 
- * @author matt
  * @version 1.0
  */
 public abstract class UnabortableCallable<T> implements AbortableCallable<T> {

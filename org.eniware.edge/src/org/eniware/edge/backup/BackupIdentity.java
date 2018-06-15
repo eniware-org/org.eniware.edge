@@ -11,7 +11,6 @@ import java.util.Date;
 /**
  * Identity information about a {@link Backup}.
  * 
- * @author matt
  * @version 1.0
  * @since 1.55
  */

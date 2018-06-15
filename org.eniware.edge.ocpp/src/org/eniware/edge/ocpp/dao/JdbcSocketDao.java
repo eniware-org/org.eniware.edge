@@ -27,7 +27,6 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * JDBC implementation of {@link SocketDao}.
  * 
- * @author matt
  * @version 1.0
  */
 public class JdbcSocketDao extends AbstractOcppJdbcDao<Socket> implements SocketDao {
@@ -42,8 +41,8 @@ public class JdbcSocketDao extends AbstractOcppJdbcDao<Socket> implements Socket
 	public static final String INIT_SQL = "derby-socket-init.sql";
 
 	/** The default value for the {@code sqlGetTablesVersion} property. */
-	public static final String SQL_GET_TABLES_VERSION = "SELECT svalue FROM solarnode.sn_settings WHERE skey = "
-			+ "'solarnode.ocpp_socket.version'";
+	public static final String SQL_GET_TABLES_VERSION = "SELECT svalue FROM eniwareedge.sn_settings WHERE skey = "
+			+ "'eniwareedge.ocpp_socket.version'";
 
 	public static final String SQL_INSERT = "insert";
 	public static final String SQL_UPDATE = "update";

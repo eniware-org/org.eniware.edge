@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Controller to serve up CSRF tokens, to support non-JSP based access.
  * 
- * @author matt
  * @version 1.0
  */
 @RestController

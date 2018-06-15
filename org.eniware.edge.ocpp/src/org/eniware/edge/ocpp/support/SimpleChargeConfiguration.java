@@ -1,7 +1,7 @@
 /* ==================================================================
  * SimpleChargeConfiguration.java - 25/03/2017 11:55:16 AM
  * 
- * Copyright 2007-2017 SolarNetwork.net Dev Team
+ * Copyright 2007-2017 EniwareNetwork.net Dev Team
  * 
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
@@ -27,7 +27,6 @@ import org.eniware.edge.ocpp.ChargeConfiguration;
 /**
  * Basic implementation of {@link ChargeConfiguration}.
  * 
- * @author matt
  * @version 1.0
  * @since 0.6
  */

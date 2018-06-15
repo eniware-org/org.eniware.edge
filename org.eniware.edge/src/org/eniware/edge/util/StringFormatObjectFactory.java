@@ -37,7 +37,6 @@ import org.springframework.beans.factory.ObjectFactory;
  *   itself.</dd>
  * </dl>
  * 
- * @author matt
  * @version $Id$
  */
 public class StringFormatObjectFactory implements ObjectFactory<String> {

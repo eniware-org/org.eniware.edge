@@ -12,7 +12,7 @@ import gnu.io.SerialPortEventListener;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import net.solarnetwork.node.DataCollector;
+import org.eniware.edge.DataCollector;
 
 /**
  * Abstract support for collecting data from a serial port stream.
@@ -45,7 +45,6 @@ import net.solarnetwork.node.DataCollector;
  * SerialPort. Defaults to {@code true}.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.0
  */
 public abstract class AbstractSerialPortDataCollector extends SerialPortSupport implements

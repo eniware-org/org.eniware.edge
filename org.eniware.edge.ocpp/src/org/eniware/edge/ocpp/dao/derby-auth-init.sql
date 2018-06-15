@@ -1,4 +1,4 @@
-CREATE TABLE solarnode.ocpp_auth (
+CREATE TABLE eniwareedge.ocpp_auth (
 	created			TIMESTAMP NOT NULL WITH DEFAULT CURRENT_TIMESTAMP,
 	idtag 			VARCHAR(20) NOT NULL,
 	parent_idtag	VARCHAR(20),
@@ -7,5 +7,5 @@ CREATE TABLE solarnode.ocpp_auth (
 	PRIMARY KEY (idtag)
 );
 
-INSERT INTO solarnode.sn_settings (skey, svalue) 
-VALUES ('solarnode.ocpp_auth.version', '1');
+INSERT INTO eniwareedge.sn_settings (skey, svalue) 
+VALUES ('eniwareedge.ocpp_auth.version', '1');

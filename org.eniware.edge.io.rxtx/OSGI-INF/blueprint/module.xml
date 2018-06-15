@@ -14,20 +14,20 @@
 	<!-- DataCollectorFactory service -->
 
 	<reference-list id="dataCollectorFactoryConfigurationList"
-		interface="net.solarnetwork.node.util.BeanConfiguration" availability="optional"
-		filter="(&amp;(beanConfigurationTarget=org.springframework.beans.factory.ObjectFactory)(factoryObjectClassName=net.solarnetwork.node.DataCollector)(io=serial))">
+		interface="org.eniware.edge.util.BeanConfiguration" availability="optional"
+		filter="(&amp;(beanConfigurationTarget=org.springframework.beans.factory.ObjectFactory)(factoryObjectClassName=org.eniware.edge.DataCollector)(io=serial))">
 		<reference-listener bind-method="onBind" unbind-method="onUnbind" ref="dataCollectorFactory"/>
 	</reference-list>
 	
 	<bean id="dataCollectorFactory" 
-		class="net.solarnetwork.node.util.BeanConfigurationServiceRegistrationListener">
+		class="org.eniware.edge.util.BeanConfigurationServiceRegistrationListener">
 		<property name="serviceClass"
-			value="net.solarnetwork.node.io.rxtx.SerialPortDataCollectorFactory"/>
+			value="org.eniware.edge.io.rxtx.SerialPortDataCollectorFactory"/>
 		<property name="serviceInterfaces"
 			value="org.springframework.beans.factory.ObjectFactory"/>
 		<property name="serviceProperties">
 			<map>
-				<entry key="factoryObjectClassName" value="net.solarnetwork.node.DataCollector"/>
+				<entry key="factoryObjectClassName" value="org.eniware.edge.DataCollector"/>
 			</map>
 		</property>
 		<property name="bundleContext" ref="bundleContext"/>
@@ -36,32 +36,32 @@
 	<!-- ConversationalDataCollectorFactory service -->
 	
 	<reference-list id="conversationalDataCollectorFactoryConfigurationList" 
-		interface="net.solarnetwork.node.util.BeanConfiguration" availability="optional"
-		filter="(&amp;(beanConfigurationTarget=org.springframework.beans.factory.ObjectFactory)(factoryObjectClassName=net.solarnetwork.node.ConversationalDataCollector)(io=serial))">
+		interface="org.eniware.edge.util.BeanConfiguration" availability="optional"
+		filter="(&amp;(beanConfigurationTarget=org.springframework.beans.factory.ObjectFactory)(factoryObjectClassName=org.eniware.edge.ConversationalDataCollector)(io=serial))">
 		<reference-listener bind-method="onBind" unbind-method="onUnbind" ref="conversationalDataCollectorFactory"/>
 	</reference-list>
 	
 	<bean id="conversationalDataCollectorFactory" 
-		class="net.solarnetwork.node.util.BeanConfigurationServiceRegistrationListener">
+		class="org.eniware.edge.util.BeanConfigurationServiceRegistrationListener">
 		<property name="serviceClass"
-			value="net.solarnetwork.node.io.rxtx.SerialPortConversationalDataCollectorFactory"/>
+			value="org.eniware.edge.io.rxtx.SerialPortConversationalDataCollectorFactory"/>
 		<property name="serviceInterfaces"
 			value="org.springframework.beans.factory.ObjectFactory"/>
 		<property name="serviceProperties">
 			<map>
-				<entry key="factoryObjectClassName" value="net.solarnetwork.node.ConversationalDataCollector"/>
+				<entry key="factoryObjectClassName" value="org.eniware.edge.ConversationalDataCollector"/>
 			</map>
 		</property>
 		<property name="bundleContext" ref="bundleContext"/>
 	</bean>
 	
 	<bean id="listenerSettingsFactory" 
-		class="net.solarnetwork.node.settings.support.BasicSettingSpecifierProviderFactory">
+		class="org.eniware.edge.settings.support.BasicSettingSpecifierProviderFactory">
 		<property name="displayName" value="Serial Port"/>
-		<property name="factoryUID" value="net.solarnetwork.node.io.rxtx"/>
+		<property name="factoryUID" value="org.eniware.edge.io.rxtx"/>
 		<property name="messageSource">
 			<bean class="org.springframework.context.support.ResourceBundleMessageSource">
-				<property name="basenames" value="net.solarnetwork.node.io.rxtx.RxtxDataCollectorFactory"/>
+				<property name="basenames" value="org.eniware.edge.io.rxtx.RxtxDataCollectorFactory"/>
 			</bean>
 		</property>
 	</bean>
@@ -69,17 +69,17 @@
 	<!-- Published Services -->
 	
 	<service ref="listenerSettingsFactory" 
-		interface="net.solarnetwork.node.settings.SettingSpecifierProviderFactory"/>
+		interface="org.eniware.edge.settings.SettingSpecifierProviderFactory"/>
 	
-	<osgix:managed-service-factory factory-pid="net.solarnetwork.node.io.rxtx" autowire-on-update="true">
+	<osgix:managed-service-factory factory-pid="org.eniware.edge.io.rxtx" autowire-on-update="true">
 		<osgix:interfaces>
-			<beans:value>net.solarnetwork.node.DataCollectorFactory</beans:value>
-			<beans:value>net.solarnetwork.node.settings.SettingSpecifierProvider</beans:value>
+			<beans:value>org.eniware.edge.DataCollectorFactory</beans:value>
+			<beans:value>org.eniware.edge.settings.SettingSpecifierProvider</beans:value>
 		</osgix:interfaces>
 		<osgix:service-properties>
-			<beans:entry key="settingPid" value="net.solarnetwork.node.io.rxtx"/>
+			<beans:entry key="settingPid" value="org.eniware.edge.io.rxtx"/>
 		</osgix:service-properties>
-		<bean class="net.solarnetwork.node.io.rxtx.RxtxDataCollectorFactory"/>
+		<bean class="org.eniware.edge.io.rxtx.RxtxDataCollectorFactory"/>
 	</osgix:managed-service-factory>
 	
 </blueprint>

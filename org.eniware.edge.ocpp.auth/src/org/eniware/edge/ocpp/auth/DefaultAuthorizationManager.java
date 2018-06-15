@@ -9,13 +9,13 @@ package org.eniware.edge.ocpp.auth;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import net.solarnetwork.node.ocpp.Authorization;
-import net.solarnetwork.node.ocpp.AuthorizationDao;
-import net.solarnetwork.node.ocpp.AuthorizationManager;
-import net.solarnetwork.node.ocpp.support.CentralSystemServiceFactorySupport;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicToggleSettingSpecifier;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.edge.ocpp.Authorization;
+import org.eniware.edge.ocpp.AuthorizationDao;
+import org.eniware.edge.ocpp.AuthorizationManager;
+import org.eniware.edge.ocpp.support.CentralSystemServiceFactorySupport;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.support.BasicToggleSettingSpecifier;
+import org.eniware.util.OptionalService;
 import ocpp.v15.cs.AuthorizationStatus;
 import ocpp.v15.cs.AuthorizeRequest;
 import ocpp.v15.cs.AuthorizeResponse;
@@ -24,7 +24,6 @@ import ocpp.v15.cs.AuthorizeResponse;
  * Default implementation of {@link AuthorizationManager}. This implementation
  * supports local caching of ID tags.
  * 
- * @author matt
  * @version 1.0
  */
 public class DefaultAuthorizationManager extends CentralSystemServiceFactorySupport
@@ -99,7 +98,7 @@ public class DefaultAuthorizationManager extends CentralSystemServiceFactorySupp
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.ocpp.auth";
+		return "org.eniware.edge.ocpp.auth";
 	}
 
 	@Override

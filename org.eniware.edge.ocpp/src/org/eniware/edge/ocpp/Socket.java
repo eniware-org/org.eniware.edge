@@ -12,7 +12,6 @@ import java.util.Date;
  * Domain object for a socket, which is a physical connector for charging a
  * device with.
  * 
- * @author matt
  * @version 1.0
  */
 public class Socket {

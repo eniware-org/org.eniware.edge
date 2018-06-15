@@ -15,7 +15,6 @@ import org.eniware.edge.settings.SettingSpecifier;
 /**
  * Basic implementation of {@link ParentSettingSpecifier}.
  * 
- * @author matt
  * @version $Revision$
  */
 public class BasicParentSettingSpecifier extends BaseSettingSpecifier implements

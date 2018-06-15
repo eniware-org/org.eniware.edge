@@ -1,12 +1,12 @@
 'use strict';
-SolarNode.WebSocket = (function() {
+EniwareEdge.WebSocket = (function() {
 	var self = {};
 	var stompClient;
 	var pingTask;
 	var subscriptions = {};
 	
 	function executePing(url) {
-		$.getJSON(SolarNode.context.path('/csrf')).then(function() {
+		$.getJSON(EniwareEdge.context.path('/csrf')).then(function() {
 			// nothing, just used to keep the socket connection alive
 		});
 	}
@@ -15,9 +15,9 @@ SolarNode.WebSocket = (function() {
 		if ( stompClient != null ) {
 			callback(null, stompClient);
 		}
-		var csrf = SolarNode.csrfData;
+		var csrf = EniwareEdge.csrfData;
 		var url = (document.location.protocol === 'https:' ? 'wss://' : 'ws://') 
-			+document.location.host +SolarNode.context.path('/ws');
+			+document.location.host +EniwareEdge.context.path('/ws');
 		var socket = new WebSocket(url);
 		var client = Stomp.over(socket);
 		client.debug = false;

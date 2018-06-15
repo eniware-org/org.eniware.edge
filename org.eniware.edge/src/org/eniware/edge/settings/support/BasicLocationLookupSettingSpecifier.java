@@ -14,7 +14,6 @@ import org.eniware.edge.settings.SettingSpecifier;
 /**
  * Basic implementation of {@link LocationLookupSettingSpecifier}.
  * 
- * @author matt
  * @version 1.2
  */
 public class BasicLocationLookupSettingSpecifier extends BaseKeyedSettingSpecifier<Long> implements

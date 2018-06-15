@@ -13,16 +13,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
-import net.solarnetwork.node.reactor.Instruction;
-import net.solarnetwork.node.reactor.ReactorSerializationService;
-import net.solarnetwork.node.reactor.support.BasicInstruction;
+import org.eniware.edge.reactor.Instruction;
+import org.eniware.edge.reactor.ReactorSerializationService;
+import org.eniware.edge.reactor.support.BasicInstruction;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * JSON-based IO support for ReactorService.
  * 
- * @author matt
  * @version 1.1
  */
 public class JsonReactorSerializationService implements ReactorSerializationService {

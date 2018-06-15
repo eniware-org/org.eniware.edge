@@ -11,7 +11,6 @@ import org.eniware.edge.settings.SettingSpecifier;
 /**
  * Base implementation of {@link SettingSpecifier}.
  * 
- * @author matt
  * @version $Revision$
  */
 public abstract class BaseSettingSpecifier implements SettingSpecifier {

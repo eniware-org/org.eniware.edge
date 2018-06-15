@@ -5,7 +5,7 @@
 
 package org.eniware.edge.dao.jdbc;
 
-import net.solarnetwork.node.job.AbstractJob;
+import org.eniware.edge.job.AbstractJob;
 
 import org.quartz.JobExecutionContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -16,7 +16,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
  * <p>This can be used to execute periodic SQL administration tasks, such as the 
  * "SHUTDOWN COMPACT" command in hsqldb.</p>
  * 
- * @author matt
  * @version $Revision: 398 $ $Date: 2009-10-26 14:39:27 +1300 (Mon, 26 Oct 2009) $
  */
 public class SqlStatementJob extends AbstractJob {

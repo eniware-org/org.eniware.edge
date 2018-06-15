@@ -11,7 +11,6 @@ import org.supercsv.cellprocessor.ift.CellProcessor;
 /**
  * Metadata about a JDBC table column for use in CSV processing.
  * 
- * @author matt
  * @version 1.0
  * @since 1.17
  */

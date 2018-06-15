@@ -7,14 +7,13 @@
 package org.eniware.edge.setup;
 
 import java.util.Locale;
-import net.solarnetwork.util.SerializeIgnore;
+import org.eniware.util.SerializeIgnore;
 import org.osgi.framework.Bundle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Implementation of {@link Plugin} that wraps a {@link Bundle}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BundlePlugin implements Plugin {

@@ -13,7 +13,6 @@ package org.eniware.edge.domain;
  * of information, for example a weather location, a price location, etc.
  * </p>
  * 
- * @author matt
  * @version 1.1
  */
 public interface Location {

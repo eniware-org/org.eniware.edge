@@ -13,7 +13,6 @@ import org.springframework.core.io.Resource;
 /**
  * {@link BackupResource} implementation using a Spring {@link Resource}.
  * 
- * @author matt
  * @version 1.2
  */
 public class ResourceBackupResource implements BackupResource {
@@ -27,7 +26,7 @@ public class ResourceBackupResource implements BackupResource {
 	 * Constructor.
 	 * 
 	 * The {@code providerKey} will be set to
-	 * {@code net.solarnetwork.node.backup.FileBackupResourceProvider}.
+	 * {@code org.eniware.edge.backup.FileBackupResourceProvider}.
 	 * 
 	 * @param resource
 	 *        The resource.

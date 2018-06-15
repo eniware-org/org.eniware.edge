@@ -10,7 +10,6 @@ package org.eniware.edge.setup;
  * Exception thrown when a provisioning error occurs, such as a missing
  * dependency that prevents a plugin from being installed.
  * 
- * @author matt
  * @version 1.0
  */
 public class PluginProvisionException extends RuntimeException {

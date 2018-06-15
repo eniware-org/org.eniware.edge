@@ -14,7 +14,6 @@ package org.eniware.edge;
  * geared towards reading statistics from generation or consumption data
  * sources.</p>
  * 
- * @author matt
  * @version $Revision$ $Date$
  */
 public interface DataCollector {

@@ -6,7 +6,7 @@
 
 package org.eniware.edge.setup.web;
 
-import static net.solarnetwork.web.domain.Response.response;
+import static org.eniware.web.domain.Response.response;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -30,21 +30,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import net.solarnetwork.node.IdentityService;
-import net.solarnetwork.node.backup.Backup;
-import net.solarnetwork.node.backup.BackupManager;
-import net.solarnetwork.node.backup.BackupService;
-import net.solarnetwork.node.backup.BackupServiceSupport;
-import net.solarnetwork.node.settings.SettingsBackup;
-import net.solarnetwork.node.settings.SettingsCommand;
-import net.solarnetwork.node.settings.SettingsService;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.web.domain.Response;
+import org.eniware.edge.IdentityService;
+import org.eniware.edge.backup.Backup;
+import org.eniware.edge.backup.BackupManager;
+import org.eniware.edge.backup.BackupService;
+import org.eniware.edge.backup.BackupServiceSupport;
+import org.eniware.edge.settings.SettingsBackup;
+import org.eniware.edge.settings.SettingsCommand;
+import org.eniware.edge.settings.SettingsService;
+import org.eniware.util.OptionalService;
+import org.eniware.web.domain.Response;
 
 /**
  * Web controller for the settings UI.
  * 
- * @author matt
  * @version 1.2
  */
 @ServiceAwareController

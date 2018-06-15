@@ -17,9 +17,9 @@ import org.osgi.service.event.Event;
 import org.osgi.service.event.EventAdmin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import net.solarnetwork.node.dao.SettingDao;
-import net.solarnetwork.node.support.KeyValuePair;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.edge.dao.SettingDao;
+import org.eniware.edge.support.KeyValuePair;
+import org.eniware.util.OptionalService;
 import ocpp.v15.support.ConfigurationKeys;
 
 /**
@@ -30,7 +30,6 @@ import ocpp.v15.support.ConfigurationKeys;
  * {@link #SETTING_KEY} and the {@code type} values are derived from the
  * {@link ConfigurationKeys#getKey()} values.
  * 
- * @author matt
  * @version 1.0
  * @since 0.6
  */

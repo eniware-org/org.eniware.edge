@@ -17,7 +17,6 @@ import org.eniware.edge.settings.SettingSpecifier;
 /**
  * Basic implementation of {@link GroupSettingSpecifier}.
  * 
- * @author matt
  * @version 1.1
  */
 public class BasicGroupSettingSpecifier extends BaseSettingSpecifier implements GroupSettingSpecifier {

@@ -69,7 +69,7 @@
 								</button>
 								<script>
 								$('#del${instance.key}').click(function() {
-									SolarNode.Settings.deleteFactoryConfiguration({
+									EniwareEdge.Settings.deleteFactoryConfiguration({
 										button: this,
 										url: '<setup:url value="/a/settings/manage/delete"/>',
 										factoryUID: '${factory.factoryUID}',
@@ -91,7 +91,7 @@
 <script>
 $(function() {
 	$('#submit').click(function() {
-		SolarNode.Settings.saveUpdates($(this.form).attr('action'), {
+		EniwareEdge.Settings.saveUpdates($(this.form).attr('action'), {
 			success: '<fmt:message key="settings.save.success.msg"/>',
 			error: '<fmt:message key="settings.save.error.msg"/>',
 			title: '<fmt:message key="settings.save.result.title"/>',
@@ -99,17 +99,17 @@ $(function() {
 		});
 	});
 	$('#add').click(function() {
-		SolarNode.Settings.addFactoryConfiguration({
+		EniwareEdge.Settings.addFactoryConfiguration({
 			button: this,
 			url: '<setup:url value="/a/settings/manage/add"/>',
 			factoryUID: '${factory.factoryUID}'
 		});
 	});
-	SolarNode.Settings.reset();
+	EniwareEdge.Settings.reset();
 });
 </script>
 <div id="alert-delete" class="alert alert-danger alert-block hidden">
-	<button type="button" class="close" data-dismiss="alert">×</button>
+	<button type="button" class="close" data-dismiss="alert">ï¿½</button>
 	<h4><fmt:message key="settings.factory.delete.alert.title"/></h4>
 	<p>
 		<fmt:message key="settings.factory.delete.alert.msg"/>

@@ -6,12 +6,11 @@
 
 package org.eniware.edge.domain;
 
-import net.solarnetwork.domain.GeneralDatumMetadata;
+import org.eniware.domain.GeneralDatumMetadata;
 
 /**
  * Extension of {@link Location} to add general metadata support.
  * 
- * @author matt
  * @version 1.0
  */
 public interface GeneralLocation extends Location {

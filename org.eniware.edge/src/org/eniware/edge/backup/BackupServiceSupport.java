@@ -25,7 +25,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * Abstract support class for {@link BackupService} implementations.
  * 
- * @author matt
  * @version 1.1
  * @since 1.54
  */

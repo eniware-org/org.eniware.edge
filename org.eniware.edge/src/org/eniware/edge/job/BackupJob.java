@@ -11,12 +11,11 @@ import org.quartz.DisallowConcurrentExecution;
 import org.quartz.JobExecutionContext;
 import org.quartz.PersistJobDataAfterExecution;
 
-import net.solarnetwork.util.OptionalService;
+import org.eniware.util.OptionalService;
 
 /**
  * Scheduled backup job using {@link BackupManager}.
  * 
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

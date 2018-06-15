@@ -14,12 +14,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import net.solarnetwork.node.LockTimeoutException;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.support.SerialPortBean;
-import net.solarnetwork.node.support.SerialPortBeanParameters;
+import org.eniware.edge.LockTimeoutException;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.support.SerialPortBean;
+import org.eniware.edge.support.SerialPortBeanParameters;
 
 import org.eniware.edge.io.serial.SerialConnection;
 import org.eniware.edge.io.serial.SerialConnectionAction;
@@ -31,7 +31,6 @@ import org.springframework.context.MessageSource;
 /**
  * RXTX implementation of {@link SerialNetwork}.
  * 
- * @author matt
  * @version 1.1
  */
 public class SerialPortNetwork implements SerialNetwork, SettingSpecifierProvider {
@@ -184,7 +183,7 @@ public class SerialPortNetwork implements SerialNetwork, SettingSpecifierProvide
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.io.serial";
+		return "org.eniware.edge.io.serial";
 	}
 
 	@Override

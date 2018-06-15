@@ -11,7 +11,6 @@ import java.util.Date;
 /**
  * Basic implementation of {@link BackupInfo}.
  * 
- * @author matt
  * @version 1.1
  * @since 1.46
  */

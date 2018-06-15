@@ -79,7 +79,6 @@ import org.springframework.context.MessageSource;
  * the job to be exposed as services themselves in the runtime.</dd>
  * </dl>
  * 
- * @author matt
  * @version 2.0
  */
 public class SimpleManagedTriggerAndJobDetail implements ManagedTriggerAndJobDetail, ServiceProvider {

@@ -22,7 +22,6 @@ import java.util.Date;
  * {@code instructionId} and {@code instructorId} values are equal.
  * </p>
  * 
- * @author matt
  * @version $Revision$
  */
 public interface Instruction {
@@ -53,7 +52,7 @@ public interface Instruction {
 	Date getInstructionDate();
 
 	/**
-	 * Get the SolarNet-assigned unique ID for this instruction.
+	 * Get the EniwareNet-assigned unique ID for this instruction.
 	 * 
 	 * @return unique ID
 	 */

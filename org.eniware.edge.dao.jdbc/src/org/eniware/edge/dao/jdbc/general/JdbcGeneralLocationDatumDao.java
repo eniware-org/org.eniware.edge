@@ -23,15 +23,14 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.solarnetwork.domain.GeneralDatumSamples;
-import net.solarnetwork.domain.GeneralLocationDatumSamples;
-import net.solarnetwork.node.domain.GeneralLocationDatum;
+import org.eniware.domain.GeneralDatumSamples;
+import org.eniware.domain.GeneralLocationDatumSamples;
+import org.eniware.edge.domain.GeneralLocationDatum;
 
 /**
- * JDBC-based implementation of {@link net.solarnetwork.node.dao.DatumDao} for
+ * JDBC-based implementation of {@link org.eniware.edge.dao.DatumDao} for
  * {@link GeneralLocationDatum} domain objects.
  * 
- * @author matt
  * @version 1.2
  */
 public class JdbcGeneralLocationDatumDao extends AbstractJdbcDatumDao<GeneralLocationDatum> {
@@ -46,8 +45,8 @@ public class JdbcGeneralLocationDatumDao extends AbstractJdbcDatumDao<GeneralLoc
 	public static final String DEFAULT_INIT_SQL = "derby-generallocdatum-init.sql";
 
 	/** The default value for the {@code sqlGetTablesVersion} property. */
-	public static final String DEFAULT_SQL_GET_TABLES_VERSION = "SELECT svalue FROM solarnode.sn_settings WHERE skey = "
-			+ "'solarnode.sn_general_loc_datum.version'";
+	public static final String DEFAULT_SQL_GET_TABLES_VERSION = "SELECT svalue FROM eniwareedge.sn_settings WHERE skey = "
+			+ "'eniwareedge.sn_general_loc_datum.version'";
 
 	private ObjectMapper objectMapper;
 

@@ -18,18 +18,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import net.solarnetwork.node.SystemService;
-import net.solarnetwork.node.ocpp.ChargeConfiguration;
-import net.solarnetwork.node.ocpp.ChargeConfigurationDao;
-import net.solarnetwork.node.ocpp.ChargeSession;
-import net.solarnetwork.node.ocpp.ChargeSessionManager;
-import net.solarnetwork.node.ocpp.support.SimpleChargeConfiguration;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicTitleSettingSpecifier;
-import net.solarnetwork.util.FilterableService;
-import net.solarnetwork.util.OptionalService;
+import org.eniware.edge.SystemService;
+import org.eniware.edge.ocpp.ChargeConfiguration;
+import org.eniware.edge.ocpp.ChargeConfigurationDao;
+import org.eniware.edge.ocpp.ChargeSession;
+import org.eniware.edge.ocpp.ChargeSessionManager;
+import org.eniware.edge.ocpp.support.SimpleChargeConfiguration;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.settings.support.BasicTitleSettingSpecifier;
+import org.eniware.util.FilterableService;
+import org.eniware.util.OptionalService;
 import ocpp.v15.cp.AvailabilityStatus;
 import ocpp.v15.cp.AvailabilityType;
 import ocpp.v15.cp.CancelReservationRequest;
@@ -72,9 +72,8 @@ import ocpp.v15.cp.UpdateFirmwareResponse;
 import ocpp.v15.support.ConfigurationKeys;
 
 /**
- * SolarNode implementation of {@link ChargePointService}
+ * EniwareEdge implementation of {@link ChargePointService}
  * 
- * @author matt
  * @version 1.1
  */
 @WebService(serviceName = "ChargePointService", targetNamespace = "urn://Ocpp/Cp/2012/06/")
@@ -332,7 +331,7 @@ public class ChargePointService_v15 implements ChargePointService, SettingSpecif
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.ocpp.web.chargepoint";
+		return "org.eniware.edge.ocpp.web.chargepoint";
 	}
 
 	@Override

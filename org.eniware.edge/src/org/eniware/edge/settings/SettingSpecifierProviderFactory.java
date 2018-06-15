@@ -11,7 +11,6 @@ import org.springframework.context.MessageSource;
 /**
  * API for a {@link SettingSpecifierProvider} managed as a factory.
  * 
- * @author matt
  * @version $Revision$
  */
 public interface SettingSpecifierProviderFactory {

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 
-import net.solarnetwork.node.support.SerialPortBean;
+import org.eniware.edge.support.SerialPortBean;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,6 @@ import org.slf4j.LoggerFactory;
 /**
  * Base class for factories for {@link SerialPortSupport} implementations.
  *
- * @author matt
  * @version $Revision$ $Date$
  */
 public abstract class AbstractSerialPortSupportFactory extends SerialPortBean {

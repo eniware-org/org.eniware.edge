@@ -15,7 +15,6 @@ import org.eniware.edge.settings.TitleSettingSpecifier;
 /**
  * Basic implemtation of {@link TitleSettingSpecifier}.
  * 
- * @author matt
  * @version 1.2
  */
 public class BasicTitleSettingSpecifier extends BaseKeyedSettingSpecifier<String> implements

@@ -5,13 +5,12 @@
  */
 package org.eniware.edge.domain;
 
-import net.solarnetwork.domain.GeneralDatumMetadata;
-import net.solarnetwork.domain.GeneralLocationSourceMetadata;
+import org.eniware.domain.GeneralDatumMetadata;
+import org.eniware.domain.GeneralLocationSourceMetadata;
 
 /**
  * Basic implementation of {@link GeneralLocation}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BasicGeneralLocation extends BasicLocation implements GeneralLocation {

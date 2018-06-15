@@ -11,7 +11,6 @@ import org.eniware.edge.domain.Datum;
 /**
  * API for collecting {@link Datum} objects from some device.
  * 
- * @author matt
  * @version 1.3
  * @param <T>
  *        the Datum type
@@ -29,7 +28,7 @@ public interface DatumDataSource<T extends Datum> extends Identifiable {
 	 * 
 	 * @since 1.2
 	 */
-	public static final String EVENT_TOPIC_DATUM_CAPTURED = "net/solarnetwork/node/DatumDataSource/DATUM_CAPTURED";
+	public static final String EVENT_TOPIC_DATUM_CAPTURED = "net/eniwarenetwork/node/DatumDataSource/DATUM_CAPTURED";
 
 	/**
 	 * An {@link org.osgi.service.event.Event} property for the string name of

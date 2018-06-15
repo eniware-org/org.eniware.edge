@@ -8,12 +8,12 @@
 	<!-- Published Services -->
 
 	<service ref="jsonReactorSerializationService" ranking="1"
-		interface="net.solarnetwork.node.reactor.ReactorSerializationService"/>
+		interface="org.eniware.edge.reactor.ReactorSerializationService"/>
 	
 	<!-- Supporting Services -->
 
 	<bean id="jsonReactorSerializationService"
-		class="net.solarnetwork.node.reactor.io.json.JsonReactorSerializationService">
+		class="org.eniware.edge.reactor.io.json.JsonReactorSerializationService">
 	</bean>
 	
 </blueprint>

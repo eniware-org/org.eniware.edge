@@ -10,9 +10,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Information about a SolarNode setup identity.
+ * Information about a EniwareEdge setup identity.
  * 
- * @author matt
  * @version 1.0
  */
 public class SetupIdentityInfo {
@@ -25,9 +24,9 @@ public class SetupIdentityInfo {
 
 	private final Long nodeId;
 	private final String confirmationCode;
-	private final String solarNetHostName;
-	private final Integer solarNetHostPort;
-	private final boolean solarNetForceTls;
+	private final String eniwareNetHostName;
+	private final Integer eniwareNetHostPort;
+	private final boolean eniwareNetForceTls;
 	private final String keyStorePassword;
 
 	/**
@@ -36,12 +35,12 @@ public class SetupIdentityInfo {
 	 * @param nodeId
 	 *        the node ID
 	 * @param confirmationCode
-	 *        the SolarNetwork association confirmation code
-	 * @param solarNetHostName
-	 *        the SolarNetwork host name
-	 * @param solarNetHostPort
-	 *        the SolarNetwork host port
-	 * @param solarNetForceTls
+	 *        the EniwareNetwork association confirmation code
+	 * @param eniwareNetHostName
+	 *        the EniwareNetwork host name
+	 * @param eniwareNetHostPort
+	 *        the EniwareNetwork host port
+	 * @param eniwareNetForceTls
 	 *        {@literal true} to force TLS when {@code port} is not
 	 *        {@literal 443}
 	 * @param keyStorePassword
@@ -50,16 +49,16 @@ public class SetupIdentityInfo {
 	@JsonCreator
 	public SetupIdentityInfo(@JsonProperty("nodeId") Long nodeId,
 			@JsonProperty("confirmationCode") String confirmationCode,
-			@JsonProperty("solarNetHostName") String solarNetHostName,
-			@JsonProperty("solarNetHostPort") Integer solarNetHostPort,
-			@JsonProperty("solarNetForceTls") boolean solarNetForceTls,
+			@JsonProperty("eniwareNetHostName") String eniwareNetHostName,
+			@JsonProperty("eniwareNetHostPort") Integer eniwareNetHostPort,
+			@JsonProperty("eniwareNetForceTls") boolean eniwareNetForceTls,
 			@JsonProperty("keyStorePassword") String keyStorePassword) {
 		super();
 		this.nodeId = nodeId;
 		this.confirmationCode = confirmationCode;
-		this.solarNetHostName = solarNetHostName;
-		this.solarNetHostPort = solarNetHostPort;
-		this.solarNetForceTls = solarNetForceTls;
+		this.eniwareNetHostName = eniwareNetHostName;
+		this.eniwareNetHostPort = eniwareNetHostPort;
+		this.eniwareNetForceTls = eniwareNetForceTls;
 		this.keyStorePassword = keyStorePassword;
 	}
 
@@ -71,13 +70,13 @@ public class SetupIdentityInfo {
 	 * @return the new instance
 	 */
 	public SetupIdentityInfo withKeyStorePassword(String newPassword) {
-		return new SetupIdentityInfo(nodeId, confirmationCode, solarNetHostName, solarNetHostPort,
-				solarNetForceTls, newPassword);
+		return new SetupIdentityInfo(nodeId, confirmationCode, eniwareNetHostName, eniwareNetHostPort,
+				eniwareNetForceTls, newPassword);
 	}
 
 	@Override
 	public String toString() {
-		return "SetupIdentityInfo{" + nodeId + "@" + solarNetHostName + ":" + solarNetHostPort + "}";
+		return "SetupIdentityInfo{" + nodeId + "@" + eniwareNetHostName + ":" + eniwareNetHostPort + "}";
 	}
 
 	@Override
@@ -87,9 +86,9 @@ public class SetupIdentityInfo {
 		result = prime * result + ((confirmationCode == null) ? 0 : confirmationCode.hashCode());
 		result = prime * result + ((keyStorePassword == null) ? 0 : keyStorePassword.hashCode());
 		result = prime * result + ((nodeId == null) ? 0 : nodeId.hashCode());
-		result = prime * result + (solarNetForceTls ? 1231 : 1237);
-		result = prime * result + ((solarNetHostName == null) ? 0 : solarNetHostName.hashCode());
-		result = prime * result + ((solarNetHostPort == null) ? 0 : solarNetHostPort.hashCode());
+		result = prime * result + (eniwareNetForceTls ? 1231 : 1237);
+		result = prime * result + ((eniwareNetHostName == null) ? 0 : eniwareNetHostName.hashCode());
+		result = prime * result + ((eniwareNetHostPort == null) ? 0 : eniwareNetHostPort.hashCode());
 		return result;
 	}
 
@@ -126,21 +125,21 @@ public class SetupIdentityInfo {
 		} else if ( !nodeId.equals(other.nodeId) ) {
 			return false;
 		}
-		if ( solarNetForceTls != other.solarNetForceTls ) {
+		if ( eniwareNetForceTls != other.eniwareNetForceTls ) {
 			return false;
 		}
-		if ( solarNetHostName == null ) {
-			if ( other.solarNetHostName != null ) {
+		if ( eniwareNetHostName == null ) {
+			if ( other.eniwareNetHostName != null ) {
 				return false;
 			}
-		} else if ( !solarNetHostName.equals(other.solarNetHostName) ) {
+		} else if ( !eniwareNetHostName.equals(other.eniwareNetHostName) ) {
 			return false;
 		}
-		if ( solarNetHostPort == null ) {
-			if ( other.solarNetHostPort != null ) {
+		if ( eniwareNetHostPort == null ) {
+			if ( other.eniwareNetHostPort != null ) {
 				return false;
 			}
-		} else if ( !solarNetHostPort.equals(other.solarNetHostPort) ) {
+		} else if ( !eniwareNetHostPort.equals(other.eniwareNetHostPort) ) {
 			return false;
 		}
 		return true;
@@ -154,16 +153,16 @@ public class SetupIdentityInfo {
 		return confirmationCode;
 	}
 
-	public String getSolarNetHostName() {
-		return solarNetHostName;
+	public String getEniwareNetHostName() {
+		return eniwareNetHostName;
 	}
 
-	public Integer getSolarNetHostPort() {
-		return solarNetHostPort;
+	public Integer getEniwareNetHostPort() {
+		return eniwareNetHostPort;
 	}
 
-	public boolean isSolarNetForceTls() {
-		return solarNetForceTls;
+	public boolean isEniwareNetForceTls() {
+		return eniwareNetForceTls;
 	}
 
 	public String getKeyStorePassword() {

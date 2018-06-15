@@ -14,7 +14,6 @@ import org.eniware.edge.settings.CronExpressionSettingSpecifier;
 /**
  * Basic implementation of {@link CronExpressionSettingSpecifier}.
  * 
- * @author matt
  * @version 1.0
  */
 public class BasicCronExpressionSettingSpecifier extends BasicTextFieldSettingSpecifier
@@ -39,7 +38,7 @@ public class BasicCronExpressionSettingSpecifier extends BasicTextFieldSettingSp
 	 * @return A URL to link to.
 	 */
 	public static final String getCronSyntaxHelpLink() {
-		String result = "https://github.com/SolarNetwork/solarnetwork/wiki/SolarNode-Cron-Job-Syntax";
+		String result = "https://github.com/SolarNetwork/eniwarenetwork/wiki/EniwareEdge-Cron-Job-Syntax";
 		Properties props = new Properties();
 		try {
 			props.load(org.eniware.edge.settings.support.BasicCronExpressionSettingSpecifier.class

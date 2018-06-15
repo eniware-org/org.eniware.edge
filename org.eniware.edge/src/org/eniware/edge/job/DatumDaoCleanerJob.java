@@ -37,7 +37,6 @@ import org.quartz.PersistJobDataAfterExecution;
  *
  * @param <T>
  *        the Datum type for this job
- * @author matt
  * @version 2.0
  */
 @PersistJobDataAfterExecution

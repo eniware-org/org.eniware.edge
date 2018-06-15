@@ -6,13 +6,12 @@
 
 package org.eniware.edge.domain;
 
-import net.solarnetwork.util.SerializeIgnore;
+import org.eniware.util.SerializeIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * GeneralNodeDatum that also implements {@link ACEnergyDatum}.
  * 
- * @author matt
  * @version 1.1
  */
 public class GeneralNodeACEnergyDatum extends GeneralNodeEnergyDatum implements ACEnergyDatum {

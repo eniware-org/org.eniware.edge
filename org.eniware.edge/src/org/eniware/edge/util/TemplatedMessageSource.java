@@ -44,7 +44,6 @@ import org.springframework.context.NoSuchMessageException;
  * instances of this class as well.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.0
  */
 public class TemplatedMessageSource implements MessageSource, HierarchicalMessageSource {

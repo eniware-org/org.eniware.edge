@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: SolarNode OCPP Core Support
+Bundle-Name: EniwareEdge OCPP Core Support
 Bundle-SymbolicName: org.eniware.edge.ocpp
 Bundle-Description: Provides core Open Charge Point Protocol (OCPP) support.
 Bundle-Version: 0.8.1
-Bundle-Vendor: SolarNetwork
+Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: 
  org.eniware.edge.ocpp;version="0.4.0",
@@ -14,17 +14,17 @@ Import-Package:
  javax.xml.namespace,
  javax.xml.ws,
  javax.xml.ws.soap,
- net.solarnetwork.node;version="1.17.0",
- net.solarnetwork.node.dao;version="1.6.0",
- net.solarnetwork.node.dao.jdbc;version="1.10.0",
- net.solarnetwork.node.job;version="1.12.0",
- net.solarnetwork.node.reactor;version="1.2.0",
- net.solarnetwork.node.reactor.support;version="1.2.0",
- net.solarnetwork.node.settings;version="1.6.0",
- net.solarnetwork.node.settings.support;version="1.4.0",
- net.solarnetwork.node.support;version="1.13.1",
- net.solarnetwork.support;version="1.4.0",
- net.solarnetwork.util;version="1.19.0",
+ org.eniware.edge;version="1.17.0",
+ org.eniware.edge.dao;version="1.6.0",
+ org.eniware.edge.dao.jdbc;version="1.10.0",
+ org.eniware.edge.job;version="1.12.0",
+ org.eniware.edge.reactor;version="1.2.0",
+ org.eniware.edge.reactor.support;version="1.2.0",
+ org.eniware.edge.settings;version="1.6.0",
+ org.eniware.edge.settings.support;version="1.4.0",
+ org.eniware.edge.support;version="1.13.1",
+ org.eniware.support;version="1.4.0",
+ org.eniware.util;version="1.19.0",
  ocpp.v15.cs;version="1.5.0",
  ocpp.v15.support;version="1.6.0",
  org.aopalliance.aop;version="1.0.0",

@@ -17,7 +17,6 @@ import org.springframework.stereotype.Controller;
  * Controller extension to indicate global services should be injected into the
  * model.
  * 
- * @author matt
  * @version 1.0
  */
 @Target(ElementType.TYPE)

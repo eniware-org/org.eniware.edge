@@ -9,7 +9,6 @@ package org.eniware.edge.ocpp;
 /**
  * DAO API for {@link Socket} entities.
  * 
- * @author matt
  * @version 1.0
  */
 public interface SocketDao {

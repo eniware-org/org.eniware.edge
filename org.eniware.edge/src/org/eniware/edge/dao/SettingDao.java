@@ -26,7 +26,6 @@ import org.eniware.edge.support.KeyValuePair;
  * and namespace to prevent key collisions across different packages.
  * </p>
  * 
- * @author matt
  * @version 1.2
  */
 public interface SettingDao extends BatchableDao<Setting> {
@@ -36,7 +35,7 @@ public interface SettingDao extends BatchableDao<Setting> {
 	 * adding new, updating an existing, or deleting. The various
 	 * {@code SETTING_*} properties will be provided as event properties.
 	 */
-	String EVENT_TOPIC_SETTING_CHANGED = "net/solarnetwork/node/dao/SETTING_CHANGED";
+	String EVENT_TOPIC_SETTING_CHANGED = "net/eniwarenetwork/node/dao/SETTING_CHANGED";
 
 	/** Event property key for the setting key. */
 	String SETTING_KEY = "Key";

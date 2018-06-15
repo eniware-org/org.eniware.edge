@@ -24,7 +24,7 @@ import org.quartz.PersistJobDataAfterExecution;
 import org.springframework.context.MessageSource;
 import org.springframework.dao.DuplicateKeyException;
 
-import net.solarnetwork.util.OptionalService;
+import org.eniware.util.OptionalService;
 
 /**
  * Extension of {@link DatumDataSourceLoggerJob} designed to be used as a
@@ -34,8 +34,7 @@ import net.solarnetwork.util.OptionalService;
  * This class implements {@link SettingSpecifierProvider} but delegates that API
  * to the configured {@link #getDatumDataSource()}.
  * </p>
- * 
- * @author matt
+ *
  * @version 2.0
  */
 @PersistJobDataAfterExecution

@@ -15,7 +15,6 @@ import org.eniware.edge.reactor.InstructionStatus;
 /**
  * Basic implementation of {@link InstructionStatus}.
  * 
- * @author matt
  * @version 1.2
  */
 public class BasicInstructionStatus implements InstructionStatus, Serializable {

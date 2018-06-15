@@ -53,9 +53,9 @@ import org.quartz.Trigger;
  * </p>
  * 
  * <pre>
- * &lt;reference-list id="triggers" interface="net.solarnetwork.node.job.TriggerAndJobDetail">
+ * &lt;reference-list id="triggers" interface="org.eniware.edge.job.TriggerAndJobDetail">
  * 		&lt;reference-listener bind-method="onBind" unbind-method="onUnbind">
- * 			&lt;bean class="net.solarnetwork.node.runtime.JobServiceRegistrationListener">
+ * 			&lt;bean class="org.eniware.edge.runtime.JobServiceRegistrationListener">
  * 				&lt;property name="scheduler" ref="scheduler"/>
  *              &lt;property name="bundleContext" ref="bundleContext"/>
  * 			&lt;/bean>
@@ -74,7 +74,6 @@ import org.quartz.Trigger;
  * un-registered.</dd>
  * </dl>
  * 
- * @author matt
  * @version 2.0
  * @see ManagedJobServiceRegistrationListener for alternative using
  *      settings-based jobs

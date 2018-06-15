@@ -10,8 +10,7 @@ package org.eniware.edge.settings;
  * A setting specifier that can store a value associated with a key.
  * 
  * @param <T>
- *        the type of value stored by this setting
- * @author matt
+ * 
  * @version 1.3
  */
 public interface KeyedSettingSpecifier<T> extends SettingSpecifier, MappableSpecifier {
@@ -37,7 +36,7 @@ public interface KeyedSettingSpecifier<T> extends SettingSpecifier, MappableSpec
 	 *        the mapper
 	 * @return the new instance
 	 * @deprecated Use
-	 *             {@link MappableSpecifier#mappedWithMapper(net.solarnetwork.node.settings.MappableSpecifier.Mapper)}
+	 *             {@link MappableSpecifier#mappedWithMapper(org.eniware.edge.settings.MappableSpecifier.Mapper)}
 	 *             directly.
 	 */
 	@Deprecated

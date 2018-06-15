@@ -12,7 +12,6 @@ import ocpp.v15.cs.IdTagInfo;
 /**
  * Representation of a charge session.
  * 
- * @author matt
  * @version 1.0
  */
 public class ChargeSession extends IdTagInfo {

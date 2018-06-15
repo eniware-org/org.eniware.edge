@@ -17,12 +17,12 @@ $(document).ready(function() {
 				$(form.elements['oldPassword']).attr('value', '');
 				form.reset();
 			} else {
-				SolarNode.error(json.message);
+				EniwareEdge.error(json.message);
 			}
 		},
 		error: function(xhr, status, statusText) {
 			var json = $.parseJSON(xhr.responseText);
-			SolarNode.error(json.message);
+			EniwareEdge.error(json.message);
 		}
 	});
 	
@@ -39,12 +39,12 @@ $(document).ready(function() {
 				$('#change-username-success').removeClass('hidden');
 				$('.active-user-display').text(form.elements['username'].value);
 			} else {
-				SolarNode.error(json.message);
+				EniwareEdge.error(json.message);
 			}
 		},
 		error: function(xhr, status, statusText) {
 			var json = $.parseJSON(xhr.responseText);
-			SolarNode.error(json.message);
+			EniwareEdge.error(json.message);
 		}
 	});
 	

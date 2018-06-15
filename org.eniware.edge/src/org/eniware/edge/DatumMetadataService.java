@@ -6,12 +6,11 @@
 
 package org.eniware.edge;
 
-import net.solarnetwork.domain.GeneralDatumMetadata;
+import org.eniware.domain.GeneralDatumMetadata;
 
 /**
  * API for manipulating {@link GeneralDatumMetadata} associated with a node.
  * 
- * @author matt
  * @version 1.0
  */
 public interface DatumMetadataService {

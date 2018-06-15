@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Default controller.
  * 
- * @author matt
  * @version 1.1
  */
 @Controller

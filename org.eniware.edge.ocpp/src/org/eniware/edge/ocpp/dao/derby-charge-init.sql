@@ -1,4 +1,4 @@
-CREATE TABLE solarnode.ocpp_charge (
+CREATE TABLE eniwareedge.ocpp_charge (
 	created			TIMESTAMP NOT NULL WITH DEFAULT CURRENT_TIMESTAMP,
 	sessid_hi		BIGINT NOT NULL,
 	sessid_lo		BIGINT NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE solarnode.ocpp_charge (
 	CONSTRAINT ocpp_charge_pk PRIMARY KEY (sessid_hi, sessid_lo)
 );
 
-CREATE TABLE solarnode.ocpp_meter_reading (
+CREATE TABLE eniwareedge.ocpp_meter_reading (
 	created			TIMESTAMP NOT NULL WITH DEFAULT CURRENT_TIMESTAMP,
 	sessid_hi		BIGINT NOT NULL,
 	sessid_lo		BIGINT NOT NULL,
@@ -21,9 +21,9 @@ CREATE TABLE solarnode.ocpp_meter_reading (
 	location		VARCHAR(8),
 	unit 			VARCHAR(8),
 	CONSTRAINT ocpp_meter_reading_charge_fk FOREIGN KEY (sessid_hi, sessid_lo)
-		REFERENCES solarnode.ocpp_charge (sessid_hi, sessid_lo)
+		REFERENCES eniwareedge.ocpp_charge (sessid_hi, sessid_lo)
 		ON DELETE CASCADE
 );
 
-INSERT INTO solarnode.sn_settings (skey, svalue) 
-VALUES ('solarnode.ocpp_charge.version', '1');
+INSERT INTO eniwareedge.sn_settings (skey, svalue) 
+VALUES ('eniwareedge.ocpp_charge.version', '1');

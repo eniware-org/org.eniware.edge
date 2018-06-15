@@ -38,27 +38,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
-import net.solarnetwork.domain.NetworkAssociation;
-import net.solarnetwork.domain.NetworkAssociationDetails;
-import net.solarnetwork.domain.NetworkCertificate;
-import net.solarnetwork.node.backup.Backup;
-import net.solarnetwork.node.backup.BackupInfo;
-import net.solarnetwork.node.backup.BackupManager;
-import net.solarnetwork.node.backup.BackupService;
-import net.solarnetwork.node.settings.SettingsCommand;
-import net.solarnetwork.node.settings.SettingsService;
-import net.solarnetwork.node.setup.InvalidVerificationCodeException;
-import net.solarnetwork.node.setup.PKIService;
-import net.solarnetwork.node.setup.SetupException;
-import net.solarnetwork.node.setup.UserProfile;
-import net.solarnetwork.node.setup.UserService;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.web.domain.Response;
+import org.eniware.domain.NetworkAssociation;
+import org.eniware.domain.NetworkAssociationDetails;
+import org.eniware.domain.NetworkCertificate;
+import org.eniware.edge.backup.Backup;
+import org.eniware.edge.backup.BackupInfo;
+import org.eniware.edge.backup.BackupManager;
+import org.eniware.edge.backup.BackupService;
+import org.eniware.edge.settings.SettingsCommand;
+import org.eniware.edge.settings.SettingsService;
+import org.eniware.edge.setup.InvalidVerificationCodeException;
+import org.eniware.edge.setup.PKIService;
+import org.eniware.edge.setup.SetupException;
+import org.eniware.edge.setup.UserProfile;
+import org.eniware.edge.setup.UserService;
+import org.eniware.util.OptionalService;
+import org.eniware.web.domain.Response;
 
 /**
- * Controller used to associate a node with a SolarNet account.
+ * Controller used to associate a node with a EniwareNet account.
  * 
- * @author maxieduncan
  * @version 1.3
  */
 @Controller
@@ -200,7 +199,7 @@ public class NodeAssociationController extends BaseSetupController {
 	}
 
 	/**
-	 * Confirms the node association with the SolarNet server supplied in the
+	 * Confirms the node association with the EniwareNet server supplied in the
 	 * verification code.
 	 * 
 	 * @param command
@@ -234,7 +233,7 @@ public class NodeAssociationController extends BaseSetupController {
 				model.addAttribute("csr", pkiService.generateNodePKCS10CertificateRequestString());
 			}
 			if ( !userService.someUserExists() ) {
-				// create a new user now, using the username from SolarNet and a random password
+				// create a new user now, using the username from EniwareNet and a random password
 				UserProfile user = new UserProfile();
 				user.setUsername(details.getUsername());
 				user.setPassword(KeyGenerators.string().generateKey());

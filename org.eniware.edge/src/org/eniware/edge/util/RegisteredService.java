@@ -16,8 +16,7 @@ import org.osgi.framework.ServiceRegistration;
  * A class to help with tracking registered services.
  * 
  * @param <T>
- *        the service object type
- * @author matt
+ * 
  * @version 1.1
  */
 public class RegisteredService<T> {

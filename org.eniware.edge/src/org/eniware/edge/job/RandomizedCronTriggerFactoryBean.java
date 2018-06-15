@@ -18,8 +18,7 @@ import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
  * The cron expression is only randomized if the
  * {@link #setCronExpression(String)} method is used to set the cron expression.
  * </p>
- * 
- * @author matt
+ *
  * @version 2.0
  */
 public class RandomizedCronTriggerFactoryBean extends CronTriggerFactoryBean {
@@ -28,7 +27,7 @@ public class RandomizedCronTriggerFactoryBean extends CronTriggerFactoryBean {
 	 * A trigger job data map key for the original cron expression before
 	 * randomization was applied.
 	 */
-	public static final String BASE_CRON_EXPRESSION_KEY = "net.solarnetwork.node.job.BASE_CRON_EXPRESSION";
+	public static final String BASE_CRON_EXPRESSION_KEY = "org.eniware.edge.job.BASE_CRON_EXPRESSION";
 
 	private boolean randomSecond = true;
 	private String baseCronExpression;

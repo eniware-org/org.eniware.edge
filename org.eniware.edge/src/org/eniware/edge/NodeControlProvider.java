@@ -6,7 +6,7 @@
 package org.eniware.edge;
 
 import java.util.List;
-import net.solarnetwork.domain.NodeControlInfo;
+import org.eniware.domain.NodeControlInfo;
 
 /**
  * API for control providers to implement.
@@ -15,7 +15,6 @@ import net.solarnetwork.domain.NodeControlInfo;
  * {@link Identifiable#getUID()} will return the <em>control ID</em> of that
  * control.
  * 
- * @author matt
  * @version 1.3
  */
 public interface NodeControlProvider extends Identifiable {
@@ -30,7 +29,7 @@ public interface NodeControlProvider extends Identifiable {
 	 * 
 	 * @since 1.2
 	 */
-	String EVENT_TOPIC_CONTROL_INFO_CAPTURED = "net/solarnetwork/node/NodeControlProvider/CONTROL_INFO_CAPTURED";
+	String EVENT_TOPIC_CONTROL_INFO_CAPTURED = "net/eniwarenetwork/node/NodeControlProvider/CONTROL_INFO_CAPTURED";
 
 	/**
 	 * An {@code org.osgi.service.event.Event} topic for when a
@@ -41,7 +40,7 @@ public interface NodeControlProvider extends Identifiable {
 	 * 
 	 * @since 1.3
 	 */
-	String EVENT_TOPIC_CONTROL_INFO_CHANGED = "net/solarnetwork/node/NodeControlProvider/CONTROL_INFO_CHANGED";
+	String EVENT_TOPIC_CONTROL_INFO_CHANGED = "net/eniwarenetwork/node/NodeControlProvider/CONTROL_INFO_CHANGED";
 
 	/**
 	 * Get a list of available controls this provider supports.

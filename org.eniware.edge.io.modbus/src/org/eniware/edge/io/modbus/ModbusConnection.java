@@ -9,7 +9,7 @@ package org.eniware.edge.io.modbus;
 import java.io.IOException;
 import java.util.BitSet;
 import java.util.Map;
-import net.solarnetwork.node.LockTimeoutException;
+import org.eniware.edge.LockTimeoutException;
 
 /**
  * High level Modbus connection API.
@@ -19,7 +19,6 @@ import net.solarnetwork.node.LockTimeoutException;
  * direct dependency on Jamod (or any other Modbus implementation).
  * </p>
  * 
- * @author matt
  * @version 1.0
  * @since 2.0
  */

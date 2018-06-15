@@ -9,16 +9,15 @@ package org.eniware.edge.ocpp.web;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.context.MessageSource;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.settings.support.BasicToggleSettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.settings.support.BasicToggleSettingSpecifier;
 import ocpp.v15.support.HMACHandler;
 
 /**
  * Extension of {@link HMACHandler} to support {@link SettingSpecifierProvider}.
  * 
- * @author matt
  * @version 1.0
  */
 public class ManagedHMACHandler extends HMACHandler implements SettingSpecifierProvider {
@@ -27,7 +26,7 @@ public class ManagedHMACHandler extends HMACHandler implements SettingSpecifierP
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.ocpp.web";
+		return "org.eniware.edge.ocpp.web";
 	}
 
 	@Override

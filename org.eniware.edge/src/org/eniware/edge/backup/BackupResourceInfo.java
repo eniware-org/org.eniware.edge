@@ -8,7 +8,6 @@ package org.eniware.edge.backup;
 /**
  * Metadata about a {@link BackupResource}.
  * 
- * @author matt
  * @version 1.0
  * @since 1.46
  */

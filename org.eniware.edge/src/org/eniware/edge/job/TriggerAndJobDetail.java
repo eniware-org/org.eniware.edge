@@ -18,7 +18,6 @@ import org.springframework.context.MessageSource;
  * for registering/un-registering jobs published as services in
  * bundles within a single "core" {@code Scheduler}.</p>
  *
- * @author matt
  * @version $Revision$ $Date$
  */
 public interface TriggerAndJobDetail {

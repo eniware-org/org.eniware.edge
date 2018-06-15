@@ -6,13 +6,12 @@
 
 package org.eniware.edge.domain;
 
-import net.solarnetwork.domain.GeneralDatumSamples;
+import org.eniware.domain.GeneralDatumSamples;
 
 /**
  * API for taking a {@link GeneralDatumSamples} object and transforming it in
  * some way into a different {@link GeneralDatumSamples) object.
  * 
- * @author matt
  * @version 1.1
  */
 public interface GeneralDatumSamplesTransformer {

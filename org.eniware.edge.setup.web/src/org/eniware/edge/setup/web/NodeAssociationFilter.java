@@ -16,13 +16,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.filter.GenericFilterBean;
-import net.solarnetwork.node.IdentityService;
+import org.eniware.edge.IdentityService;
 
 /**
  * Filter to force the user to the node association setup if not already
  * associated.
  * 
- * @author matt
  * @version 1.2
  */
 public class NodeAssociationFilter extends GenericFilterBean implements Filter {

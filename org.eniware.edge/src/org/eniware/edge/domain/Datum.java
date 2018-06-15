@@ -12,7 +12,6 @@ import java.util.Map;
 /**
  * Basic persistable domain object API.
  * 
- * @author matt
  * @version 1.3
  */
 public interface Datum {
@@ -79,7 +78,7 @@ public interface Datum {
 	String getSourceId();
 
 	/**
-	 * Get the date this object was uploaded to SolarNet.
+	 * Get the date this object was uploaded to EniwareNet.
 	 * 
 	 * @return the upload date
 	 */

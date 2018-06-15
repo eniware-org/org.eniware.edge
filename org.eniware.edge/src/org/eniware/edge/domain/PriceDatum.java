@@ -11,13 +11,12 @@ import java.math.BigDecimal;
 /**
  * API for price data.
  * 
- * @author matt
  * @version 1.1
  */
 public interface PriceDatum extends Datum {
 
 	/**
-	 * A {@link net.solarnetwork.domain.GeneralDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralDatumSamples} instantaneous
 	 * sample key for {@link PriceDatum#getPrice()} values.
 	 */
 	static final String PRICE_KEY = "price";

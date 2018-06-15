@@ -9,7 +9,6 @@ package org.eniware.edge.setup.web;
 /**
  * Bean for an instruction parameter.
  * 
- * @author matt
  * @version 1.0
  */
 public class InstructionParameter {

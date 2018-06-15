@@ -9,25 +9,24 @@ package org.eniware.edge.domain;
 /**
  * Standardized API for photovoltaic system related energy datum to implement.
  * 
- * @author matt
  * @version 1.0
  */
 public interface PVEnergyDatum extends EnergyDatum {
 
 	/**
-	 * The {@link net.solarnetwork.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
 	 * sample key for {@link #getDCPower()} values.
 	 */
 	static final String DC_POWER_KEY = "dcPower";
 
 	/**
-	 * The {@link net.solarnetwork.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
 	 * sample key for {@link #getDCVoltage()} values.
 	 */
 	static final String DC_VOLTAGE_KEY = "dcVoltage";
 
 	/**
-	 * The {@link net.solarnetwork.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
 	 * sample key for {@link #getVoltage()} values.
 	 */
 	static final String VOLTAGE_KEY = "voltage";

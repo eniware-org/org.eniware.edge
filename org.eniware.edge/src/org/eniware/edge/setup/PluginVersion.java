@@ -13,7 +13,6 @@ package org.eniware.edge.setup;
  * Purposely compatible with OSGi {@code org.osgi.framework.Version} class.
  * </p>
  * 
- * @author matt
  * @version 1.0
  */
 public interface PluginVersion extends Comparable<PluginVersion> {

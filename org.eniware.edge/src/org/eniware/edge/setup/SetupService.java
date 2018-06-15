@@ -8,29 +8,28 @@ package org.eniware.edge.setup;
 
 import org.eniware.edge.domain.NodeAppConfiguration;
 
-import net.solarnetwork.domain.NetworkAssociation;
-import net.solarnetwork.domain.NetworkAssociationDetails;
-import net.solarnetwork.domain.NetworkCertificate;
-import net.solarnetwork.domain.NetworkIdentity;
+import org.eniware.domain.NetworkAssociation;
+import org.eniware.domain.NetworkAssociationDetails;
+import org.eniware.domain.NetworkCertificate;
+import org.eniware.domain.NetworkIdentity;
 
 /**
  * API for node setup support.
  * 
- * @author matt
  * @version 1.3
  */
 public interface SetupService {
 
 	/** Topic for when a network association has been accepted. */
-	public static final String TOPIC_NETWORK_ASSOCIATION_ACCEPTED = "net/solarnetwork/node/setup/NETWORK_ASSOCIATION_ACCEPTED";
+	public static final String TOPIC_NETWORK_ASSOCIATION_ACCEPTED = "net/eniwarenetwork/node/setup/NETWORK_ASSOCIATION_ACCEPTED";
 
 	/**
-	 * Decode a SolarNet verification code to determine the service that the
+	 * Decode a EniwareNet verification code to determine the service that the
 	 * node should register itself with.
 	 * 
 	 * @param verificationCode
-	 *        The verification code supplied by SolarNet to decode.
-	 * @return details for the given SolarNet host
+	 *        The verification code supplied by EniwareNet to decode.
+	 * @return details for the given EniwareNet host
 	 * @throws InvalidVerificationCodeException
 	 *         thrown if an error is encountered decoding the verification code.
 	 */
@@ -50,7 +49,7 @@ public interface SetupService {
 	NetworkAssociation retrieveNetworkAssociation(NetworkAssociationDetails details);
 
 	/**
-	 * Associate this node with a SolarNet central service, using details
+	 * Associate this node with a EniwareNet central service, using details
 	 * previously obtained via {@link #decodeVerificationCode(String)}.
 	 * 
 	 * @param details
@@ -68,7 +67,7 @@ public interface SetupService {
 	 * future.
 	 * 
 	 * @param password
-	 *        A password to encrypt the keystore with when passing to SolarNet.
+	 *        A password to encrypt the keystore with when passing to EniwareNet.
 	 * @throws SetupException
 	 *         if an error is encountered renewing the certificate
 	 * @since 1.2
@@ -80,7 +79,7 @@ public interface SetupService {
 	 * 
 	 * <p>
 	 * The application configuration includes network service URLs returned by
-	 * the SolarUser and SolarQuery applications.
+	 * the EniwareUser and EniwareQuery applications.
 	 * </p>
 	 * 
 	 * @return the app configuration, never {@code null}

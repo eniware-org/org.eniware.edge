@@ -9,16 +9,15 @@ package org.eniware.edge.io.modbus;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
-import net.solarnetwork.node.DatumDataSource;
-import net.solarnetwork.node.support.DatumDataSourceSupport;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.util.StringUtils;
+import org.eniware.edge.DatumDataSource;
+import org.eniware.edge.support.DatumDataSourceSupport;
+import org.eniware.util.OptionalService;
+import org.eniware.util.StringUtils;
 
 /**
  * A base helper class to support {@link ModbusNetwork} based
  * {@link DatumDataSource} implementations.
  * 
- * @author matt
  * @version 1.0
  */
 public abstract class ModbusDeviceDatumDataSourceSupport extends DatumDataSourceSupport {

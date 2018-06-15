@@ -6,7 +6,7 @@
 
 package org.eniware.edge.setup.web;
 
-import static net.solarnetwork.web.domain.Response.response;
+import static org.eniware.web.domain.Response.response;
 import javax.annotation.Resource;
 
 import org.eniware.edge.setup.web.support.ServiceAwareController;
@@ -14,14 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import net.solarnetwork.node.SystemService;
-import net.solarnetwork.util.OptionalService;
-import net.solarnetwork.web.domain.Response;
+import org.eniware.edge.SystemService;
+import org.eniware.util.OptionalService;
+import org.eniware.web.domain.Response;
 
 /**
  * Controller to manage the initial home screen.
  * 
- * @author matt
  * @version 1.0
  * @since 1.23
  */
@@ -44,7 +43,7 @@ public class HomeController {
 	}
 
 	/**
-	 * Restart or reboot SolarNode.
+	 * Restart or reboot EniwareEdge.
 	 * 
 	 * @param reboot
 	 *        If {@code true} then call {@link SystemService#reboot()},

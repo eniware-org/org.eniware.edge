@@ -17,17 +17,17 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import net.solarnetwork.node.ConversationalDataCollector;
-import net.solarnetwork.node.DataCollector;
-import net.solarnetwork.node.DataCollectorFactory;
-import net.solarnetwork.node.LockTimeoutException;
-import net.solarnetwork.node.PortLockedConversationalDataCollector;
-import net.solarnetwork.node.PortLockedDataCollector;
-import net.solarnetwork.node.settings.SettingSpecifier;
-import net.solarnetwork.node.settings.SettingSpecifierProvider;
-import net.solarnetwork.node.settings.support.BasicTextFieldSettingSpecifier;
-import net.solarnetwork.node.support.DataCollectorSerialPortBeanParameters;
-import net.solarnetwork.node.support.SerialPortBeanParameters;
+import org.eniware.edge.ConversationalDataCollector;
+import org.eniware.edge.DataCollector;
+import org.eniware.edge.DataCollectorFactory;
+import org.eniware.edge.LockTimeoutException;
+import org.eniware.edge.PortLockedConversationalDataCollector;
+import org.eniware.edge.PortLockedDataCollector;
+import org.eniware.edge.settings.SettingSpecifier;
+import org.eniware.edge.settings.SettingSpecifierProvider;
+import org.eniware.edge.settings.support.BasicTextFieldSettingSpecifier;
+import org.eniware.edge.support.DataCollectorSerialPortBeanParameters;
+import org.eniware.edge.support.SerialPortBeanParameters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
@@ -54,7 +54,6 @@ import org.springframework.context.support.ResourceBundleMessageSource;
  * <dd>The service group to use. Defaults to <em>null</em>.</dd>
  * </dl>
  * 
- * @author matt
  * @version 1.1
  */
 public class RxtxDataCollectorFactory implements DataCollectorFactory<SerialPortBeanParameters>,
@@ -167,7 +166,7 @@ public class RxtxDataCollectorFactory implements DataCollectorFactory<SerialPort
 
 	@Override
 	public String getSettingUID() {
-		return "net.solarnetwork.node.io.rxtx";
+		return "org.eniware.edge.io.rxtx";
 	}
 
 	@Override

@@ -11,7 +11,6 @@ import java.util.Date;
 /**
  * Simple implementation of {@link BackupServiceInfo}.
  * 
- * @author matt
  * @version 1.0
  */
 public class SimpleBackupServiceInfo implements BackupServiceInfo {

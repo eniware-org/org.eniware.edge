@@ -14,12 +14,11 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
-import net.solarnetwork.dao.jdbc.SQLExceptionHandler;
+import org.eniware.dao.jdbc.SQLExceptionHandler;
 
 /**
  * Recover from connection exceptions by shutting down.
  * 
- * @author matt
  * @version 1.0
  */
 public class ShutdownSQLExceptionHandler implements SQLExceptionHandler {

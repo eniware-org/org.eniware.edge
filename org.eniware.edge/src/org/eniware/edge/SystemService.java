@@ -9,7 +9,6 @@ package org.eniware.edge;
  * API for node system services, such as restarting, rebooting, or making system
  * configuration changes.
  * 
- * @author matt
  * @version 1.0
  * @since 1.47
  */

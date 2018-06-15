@@ -15,17 +15,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import net.solarnetwork.node.ConversationalDataCollector;
-import net.solarnetwork.node.DataCollector;
+import org.eniware.edge.ConversationalDataCollector;
+import org.eniware.edge.DataCollector;
 
 /**
  * Serial port conversation-based {@link DataCollector} implementation.
  * 
  * <p>Note this class is not thread-safe, in that
- * {@link #collectData(net.solarnetwork.node.ConversationalDataCollector.Moderator)}
+ * {@link #collectData(org.eniware.edge.ConversationalDataCollector.Moderator)}
  * should not be called by more than one thread at a time.</p>
  * 
- * @author matt
  * @version $Revision$ $Date$
  * @param <T> the datum type
  */

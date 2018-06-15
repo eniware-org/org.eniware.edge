@@ -1,9 +1,9 @@
 (function() {
 'use strict';
 
-SolarNode.Backups = {};
+EniwareEdge.Backups = {};
 
-SolarNode.Backups.generateBackupList = function(backupInfo, container) {
+EniwareEdge.Backups.generateBackupList = function(backupInfo, container) {
 	container.empty();
 	if ( !backupInfo || !Array.isArray(backupInfo.resourceInfos) ) {
 		return;
@@ -34,7 +34,7 @@ SolarNode.Backups.generateBackupList = function(backupInfo, container) {
 	});
 };
 
-SolarNode.Backups.selectedProviders = function(container) {
+EniwareEdge.Backups.selectedProviders = function(container) {
 	return container.find('.menu-item.selected').map(function(idx, item) {
 		return { name : 'providers', value : $(item).data('provider') };
 	}).toArray();

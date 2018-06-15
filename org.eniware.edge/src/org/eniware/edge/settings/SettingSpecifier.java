@@ -14,7 +14,6 @@ package org.eniware.edge.settings;
  * interfaces that extend this interface are used.
  * </p>
  * 
- * @author matt
  * @version $Revision$
  */
 public interface SettingSpecifier {

@@ -9,9 +9,8 @@ package org.eniware.edge;
 import org.eniware.edge.domain.Datum;
 
 /**
- * API for posting local SolarNode data to a remote server.
+ * API for posting local EniwareEdge data to a remote server.
  * 
- * @author matt.magoffin
  * @version 1.2
  */
 public interface UploadService {
@@ -25,7 +24,7 @@ public interface UploadService {
 	 * 
 	 * @since 1.2
 	 */
-	public static final String EVENT_TOPIC_DATUM_UPLOADED = "net/solarnetwork/node/UploadService/DATUM_UPLOADED";
+	public static final String EVENT_TOPIC_DATUM_UPLOADED = "net/eniwarenetwork/node/UploadService/DATUM_UPLOADED";
 
 	/**
 	 * Get a unique key for this service.
