@@ -5,6 +5,5 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.edge"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.eniware.common"/>
-	<classpathentry kind="lib" path="/eniware-osgi-target/platform/quartz-2.2.3.jar"/>
 	<classpathentry kind="output" path="build/eclipse"/>
 </classpath>
