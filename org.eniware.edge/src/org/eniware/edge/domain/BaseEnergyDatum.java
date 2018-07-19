@@ -9,7 +9,7 @@ package org.eniware.edge.domain;
  * Base class for {@link EnergyDatum} implementations.
  * 
  * @version 1.1
- * @deprecated use {@link GeneralNodeEnergyDatum}
+ * @deprecated use {@link GeneralEdgeEnergyDatum}
  */
 @Deprecated
 public abstract class BaseEnergyDatum extends BaseDatum implements EnergyDatum {

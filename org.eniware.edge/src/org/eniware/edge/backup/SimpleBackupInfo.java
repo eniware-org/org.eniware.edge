@@ -43,8 +43,8 @@ public class SimpleBackupInfo extends SimpleBackupIdentity implements BackupInfo
 	 *        The backup key.
 	 * @param date
 	 *        The backup date.
-	 * @param nodeId
-	 *        The node ID.
+	 * @param EdgeId
+	 *        The Edge ID.
 	 * @param qualifier
 	 *        The qualifier.
 	 * @param providerInfos
@@ -52,7 +52,7 @@ public class SimpleBackupInfo extends SimpleBackupIdentity implements BackupInfo
 	 * @param resourceInfos
 	 *        The resources.
 	 */
-	public SimpleBackupInfo(String key, Date date, Long nodeId, String qualifier,
+	public SimpleBackupInfo(String key, Date date, Long EdgeId, String qualifier,
 			Collection<BackupResourceProviderInfo> providerInfos,
 			Collection<BackupResourceInfo> resourceInfos) {
 		super(key, date, null, null);

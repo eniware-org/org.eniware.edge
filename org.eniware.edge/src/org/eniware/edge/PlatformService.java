@@ -30,7 +30,7 @@ public interface PlatformService {
 	 * the name of the <em>core</em> class name of the datum type.
 	 * </p>
 	 */
-	String EVENT_TOPIC_PLATFORM_STATE_CHANGED = "net/eniwarenetwork/node/PlatformService/STATE_CHANGED";
+	String EVENT_TOPIC_PLATFORM_STATE_CHANGED = "net/eniwarenetwork/Edge/PlatformService/STATE_CHANGED";
 
 	/**
 	 * A {@link org.osgi.service.event.Event} property name for a

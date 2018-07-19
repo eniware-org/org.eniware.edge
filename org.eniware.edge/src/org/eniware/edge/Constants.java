@@ -13,8 +13,8 @@ package org.eniware.edge;
  */
 public final class Constants {
 
-	/** The system property for the node's home directory. */
-	public static final String SYSTEM_PROP_NODE_HOME = "sn.home";
+	/** The system property for the Edge's home directory. */
+	public static final String SYSTEM_PROP_Edge_HOME = "sn.home";
 
 	/**
 	 * An event topic to post when a significant change has occurred to the
@@ -23,7 +23,7 @@ public final class Constants {
 	 * 
 	 * @since 1.1
 	 */
-	public static final String EVENT_TOPIC_CONFIGURATION_CHANGED = "net/eniwarenetwork/node/CONFIGURATION_CHANGED";
+	public static final String EVENT_TOPIC_CONFIGURATION_CHANGED = "net/eniwarenetwork/Edge/CONFIGURATION_CHANGED";
 
 	private Constants() {
 		// don't construct me

@@ -6,7 +6,7 @@
 
 package org.eniware.edge.setup.impl;
 
-import static org.eniware.edge.SetupSettings.KEY_NODE_ID;
+import static org.eniware.edge.SetupSettings.KEY_Edge_ID;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,7 +35,7 @@ import org.eniware.edge.IdentityService;
 import org.eniware.edge.SetupSettings;
 import org.eniware.edge.backup.BackupManager;
 import org.eniware.edge.dao.SettingDao;
-import org.eniware.edge.domain.NodeAppConfiguration;
+import org.eniware.edge.domain.EdgeAppConfiguration;
 import org.eniware.edge.reactor.Instruction;
 import org.eniware.edge.reactor.InstructionHandler;
 import org.eniware.edge.reactor.InstructionStatus.InstructionState;
@@ -101,7 +101,7 @@ public class DefaultSetupService extends XmlServiceSupport
 	public static final String DEFAULT_ENIWAREIN_URL_PREFIX = "/eniwarein";
 
 	/**
-	 * Instruction topic for sending a renewed certificate to a node.
+	 * Instruction topic for sending a renewed certificate to a Edge.
 	 * 
 	 * @since 1.5
 	 */
@@ -123,7 +123,7 @@ public class DefaultSetupService extends XmlServiceSupport
 	 */
 	public static final String NETWORK_APP_CONFIGURATION_URL_PATH = "/api/v1/pub/config";
 
-	public static final Pattern DEFAULT_SUBJECT_NAME_NODE_ID_PATTERN = Pattern
+	public static final Pattern DEFAULT_SUBJECT_NAME_Edge_ID_PATTERN = Pattern
 			.compile("UID\\s*=\\s*(\\d+)", Pattern.CASE_INSENSITIVE);
 
 	private static final long APP_CONFIG_CACHE_MS = 24 * 60 * 60 * 1000L; // 1 day
@@ -136,10 +136,10 @@ public class DefaultSetupService extends XmlServiceSupport
 	private static final String VERIFICATION_CODE_TERMS_OF_SERVICE = "termsOfService";
 	private static final String VERIFICATION_CODE_EXPIRATION_KEY = "expiration";
 	private static final String VERIFICATION_CODE_SECURITY_PHRASE = "securityPhrase";
-	private static final String VERIFICATION_CODE_NODE_ID_KEY = "networkId";
-	private static final String VERIFICATION_CODE_NODE_CERT = "networkCertificate";
-	private static final String VERIFICATION_CODE_NODE_CERT_STATUS = "networkCertificateStatus";
-	private static final String VERIFICATION_CODE_NODE_CERT_DN_KEY = "networkCertificateSubjectDN";
+	private static final String VERIFICATION_CODE_Edge_ID_KEY = "networkId";
+	private static final String VERIFICATION_CODE_Edge_CERT = "networkCertificate";
+	private static final String VERIFICATION_CODE_Edge_CERT_STATUS = "networkCertificateStatus";
+	private static final String VERIFICATION_CODE_Edge_CERT_DN_KEY = "networkCertificateSubjectDN";
 	private static final String VERIFICATION_CODE_USER_NAME_KEY = "username";
 	private static final String VERIFICATION_CODE_FORCE_TLS = "forceTLS";
 	private static final String VERIFICATION_URL_ENIWAREUSER = "eniwareUserServiceURL";
@@ -155,7 +155,7 @@ public class DefaultSetupService extends XmlServiceSupport
 	private PKIService pkiService;
 	private String eniwareInUrlPrefix = DEFAULT_ENIWAREIN_URL_PREFIX;
 
-	private NodeAppConfiguration appConfiguration = new NodeAppConfiguration();
+	private EdgeAppConfiguration appConfiguration = new EdgeAppConfiguration();
 
 	/**
 	 * Default constructor.
@@ -169,12 +169,12 @@ public class DefaultSetupService extends XmlServiceSupport
 		setConnectionTimeout(60000);
 	}
 
-	private Map<String, XPathExpression> getNodeAssociationPropertyMapping() {
+	private Map<String, XPathExpression> getEdgeAssociationPropertyMapping() {
 		Map<String, String> xpathMap = new HashMap<String, String>();
-		xpathMap.put(VERIFICATION_CODE_NODE_ID_KEY, "/*/@networkId");
-		xpathMap.put(VERIFICATION_CODE_NODE_CERT_DN_KEY, "/*/@networkCertificateSubjectDN");
-		xpathMap.put(VERIFICATION_CODE_NODE_CERT_STATUS, "/*/@networkCertificateStatus");
-		xpathMap.put(VERIFICATION_CODE_NODE_CERT, "/*/@networkCertificate");
+		xpathMap.put(VERIFICATION_CODE_Edge_ID_KEY, "/*/@networkId");
+		xpathMap.put(VERIFICATION_CODE_Edge_CERT_DN_KEY, "/*/@networkCertificateSubjectDN");
+		xpathMap.put(VERIFICATION_CODE_Edge_CERT_STATUS, "/*/@networkCertificateStatus");
+		xpathMap.put(VERIFICATION_CODE_Edge_CERT, "/*/@networkCertificate");
 		xpathMap.put(VERIFICATION_CODE_USER_NAME_KEY, "/*/@username");
 		xpathMap.put(VERIFICATION_CODE_CONFIRMATION_KEY, "/*/@confirmationKey");
 		return getXPathExpressionMap(xpathMap);
@@ -208,21 +208,21 @@ public class DefaultSetupService extends XmlServiceSupport
 	}
 
 	@Override
-	public Long getNodeId() {
-		return setupIdentityDao.getSetupIdentityInfo().getNodeId();
+	public Long getEdgeId() {
+		return setupIdentityDao.getSetupIdentityInfo().getEdgeId();
 	}
 
 	@Override
-	public Principal getNodePrincipal() {
+	public Principal getEdgePrincipal() {
 		if ( pkiService == null ) {
 			return null;
 		}
-		X509Certificate nodeCert = pkiService.getNodeCertificate();
-		if ( nodeCert == null ) {
-			log.debug("No node certificate available, cannot get node principal");
+		X509Certificate EdgeCert = pkiService.getEdgeCertificate();
+		if ( EdgeCert == null ) {
+			log.debug("No Edge certificate available, cannot get Edge principal");
 			return null;
 		}
-		return nodeCert.getSubjectX500Principal();
+		return EdgeCert.getSubjectX500Principal();
 	}
 
 	@Override
@@ -247,7 +247,7 @@ public class DefaultSetupService extends XmlServiceSupport
 		final String host = getEniwareNetHostName();
 		if ( host == null ) {
 			throw new SetupException(
-					"EniwareNet host not configured. Perhaps this node is not yet set up?");
+					"EniwareNet host not configured. Perhaps this Edge is not yet set up?");
 		}
 		return "http" + (port == 443 || isForceTLS() ? "s" : "") + "://" + host
 				+ (port == 443 || port == 80 ? "" : (":" + port)) + eniwareInUrlPrefix;
@@ -364,7 +364,7 @@ public class DefaultSetupService extends XmlServiceSupport
 			final NetworkCertificate result = new NetworkAssociationDetails();
 			webFormPostForBean(PropertyAccessorFactory.forBeanPropertyAccess(req), result,
 					getAbsoluteUrl(details, ENIWARE_NET_REG_URL), null,
-					getNodeAssociationPropertyMapping());
+					getEdgeAssociationPropertyMapping());
 
 			SetupIdentityInfo oldInfo = setupIdentityDao.getSetupIdentityInfo();
 			SetupIdentityInfo info = new SetupIdentityInfo(result.getNetworkId(),
@@ -375,11 +375,11 @@ public class DefaultSetupService extends XmlServiceSupport
 			setupIdentityDao.saveSetupIdentityInfo(info);
 
 			if ( result.getNetworkCertificateStatus() == null ) {
-				// create the node's CSR based on the given subjectDN
-				log.debug("Creating node CSR for subject {}", result.getNetworkCertificateSubjectDN());
-				pkiService.generateNodeSelfSignedCertificate(result.getNetworkCertificateSubjectDN());
+				// create the Edge's CSR based on the given subjectDN
+				log.debug("Creating Edge CSR for subject {}", result.getNetworkCertificateSubjectDN());
+				pkiService.generateEdgeSelfSignedCertificate(result.getNetworkCertificateSubjectDN());
 			} else if ( details.getKeystorePassword() != null ) {
-				log.debug("Saving node certificate for subject {}",
+				log.debug("Saving Edge certificate for subject {}",
 						result.getNetworkCertificateSubjectDN());
 				pkiService.savePKCS12Keystore(result.getNetworkCertificate(),
 						details.getKeystorePassword());
@@ -390,7 +390,7 @@ public class DefaultSetupService extends XmlServiceSupport
 			// post NETWORK_ASSOCIATION_ACCEPTED event
 			Map<String, Object> props = new HashMap<String, Object>(2);
 			if ( result.getNetworkId() != null ) {
-				props.put(KEY_NODE_ID, result.getNetworkId());
+				props.put(KEY_Edge_ID, result.getNetworkId());
 			}
 			postEvent(new Event(SetupService.TOPIC_NETWORK_ASSOCIATION_ACCEPTED, props));
 
@@ -433,11 +433,11 @@ public class DefaultSetupService extends XmlServiceSupport
 		String cert = org.springframework.util.StringUtils.arrayToDelimitedString(certParts, "");
 		log.debug("Got certificate renewal instruction with certificate data: {}", cert);
 		try {
-			pki.saveNodeSignedCertificate(cert);
+			pki.saveEdgeSignedCertificate(cert);
 			if ( log.isInfoEnabled() ) {
-				X509Certificate nodeCert = pki.getNodeCertificate();
-				log.info("Installed node certificate {}, valid to {}", nodeCert.getSerialNumber(),
-						nodeCert.getNotAfter());
+				X509Certificate EdgeCert = pki.getEdgeCertificate();
+				log.info("Installed Edge certificate {}, valid to {}", EdgeCert.getSerialNumber(),
+						EdgeCert.getNotAfter());
 			}
 			return InstructionState.Completed;
 		} catch ( CertificateException e ) {
@@ -503,8 +503,8 @@ public class DefaultSetupService extends XmlServiceSupport
 	}
 
 	@Override
-	public NodeAppConfiguration getAppConfiguration() {
-		NodeAppConfiguration config = this.appConfiguration;
+	public EdgeAppConfiguration getAppConfiguration() {
+		EdgeAppConfiguration config = this.appConfiguration;
 		if ( config.getCreated() + APP_CONFIG_CACHE_MS > System.currentTimeMillis() ) {
 			return config;
 		}
@@ -533,7 +533,7 @@ public class DefaultSetupService extends XmlServiceSupport
 					log.warn("Network error fetching EniwareUser app configuration: " + e.getMessage());
 				}
 			}
-			config = new NodeAppConfiguration(networkServiceUrls);
+			config = new EdgeAppConfiguration(networkServiceUrls);
 			this.appConfiguration = config;
 		} catch ( Exception e ) {
 			// don't re-throw from here

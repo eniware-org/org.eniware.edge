@@ -34,7 +34,7 @@ public interface DatumDao<T extends Datum> {
 	 * 
 	 * @since 1.2
 	 */
-	public static final String EVENT_TOPIC_DATUM_STORED = "net/eniwarenetwork/node/dao/DATUM_STORED";
+	public static final String EVENT_TOPIC_DATUM_STORED = "net/eniwarenetwork/Edge/dao/DATUM_STORED";
 
 	/**
 	 * Get the class supported by this Dao.

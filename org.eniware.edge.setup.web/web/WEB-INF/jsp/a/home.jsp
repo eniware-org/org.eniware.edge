@@ -6,20 +6,20 @@
 	</fmt:message>
 </p>
 
-<section id="external-node-links" class="hide">
+<section id="external-Edge-links" class="hide">
 	<h2><fmt:message key="home.external-links.title"/></h2>	
 	<p><fmt:message key="home.external-links.intro"/></p>
 	<dl class="dl-horizontal">
-		<dt class="node-dashboard hide">
+		<dt class="Edge-dashboard hide">
 			<fmt:message key="home.external-links.dashboard.title"/>
 		</dt>
-		<dd class="node-dashboard hide">
+		<dd class="Edge-dashboard hide">
 			<fmt:message key="home.external-links.dashboard.info"/>
 		</dd>
-		<dt class="node-dataview hide">
+		<dt class="Edge-dataview hide">
 			<fmt:message key="home.external-links.dataview.title"/>
 		</dt>
-		<dd class="node-dataview hide">
+		<dd class="Edge-dataview hide">
 			<fmt:message key="home.external-links.dataview.info"/>
 		</dd>
 		<dt class="dev-apitool hide">

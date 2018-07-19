@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EniwareEdge Security
 Bundle-SymbolicName: org.eniware.edge.setup.security
-Bundle-Description: Default node authentication and authorization provider.
+Bundle-Description: Default Edge authentication and authorization provider.
 Bundle-Version: 1.0.0
 Bundle-Vendor: EniwareNetwork
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

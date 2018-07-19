@@ -9,7 +9,7 @@ package org.eniware.edge;
 import org.eniware.domain.GeneralDatumMetadata;
 
 /**
- * API for manipulating {@link GeneralDatumMetadata} associated with a node.
+ * API for manipulating {@link GeneralDatumMetadata} associated with a Edge.
  * 
  * @version 1.0
  */

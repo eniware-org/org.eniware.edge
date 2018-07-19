@@ -18,7 +18,7 @@
 	<!-- Service References -->
 	
 	<osgi:reference id="txManager" interface="org.springframework.transaction.PlatformTransactionManager"
-		filter="(db=node)"/>
+		filter="(db=Edge)"/>
 	
 	<osgi:reference id="identityService" interface="org.eniware.edge.IdentityService"/>
 	

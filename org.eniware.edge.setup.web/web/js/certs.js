@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#btn-view-node-csr').click(function(event) {
+	$('#btn-view-Edge-csr').click(function(event) {
 		var a = this;
 		event.preventDefault();
 		$.getJSON(a.href, function(data) {
@@ -7,7 +7,7 @@ $(document).ready(function() {
 			$('#view-csr-modal').modal('show');
 		});
 	});
-	$('#btn-renew-node-cert').click(function(event) {
+	$('#btn-renew-Edge-cert').click(function(event) {
 		event.preventDefault();
 		$('#renew-cert-modal').modal('show');
 	});
@@ -43,7 +43,7 @@ $(document).ready(function() {
 	}).on('shown', function() {
 		$('#renew-cert-password').focus();
 	});
-	$('#btn-export-node-cert').click(function(event) {
+	$('#btn-export-Edge-cert').click(function(event) {
 		var a = this;
 		event.preventDefault();
 		$.getJSON(a.href, function(data) {

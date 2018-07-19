@@ -21,7 +21,7 @@
 		<logout logout-url="/logout" logout-success-url="/loggedout.do"/>
 	</http>
 	
-	<beans:bean id="associationFilter" class="org.eniware.edge.setup.web.NodeAssociationFilter"/>
+	<beans:bean id="associationFilter" class="org.eniware.edge.setup.web.EdgeAssociationFilter"/>
 
 	<authentication-manager alias="authenticationManager">
 		<authentication-provider user-service-ref="userDetailsService">			

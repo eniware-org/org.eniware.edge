@@ -49,7 +49,7 @@ EniwareEdge.Plugins.populateUI = function(availableSection, upgradeSection, inst
 	var installedContainer = installedSection.children('.list-content');
 	
 	var groupNameForPlugin = function(plugin) {
-		var match = plugin.uid.match(/^net\.eniwarenetwork\.node\.(\w+)/);
+		var match = plugin.uid.match(/^net\.eniwarenetwork\.Edge\.(\w+)/);
 		if ( match == null ) {
 			return plugin.uid;
 		}

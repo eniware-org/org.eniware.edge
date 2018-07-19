@@ -67,8 +67,8 @@ public class JsonReactorSerializationService implements ReactorSerializationServ
 		return results;
 	}
 
-	private String getStringFieldValue(JsonNode node, String fieldName, String placeholder) {
-		JsonNode child = node.get(fieldName);
+	private String getStringFieldValue(JsonNode Edge, String fieldName, String placeholder) {
+		JsonNode child = Edge.get(fieldName);
 		return (child == null ? placeholder : child.asText());
 	}
 
@@ -88,20 +88,20 @@ public class JsonReactorSerializationService implements ReactorSerializationServ
 	 * 
 	 * @param instructorId
 	 *        the instructor ID
-	 * @param node
-	 *        the JSON node
+	 * @param Edge
+	 *        the JSON Edge
 	 * @return the Instruction, or <em>null</em> if unable to parse
 	 */
-	private Instruction decodeInstruction(String instructorId, JsonNode node) {
-		final String topic = getStringFieldValue(node, "topic", null);
-		final String instructionId = getStringFieldValue(node, "id", null);
-		final String instructionDate = getStringFieldValue(node, "instructionDate", null);
+	private Instruction decodeInstruction(String instructorId, JsonNode Edge) {
+		final String topic = getStringFieldValue(Edge, "topic", null);
+		final String instructionId = getStringFieldValue(Edge, "id", null);
+		final String instructionDate = getStringFieldValue(Edge, "instructionDate", null);
 		final Date date = (instructionDate == null ? null : objectMapper.convertValue(instructionDate,
 				Date.class));
 
 		BasicInstruction result = new BasicInstruction(topic, date, instructionId, instructorId, null);
 
-		JsonNode params = node.get("parameters");
+		JsonNode params = Edge.get("parameters");
 		if ( params != null && params.isArray() ) {
 			for ( JsonNode p : params ) {
 				String paramName = getStringFieldValue(p, "name", null);

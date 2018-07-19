@@ -191,7 +191,7 @@ public class RestoreFromBackupSQLExceptionHandler implements SQLExceptionHandler
 		}
 		final IdentityService identService = (identityService != null ? identityService.service()
 				: null);
-		final Long nodeId = (identService != null ? identService.getNodeId() : null);
+		final Long EdgeId = (identService != null ? identService.getEdgeId() : null);
 		Collection<Backup> backups = backupService.getAvailableBackups();
 		if ( backups == null || backups.isEmpty() ) {
 			log.debug("No Backup available to restore from");
@@ -199,9 +199,9 @@ public class RestoreFromBackupSQLExceptionHandler implements SQLExceptionHandler
 		}
 		Backup backup = null;
 		for ( Backup b : backups ) {
-			// get the most recent available backup for this node
+			// get the most recent available backup for this Edge
 			if ( b.isComplete() && (backup == null || backup.getDate().before(b.getDate()))
-					&& (nodeId == null || nodeId.equals(b.getNodeId())) ) {
+					&& (EdgeId == null || EdgeId.equals(b.getEdgeId())) ) {
 				backup = b;
 			}
 		}
@@ -278,7 +278,7 @@ public class RestoreFromBackupSQLExceptionHandler implements SQLExceptionHandler
 	}
 
 	/**
-	 * Set an {@link IdentityService} to know the current node identity to
+	 * Set an {@link IdentityService} to know the current Edge identity to
 	 * associate backups with.
 	 * 
 	 * @param identityService

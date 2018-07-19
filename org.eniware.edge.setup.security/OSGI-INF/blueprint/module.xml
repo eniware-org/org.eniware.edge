@@ -30,7 +30,7 @@
 	
 	<service ref="passwordEncoder" interface="org.springframework.security.crypto.password.PasswordEncoder">
 		<service-properties>
-			<entry key="app" value="node"/>
+			<entry key="app" value="Edge"/>
 		</service-properties>
 	</service>
 
@@ -40,7 +40,7 @@
 			<value>org.springframework.security.core.userdetails.UserDetailsService</value>
 		</interfaces>
 		<service-properties>
-			<entry key="app" value="node"/>
+			<entry key="app" value="Edge"/>
 		</service-properties>
 	</service>
 

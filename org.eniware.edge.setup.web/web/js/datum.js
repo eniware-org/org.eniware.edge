@@ -169,13 +169,13 @@ EniwareEdge.Datum = (function() {
 		}
 	}
 	
-	function updateExternalNodeLinks(container) {
+	function updateExternalEdgeLinks(container) {
 		$.getJSON(EniwareEdge.context.path('/a/config')).then(function(json) {
 			var replaced = false; 
 			if ( json && json.data && json.data.networkServiceUrls ) {
 				var urls = json.data.networkServiceUrls;
 				Object.keys(urls).forEach(function(name) {
-					var url = urls[name].replace(/\{nodeId\}/, EniwareEdge.nodeId);
+					var url = urls[name].replace(/\{EdgeId\}/, EniwareEdge.EdgeId);
 					var els = container.find('.'+name);
 					if ( els.length > 0 ) {
 						els.find('a.external-link').attr('href', url);
@@ -201,7 +201,7 @@ EniwareEdge.Datum = (function() {
 		addDatumActivityTableRow : { value : addDatumActivityTableRow },
 		updateDatumActivitySeenPropsTableRow : { value : updateDatumActivitySeenPropsTableRow },
 		
-		updateExternalNodeLinks : { value : updateExternalNodeLinks },
+		updateExternalEdgeLinks : { value : updateExternalEdgeLinks },
 	});
 }());
 
@@ -236,8 +236,8 @@ $(document).ready(function() {
 		seenPropsContainer.removeClass('hide');
 	});
 	
-	$('#external-node-links').first().each(function() {
+	$('#external-Edge-links').first().each(function() {
 		var container = $(this);
-		EniwareEdge.Datum.updateExternalNodeLinks(container);
+		EniwareEdge.Datum.updateExternalEdgeLinks(container);
 	});
 });

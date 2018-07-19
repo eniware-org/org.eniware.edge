@@ -229,9 +229,9 @@ public class ConfigurableCentralSystemServiceFactory
 	/**
 	 * Get the ChargeBoxIdentity value to use. This method returns the
 	 * {@code Principal#getName()} returned by
-	 * {@link IdentityService#getNodePrincipal()}.
+	 * {@link IdentityService#getEdgePrincipal()}.
 	 * 
-	 * @return The node's {@link Principal} name value, or an empty string if
+	 * @return The Edge's {@link Principal} name value, or an empty string if
 	 *         none available.
 	 */
 	@Override
@@ -241,12 +241,12 @@ public class ConfigurableCentralSystemServiceFactory
 			log.debug("IdentityService not available; cannot get ChargeBoxIdentity value");
 			return "";
 		}
-		Principal nodePrincipal = ident.getNodePrincipal();
-		if ( nodePrincipal == null ) {
-			log.debug("Node Principal not available; cannot get ChargeBoxIdentity value");
+		Principal EdgePrincipal = ident.getEdgePrincipal();
+		if ( EdgePrincipal == null ) {
+			log.debug("Edge Principal not available; cannot get ChargeBoxIdentity value");
 			return "";
 		}
-		return nodePrincipal.getName();
+		return EdgePrincipal.getName();
 	}
 
 	@Override
@@ -261,9 +261,9 @@ public class ConfigurableCentralSystemServiceFactory
 			log.debug("IdentityService not available; cannot post BootNotification");
 			return false;
 		}
-		Long nodeId = ident.getNodeId();
-		if ( nodeId == null ) {
-			log.debug("Node ID not available; cannot post BootNotification");
+		Long EdgeId = ident.getEdgeId();
+		if ( EdgeId == null ) {
+			log.debug("Edge ID not available; cannot post BootNotification");
 			return false;
 		}
 		CentralSystemService client = getServiceInternal();
@@ -275,7 +275,7 @@ public class ConfigurableCentralSystemServiceFactory
 			BootNotificationRequest req = new BootNotificationRequest();
 			req.setChargePointModel(this.chargePointModel);
 			req.setChargePointVendor(this.chargePointVendor);
-			req.setChargePointSerialNumber(nodeId.toString());
+			req.setChargePointSerialNumber(EdgeId.toString());
 			req.setFirmwareVersion(this.firmwareVersion);
 			BootNotificationResponse res = client.bootNotification(req, chargeBoxIdentity());
 			if ( res == null ) {

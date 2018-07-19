@@ -10,11 +10,11 @@ import org.eniware.util.SerializeIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * GeneralNodeDatum that also implements {@link PVEnergyDatum}.
+ * GeneralEdgeDatum that also implements {@link PVEnergyDatum}.
  * 
  * @version 1.0
  */
-public class GeneralNodePVEnergyDatum extends GeneralNodeEnergyDatum implements PVEnergyDatum {
+public class GeneralEdgePVEnergyDatum extends GeneralEdgeEnergyDatum implements PVEnergyDatum {
 
 	@Override
 	@JsonIgnore

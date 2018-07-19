@@ -32,7 +32,7 @@
 	/js/certs.js
 	/js/login.js
 	/js/settings.js
-	/js/new-node.js
+	/js/new-Edge.js
 	/js/plugins.js
 </pack:script>
 <sec:authorize access="!hasRole('ROLE_USER')">

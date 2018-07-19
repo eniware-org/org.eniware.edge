@@ -23,13 +23,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.eniware.domain.EdgeControlInfo;
-import org.eniware.edge.NodeControlProvider;
+import org.eniware.edge.EdgeControlProvider;
 import org.eniware.edge.reactor.InstructionHandler;
 import org.eniware.edge.reactor.InstructionStatus;
 import org.eniware.edge.reactor.support.BasicInstruction;
 
 /**
- * Controller to act as a local Instructor to the local node.
+ * Controller to act as a local Instructor to the local Edge.
  * 
  * @version 1.0
  */
@@ -43,8 +43,8 @@ public class InstructorController {
 
 	private final Logger log = LoggerFactory.getLogger(getClass());
 
-	@Resource(name = "nodeControlProviderList")
-	private Collection<NodeControlProvider> providers = Collections.emptyList();
+	@Resource(name = "EdgeControlProviderList")
+	private Collection<EdgeControlProvider> providers = Collections.emptyList();
 
 	@Resource(name = "instructionHandlerList")
 	private Collection<InstructionHandler> handlers = Collections.emptyList();
@@ -52,7 +52,7 @@ public class InstructorController {
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String settingsList(ModelMap model) {
 		List<String> providerIds = new ArrayList<String>();
-		for ( NodeControlProvider provider : providers ) {
+		for ( EdgeControlProvider provider : providers ) {
 			providerIds.addAll(provider.getAvailableControlIds());
 		}
 		model.put(KEY_CONTROL_IDS, providerIds);
@@ -61,8 +61,8 @@ public class InstructorController {
 
 	@RequestMapping(value = "/manage", method = RequestMethod.GET)
 	public String manage(@RequestParam("id") String controlId, ModelMap model) {
-		NodeControlProvider provider = null;
-		for ( NodeControlProvider p : providers ) {
+		EdgeControlProvider provider = null;
+		for ( EdgeControlProvider p : providers ) {
 			for ( String s : p.getAvailableControlIds() ) {
 				if ( s.equals(controlId) ) {
 					provider = p;
@@ -119,7 +119,7 @@ public class InstructorController {
 		return "redirect:/a/controls/manage?id=" + instruction.getControlId();
 	}
 
-	public void setProviders(Collection<NodeControlProvider> providers) {
+	public void setProviders(Collection<EdgeControlProvider> providers) {
 		this.providers = providers;
 	}
 

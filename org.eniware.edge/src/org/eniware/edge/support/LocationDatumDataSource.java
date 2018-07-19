@@ -22,7 +22,7 @@ import org.eniware.edge.domain.BasicGeneralLocation;
 import org.eniware.edge.domain.Datum;
 import org.eniware.edge.domain.GeneralLocation;
 import org.eniware.edge.domain.GeneralLocationDatum;
-import org.eniware.edge.domain.GeneralNodeDatum;
+import org.eniware.edge.domain.GeneralEdgeDatum;
 import org.eniware.edge.domain.Location;
 import org.eniware.edge.domain.PriceLocation;
 import org.eniware.edge.domain.PricedDatum;
@@ -214,8 +214,8 @@ public class LocationDatumDataSource<T extends Datum> implements DatumDataSource
 				GeneralLocationDatum gDatum = (GeneralLocationDatum) datum;
 				gDatum.setLocationId(locationId);
 				gDatum.setSourceId(sourceId);
-			} else if ( datum instanceof GeneralNodeDatum ) {
-				GeneralNodeDatum gDatum = (GeneralNodeDatum) datum;
+			} else if ( datum instanceof GeneralEdgeDatum ) {
+				GeneralEdgeDatum gDatum = (GeneralEdgeDatum) datum;
 				gDatum.putStatusSampleValue(PricedDatum.PRICE_LOCATION_KEY, locationId);
 				gDatum.putStatusSampleValue(PricedDatum.PRICE_SOURCE_KEY, sourceId);
 			} else {

@@ -11,12 +11,12 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Bean for immutable node application configuration.
+ * Bean for immutable Edge application configuration.
  * 
  * @version 1.0
  * @since 1.53
  */
-public class NodeAppConfiguration {
+public class EdgeAppConfiguration {
 
 	private final long created;
 	private final Map<String, String> networkServiceUrls;
@@ -24,7 +24,7 @@ public class NodeAppConfiguration {
 	/**
 	 * Default constructor.
 	 */
-	public NodeAppConfiguration() {
+	public EdgeAppConfiguration() {
 		super();
 		this.created = 0; // make expired
 		this.networkServiceUrls = Collections.emptyMap();
@@ -36,7 +36,7 @@ public class NodeAppConfiguration {
 	 * @param networkServiceUrls
 	 *        the newtork service URLs
 	 */
-	public NodeAppConfiguration(Map<String, String> networkServiceUrls) {
+	public EdgeAppConfiguration(Map<String, String> networkServiceUrls) {
 		super();
 		this.created = System.currentTimeMillis();
 		this.networkServiceUrls = (networkServiceUrls == null || networkServiceUrls.isEmpty()

@@ -42,7 +42,7 @@
 	
 	<osgix:managed-service-factory factory-pid="org.eniware.edge.control.modbus.toggle" autowire-on-update="true">
 		<osgix:interfaces>
-			<beans:value>org.eniware.edge.NodeControlProvider</beans:value>
+			<beans:value>org.eniware.edge.EdgeControlProvider</beans:value>
 			<beans:value>org.eniware.edge.reactor.InstructionHandler</beans:value>
 			<beans:value>org.eniware.edge.settings.SettingSpecifierProvider</beans:value>
 		</osgix:interfaces>

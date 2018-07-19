@@ -16,7 +16,7 @@ import org.eniware.domain.EdgeControlPropertyType;
  * 
  * @version 1.1
  */
-public class NodeControlInfoDatum extends BaseDatum implements EdgeControlInfo {
+public class EdgeControlInfoDatum extends BaseDatum implements EdgeControlInfo {
 
 	private EdgeControlPropertyType type;
 	private String value;
@@ -91,7 +91,7 @@ public class NodeControlInfoDatum extends BaseDatum implements EdgeControlInfo {
 
 	@Override
 	public String toString() {
-		return "NodeControlInfoDatum{controlId=" + (getSourceId() == null ? "" : getSourceId())
+		return "EdgeControlInfoDatum{controlId=" + (getSourceId() == null ? "" : getSourceId())
 				+ ",type=" + (type == null ? "" : type.toString()) + ",property="
 				+ (propertyName == null ? "" : propertyName) + ",value=" + (value == null ? "" : value)
 				+ '}';
@@ -118,7 +118,7 @@ public class NodeControlInfoDatum extends BaseDatum implements EdgeControlInfo {
 		if ( getClass() != obj.getClass() ) {
 			return false;
 		}
-		NodeControlInfoDatum other = (NodeControlInfoDatum) obj;
+		EdgeControlInfoDatum other = (EdgeControlInfoDatum) obj;
 		if ( propertyName == null ) {
 			if ( other.propertyName != null ) {
 				return false;

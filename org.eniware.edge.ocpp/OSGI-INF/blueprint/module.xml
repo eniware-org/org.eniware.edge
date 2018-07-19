@@ -40,7 +40,7 @@
 		<property name="serviceClassName" value="org.eniware.edge.IdentityService"/>
 	</bean>
 
-	<reference id="scheduler" interface="org.quartz.Scheduler" filter="(function=node)"/>
+	<reference id="scheduler" interface="org.quartz.Scheduler" filter="(function=Edge)"/>
 
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames" value="org.eniware.edge.ocpp.impl.ConfigurableCentralSystemServiceFactory"/>
@@ -52,7 +52,7 @@
 		<property name="messageSource" ref="messageSource"/>
 	</bean>
 	
-	<reference id="dataSource" interface="javax.sql.DataSource" filter="(db=node)"/>
+	<reference id="dataSource" interface="javax.sql.DataSource" filter="(db=Edge)"/>
 	
 	<bean id="authDao" class="org.eniware.edge.ocpp.dao.JdbcAuthorizationDao" init-method="init">
 		<property name="dataSource" ref="dataSource"/>

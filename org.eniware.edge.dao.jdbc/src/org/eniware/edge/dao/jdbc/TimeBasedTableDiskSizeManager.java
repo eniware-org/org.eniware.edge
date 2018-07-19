@@ -58,8 +58,8 @@ public class TimeBasedTableDiskSizeManager {
 
 	private JdbcOperations jdbcOperations;
 	private OptionalService<DatabaseSystemService> dbSystemService;
-	private String schemaName = "ENIWARENODE";
-	private String tableName = "SN_GENERAL_NODE_DATUM";
+	private String schemaName = "ENIWAREEdge";
+	private String tableName = "SN_GENERAL_Edge_DATUM";
 	private String dateColumnName = "CREATED";
 	private float maxFileSystemUseThreshold = 90.0f;
 	private long minTableSizeThreshold = (1024 * 1024); // 1MB
@@ -290,7 +290,7 @@ public class TimeBasedTableDiskSizeManager {
 	 * Set the name of the schema of the database table to manage.
 	 * 
 	 * <p>
-	 * This defaults to {@literal ENIWARENODE}.
+	 * This defaults to {@literal ENIWAREEdge}.
 	 * </p>
 	 * 
 	 * @param schemaName
@@ -304,7 +304,7 @@ public class TimeBasedTableDiskSizeManager {
 	 * Set the name of the database table to manage.
 	 * 
 	 * <p>
-	 * This defaults to {@literal SN_GENERAL_NODE_DATUM}.
+	 * This defaults to {@literal SN_GENERAL_Edge_DATUM}.
 	 * </p>
 	 * 
 	 * @param tableName

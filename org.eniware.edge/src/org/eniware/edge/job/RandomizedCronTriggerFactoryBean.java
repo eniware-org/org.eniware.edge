@@ -12,7 +12,7 @@ import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
 
 /**
  * Extension of {@link CronTriggerBean} that can randomize specific fields of
- * the cron expression to distribute a job across several nodes over time.
+ * the cron expression to distribute a job across several Edges over time.
  * 
  * <p>
  * The cron expression is only randomized if the

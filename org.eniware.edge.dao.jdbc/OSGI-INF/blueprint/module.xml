@@ -20,7 +20,7 @@
 
 	<osgix:cm-properties id="dao.jdbc.cfg"
 		persistent-id="org.eniware.edge.dao.jdbc">
-		<beans:prop key="DatabaseSetup.initSqlResource">classpath:/net/eniwarenetwork/node/dao/jdbc/derby-init.sql</beans:prop>
+		<beans:prop key="DatabaseSetup.initSqlResource">classpath:/net/eniwarenetwork/Edge/dao/jdbc/derby-init.sql</beans:prop>
 		<beans:prop key="restoreFromBackup.exceptionThreshold">1</beans:prop>
 		<beans:prop key="restoreFromBackup.secondsDelay">30</beans:prop>
 		<beans:prop key="restoreFromBackup.resourceProviderFilter">org.eniware.edge.settings.ca.CASettingsService</beans:prop>
@@ -44,16 +44,16 @@
 		<beans:prop key="jdbc.pool.interceptors">ConnectionState;StatementCache(prepared=true,callable=true,max=50);ResetAbandonedTimer</beans:prop>
 		<beans:prop key="jdbc.pool.jmxEnabled">true</beans:prop>
 		<beans:prop key="JdbcDatumDao.maxFetchForUpload">240</beans:prop>
-		<beans:prop key="JdbcGeneralNodeDatumDao.initSqlResource">classpath:/net/eniwarenetwork/node/dao/jdbc/general/derby-generalnodedatum-init.sql</beans:prop>
-		<beans:prop key="JdbcGeneralNodeDatumDao.sqlResourcePrefix">derby-generalnodedatum</beans:prop>
-		<beans:prop key="JdbcGeneralLocationDatumDao.initSqlResource">classpath:/net/eniwarenetwork/node/dao/jdbc/general/derby-generallocdatum-init.sql</beans:prop>
+		<beans:prop key="JdbcGeneralEdgeDatumDao.initSqlResource">classpath:/net/eniwarenetwork/Edge/dao/jdbc/general/derby-generalEdgedatum-init.sql</beans:prop>
+		<beans:prop key="JdbcGeneralEdgeDatumDao.sqlResourcePrefix">derby-generalEdgedatum</beans:prop>
+		<beans:prop key="JdbcGeneralLocationDatumDao.initSqlResource">classpath:/net/eniwarenetwork/Edge/dao/jdbc/general/derby-generallocdatum-init.sql</beans:prop>
 		<beans:prop key="JdbcGeneralLocationDatumDao.sqlResourcePrefix">derby-generallocdatum</beans:prop>
-		<beans:prop key="job.generalNodeDatumCleaner.cron">35 0 0/2 ? * *</beans:prop>
-		<beans:prop key="job.generalNodeDatumCleaner.uploadedTrimHours">4</beans:prop>
-		<beans:prop key="job.generalNodeDatumTrimmer.cron">35 0 1/2 ? * *</beans:prop>
-		<beans:prop key="job.generalNodeDatumTrimmer.trimMinutes">120</beans:prop>
-		<beans:prop key="job.generalNodeDatumTrimmer.fileSystemUseThreshold">90</beans:prop>
-		<beans:prop key="job.generalNodeDatumTrimmer.tableSizeThreshold">1048576</beans:prop>
+		<beans:prop key="job.generalEdgeDatumCleaner.cron">35 0 0/2 ? * *</beans:prop>
+		<beans:prop key="job.generalEdgeDatumCleaner.uploadedTrimHours">4</beans:prop>
+		<beans:prop key="job.generalEdgeDatumTrimmer.cron">35 0 1/2 ? * *</beans:prop>
+		<beans:prop key="job.generalEdgeDatumTrimmer.trimMinutes">120</beans:prop>
+		<beans:prop key="job.generalEdgeDatumTrimmer.fileSystemUseThreshold">90</beans:prop>
+		<beans:prop key="job.generalEdgeDatumTrimmer.tableSizeThreshold">1048576</beans:prop>
 		<beans:prop key="job.generalLocationDatumCleaner.cron">35 30 0/2 ? * *</beans:prop>
 		<beans:prop key="job.generalLocationDatumCleaner.uploadedTrimHours">4</beans:prop>
 		<beans:prop key="job.generalLocationDatumTrimmer.cron">35 30 1/2 ? * *</beans:prop>
@@ -75,7 +75,7 @@
 	<bean id="databaseSystemService" class="org.eniware.util.DynamicServiceTracker">
 		<property name="bundleContext" ref="bundleContext" />
 		<property name="serviceClassName" value="org.eniware.edge.dao.jdbc.DatabaseSystemService" />
-		<property name="serviceFilter" value="(db=node)"/>
+		<property name="serviceFilter" value="(db=Edge)"/>
 	</bean>
 
 	<bean id="identityService" class="org.eniware.util.DynamicServiceTracker">
@@ -91,13 +91,13 @@
 	<service ref="dataSource" interface="javax.sql.DataSource"
 		depends-on="databaseSetup">
 		<service-properties>
-			<entry key="db" value="node" />
+			<entry key="db" value="Edge" />
 		</service-properties>
 	</service>
 
 	<service ref="jdbcTemplate" interface="org.springframework.jdbc.core.JdbcOperations">
 		<service-properties>
-			<entry key="db" value="node" />
+			<entry key="db" value="Edge" />
 		</service-properties>
 	</service>
 
@@ -105,24 +105,24 @@
 		interface="org.springframework.transaction.PlatformTransactionManager"
 		depends-on="databaseSetup">
 		<service-properties>
-			<entry key="db" value="node" />
+			<entry key="db" value="Edge" />
 		</service-properties>
 	</service>
 
-	<service ref="generalNodeDatumDao" ranking="1" depends-on="databaseSetup">
+	<service ref="generalEdgeDatumDao" ranking="1" depends-on="databaseSetup">
 		<interfaces>
 			<value>org.eniware.edge.dao.DatumDao</value>
 			<value>org.eniware.edge.dao.jdbc.JdbcDao</value>
 		</interfaces>
 		<service-properties>
 			<beans:entry key="datumClassName"
-				value="org.eniware.edge.domain.GeneralNodeDatum" />
+				value="org.eniware.edge.domain.GeneralEdgeDatum" />
 		</service-properties>
 	</service>
 
-	<service ref="generalNodeDatumCleaner" interface="org.eniware.edge.job.TriggerAndJobDetail" />
+	<service ref="generalEdgeDatumCleaner" interface="org.eniware.edge.job.TriggerAndJobDetail" />
 
-	<service ref="generalNodeDatumTrimmer" interface="org.eniware.edge.job.TriggerAndJobDetail" />
+	<service ref="generalEdgeDatumTrimmer" interface="org.eniware.edge.job.TriggerAndJobDetail" />
 
 	<service ref="generalLocationDatumDao" ranking="1" depends-on="databaseSetup">
 		<interfaces>
@@ -244,69 +244,69 @@
 		<property name="basenames" value="org.eniware.edge.dao.jdbc.general.JOBS" />
 	</bean>
 	
-	<!-- General Node Datum -->
+	<!-- General Edge Datum -->
 
-	<bean id="generalNodeDatumDao"
-		class="org.eniware.edge.dao.jdbc.general.JdbcGeneralNodeDatumDao"
+	<bean id="generalEdgeDatumDao"
+		class="org.eniware.edge.dao.jdbc.general.JdbcGeneralEdgeDatumDao"
 		init-method="init">
 		<property name="objectMapper" ref="objectMapper" />
 		<property name="dataSource" ref="dataSource" />
 		<property name="eventAdmin" ref="eventAdmin" />
-		<property name="initSqlResource" value="${JdbcGeneralNodeDatumDao.initSqlResource}" />
-		<property name="sqlResourcePrefix" value="${JdbcGeneralNodeDatumDao.sqlResourcePrefix}" />
+		<property name="initSqlResource" value="${JdbcGeneralEdgeDatumDao.initSqlResource}" />
+		<property name="sqlResourcePrefix" value="${JdbcGeneralEdgeDatumDao.sqlResourcePrefix}" />
 		<property name="maxFetchForUpload" value="${JdbcDatumDao.maxFetchForUpload}" />
 	</bean>
 
-	<bean id="generalNodeDatumCleaner" class="org.eniware.edge.job.SimpleTriggerAndJobDetail">
-		<property name="trigger" ref="generalNodeDatumCleanerTrigger"/>
-		<property name="jobDetail" ref="generalNodeDatumCleanerJob"/>
+	<bean id="generalEdgeDatumCleaner" class="org.eniware.edge.job.SimpleTriggerAndJobDetail">
+		<property name="trigger" ref="generalEdgeDatumCleanerTrigger"/>
+		<property name="jobDetail" ref="generalEdgeDatumCleanerJob"/>
 		<property name="messageSource" ref="jobMessageSource"/>
 	</bean>
 
-	<bean id="generalNodeDatumCleanerTrigger"
+	<bean id="generalEdgeDatumCleanerTrigger"
 		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
-		<property name="jobDetail" ref="generalNodeDatumCleanerJob" />
-		<property name="cronExpression" value="${job.generalNodeDatumCleaner.cron}" />
+		<property name="jobDetail" ref="generalEdgeDatumCleanerJob" />
+		<property name="cronExpression" value="${job.generalEdgeDatumCleaner.cron}" />
 		<property name="misfireInstructionName" value="MISFIRE_INSTRUCTION_DO_NOTHING" />
 	</bean>
 
-	<bean id="generalNodeDatumCleanerJob"
+	<bean id="generalEdgeDatumCleanerJob"
 		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
 		<property name="jobClass" value="org.eniware.edge.job.DatumDaoCleanerJob" />
 		<property name="jobDataAsMap">
 			<map>
-				<entry key="datumDao" value-ref="generalNodeDatumDao" />
-				<entry key="hours" value="${job.generalNodeDatumCleaner.uploadedTrimHours}"/>
+				<entry key="datumDao" value-ref="generalEdgeDatumDao" />
+				<entry key="hours" value="${job.generalEdgeDatumCleaner.uploadedTrimHours}"/>
 			</map>
 		</property>
 	</bean>
 	
-	<bean id="generalNodeDatumTrimManager" class="org.eniware.edge.dao.jdbc.TimeBasedTableDiskSizeManager">
+	<bean id="generalEdgeDatumTrimManager" class="org.eniware.edge.dao.jdbc.TimeBasedTableDiskSizeManager">
 		<property name="jdbcOperations" ref="jdbcTemplate"/>
 		<property name="dbSystemService" ref="databaseSystemService"/>
-		<property name="tableName" value="SN_GENERAL_NODE_DATUM"/>
-		<property name="trimMinutes" value="${job.generalNodeDatumTrimmer.trimMinutes}"/>
-		<property name="maxFileSystemUseThreshold" value="${job.generalNodeDatumTrimmer.fileSystemUseThreshold}"/>
-		<property name="minTableSizeThreshold" value="${job.generalNodeDatumTrimmer.tableSizeThreshold}"/>
+		<property name="tableName" value="SN_GENERAL_Edge_DATUM"/>
+		<property name="trimMinutes" value="${job.generalEdgeDatumTrimmer.trimMinutes}"/>
+		<property name="maxFileSystemUseThreshold" value="${job.generalEdgeDatumTrimmer.fileSystemUseThreshold}"/>
+		<property name="minTableSizeThreshold" value="${job.generalEdgeDatumTrimmer.tableSizeThreshold}"/>
 	</bean>
 
-	<bean id="generalNodeDatumTrimmer" class="org.eniware.edge.job.SimpleTriggerAndJobDetail">
-		<property name="trigger" ref="generalNodeDatumTrimmerTrigger"/>
-		<property name="jobDetail" ref="generalNodeDatumTrimmerJob"/>
+	<bean id="generalEdgeDatumTrimmer" class="org.eniware.edge.job.SimpleTriggerAndJobDetail">
+		<property name="trigger" ref="generalEdgeDatumTrimmerTrigger"/>
+		<property name="jobDetail" ref="generalEdgeDatumTrimmerJob"/>
 		<property name="messageSource" ref="jobMessageSource"/>
 	</bean>
 
-	<bean id="generalNodeDatumTrimmerTrigger"
+	<bean id="generalEdgeDatumTrimmerTrigger"
 		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
-		<property name="jobDetail" ref="generalNodeDatumTrimmerJob" />
-		<property name="cronExpression" value="${job.generalNodeDatumTrimmer.cron}" />
+		<property name="jobDetail" ref="generalEdgeDatumTrimmerJob" />
+		<property name="cronExpression" value="${job.generalEdgeDatumTrimmer.cron}" />
 		<property name="misfireInstructionName" value="MISFIRE_INSTRUCTION_DO_NOTHING" />
 	</bean>
 
-	<bean id="generalNodeDatumTrimmerJob"
+	<bean id="generalEdgeDatumTrimmerJob"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 		<property name="concurrent" value="false"/>
-		<property name="targetObject" ref="generalNodeDatumTrimManager"/>
+		<property name="targetObject" ref="generalEdgeDatumTrimManager"/>
 		<property name="targetMethod" value="performMaintenance"/>
 	</bean>
 	
@@ -344,7 +344,7 @@
 		<property name="jobDataAsMap">
 			<map>
 				<entry key="datumDao" value-ref="generalLocationDatumDao" />
-				<entry key="hours" value="${job.generalNodeDatumCleaner.uploadedTrimHours}"/>
+				<entry key="hours" value="${job.generalEdgeDatumCleaner.uploadedTrimHours}"/>
 			</map>
 		</property>
 	</bean>

@@ -18,7 +18,7 @@ public interface ChargeConfigurationDao {
 	 * The EventAdmin topic used to post events when the charge configuration
 	 * has been updated.
 	 */
-	String EVENT_TOPIC_CHARGE_CONFIGURATION_UPDATED = "net/eniwarenetwork/node/ocpp/CHARGE_CONF_UPDATED";
+	String EVENT_TOPIC_CHARGE_CONFIGURATION_UPDATED = "net/eniwarenetwork/Edge/ocpp/CHARGE_CONF_UPDATED";
 
 	/**
 	 * Store (create or update) a the charge configuration.

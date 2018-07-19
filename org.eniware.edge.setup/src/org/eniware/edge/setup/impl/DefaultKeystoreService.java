@@ -56,7 +56,7 @@ import org.eniware.support.ConfigurableSSLService;
  * 
  * <p>
  * This implementation maintains a key store with two primary aliases:
- * {@code ca} and {@code node}. The key store is created as needed, and a random
+ * {@code ca} and {@code Edge}. The key store is created as needed, and a random
  * password is generated and assigned to the key store. The password is stored
  * in the Settings database, using the {@link #KEY_PASSWORD} key. This key store
  * is then used to implement {@link SSLService} and is used as both the key and
@@ -68,15 +68,15 @@ import org.eniware.support.ConfigurableSSLService;
 public class DefaultKeystoreService extends ConfigurableSSLService
 		implements PKIService, SSLService, BackupResourceProvider {
 
-	private static final String BACKUP_RESOURCE_NAME_KEYSTORE = "node.jks";
+	private static final String BACKUP_RESOURCE_NAME_KEYSTORE = "Edge.jks";
 
 	/** The default value for the {@code keyStorePath} property. */
-	public static final String DEFAULT_KEY_STORE_PATH = "conf/tls/node.jks";
+	public static final String DEFAULT_KEY_STORE_PATH = "conf/tls/Edge.jks";
 
 	private static final String PKCS12_KEYSTORE_TYPE = "pkcs12";
 	private static final int PASSWORD_LENGTH = 20;
 
-	private String nodeAlias = "node";
+	private String EdgeAlias = "Edge";
 	private String caAlias = "ca";
 	private int keySize = 2048;
 	private MessageSource messageSource;
@@ -207,14 +207,14 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	@Override
-	public boolean isNodeCertificateValid(String issuerDN) throws CertificateException {
+	public boolean isEdgeCertificateValid(String issuerDN) throws CertificateException {
 		KeyStore keyStore = loadKeyStore();
 		X509Certificate x509 = null;
 		try {
-			if ( keyStore == null || !keyStore.containsAlias(nodeAlias) ) {
+			if ( keyStore == null || !keyStore.containsAlias(EdgeAlias) ) {
 				return false;
 			}
-			Certificate cert = keyStore.getCertificate(nodeAlias);
+			Certificate cert = keyStore.getCertificate(EdgeAlias);
 			if ( !(cert instanceof X509Certificate) ) {
 				return false;
 			}
@@ -228,7 +228,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 			}
 			return true;
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error checking for node certificate", e);
+			throw new CertificateException("Error checking for Edge certificate", e);
 		} catch ( CertificateExpiredException e ) {
 			log.debug("Certificate {} has expired", x509.getSubjectDN().getName());
 		} catch ( CertificateNotYetValidException e ) {
@@ -238,7 +238,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	@Override
-	public X509Certificate generateNodeSelfSignedCertificate(String dn) throws CertificateException {
+	public X509Certificate generateEdgeSelfSignedCertificate(String dn) throws CertificateException {
 		KeyStore keyStore = null;
 		try {
 			keyStore = loadKeyStore();
@@ -248,7 +248,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 				root = root.getCause();
 			}
 			if ( root instanceof UnrecoverableKeyException ) {
-				// bad password... we shall assume here that a new node association is underway,
+				// bad password... we shall assume here that a new Edge association is underway,
 				// so delete the existing key store and re-create
 				File ksFile = new File(getKeyStorePath());
 				if ( ksFile.isFile() ) {
@@ -267,12 +267,12 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 				throw e;
 			}
 		}
-		return createSelfSignedCertificate(keyStore, dn, nodeAlias);
+		return createSelfSignedCertificate(keyStore, dn, EdgeAlias);
 	}
 
 	private X509Certificate createSelfSignedCertificate(KeyStore keyStore, String dn, String alias) {
 		try {
-			// create new key pair for the node
+			// create new key pair for the Edge
 			KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
 			keyGen.initialize(keySize, new SecureRandom());
 			KeyPair keypair = keyGen.generateKeyPair();
@@ -285,9 +285,9 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 			saveKeyStore(keyStore);
 			return (X509Certificate) cert;
 		} catch ( NoSuchAlgorithmException e ) {
-			throw new CertificateException("Error setting up node key pair", e);
+			throw new CertificateException("Error setting up Edge key pair", e);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error setting up node key pair", e);
+			throw new CertificateException("Error setting up Edge key pair", e);
 		}
 	}
 
@@ -308,24 +308,24 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	@Override
-	public String generateNodePKCS10CertificateRequestString() throws CertificateException {
+	public String generateEdgePKCS10CertificateRequestString() throws CertificateException {
 		KeyStore keyStore = loadKeyStore();
 		Key key;
 		try {
-			key = keyStore.getKey(nodeAlias, getKeyStorePassword().toCharArray());
+			key = keyStore.getKey(EdgeAlias, getKeyStorePassword().toCharArray());
 		} catch ( UnrecoverableKeyException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		} catch ( NoSuchAlgorithmException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		}
 		assert key instanceof PrivateKey;
 		Certificate cert;
 		try {
-			cert = keyStore.getCertificate(nodeAlias);
+			cert = keyStore.getCertificate(EdgeAlias);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node certificate", e);
+			throw new CertificateException("Error opening Edge certificate", e);
 		}
 		assert cert instanceof X509Certificate;
 		return certificateService.generatePKCS10CertificateRequestString((X509Certificate) cert,
@@ -333,24 +333,24 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	@Override
-	public String generateNodePKCS7CertificateString() throws CertificateException {
+	public String generateEdgePKCS7CertificateString() throws CertificateException {
 		KeyStore keyStore = loadKeyStore();
 		Key key;
 		try {
-			key = keyStore.getKey(nodeAlias, getKeyStorePassword().toCharArray());
+			key = keyStore.getKey(EdgeAlias, getKeyStorePassword().toCharArray());
 		} catch ( UnrecoverableKeyException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		} catch ( NoSuchAlgorithmException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		}
 		assert key instanceof PrivateKey;
 		Certificate cert;
 		try {
-			cert = keyStore.getCertificate(nodeAlias);
+			cert = keyStore.getCertificate(EdgeAlias);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node certificate", e);
+			throw new CertificateException("Error opening Edge certificate", e);
 		}
 		assert cert instanceof X509Certificate;
 		return certificateService
@@ -358,24 +358,24 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	@Override
-	public String generateNodePKCS7CertificateChainString() throws CertificateException {
+	public String generateEdgePKCS7CertificateChainString() throws CertificateException {
 		KeyStore keyStore = loadKeyStore();
 		Key key;
 		try {
-			key = keyStore.getKey(nodeAlias, getKeyStorePassword().toCharArray());
+			key = keyStore.getKey(EdgeAlias, getKeyStorePassword().toCharArray());
 		} catch ( UnrecoverableKeyException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		} catch ( NoSuchAlgorithmException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		}
 		assert key instanceof PrivateKey;
 		Certificate[] chain;
 		try {
-			chain = keyStore.getCertificateChain(nodeAlias);
+			chain = keyStore.getCertificateChain(EdgeAlias);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node certificate", e);
+			throw new CertificateException("Error opening Edge certificate", e);
 		}
 		X509Certificate[] x509Chain = new X509Certificate[chain.length];
 		for ( int i = 0; i < chain.length; i++ ) {
@@ -386,18 +386,18 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	@Override
-	public X509Certificate getNodeCertificate() throws CertificateException {
-		return getNodeCertificate(loadKeyStore());
+	public X509Certificate getEdgeCertificate() throws CertificateException {
+		return getEdgeCertificate(loadKeyStore());
 	}
 
-	private X509Certificate getNodeCertificate(KeyStore keyStore) {
-		X509Certificate nodeCert;
+	private X509Certificate getEdgeCertificate(KeyStore keyStore) {
+		X509Certificate EdgeCert;
 		try {
-			nodeCert = (X509Certificate) keyStore.getCertificate(nodeAlias);
+			EdgeCert = (X509Certificate) keyStore.getCertificate(EdgeAlias);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node certificate", e);
+			throw new CertificateException("Error opening Edge certificate", e);
 		}
-		return nodeCert;
+		return EdgeCert;
 	}
 
 	@Override
@@ -406,13 +406,13 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	private X509Certificate getCACertificate(KeyStore keyStore) {
-		X509Certificate nodeCert;
+		X509Certificate EdgeCert;
 		try {
-			nodeCert = (X509Certificate) keyStore.getCertificate(caAlias);
+			EdgeCert = (X509Certificate) keyStore.getCertificate(caAlias);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node certificate", e);
+			throw new CertificateException("Error opening Edge certificate", e);
 		}
-		return nodeCert;
+		return EdgeCert;
 	}
 
 	@Override
@@ -423,7 +423,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 		KeyStore newKeyStore = loadKeyStore(KeyStore.getDefaultType(), null, newPassword);
 
 		// change the password to our local random one
-		copyNodeChain(keyStore, password, newKeyStore, newPassword);
+		copyEdgeChain(keyStore, password, newKeyStore, newPassword);
 
 		File ksFile = new File(getKeyStorePath());
 		if ( ksFile.isFile() ) {
@@ -434,17 +434,17 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 				setupIdentityDao.getSetupIdentityInfo().withKeyStorePassword(newPassword));
 	}
 
-	private void copyNodeChain(KeyStore keyStore, String password, KeyStore newKeyStore,
+	private void copyEdgeChain(KeyStore keyStore, String password, KeyStore newKeyStore,
 			String newPassword) {
 		try {
 			// change the password to our local random one
-			Key key = keyStore.getKey(nodeAlias, password.toCharArray());
-			Certificate[] chain = keyStore.getCertificateChain(nodeAlias);
+			Key key = keyStore.getKey(EdgeAlias, password.toCharArray());
+			Certificate[] chain = keyStore.getCertificateChain(EdgeAlias);
 			X509Certificate[] x509Chain = new X509Certificate[chain.length];
 			for ( int i = 0; i < chain.length; i += 1 ) {
 				x509Chain[i] = (X509Certificate) chain[i];
 			}
-			saveNodeCertificateChain(newKeyStore, key, newPassword, x509Chain[0], x509Chain);
+			saveEdgeCertificateChain(newKeyStore, key, newPassword, x509Chain[0], x509Chain);
 		} catch ( GeneralSecurityException e ) {
 			throw new CertificateException(e);
 		}
@@ -454,7 +454,7 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	public String generatePKCS12KeystoreString(String password) throws CertificateException {
 		KeyStore keyStore = loadKeyStore();
 		KeyStore newKeyStore = loadKeyStore(PKCS12_KEYSTORE_TYPE, null, password);
-		copyNodeChain(keyStore, getKeyStorePassword(), newKeyStore, password);
+		copyEdgeChain(keyStore, getKeyStorePassword(), newKeyStore, password);
 
 		ByteArrayOutputStream byos = new ByteArrayOutputStream();
 		saveKeyStore(newKeyStore, password, new Base64OutputStream(byos));
@@ -467,33 +467,33 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 	}
 
 	@Override
-	public void saveNodeSignedCertificate(String pem) throws CertificateException {
+	public void saveEdgeSignedCertificate(String pem) throws CertificateException {
 		KeyStore keyStore = loadKeyStore();
 		Key key;
 		try {
-			key = keyStore.getKey(nodeAlias, getKeyStorePassword().toCharArray());
+			key = keyStore.getKey(EdgeAlias, getKeyStorePassword().toCharArray());
 		} catch ( UnrecoverableKeyException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		} catch ( NoSuchAlgorithmException e ) {
-			throw new CertificateException("Error opening node private key", e);
+			throw new CertificateException("Error opening Edge private key", e);
 		}
-		X509Certificate nodeCert = getNodeCertificate(keyStore);
-		if ( nodeCert == null ) {
+		X509Certificate EdgeCert = getEdgeCertificate(keyStore);
+		if ( EdgeCert == null ) {
 			throw new CertificateException(
-					"The node does not have a private key, start the association process over.");
+					"The Edge does not have a private key, start the association process over.");
 		}
 
 		X509Certificate[] chain = certificateService.parsePKCS7CertificateChainString(pem);
 
-		saveNodeCertificateChain(keyStore, key, getKeyStorePassword(), nodeCert, chain);
+		saveEdgeCertificateChain(keyStore, key, getKeyStorePassword(), EdgeCert, chain);
 
 		saveKeyStore(keyStore);
 	}
 
-	private void saveNodeCertificateChain(KeyStore keyStore, Key key, String keyPassword,
-			X509Certificate nodeCert, X509Certificate[] chain) {
+	private void saveEdgeCertificateChain(KeyStore keyStore, Key key, String keyPassword,
+			X509Certificate EdgeCert, X509Certificate[] chain) {
 		if ( keyPassword == null ) {
 			keyPassword = "";
 		}
@@ -547,18 +547,18 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 					+ " does not match expected " + chain[1].getSubjectDN().getName());
 		}
 
-		// the subject must be our node's existing subject...
-		if ( !chain[0].getSubjectDN().equals(nodeCert.getSubjectDN()) ) {
+		// the subject must be our Edge's existing subject...
+		if ( !chain[0].getSubjectDN().equals(EdgeCert.getSubjectDN()) ) {
 			throw new CertificateException("Subject " + chain[0].getIssuerDN().getName()
-					+ " does not match expected " + nodeCert.getSubjectDN().getName());
+					+ " does not match expected " + EdgeCert.getSubjectDN().getName());
 		}
 
-		log.info("Installing node certificate {} reply {} issued by {}", chain[0].getSerialNumber(),
+		log.info("Installing Edge certificate {} reply {} issued by {}", chain[0].getSerialNumber(),
 				chain[0].getSubjectDN().getName(), chain[0].getIssuerDN().getName());
 		try {
-			keyStore.setKeyEntry(nodeAlias, key, keyPassword.toCharArray(), chain);
+			keyStore.setKeyEntry(EdgeAlias, key, keyPassword.toCharArray(), chain);
 		} catch ( KeyStoreException e ) {
-			throw new CertificateException("Error opening node certificate", e);
+			throw new CertificateException("Error opening Edge certificate", e);
 		}
 	}
 
@@ -591,8 +591,8 @@ public class DefaultKeystoreService extends ConfigurableSSLService
 		}
 	}
 
-	public void setNodeAlias(String nodeAlias) {
-		this.nodeAlias = nodeAlias;
+	public void setEdgeAlias(String EdgeAlias) {
+		this.EdgeAlias = EdgeAlias;
 	}
 
 	public void setCaAlias(String caAlias) {

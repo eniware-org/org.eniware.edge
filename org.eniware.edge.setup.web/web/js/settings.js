@@ -271,7 +271,7 @@ EniwareEdge.Settings.addGroupedSetting = function(params) {
 };
 
 /**
- * Post any setting changes back to the node.
+ * Post any setting changes back to the Edge.
  * 
  * @param url {String} the URL to post to
  * @param msg.title {String} the result dialog title
@@ -409,8 +409,8 @@ function refreshBackupList() {
 		if ( Array.isArray(json.data) ) {
 			json.data.forEach(function(backup) {
 				var date = new Date(backup.date),
-					nodeId = backup.nodeId;
-				optionEl.add(new Option('Node ' +nodeId + ' @ ' +formatTimestamp(date), backup.key));
+					EdgeId = backup.EdgeId;
+				optionEl.add(new Option('Edge ' +EdgeId + ' @ ' +formatTimestamp(date), backup.key));
 			});
 		}
 		optionEl.selectedIndex = 0;

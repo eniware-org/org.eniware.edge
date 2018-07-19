@@ -176,7 +176,7 @@ public class InstructionExecutionJob extends AbstractJob {
 	/**
 	 * Set the minimum amount of time to wait before forcing instructions into
 	 * the {@link InstructionState#Declined} state. This prevents instructions
-	 * not handled by any handler from sticking around on the node indefinitely.
+	 * not handled by any handler from sticking around on the Edge indefinitely.
 	 * Defaults to {@link #DEFAULT_EXECUTION_RECEIVED_HOUR_LIMIT}.
 	 * 
 	 * @param executionReceivedHourLimit

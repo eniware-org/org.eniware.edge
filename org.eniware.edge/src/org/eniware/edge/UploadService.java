@@ -24,7 +24,7 @@ public interface UploadService {
 	 * 
 	 * @since 1.2
 	 */
-	public static final String EVENT_TOPIC_DATUM_UPLOADED = "net/eniwarenetwork/node/UploadService/DATUM_UPLOADED";
+	public static final String EVENT_TOPIC_DATUM_UPLOADED = "net/eniwarenetwork/Edge/UploadService/DATUM_UPLOADED";
 
 	/**
 	 * Get a unique key for this service.

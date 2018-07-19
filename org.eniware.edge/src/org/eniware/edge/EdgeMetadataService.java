@@ -9,15 +9,15 @@ package org.eniware.edge;
 import org.eniware.domain.GeneralDatumMetadata;
 
 /**
- * API for managing node metadata.
+ * API for managing Edge metadata.
  * 
  * @version 1.0
  * @since 1.50
  */
-public interface NodeMetadataService {
+public interface EdgeMetadataService {
 
 	/**
-	 * Add node metadata. If metadata already exists for the given source, the
+	 * Add Edge metadata. If metadata already exists for the given source, the
 	 * values will be merged such that tags are only added and only new info
 	 * values will be added.
 	 * 
@@ -26,15 +26,15 @@ public interface NodeMetadataService {
 	 * @param meta
 	 *        the metadata to add
 	 */
-	void addNodeMetadata(GeneralDatumMetadata meta);
+	void addEdgeMetadata(GeneralDatumMetadata meta);
 
 	/**
-	 * Get all metadata for the active node.
+	 * Get all metadata for the active Edge.
 	 * 
 	 * @param sourceId
 	 *        the sourceId to get the metadta for
 	 * @return the metadata, or <em>null</em> if none available
 	 */
-	GeneralDatumMetadata getNodeMetadata();
+	GeneralDatumMetadata getEdgeMetadata();
 
 }

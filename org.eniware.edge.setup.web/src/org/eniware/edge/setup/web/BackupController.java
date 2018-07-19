@@ -194,7 +194,7 @@ public class BackupController extends BaseSetupController {
 		manager.restoreBackup(backup, props);
 		shutdownSoon();
 		return new Response<Object>(true, null,
-				messageSource.getMessage("node.setup.restore.success", null, locale), null);
+				messageSource.getMessage("Edge.setup.restore.success", null, locale), null);
 	}
 
 }

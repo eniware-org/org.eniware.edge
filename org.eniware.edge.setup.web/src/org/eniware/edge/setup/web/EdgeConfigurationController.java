@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.eniware.edge.domain.NodeAppConfiguration;
+import org.eniware.edge.domain.EdgeAppConfiguration;
 import org.eniware.edge.setup.SetupService;
 import org.eniware.web.domain.Response;
 
 /**
- * REST controller for node configuration.
+ * REST controller for Edge configuration.
  * 
  * 
  * @version 1.0
@@ -36,7 +36,7 @@ public class EdgeConfigurationController extends BaseSetupWebServiceController {
 
 	@RequestMapping(value = "/config", method = RequestMethod.GET)
 	@ResponseBody
-	public Response<NodeAppConfiguration> getAppConfiguration() {
+	public Response<EdgeAppConfiguration> getAppConfiguration() {
 		return response(setupService.getAppConfiguration());
 	}
 

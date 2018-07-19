@@ -6,7 +6,7 @@
 
 package org.eniware.edge.setup;
 
-import org.eniware.edge.domain.NodeAppConfiguration;
+import org.eniware.edge.domain.EdgeAppConfiguration;
 
 import org.eniware.domain.NetworkAssociation;
 import org.eniware.domain.NetworkAssociationDetails;
@@ -14,18 +14,18 @@ import org.eniware.domain.NetworkCertificate;
 import org.eniware.domain.NetworkIdentity;
 
 /**
- * API for node setup support.
+ * API for Edge setup support.
  * 
  * @version 1.3
  */
 public interface SetupService {
 
 	/** Topic for when a network association has been accepted. */
-	public static final String TOPIC_NETWORK_ASSOCIATION_ACCEPTED = "net/eniwarenetwork/node/setup/NETWORK_ASSOCIATION_ACCEPTED";
+	public static final String TOPIC_NETWORK_ASSOCIATION_ACCEPTED = "net/eniwarenetwork/Edge/setup/NETWORK_ASSOCIATION_ACCEPTED";
 
 	/**
 	 * Decode a EniwareNet verification code to determine the service that the
-	 * node should register itself with.
+	 * Edge should register itself with.
 	 * 
 	 * @param verificationCode
 	 *        The verification code supplied by EniwareNet to decode.
@@ -49,7 +49,7 @@ public interface SetupService {
 	NetworkAssociation retrieveNetworkAssociation(NetworkAssociationDetails details);
 
 	/**
-	 * Associate this node with a EniwareNet central service, using details
+	 * Associate this Edge with a EniwareNet central service, using details
 	 * previously obtained via {@link #decodeVerificationCode(String)}.
 	 * 
 	 * @param details
@@ -62,7 +62,7 @@ public interface SetupService {
 	NetworkCertificate acceptNetworkAssociation(NetworkAssociationDetails details) throws SetupException;
 
 	/**
-	 * Renew the node's active certificate. The node must already be associated
+	 * Renew the Edge's active certificate. The Edge must already be associated
 	 * before this method will work. The renewal will be processed in the
 	 * future.
 	 * 
@@ -85,6 +85,6 @@ public interface SetupService {
 	 * @return the app configuration, never {@code null}
 	 * @since 1.3
 	 */
-	NodeAppConfiguration getAppConfiguration();
+	EdgeAppConfiguration getAppConfiguration();
 
 }

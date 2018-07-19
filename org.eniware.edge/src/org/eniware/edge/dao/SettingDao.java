@@ -35,7 +35,7 @@ public interface SettingDao extends BatchableDao<Setting> {
 	 * adding new, updating an existing, or deleting. The various
 	 * {@code SETTING_*} properties will be provided as event properties.
 	 */
-	String EVENT_TOPIC_SETTING_CHANGED = "net/eniwarenetwork/node/dao/SETTING_CHANGED";
+	String EVENT_TOPIC_SETTING_CHANGED = "net/eniwarenetwork/Edge/dao/SETTING_CHANGED";
 
 	/** Event property key for the setting key. */
 	String SETTING_KEY = "Key";

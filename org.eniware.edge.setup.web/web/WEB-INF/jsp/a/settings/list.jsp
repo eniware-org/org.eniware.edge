@@ -129,7 +129,7 @@
 						<c:forEach items="${backups}" var="backup" varStatus="backupStatus">
 							<option value="${backup.key}">
 								<fmt:message key="backup.backups.backup.label">
-									<fmt:param value="${backup.nodeId}"/>
+									<fmt:param value="${backup.EdgeId}"/>
 									<fmt:param>
 										<fmt:formatDate value="${backup.date}" pattern="dd MMM yyyy HH:mm"/>
 									</fmt:param>

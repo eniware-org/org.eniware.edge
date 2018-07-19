@@ -13,7 +13,7 @@ import java.util.Map;
 import org.eniware.edge.settings.SettingSpecifierProvider;
 
 /**
- * API for node backup.
+ * API for Edge backup.
  * 
  * @version 1.3
  */

@@ -56,7 +56,7 @@ import org.eniware.util.OptionalService;
 import org.eniware.web.domain.Response;
 
 /**
- * Controller used to associate a node with a EniwareNet account.
+ * Controller used to associate a Edge with a EniwareNet account.
  * 
  * @version 1.3
  */
@@ -113,7 +113,7 @@ public class EdgeAssociationController extends BaseSetupController {
 	private Map<String, String> networkURLs = new HashMap<String, String>(4);
 
 	/**
-	 * Node association entry point.
+	 * Edge association entry point.
 	 * 
 	 * @param model
 	 *        the model
@@ -185,13 +185,13 @@ public class EdgeAssociationController extends BaseSetupController {
 			NetworkAssociation na = getSetupBiz().retrieveNetworkAssociation(details);
 			model.addAttribute(KEY_IDENTITY, na);
 		} catch ( SetupException e ) {
-			errors.reject("node.setup.identity.error", new Object[] { details.getHost() }, null);
+			errors.reject("Edge.setup.identity.error", new Object[] { details.getHost() }, null);
 			return setupForm(model);
 		} catch ( RuntimeException e ) {
 			log.error("Unexpected exception processing /setup/verify", e);
 			// We are assuming any exception thrown here is caused by the server being down,
 			// but there's no guarantee this is the case
-			errors.reject("node.setup.identity.error", new Object[] { details.getHost() }, null);
+			errors.reject("Edge.setup.identity.error", new Object[] { details.getHost() }, null);
 			return PAGE_ENTER_CODE;
 		}
 
@@ -199,7 +199,7 @@ public class EdgeAssociationController extends BaseSetupController {
 	}
 
 	/**
-	 * Confirms the node association with the EniwareNet server supplied in the
+	 * Confirms the Edge association with the EniwareNet server supplied in the
 	 * verification code.
 	 * 
 	 * @param command
@@ -230,7 +230,7 @@ public class EdgeAssociationController extends BaseSetupController {
 				details.setNetworkCertificate(cert.getNetworkCertificate());
 			} else {
 				// generate certificate request
-				model.addAttribute("csr", pkiService.generateNodePKCS10CertificateRequestString());
+				model.addAttribute("csr", pkiService.generateEdgePKCS10CertificateRequestString());
 			}
 			if ( !userService.someUserExists() ) {
 				// create a new user now, using the username from EniwareNet and a random password
@@ -252,7 +252,7 @@ public class EdgeAssociationController extends BaseSetupController {
 			}
 			return "associate/setup-success";
 		} catch ( Exception e ) {
-			errors.reject("node.setup.success.error", new Object[] { details.getHost() }, null);
+			errors.reject("Edge.setup.success.error", new Object[] { details.getHost() }, null);
 			return PAGE_ENTER_CODE;
 		}
 	}
@@ -303,7 +303,7 @@ public class EdgeAssociationController extends BaseSetupController {
 			request.getSession(true).setAttribute(BACKUP_KEY_SESSION_KEY, backup.getKey());
 			return PAGE_RESTORE_FROM_BACKUP;
 		}
-		request.getSession(true).setAttribute("errorMessageKey", "node.setup.restore.error.unknown");
+		request.getSession(true).setAttribute("errorMessageKey", "Edge.setup.restore.error.unknown");
 		request.getSession(true).setAttribute("errorMessageParam0", "Backup not imported");
 		return "redirect:/associate";
 	}
@@ -314,7 +314,7 @@ public class EdgeAssociationController extends BaseSetupController {
 		final BackupManager manager = backupManagerTracker.service();
 		if ( manager == null ) {
 			request.getSession(true).setAttribute("errorMessageKey",
-					"node.setup.restore.error.noBackupManager");
+					"Edge.setup.restore.error.noBackupManager");
 			return "redirect:/associate";
 		}
 		Map<String, String> props = new HashMap<String, String>();
@@ -326,7 +326,7 @@ public class EdgeAssociationController extends BaseSetupController {
 				request.getSession(true).setAttribute(BACKUP_KEY_SESSION_KEY, backup.getKey());
 				return PAGE_RESTORE_FROM_BACKUP;
 			}
-			request.getSession(true).setAttribute("errorMessageKey", "node.setup.restore.error.unknown");
+			request.getSession(true).setAttribute("errorMessageKey", "Edge.setup.restore.error.unknown");
 			request.getSession(true).setAttribute("errorMessageParam0", "Backup not imported");
 			return "redirect:/associate";
 		} catch ( Exception e ) {
@@ -335,7 +335,7 @@ public class EdgeAssociationController extends BaseSetupController {
 			while ( root.getCause() != null ) {
 				root = root.getCause();
 			}
-			request.getSession(true).setAttribute("errorMessageKey", "node.setup.restore.error.unknown");
+			request.getSession(true).setAttribute("errorMessageKey", "Edge.setup.restore.error.unknown");
 			request.getSession(true).setAttribute("errorMessageParam0", root.getMessage());
 			return "redirect:/associate";
 		}
@@ -391,7 +391,7 @@ public class EdgeAssociationController extends BaseSetupController {
 		request.getSession().removeAttribute(BACKUP_KEY_SESSION_KEY);
 		shutdownSoon();
 		return new Response<Object>(true, null,
-				messageSource.getMessage("node.setup.restore.success", null, locale), null);
+				messageSource.getMessage("Edge.setup.restore.success", null, locale), null);
 	}
 
 	public void setPkiService(PKIService pkiService) {

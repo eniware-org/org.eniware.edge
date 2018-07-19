@@ -22,7 +22,7 @@
 	<osgix:cm-properties id="setup.cfg" persistent-id="org.eniware.edge.setup">
 		<beans:prop key="SetupService.eniwareInUrlPrefix">/eniwarein</beans:prop>
 		<beans:prop key="SetupIdentityDao.dataFilePath">conf/identity.json</beans:prop>
-		<beans:prop key="PKIService.keyStorePath">conf/tls/node.jks</beans:prop>
+		<beans:prop key="PKIService.keyStorePath">conf/tls/Edge.jks</beans:prop>
 		<beans:prop key="PKIService.manualKeyStorePassword"></beans:prop>
 		<beans:prop key="PKIService.trustStorePath">conf/tls/trust.jks</beans:prop>
 		<beans:prop key="PKIService.trustStorePassword">eniwareedge</beans:prop>

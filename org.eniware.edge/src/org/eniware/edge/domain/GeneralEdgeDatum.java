@@ -7,11 +7,11 @@
 package org.eniware.edge.domain;
 
 /**
- * General node datum. Note that no {@code nodeId} property is added to this
- * class because the node ID is implied by the node's identity.
+ * General Edge datum. Note that no {@code EdgeId} property is added to this
+ * class because the Edge ID is implied by the Edge's identity.
  * 
  * @version 1.0
  */
-public class GeneralNodeDatum extends GeneralDatumSupport implements Cloneable {
+public class GeneralEdgeDatum extends GeneralDatumSupport implements Cloneable {
 
 }

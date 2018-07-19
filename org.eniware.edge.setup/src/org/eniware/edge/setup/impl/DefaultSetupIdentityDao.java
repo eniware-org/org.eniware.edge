@@ -45,7 +45,7 @@ public class DefaultSetupIdentityDao implements SetupIdentityDao, BackupResource
 
 	private static final String BACKUP_RESOURCE_NAME_DATA_FILE = "identity.json";
 
-	public static final String KEY_NODE_ID = "eniwareedge.id";
+	public static final String KEY_Edge_ID = "eniwareedge.id";
 	public static final String KEY_ENIWARENETWORK_HOST_NAME = "eniwareedge.eniwarenet.host";
 	public static final String KEY_ENIWARENETWORK_HOST_PORT = "eniwareedge.eniwarenet.port";
 	public static final String KEY_ENIWARENETWORK_FORCE_TLS = "eniwareedge.eniwarenet.forceTLS";
@@ -111,15 +111,15 @@ public class DefaultSetupIdentityDao implements SetupIdentityDao, BackupResource
 	private SetupIdentityInfo loadLegacySettingsData() {
 		SettingDao dao = (settingDao != null ? settingDao.service() : null);
 		if ( dao != null ) {
-			String nodeId = dao.getSetting(KEY_NODE_ID, SETUP_TYPE_KEY);
+			String EdgeId = dao.getSetting(KEY_Edge_ID, SETUP_TYPE_KEY);
 			String confCode = dao.getSetting(KEY_CONFIRMATION_CODE, SETUP_TYPE_KEY);
 			String hostName = dao.getSetting(KEY_ENIWARENETWORK_HOST_NAME, SETUP_TYPE_KEY);
 			String hostPort = dao.getSetting(KEY_ENIWARENETWORK_HOST_PORT, SETUP_TYPE_KEY);
 			String forceTls = dao.getSetting(KEY_ENIWARENETWORK_FORCE_TLS, SETUP_TYPE_KEY);
 			String keyStorePw = dao.getSetting(KEY_KEY_STORE_PASSWORD, SETUP_TYPE_KEY);
-			if ( nodeId != null && confCode != null && hostName != null && hostPort != null
+			if ( EdgeId != null && confCode != null && hostName != null && hostPort != null
 					&& forceTls != null && keyStorePw != null ) {
-				SetupIdentityInfo info = new SetupIdentityInfo(Long.valueOf(nodeId), confCode, hostName,
+				SetupIdentityInfo info = new SetupIdentityInfo(Long.valueOf(EdgeId), confCode, hostName,
 						Integer.valueOf(hostPort), Boolean.parseBoolean(forceTls), keyStorePw);
 				return info;
 			}
@@ -199,7 +199,7 @@ public class DefaultSetupIdentityDao implements SetupIdentityDao, BackupResource
 
 	@Override
 	public BackupResourceProviderInfo providerInfo(Locale locale) {
-		String name = "Node Identity Provider";
+		String name = "Edge Identity Provider";
 		String desc = "Backs up the EniwareEdge identity.";
 		MessageSource ms = messageSource;
 		if ( ms != null ) {
@@ -211,7 +211,7 @@ public class DefaultSetupIdentityDao implements SetupIdentityDao, BackupResource
 
 	@Override
 	public BackupResourceInfo resourceInfo(BackupResource resource, Locale locale) {
-		String desc = "Node identity information.";
+		String desc = "Edge identity information.";
 		MessageSource ms = messageSource;
 		if ( ms != null ) {
 			desc = ms.getMessage("identity.desc", null, desc, locale);

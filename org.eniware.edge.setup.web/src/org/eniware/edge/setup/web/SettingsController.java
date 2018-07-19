@@ -189,19 +189,19 @@ public class SettingsController {
 	}
 
 	private String backupExportFileNameForBackupKey(String backupKey) {
-		// look if already has node ID + date in key
-		Matcher m = BackupServiceSupport.NODE_AND_DATE_BACKUP_KEY_PATTERN.matcher(backupKey);
-		String nodeId = null;
+		// look if already has Edge ID + date in key
+		Matcher m = BackupServiceSupport.Edge_AND_DATE_BACKUP_KEY_PATTERN.matcher(backupKey);
+		String EdgeId = null;
 		String key = null;
 		if ( m.find() ) {
-			nodeId = m.group(1);
+			EdgeId = m.group(1);
 			key = m.group(2);
 		} else {
-			Long id = (identityService != null ? identityService.getNodeId() : null);
-			nodeId = (id != null ? id.toString() : null);
+			Long id = (identityService != null ? identityService.getEdgeId() : null);
+			EdgeId = (id != null ? id.toString() : null);
 			key = backupKey;
 		}
-		return "node-" + (nodeId != null ? nodeId : "UNKNOWN") + "-backup"
+		return "Edge-" + (EdgeId != null ? EdgeId : "UNKNOWN") + "-backup"
 				+ (key == null ? "" : "-" + key) + ".zip";
 	}
 

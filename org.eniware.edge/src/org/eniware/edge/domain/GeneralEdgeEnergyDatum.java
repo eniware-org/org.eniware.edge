@@ -10,11 +10,11 @@ import org.eniware.util.SerializeIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * GeneralNodeDatum that also implements {@link EnergyDatum}.
+ * GeneralEdgeDatum that also implements {@link EnergyDatum}.
  * 
  * @version 1.0
  */
-public class GeneralNodeEnergyDatum extends GeneralNodeDatum implements EnergyDatum {
+public class GeneralEdgeEnergyDatum extends GeneralEdgeDatum implements EnergyDatum {
 
 	/**
 	 * Return <em>true</em> if this datum is tagged with

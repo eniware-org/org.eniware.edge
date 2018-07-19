@@ -17,7 +17,7 @@ import java.util.concurrent.Future;
 import org.eniware.edge.settings.SettingSpecifierProvider;
 
 /**
- * Manager API for node-level backups.
+ * Manager API for Edge-level backups.
  * 
  * @version 1.2
  */

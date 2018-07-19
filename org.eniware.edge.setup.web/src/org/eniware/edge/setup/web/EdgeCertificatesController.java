@@ -29,7 +29,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.eniware.edge.setup.PKIService;
 
 /**
- * Controller for node certificate management.
+ * Controller for Edge certificate management.
  * 
  * @version 1.1
  */
@@ -49,50 +49,50 @@ public class EdgeCertificatesController extends BaseSetupController {
 	 */
 	@RequestMapping
 	public String home(Model model) {
-		X509Certificate nodeCert = pkiService.getNodeCertificate();
+		X509Certificate EdgeCert = pkiService.getEdgeCertificate();
 		final Date now = new Date();
-		final boolean expired = (nodeCert != null && now.after(nodeCert.getNotAfter()));
-		final boolean valid = (nodeCert != null
-				&& (!nodeCert.getIssuerDN().equals(nodeCert.getSubjectDN())
-						&& !now.before(nodeCert.getNotBefore()) && !expired));
-		model.addAttribute("nodeCert", nodeCert);
-		if ( nodeCert != null ) {
-			model.addAttribute("nodeCertSerialNumber", "0x" + nodeCert.getSerialNumber().toString(16));
+		final boolean expired = (EdgeCert != null && now.after(EdgeCert.getNotAfter()));
+		final boolean valid = (EdgeCert != null
+				&& (!EdgeCert.getIssuerDN().equals(EdgeCert.getSubjectDN())
+						&& !now.before(EdgeCert.getNotBefore()) && !expired));
+		model.addAttribute("EdgeCert", EdgeCert);
+		if ( EdgeCert != null ) {
+			model.addAttribute("EdgeCertSerialNumber", "0x" + EdgeCert.getSerialNumber().toString(16));
 		}
-		model.addAttribute("nodeCertExpired", expired);
-		model.addAttribute("nodeCertValid", valid);
+		model.addAttribute("EdgeCertExpired", expired);
+		model.addAttribute("EdgeCertValid", valid);
 		return "certs/home";
 	}
 
 	/**
-	 * Return a node's CSR based on its current certificate.
+	 * Return a Edge's CSR based on its current certificate.
 	 * 
 	 * @return a map with the PEM encoded certificate on key {@code csr}
 	 */
-	@RequestMapping(value = "/nodeCSR", method = RequestMethod.GET)
+	@RequestMapping(value = "/EdgeCSR", method = RequestMethod.GET)
 	@ResponseBody
-	public Map<String, Object> nodeCSR() {
-		String csr = pkiService.generateNodePKCS10CertificateRequestString();
+	public Map<String, Object> EdgeCSR() {
+		String csr = pkiService.generateEdgePKCS10CertificateRequestString();
 		Map<String, Object> result = new HashMap<String, Object>(1);
 		result.put("csr", csr);
 		return result;
 	}
 
 	/**
-	 * Return a node's current certificate.
+	 * Return a Edge's current certificate.
 	 * 
 	 * @return a map with the PEM encoded certificate on key {@code cert} if
 	 *         {@code download} is not <em>true</em>, otherwise the content is
 	 *         returned as a file attachment
 	 */
-	@RequestMapping(value = "/nodeCert", method = RequestMethod.GET)
+	@RequestMapping(value = "/EdgeCert", method = RequestMethod.GET)
 	@ResponseBody
-	public Object viewNodeCert(
+	public Object viewEdgeCert(
 			@RequestParam(value = "download", required = false) final Boolean download,
 			@RequestParam(value = "chain", required = false) final Boolean asChain) {
 		final String cert = (Boolean.TRUE.equals(asChain)
-				? pkiService.generateNodePKCS7CertificateChainString()
-				: pkiService.generateNodePKCS7CertificateString());
+				? pkiService.generateEdgePKCS7CertificateChainString()
+				: pkiService.generateEdgePKCS7CertificateString());
 
 		if ( !Boolean.TRUE.equals(download) ) {
 			Map<String, Object> result = new HashMap<String, Object>(1);
@@ -107,7 +107,7 @@ public class EdgeCertificatesController extends BaseSetupController {
 		headers.setCacheControl("no-cache");
 
 		headers.set("Content-Disposition",
-				"attachment; filename=eniwareedge-" + getIdentityService().getNodeId() + ".pem");
+				"attachment; filename=eniwareedge-" + getIdentityService().getEdgeId() + ".pem");
 
 		return new ResponseEntity<String>(cert, headers, HttpStatus.OK);
 	}
@@ -128,7 +128,7 @@ public class EdgeCertificatesController extends BaseSetupController {
 		if ( file != null && !file.isEmpty() ) {
 			pem = FileCopyUtils.copyToString(new InputStreamReader(file.getInputStream(), "UTF-8"));
 		}
-		pkiService.saveNodeSignedCertificate(pem);
+		pkiService.saveEdgeSignedCertificate(pem);
 		return "redirect:/a/certs";
 	}
 

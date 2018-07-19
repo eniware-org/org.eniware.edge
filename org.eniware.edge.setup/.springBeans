@@ -11,7 +11,7 @@
 	</configs>
 	<configSets>
 		<configSet>
-			<name><![CDATA[Node Setup]]></name>
+			<name><![CDATA[Edge Setup]]></name>
 			<allowBeanDefinitionOverriding>true</allowBeanDefinitionOverriding>
 			<incomplete>false</incomplete>
 			<configs>

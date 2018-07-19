@@ -28,14 +28,14 @@ import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StringUtils;
 
 /**
- * {@link BackupResourceProvider} for node files, such as installed application
+ * {@link BackupResourceProvider} for Edge files, such as installed application
  * bundle JARs.
  * 
  * @version 1.2
  */
 public class FileBackupResourceProvider implements BackupResourceProvider {
 
-	private String rootPath = System.getProperty(Constants.SYSTEM_PROP_NODE_HOME, "");
+	private String rootPath = System.getProperty(Constants.SYSTEM_PROP_Edge_HOME, "");
 	private String[] resourceDirectories = new String[] { "app/main" };
 	private String fileNamePattern = "\\.jar$";
 	private MessageSource messageSource;
@@ -216,7 +216,7 @@ public class FileBackupResourceProvider implements BackupResourceProvider {
 	 * 
 	 * <p>
 	 * If not provided, the system property
-	 * {@link org.eniware.edge.Constants#SYSTEM_PROP_NODE_HOME} will be
+	 * {@link org.eniware.edge.Constants#SYSTEM_PROP_Edge_HOME} will be
 	 * used, and if that isn't set then the runtime working directory will be
 	 * used.
 	 * </p>

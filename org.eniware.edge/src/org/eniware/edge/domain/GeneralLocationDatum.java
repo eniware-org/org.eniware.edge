@@ -14,7 +14,7 @@ import org.eniware.domain.GeneralLocationDatumSamples;
  * 
  * @version 1.1
  */
-public class GeneralLocationDatum extends GeneralNodeDatum {
+public class GeneralLocationDatum extends GeneralEdgeDatum {
 
 	private Long locationId;
 

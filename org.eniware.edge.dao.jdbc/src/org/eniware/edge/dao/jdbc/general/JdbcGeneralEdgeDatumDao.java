@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 import org.eniware.domain.GeneralDatumSamples;
 import org.eniware.domain.GeneralEdgeDatumSamples;
-import org.eniware.edge.domain.GeneralNodeDatum;
+import org.eniware.edge.domain.GeneralEdgeDatum;
 
 import org.eniware.edge.dao.jdbc.AbstractJdbcDatumDao;
 import org.springframework.core.io.ClassPathResource;
@@ -27,51 +27,51 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * JDBC-based implementation of {@link org.eniware.edge.dao.DatumDao} for
- * {@link GeneralNodeDatum} domain objects.
+ * {@link GeneralEdgeDatum} domain objects.
  * 
  * @version 1.1
  */
-public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDatum> {
+public class JdbcGeneralEdgeDatumDao extends AbstractJdbcDatumDao<GeneralEdgeDatum> {
 
 	/** The default tables version. */
 	public static final int DEFAULT_TABLES_VERSION = 1;
 
 	/** The table name for {@link PowerDatum} data. */
-	public static final String TABLE_GENERAL_NODE_DATUM = "sn_general_node_datum";
+	public static final String TABLE_GENERAL_Edge_DATUM = "sn_general_Edge_datum";
 
 	/** The default classpath Resource for the {@code initSqlResource}. */
-	public static final String DEFAULT_INIT_SQL = "derby-generalnodedatum-init.sql";
+	public static final String DEFAULT_INIT_SQL = "derby-generalEdgedatum-init.sql";
 
 	/** The default value for the {@code sqlGetTablesVersion} property. */
 	public static final String DEFAULT_SQL_GET_TABLES_VERSION = "SELECT svalue FROM eniwareedge.sn_settings WHERE skey = "
-			+ "'eniwareedge.sn_general_node_datum.version'";
+			+ "'eniwareedge.sn_general_Edge_datum.version'";
 
 	private ObjectMapper objectMapper;
 
 	/**
 	 * Default constructor.
 	 */
-	public JdbcGeneralNodeDatumDao() {
+	public JdbcGeneralEdgeDatumDao() {
 		super();
-		setSqlResourcePrefix("derby-generalnodedatum");
-		setTableName(TABLE_GENERAL_NODE_DATUM);
+		setSqlResourcePrefix("derby-generalEdgedatum");
+		setTableName(TABLE_GENERAL_Edge_DATUM);
 		setTablesVersion(DEFAULT_TABLES_VERSION);
 		setSqlGetTablesVersion(DEFAULT_SQL_GET_TABLES_VERSION);
 		setInitSqlResource(new ClassPathResource(DEFAULT_INIT_SQL, getClass()));
 	}
 
 	@Override
-	public Class<? extends GeneralNodeDatum> getDatumType() {
-		return GeneralNodeDatum.class;
+	public Class<? extends GeneralEdgeDatum> getDatumType() {
+		return GeneralEdgeDatum.class;
 	}
 
 	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED, noRollbackFor = DuplicateKeyException.class)
-	public void storeDatum(GeneralNodeDatum datum) {
+	public void storeDatum(GeneralEdgeDatum datum) {
 		try {
 			storeDomainObject(datum);
 		} catch ( DuplicateKeyException e ) {
-			List<GeneralNodeDatum> existing = findDatum(SQL_RESOURCE_FIND_FOR_PRIMARY_KEY,
+			List<GeneralEdgeDatum> existing = findDatum(SQL_RESOURCE_FIND_FOR_PRIMARY_KEY,
 					preparedStatementSetterForPrimaryKey(datum.getCreated(), datum.getSourceId()),
 					rowMapper());
 			if ( existing.size() > 0 ) {
@@ -86,7 +86,7 @@ public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDat
 	}
 
 	@Override
-	protected void setUpdateStatementValues(GeneralNodeDatum datum, PreparedStatement ps)
+	protected void setUpdateStatementValues(GeneralEdgeDatum datum, PreparedStatement ps)
 			throws SQLException {
 		int col = 1;
 		ps.setString(col++, jsonForSamples(datum));
@@ -96,7 +96,7 @@ public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDat
 
 	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-	public void setDatumUploaded(GeneralNodeDatum datum, Date date, String destination, String trackingId) {
+	public void setDatumUploaded(GeneralEdgeDatum datum, Date date, String destination, String trackingId) {
 		updateDatumUpload(datum, date == null ? System.currentTimeMillis() : date.getTime());
 	}
 
@@ -106,15 +106,15 @@ public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDat
 		return deleteUploadedDataOlderThanHours(hours);
 	}
 
-	private RowMapper<GeneralNodeDatum> rowMapper() {
-		return new RowMapper<GeneralNodeDatum>() {
+	private RowMapper<GeneralEdgeDatum> rowMapper() {
+		return new RowMapper<GeneralEdgeDatum>() {
 
 			@Override
-			public GeneralNodeDatum mapRow(ResultSet rs, int rowNum) throws SQLException {
+			public GeneralEdgeDatum mapRow(ResultSet rs, int rowNum) throws SQLException {
 				if ( log.isTraceEnabled() ) {
 					log.trace("Handling result row " + rowNum);
 				}
-				GeneralNodeDatum datum = new GeneralNodeDatum();
+				GeneralEdgeDatum datum = new GeneralEdgeDatum();
 				int col = 0;
 				datum.setCreated(rs.getTimestamp(++col));
 				datum.setSourceId(rs.getString(++col));
@@ -126,7 +126,7 @@ public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDat
 						s = objectMapper.readValue(jdata, GeneralEdgeDatumSamples.class);
 						datum.setSamples(s);
 					} catch ( IOException e ) {
-						log.error("Error deserializing JSON into GeneralNodeDatumSamples: {}",
+						log.error("Error deserializing JSON into GeneralEdgeDatumSamples: {}",
 								e.getMessage());
 					}
 				}
@@ -137,11 +137,11 @@ public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDat
 
 	@Override
 	@Transactional(readOnly = true, propagation = Propagation.REQUIRED)
-	public List<GeneralNodeDatum> getDatumNotUploaded(String destination) {
+	public List<GeneralEdgeDatum> getDatumNotUploaded(String destination) {
 		return findDatumNotUploaded(rowMapper());
 	}
 
-	private String jsonForSamples(GeneralNodeDatum datum) {
+	private String jsonForSamples(GeneralEdgeDatum datum) {
 		String json;
 		try {
 			json = objectMapper.writeValueAsString(datum.getSamples());
@@ -153,7 +153,7 @@ public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDat
 	}
 
 	@Override
-	protected void setStoreStatementValues(GeneralNodeDatum datum, PreparedStatement ps)
+	protected void setStoreStatementValues(GeneralEdgeDatum datum, PreparedStatement ps)
 			throws SQLException {
 		int col = 0;
 		ps.setTimestamp(++col,

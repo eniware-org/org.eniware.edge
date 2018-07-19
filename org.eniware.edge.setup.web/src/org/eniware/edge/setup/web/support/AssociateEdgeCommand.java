@@ -7,7 +7,7 @@
 package org.eniware.edge.setup.web.support;
 
 /**
- * A command object for associating a node with a EniwareNet account.
+ * A command object for associating a Edge with a EniwareNet account.
  * 
  * @version 1.1
  */

@@ -22,7 +22,7 @@ public class SetupIdentityInfo {
 	public static final SetupIdentityInfo UNKNOWN_IDENTITY = new SetupIdentityInfo(null, null, null,
 			null, false, null);
 
-	private final Long nodeId;
+	private final Long EdgeId;
 	private final String confirmationCode;
 	private final String eniwareNetHostName;
 	private final Integer eniwareNetHostPort;
@@ -32,8 +32,8 @@ public class SetupIdentityInfo {
 	/**
 	 * Constructor.
 	 * 
-	 * @param nodeId
-	 *        the node ID
+	 * @param EdgeId
+	 *        the Edge ID
 	 * @param confirmationCode
 	 *        the EniwareNetwork association confirmation code
 	 * @param eniwareNetHostName
@@ -47,14 +47,14 @@ public class SetupIdentityInfo {
 	 *        the password to use for the key store
 	 */
 	@JsonCreator
-	public SetupIdentityInfo(@JsonProperty("nodeId") Long nodeId,
+	public SetupIdentityInfo(@JsonProperty("EdgeId") Long EdgeId,
 			@JsonProperty("confirmationCode") String confirmationCode,
 			@JsonProperty("eniwareNetHostName") String eniwareNetHostName,
 			@JsonProperty("eniwareNetHostPort") Integer eniwareNetHostPort,
 			@JsonProperty("eniwareNetForceTls") boolean eniwareNetForceTls,
 			@JsonProperty("keyStorePassword") String keyStorePassword) {
 		super();
-		this.nodeId = nodeId;
+		this.EdgeId = EdgeId;
 		this.confirmationCode = confirmationCode;
 		this.eniwareNetHostName = eniwareNetHostName;
 		this.eniwareNetHostPort = eniwareNetHostPort;
@@ -70,13 +70,13 @@ public class SetupIdentityInfo {
 	 * @return the new instance
 	 */
 	public SetupIdentityInfo withKeyStorePassword(String newPassword) {
-		return new SetupIdentityInfo(nodeId, confirmationCode, eniwareNetHostName, eniwareNetHostPort,
+		return new SetupIdentityInfo(EdgeId, confirmationCode, eniwareNetHostName, eniwareNetHostPort,
 				eniwareNetForceTls, newPassword);
 	}
 
 	@Override
 	public String toString() {
-		return "SetupIdentityInfo{" + nodeId + "@" + eniwareNetHostName + ":" + eniwareNetHostPort + "}";
+		return "SetupIdentityInfo{" + EdgeId + "@" + eniwareNetHostName + ":" + eniwareNetHostPort + "}";
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public class SetupIdentityInfo {
 		int result = 1;
 		result = prime * result + ((confirmationCode == null) ? 0 : confirmationCode.hashCode());
 		result = prime * result + ((keyStorePassword == null) ? 0 : keyStorePassword.hashCode());
-		result = prime * result + ((nodeId == null) ? 0 : nodeId.hashCode());
+		result = prime * result + ((EdgeId == null) ? 0 : EdgeId.hashCode());
 		result = prime * result + (eniwareNetForceTls ? 1231 : 1237);
 		result = prime * result + ((eniwareNetHostName == null) ? 0 : eniwareNetHostName.hashCode());
 		result = prime * result + ((eniwareNetHostPort == null) ? 0 : eniwareNetHostPort.hashCode());
@@ -118,11 +118,11 @@ public class SetupIdentityInfo {
 		} else if ( !keyStorePassword.equals(other.keyStorePassword) ) {
 			return false;
 		}
-		if ( nodeId == null ) {
-			if ( other.nodeId != null ) {
+		if ( EdgeId == null ) {
+			if ( other.EdgeId != null ) {
 				return false;
 			}
-		} else if ( !nodeId.equals(other.nodeId) ) {
+		} else if ( !EdgeId.equals(other.EdgeId) ) {
 			return false;
 		}
 		if ( eniwareNetForceTls != other.eniwareNetForceTls ) {
@@ -145,8 +145,8 @@ public class SetupIdentityInfo {
 		return true;
 	}
 
-	public Long getNodeId() {
-		return nodeId;
+	public Long getEdgeId() {
+		return EdgeId;
 	}
 
 	public String getConfirmationCode() {

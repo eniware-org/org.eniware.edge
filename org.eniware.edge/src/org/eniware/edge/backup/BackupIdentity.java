@@ -24,11 +24,11 @@ public interface BackupIdentity {
 	String getKey();
 
 	/**
-	 * Get the node ID associated with the backup.
+	 * Get the Edge ID associated with the backup.
 	 * 
-	 * @return the node ID
+	 * @return the Edge ID
 	 */
-	Long getNodeId();
+	Long getEdgeId();
 
 	/**
 	 * Get the date the backup was created.

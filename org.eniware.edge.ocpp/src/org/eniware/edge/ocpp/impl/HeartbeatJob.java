@@ -21,7 +21,7 @@ import ocpp.v15.cs.HeartbeatRequest;
 import ocpp.v15.cs.HeartbeatResponse;
 
 /**
- * Job to post the {@link HeartbeatRequest} to let the OCPP system know the node
+ * Job to post the {@link HeartbeatRequest} to let the OCPP system know the Edge
  * is alive and has network connectivity.
  * 
  * @version 2.0

@@ -44,7 +44,7 @@ public class DefaultPlatformService implements PlatformService {
 
 	private static ExecutorService defaultSingletonExecutorService() {
 		// we want at most one task happening at a time for this service;
-		// size the blocking queue to a reasonable size for a typical node
+		// size the blocking queue to a reasonable size for a typical Edge
 		return new ThreadPoolExecutor(0, 1, 5, TimeUnit.MINUTES,
 				new ArrayBlockingQueue<Runnable>(10, true),
 				new CustomizableThreadFactory("PlatformService-Main-"));

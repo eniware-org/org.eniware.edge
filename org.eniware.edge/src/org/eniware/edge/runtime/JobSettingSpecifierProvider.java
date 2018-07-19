@@ -32,7 +32,7 @@ import org.springframework.util.StringUtils;
  * 
  * <p>
  * This class allows a set of related Quartz Trigger instances to be exposed as
- * a {@link SettingSpecifierProvider} and managed by the node's setting UI. For
+ * a {@link SettingSpecifierProvider} and managed by the Edge's setting UI. For
  * example the triggers might be grouped by the bundle they were published from.
  * It works with {@link TriggerAndJobDetail} services. Call
  * {@link #addSpecifier(TriggerAndJobDetail)} and
@@ -56,7 +56,7 @@ public class JobSettingSpecifierProvider implements SettingSpecifierProvider {
 	public static final String JOBS_PID_SUFFIX = ".JOBS";
 
 	/** The prefix to remove for display titles in setting UIDs. */
-	public static final String SN_NODE_PREFIX = "org.eniware.edge.";
+	public static final String SN_Edge_PREFIX = "org.eniware.edge.";
 
 	private String settingUID;
 	private MessageSource messageSource = null;
@@ -117,7 +117,7 @@ public class JobSettingSpecifierProvider implements SettingSpecifierProvider {
 	 * 
 	 * <p>
 	 * The display title is generated from the setting UID itself, by first
-	 * removing the {@link #SN_NODE_PREFIX} prefix and {@link #JOBS_PID_SUFFIX}
+	 * removing the {@link #SN_Edge_PREFIX} prefix and {@link #JOBS_PID_SUFFIX}
 	 * suffix, capitalizing the remaining value, and appending
 	 * {@link #TITLE_SUFFIX}. For example, the UID
 	 * <code>org.eniware.edge.power.JOBS</code> will result in
@@ -130,8 +130,8 @@ public class JobSettingSpecifierProvider implements SettingSpecifierProvider {
 	 * @return the generated title value
 	 */
 	private static String titleValue(String settingUID) {
-		if ( settingUID.startsWith(SN_NODE_PREFIX) && settingUID.length() > SN_NODE_PREFIX.length() ) {
-			String subPackage = settingUID.substring(SN_NODE_PREFIX.length());
+		if ( settingUID.startsWith(SN_Edge_PREFIX) && settingUID.length() > SN_Edge_PREFIX.length() ) {
+			String subPackage = settingUID.substring(SN_Edge_PREFIX.length());
 			if ( subPackage.endsWith(JOBS_PID_SUFFIX)
 					&& subPackage.length() > JOBS_PID_SUFFIX.length() ) {
 				subPackage = subPackage.substring(0, subPackage.length() - JOBS_PID_SUFFIX.length());

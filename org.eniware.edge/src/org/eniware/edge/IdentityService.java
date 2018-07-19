@@ -8,25 +8,25 @@ package org.eniware.edge;
 import java.security.Principal;
 
 /**
- * API for knowing information about the node's identity.
+ * API for knowing information about the Edge's identity.
  * 
  * @version 1.1
  */
 public interface IdentityService {
 
 	/**
-	 * Get the ID of the current node.
+	 * Get the ID of the current Edge.
 	 * 
-	 * @return node ID, or <em>null</em> if the ID is not known
+	 * @return Edge ID, or <em>null</em> if the ID is not known
 	 */
-	Long getNodeId();
+	Long getEdgeId();
 
 	/**
-	 * Get a {@link Principal} for the current node.
+	 * Get a {@link Principal} for the current Edge.
 	 * 
-	 * @return The node Principal, or <em>null</em> if none available.
+	 * @return The Edge Principal, or <em>null</em> if none available.
 	 */
-	Principal getNodePrincipal();
+	Principal getEdgePrincipal();
 
 	/**
 	 * Get the host name for the EniwareNet central service.

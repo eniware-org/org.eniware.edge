@@ -5,7 +5,7 @@
 <tiles-definitions>
 
 	<definition name="associateLayout" extends="default">
-		<put-attribute name="head" value="/WEB-INF/jsp/associate/new-node-head.jsp"/>
+		<put-attribute name="head" value="/WEB-INF/jsp/associate/new-Edge-head.jsp"/>
 	</definition>
 	
 	<definition name="associate/*" extends="default">

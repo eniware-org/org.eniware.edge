@@ -19,7 +19,7 @@ public class SimpleBackup implements Backup {
 	private final String key;
 	private final Long size;
 	private final boolean complete;
-	private final Long nodeId;
+	private final Long EdgeId;
 	private final String qualifier;
 
 	/**
@@ -41,8 +41,8 @@ public class SimpleBackup implements Backup {
 	/**
 	 * Construct with values.
 	 * 
-	 * @param nodeId
-	 *        the node ID
+	 * @param EdgeId
+	 *        the Edge ID
 	 * @param date
 	 *        the date
 	 * @param key
@@ -52,15 +52,15 @@ public class SimpleBackup implements Backup {
 	 * @param complete
 	 *        the complete flag
 	 */
-	public SimpleBackup(Long nodeId, Date date, String key, Long size, boolean complete) {
-		this(nodeId, date, null, key, size, complete);
+	public SimpleBackup(Long EdgeId, Date date, String key, Long size, boolean complete) {
+		this(EdgeId, date, null, key, size, complete);
 	}
 
 	/**
 	 * Construct with values.
 	 * 
-	 * @param nodeId
-	 *        the node ID
+	 * @param EdgeId
+	 *        the Edge ID
 	 * @param date
 	 *        the date
 	 * @param qualifier
@@ -73,10 +73,10 @@ public class SimpleBackup implements Backup {
 	 *        the complete flag
 	 * @since 1.2
 	 */
-	public SimpleBackup(Long nodeId, Date date, String qualifier, String key, Long size,
+	public SimpleBackup(Long EdgeId, Date date, String qualifier, String key, Long size,
 			boolean complete) {
 		super();
-		this.nodeId = nodeId;
+		this.EdgeId = EdgeId;
 		this.date = date;
 		this.qualifier = qualifier;
 		this.key = key;
@@ -96,12 +96,12 @@ public class SimpleBackup implements Backup {
 	 * @since 1.2
 	 */
 	public SimpleBackup(BackupIdentity ident, Long size, boolean complete) {
-		this(ident.getNodeId(), ident.getDate(), ident.getQualifier(), ident.getKey(), size, complete);
+		this(ident.getEdgeId(), ident.getDate(), ident.getQualifier(), ident.getKey(), size, complete);
 	}
 
 	@Override
-	public Long getNodeId() {
-		return nodeId;
+	public Long getEdgeId() {
+		return EdgeId;
 	}
 
 	@Override

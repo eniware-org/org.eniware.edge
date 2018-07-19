@@ -120,8 +120,8 @@ var EniwareEdge = {
 		 return {token:csrf,headerName:header};
 	 }()),
 	 
-	 nodeId : (function() {
-		 return $("meta[name='nodeId']").attr("content");
+	 EdgeId : (function() {
+		 return $("meta[name='EdgeId']").attr("content");
 	 }()),
 	 
 };

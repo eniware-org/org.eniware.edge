@@ -14,10 +14,10 @@
 		<tr>
 			<td>
 				<c:choose>
-					<c:when test="${nodeCertExpired}">
+					<c:when test="${EdgeCertExpired}">
 						<span class="label label-important"><fmt:message key='certs.status.expired'/></span>
 					</c:when>
-					<c:when test="${nodeCertValid}">
+					<c:when test="${EdgeCertValid}">
 						<span class="label label-success"><fmt:message key='certs.status.valid'/></span>
 					</c:when>
 					<c:otherwise>
@@ -26,20 +26,20 @@
 				</c:choose>
 			</td>
 			<td>
-				<c:if test="${not empty nodeCert}">
-					${nodeCert.subjectDN.name}<br/>
+				<c:if test="${not empty EdgeCert}">
+					${EdgeCert.subjectDN.name}<br/>
 					<small class="muted span6">
 						<fmt:message key='certs.subject.issuedby'/>
-						<em> ${nodeCert.issuerDN.name}</em>
+						<em> ${EdgeCert.issuerDN.name}</em>
 					</small>
 				</c:if>
 			</td>
 			<td>
-				${nodeCertSerialNumber}
+				${EdgeCertSerialNumber}
 			</td>
 			<td>
-				<c:if test="${nodeCertValid}">
-					<fmt:formatDate value="${nodeCert.notAfter}" pattern="dd MMM yyyy HH:mm" timeZone="GMT"/> GMT
+				<c:if test="${EdgeCertValid}">
+					<fmt:formatDate value="${EdgeCert.notAfter}" pattern="dd MMM yyyy HH:mm" timeZone="GMT"/> GMT
 				</c:if>
 			</td>
 		</tr>
@@ -48,18 +48,18 @@
 
 <div class="row">
 	<div class="span12">
-		<a class="btn" id="btn-view-node-csr" href="<setup:url value='/a/certs/nodeCSR'/>">
+		<a class="btn" id="btn-view-Edge-csr" href="<setup:url value='/a/certs/EdgeCSR'/>">
 			<fmt:message key='certs.action.csr'/>
 		</a>
-		<a class="btn${nodeCertValid ? '' : ' btn-primary'}" id="btn-view-node-csr" href="#import-cert-modal" data-toggle="modal">
+		<a class="btn${EdgeCertValid ? '' : ' btn-primary'}" id="btn-view-Edge-csr" href="#import-cert-modal" data-toggle="modal">
 			<fmt:message key='certs.action.import'/>
 		</a>
-		<c:if test="${not empty nodeCert}">
-			<a class="btn" id="btn-renew-node-cert" href="<setup:url value='/a/certs/renew'/>">
+		<c:if test="${not empty EdgeCert}">
+			<a class="btn" id="btn-renew-Edge-cert" href="<setup:url value='/a/certs/renew'/>">
 				<fmt:message key='certs.action.renew'/>
 			</a>
 		</c:if>
-		<a class="btn${nodeCertValid ? ' btn-primary' : ''}" id="btn-export-node-cert" href="<setup:url value='/a/certs/nodeCert'/>">
+		<a class="btn${EdgeCertValid ? ' btn-primary' : ''}" id="btn-export-Edge-cert" href="<setup:url value='/a/certs/EdgeCert'/>">
 			<fmt:message key='certs.action.view'/>
 		</a>
 	</div>
@@ -106,7 +106,7 @@
  	</div>
 </div>
 
-<form id="export-cert-modal" class="modal dynamic hide fade" action="<setup:url value='/a/certs/nodeCert'/>" method="get">
+<form id="export-cert-modal" class="modal dynamic hide fade" action="<setup:url value='/a/certs/EdgeCert'/>" method="get">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal">&times;</button>
 		<h3><fmt:message key='certs.export.title'/></h3>

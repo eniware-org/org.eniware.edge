@@ -69,9 +69,9 @@ public class SettingsUserService implements UserService, UserDetailsService {
 		String password = settingDao.getSetting(username, SETTING_TYPE_USER);
 		if ( password == null && identityService != null && passwordEncoder != null
 				&& !someUserExists() ) {
-			// for backwards-compat with nodes created before user auth, provide a default
-			Long nodeId = identityService.getNodeId();
-			if ( nodeId != null && nodeId.toString().equalsIgnoreCase(username) ) {
+			// for backwards-compat with Edges created before user auth, provide a default
+			Long EdgeId = identityService.getEdgeId();
+			if ( EdgeId != null && EdgeId.toString().equalsIgnoreCase(username) ) {
 				password = passwordEncoder.encode("eniware");
 				GrantedAuthority auth = new SimpleGrantedAuthority(GRANTED_AUTH_USER);
 				result = new User(username, password, Collections.singleton(auth));
@@ -201,7 +201,7 @@ public class SettingsUserService implements UserService, UserDetailsService {
 			}
 		}, new BasicBatchOptions("UpdateUser", BasicBatchOptions.DEFAULT_BATCH_SIZE, true, null));
 		if ( !updatedUsername.get() ) {
-			// no username exists, treat as a legacy node whose password was "eniware"
+			// no username exists, treat as a legacy Edge whose password was "eniware"
 			UserProfile newProfile = new UserProfile();
 			newProfile.setUsername(newUsername);
 			newProfile.setPassword("eniware");

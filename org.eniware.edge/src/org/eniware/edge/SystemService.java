@@ -6,7 +6,7 @@
 package org.eniware.edge;
 
 /**
- * API for node system services, such as restarting, rebooting, or making system
+ * API for Edge system services, such as restarting, rebooting, or making system
  * configuration changes.
  * 
  * @version 1.0
@@ -15,7 +15,7 @@ package org.eniware.edge;
 public interface SystemService {
 
 	/**
-	 * Exit the node application, stopping the active process.
+	 * Exit the Edge application, stopping the active process.
 	 * 
 	 * @param syncState
 	 *        A flag to indicate (when {@code true}) that any transient data

@@ -18,8 +18,8 @@ import org.osgi.service.event.EventAdmin;
 import org.springframework.context.MessageSource;
 import org.eniware.domain.EdgeControlInfo;
 import org.eniware.domain.EdgeControlPropertyType;
-import org.eniware.edge.NodeControlProvider;
-import org.eniware.edge.domain.NodeControlInfoDatum;
+import org.eniware.edge.EdgeControlProvider;
+import org.eniware.edge.domain.EdgeControlInfoDatum;
 import org.eniware.edge.io.modbus.ModbusConnection;
 import org.eniware.edge.io.modbus.ModbusConnectionAction;
 import org.eniware.edge.io.modbus.ModbusDeviceSupport;
@@ -46,7 +46,7 @@ import org.eniware.util.OptionalService;
  * <dt>unitId</dt>
  * <dd>The Modbus unit ID to use.</dd>
  * <dt>controlId</dt>
- * <dd>The {@link NodeControlProvider} UID to use.</dd>
+ * <dd>The {@link EdgeControlProvider} UID to use.</dd>
  * <dt>connectionFactory</dt>
  * <dd>The {@link ModbusSerialConnectionFactory} to use.</dd>
  * </dl>
@@ -54,7 +54,7 @@ import org.eniware.util.OptionalService;
  * @version 1.2
  */
 public class ModbusToggler extends ModbusDeviceSupport
-		implements SettingSpecifierProvider, NodeControlProvider, InstructionHandler {
+		implements SettingSpecifierProvider, EdgeControlProvider, InstructionHandler {
 
 	private Integer address = 0x4008;
 
@@ -100,7 +100,7 @@ public class ModbusToggler extends ModbusDeviceSupport
 		});
 	}
 
-	// NodeControlProvider
+	// EdgeControlProvider
 
 	@Override
 	public List<String> getAvailableControlIds() {
@@ -116,21 +116,21 @@ public class ModbusToggler extends ModbusDeviceSupport
 	public EdgeControlInfo getCurrentControlInfo(String controlId) {
 		// read the control's current status
 		log.debug("Reading {} status", controlId);
-		NodeControlInfoDatum result = null;
+		EdgeControlInfoDatum result = null;
 		try {
 			Boolean value = currentValue();
-			result = newNodeControlInfoDatum(controlId, value);
+			result = newEdgeControlInfoDatum(controlId, value);
 		} catch ( Exception e ) {
 			log.error("Error reading {} status: {}", controlId, e.getMessage());
 		}
 		if ( result != null ) {
-			postControlEvent(result, NodeControlProvider.EVENT_TOPIC_CONTROL_INFO_CAPTURED);
+			postControlEvent(result, EdgeControlProvider.EVENT_TOPIC_CONTROL_INFO_CAPTURED);
 		}
 		return result;
 	}
 
-	private NodeControlInfoDatum newNodeControlInfoDatum(String controlId, Boolean status) {
-		NodeControlInfoDatum info = new NodeControlInfoDatum();
+	private EdgeControlInfoDatum newEdgeControlInfoDatum(String controlId, Boolean status) {
+		EdgeControlInfoDatum info = new EdgeControlInfoDatum();
 		info.setCreated(new Date());
 		info.setSourceId(controlId);
 		info.setType(EdgeControlPropertyType.Boolean);
@@ -139,7 +139,7 @@ public class ModbusToggler extends ModbusDeviceSupport
 		return info;
 	}
 
-	private void postControlEvent(NodeControlInfoDatum info, String topic) {
+	private void postControlEvent(EdgeControlInfoDatum info, String topic) {
 		final EventAdmin admin = (eventAdmin != null ? eventAdmin.service() : null);
 		if ( admin == null ) {
 			return;
@@ -174,8 +174,8 @@ public class ModbusToggler extends ModbusDeviceSupport
 							controlId, e.getMessage());
 				}
 				if ( modbusResult != null && modbusResult.booleanValue() ) {
-					postControlEvent(newNodeControlInfoDatum(controlId, desiredValue),
-							NodeControlProvider.EVENT_TOPIC_CONTROL_INFO_CHANGED);
+					postControlEvent(newEdgeControlInfoDatum(controlId, desiredValue),
+							EdgeControlProvider.EVENT_TOPIC_CONTROL_INFO_CHANGED);
 					result = InstructionState.Completed;
 				} else {
 					result = InstructionState.Declined;

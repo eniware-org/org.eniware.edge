@@ -16,8 +16,8 @@ public final class SetupSettings {
 	/** A type key for setup settings. */
 	public static final String SETUP_TYPE_KEY = "eniwareedge.setup";
 
-	/** The node ID. */
-	public static final String KEY_NODE_ID = "eniwareedge.id";
+	/** The Edge ID. */
+	public static final String KEY_Edge_ID = "eniwareedge.id";
 
 	/** The EniwareNetwork server host name. */
 	public static final String KEY_ENIWARENETWORK_HOST_NAME = "eniwareedge.eniwarenet.host";

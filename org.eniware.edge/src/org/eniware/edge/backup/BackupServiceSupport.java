@@ -34,8 +34,8 @@ public abstract class BackupServiceSupport implements BackupService {
 	public static final String BACKUP_KEY_DATE_FORMAT = "yyyyMMdd'T'HHmmss";
 
 	/**
-	 * A pattern to match {@literal node-N-backup-D-Q} where {@literal N} is a
-	 * node ID and {@literal D} is a date formatted using
+	 * A pattern to match {@literal Edge-N-backup-D-Q} where {@literal N} is a
+	 * Edge ID and {@literal D} is a date formatted using
 	 * {@link #BACKUP_KEY_DATE_FORMAT} and {@literal Q} is an optional
 	 * qualifier.
 	 * 
@@ -44,8 +44,8 @@ public abstract class BackupServiceSupport implements BackupService {
 	 * {@link Matcher} group is {@literal 4} (not 3).
 	 * </p>
 	 */
-	public static final Pattern NODE_AND_DATE_BACKUP_KEY_PATTERN = Pattern
-			.compile("node-(\\d+)-backup-(\\d{8}T\\d{6})(-(\\w+))?");
+	public static final Pattern Edge_AND_DATE_BACKUP_KEY_PATTERN = Pattern
+			.compile("Edge-(\\d+)-backup-(\\d{8}T\\d{6})(-(\\w+))?");
 
 	protected static final ObjectMapper OBJECT_MAPPER = new ObjectMapper()
 			.setSerializationInclusion(JsonInclude.Include.NON_NULL);
@@ -62,7 +62,7 @@ public abstract class BackupServiceSupport implements BackupService {
 	 * @return a directory to use for local backup data
 	 */
 	protected File defaultBackuprDir() {
-		String path = System.getProperty(Constants.SYSTEM_PROP_NODE_HOME, null);
+		String path = System.getProperty(Constants.SYSTEM_PROP_Edge_HOME, null);
 		if ( path == null ) {
 			path = System.getProperty("java.io.tmpdir");
 		} else {
@@ -88,7 +88,7 @@ public abstract class BackupServiceSupport implements BackupService {
 	 * using default values.
 	 * 
 	 * <p>
-	 * The {@link #NODE_AND_DATE_BACKUP_KEY_PATTERN} pattern and
+	 * The {@link #Edge_AND_DATE_BACKUP_KEY_PATTERN} pattern and
 	 * {@link #BACKUP_KEY_DATE_FORMAT} format are used.
 	 * </p>
 	 * 
@@ -101,7 +101,7 @@ public abstract class BackupServiceSupport implements BackupService {
 	 * @see #backupDateFromProps(Date, Map, Pattern, String)
 	 */
 	protected Date backupDateFromProps(Date date, Map<String, String> props) {
-		return backupDateFromProps(date, props, NODE_AND_DATE_BACKUP_KEY_PATTERN,
+		return backupDateFromProps(date, props, Edge_AND_DATE_BACKUP_KEY_PATTERN,
 				BACKUP_KEY_DATE_FORMAT);
 	}
 
@@ -118,22 +118,22 @@ public abstract class BackupServiceSupport implements BackupService {
 	 * @param props
 	 *        a mapping of properties, which may include a
 	 *        {@link BackupManager#BACKUP_KEY} value
-	 * @param nodeIdAndDatePattern
-	 *        a regular expression to match a node ID and date from a backup key
+	 * @param EdgeIdAndDatePattern
+	 *        a regular expression to match a Edge ID and date from a backup key
 	 * @param dateFormat
 	 *        the format of the date extracted from the
-	 *        {@code nodeIdAndDatePattern}
+	 *        {@code EdgeIdAndDatePattern}
 	 * @return the date, never {@code null}
 	 */
 	protected Date backupDateFromProps(Date date, Map<String, String> props,
-			Pattern nodeIdAndDatePattern, String dateFormat) {
+			Pattern EdgeIdAndDatePattern, String dateFormat) {
 		if ( date != null ) {
 			return date;
 		}
 		final SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
 		String backupKey = (props == null ? null : props.get(BackupManager.BACKUP_KEY));
 		if ( backupKey != null ) {
-			Matcher m = nodeIdAndDatePattern.matcher(backupKey);
+			Matcher m = EdgeIdAndDatePattern.matcher(backupKey);
 			if ( m.find() ) {
 				try {
 					return sdf.parse(m.group(2));
@@ -146,52 +146,52 @@ public abstract class BackupServiceSupport implements BackupService {
 	}
 
 	/**
-	 * Shortcut for {@link #backupNodeIdFromProps(Long, Map, Pattern)} using
+	 * Shortcut for {@link #backupEdgeIdFromProps(Long, Map, Pattern)} using
 	 * default values.
 	 * 
 	 * <p>
-	 * The {@link #NODE_AND_DATE_BACKUP_KEY_PATTERN} pattern is used.
+	 * The {@link #Edge_AND_DATE_BACKUP_KEY_PATTERN} pattern is used.
 	 * </p>
 	 * 
-	 * @param nodeId
+	 * @param EdgeId
 	 *        if not {@literal null} then return this value
 	 * @param props
 	 *        a mapping of properties, which may include a
 	 *        {@link BackupManager#BACKUP_KEY} value
-	 * @return the node ID, or {@literal 0} if not available
-	 * @see #backupNodeIdFromProps(Long, Map, Pattern)
+	 * @return the Edge ID, or {@literal 0} if not available
+	 * @see #backupEdgeIdFromProps(Long, Map, Pattern)
 	 */
-	protected Long backupNodeIdFromProps(Long nodeId, Map<String, String> props) {
-		return backupNodeIdFromProps(nodeId, props, NODE_AND_DATE_BACKUP_KEY_PATTERN);
+	protected Long backupEdgeIdFromProps(Long EdgeId, Map<String, String> props) {
+		return backupEdgeIdFromProps(EdgeId, props, Edge_AND_DATE_BACKUP_KEY_PATTERN);
 	}
 
 	/**
-	 * Parse a node ID from a backup key.
+	 * Parse a Edge ID from a backup key.
 	 * 
-	 * @param nodeId
+	 * @param EdgeId
 	 *        if not {@literal null} then return this value
 	 * @param props
 	 *        a mapping of properties, which may include a
 	 *        {@link BackupManager#BACKUP_KEY} value
-	 * @param nodeIdAndDatePattern
-	 *        a regular expression to match a node ID and date from a backup key
-	 * @return the node ID, or {@literal 0} if not available
+	 * @param EdgeIdAndDatePattern
+	 *        a regular expression to match a Edge ID and date from a backup key
+	 * @return the Edge ID, or {@literal 0} if not available
 	 */
-	protected Long backupNodeIdFromProps(Long nodeId, Map<String, String> props,
-			Pattern nodeIdAndDatePattern) {
-		if ( nodeId != null ) {
-			return nodeId;
+	protected Long backupEdgeIdFromProps(Long EdgeId, Map<String, String> props,
+			Pattern EdgeIdAndDatePattern) {
+		if ( EdgeId != null ) {
+			return EdgeId;
 		}
 		Long result = 0L;
 		String backupKey = (props == null ? null : props.get(BackupManager.BACKUP_KEY));
 		if ( backupKey != null ) {
-			Matcher m = nodeIdAndDatePattern.matcher(backupKey);
+			Matcher m = EdgeIdAndDatePattern.matcher(backupKey);
 			if ( m.find() ) {
 
 				try {
 					result = Long.valueOf(m.group(1));
 				} catch ( NumberFormatException e ) {
-					log.warn("Unable to parse node ID from key [{}]", backupKey);
+					log.warn("Unable to parse Edge ID from key [{}]", backupKey);
 				}
 			}
 		}
@@ -204,7 +204,7 @@ public abstract class BackupServiceSupport implements BackupService {
 	 * <p>
 	 * This method calls
 	 * {@link #identityFromBackupKey(Pattern, String, String)}, passing
-	 * {@link #NODE_AND_DATE_BACKUP_KEY_PATTERN} and
+	 * {@link #Edge_AND_DATE_BACKUP_KEY_PATTERN} and
 	 * {@link #BACKUP_KEY_DATE_FORMAT} for arguments.
 	 * </p>
 	 * 
@@ -214,14 +214,14 @@ public abstract class BackupServiceSupport implements BackupService {
 	 * @since 1.1
 	 */
 	public static final BackupIdentity identityFromBackupKey(String key) {
-		return identityFromBackupKey(NODE_AND_DATE_BACKUP_KEY_PATTERN, BACKUP_KEY_DATE_FORMAT, key);
+		return identityFromBackupKey(Edge_AND_DATE_BACKUP_KEY_PATTERN, BACKUP_KEY_DATE_FORMAT, key);
 	}
 
 	/**
 	 * Extract backup identity information from a backup key.
 	 * 
-	 * @param nodeIdAndDatePattern
-	 *        a pattern that contains groups for a node ID, date, and an
+	 * @param EdgeIdAndDatePattern
+	 *        a pattern that contains groups for a Edge ID, date, and an
 	 *        optional qualifier
 	 * @param dateFormat
 	 *        the date format to parse the date with
@@ -230,21 +230,21 @@ public abstract class BackupServiceSupport implements BackupService {
 	 * @return the extracted details, or {@literal null} if none found
 	 * @since 1.1
 	 */
-	public static final BackupIdentity identityFromBackupKey(Pattern nodeIdAndDatePattern,
+	public static final BackupIdentity identityFromBackupKey(Pattern EdgeIdAndDatePattern,
 			String dateFormat, String key) {
 		BackupIdentity result = null;
 		if ( key != null ) {
-			Matcher m = nodeIdAndDatePattern.matcher(key);
+			Matcher m = EdgeIdAndDatePattern.matcher(key);
 			if ( m.find() ) {
 				final SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
 				try {
-					Long nodeId = Long.valueOf(m.group(1));
+					Long EdgeId = Long.valueOf(m.group(1));
 					Date date = sdf.parse(m.group(2));
 					String qualifier = null;
 					if ( m.groupCount() > 2 ) {
 						qualifier = m.group(m.groupCount());
 					}
-					result = new SimpleBackupIdentity(key, date, nodeId, qualifier);
+					result = new SimpleBackupIdentity(key, date, EdgeId, qualifier);
 				} catch ( NumberFormatException e ) {
 					// ignore
 				} catch ( ParseException e ) {

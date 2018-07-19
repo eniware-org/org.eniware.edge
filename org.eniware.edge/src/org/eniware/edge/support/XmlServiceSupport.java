@@ -81,8 +81,8 @@ public abstract class XmlServiceSupport extends HttpClientSupport {
 	private static final ConcurrentMap<String, GeneralDatumMetadata> SOURCE_METADATA_CACHE = new ConcurrentHashMap<String, GeneralDatumMetadata>(
 			4);
 
-	/** Special attribute key for a node ID value. */
-	public static final String ATTR_NODE_ID = "node-id";
+	/** Special attribute key for a Edge ID value. */
+	public static final String ATTR_Edge_ID = "Edge-id";
 
 	private NamespaceContext nsContext = null;
 	private DocumentBuilderFactory docBuilderFactory = null;
@@ -542,8 +542,8 @@ public abstract class XmlServiceSupport extends HttpClientSupport {
 			throws IOException {
 		PropertyDescriptor[] props = bean.getPropertyDescriptors();
 		boolean propsWritten = false;
-		if ( attributes != null && attributes.containsKey(ATTR_NODE_ID) ) {
-			out.write("nodeId=" + attributes.get(ATTR_NODE_ID));
+		if ( attributes != null && attributes.containsKey(ATTR_Edge_ID) ) {
+			out.write("EdgeId=" + attributes.get(ATTR_Edge_ID));
 			propsWritten = true;
 		}
 		for ( int i = 0; i < props.length; i++ ) {
@@ -654,7 +654,7 @@ public abstract class XmlServiceSupport extends HttpClientSupport {
 	 * 
 	 * <p>
 	 * This method calls {@link #webFormGet(BeanWrapper, String, Map)} followed
-	 * by {@link #extractBeanDataFromXml(Object, Node, Map)}.
+	 * by {@link #extractBeanDataFromXml(Object, Edge, Map)}.
 	 * </p>
 	 * 
 	 * @param bean

@@ -19,14 +19,14 @@ import org.springframework.web.filter.GenericFilterBean;
 import org.eniware.edge.IdentityService;
 
 /**
- * Filter to force the user to the node association setup if not already
+ * Filter to force the user to the Edge association setup if not already
  * associated.
  * 
  * @version 1.2
  */
 public class EdgeAssociationFilter extends GenericFilterBean implements Filter {
 
-	private static final String NODE_ASSOCIATE_PATH = "/associate";
+	private static final String Edge_ASSOCIATE_PATH = "/associate";
 	private static final String CSRF_PATH = "/csrf";
 	private static final String WEBSOCKET_PATH = "/ws";
 	private static final String PUB_PATH = "/pub/";
@@ -47,12 +47,12 @@ public class EdgeAssociationFilter extends GenericFilterBean implements Filter {
 	private void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		final String path = request.getPathInfo();
-		final Long nodeId = identityService.getNodeId();
-		if ( !(path.startsWith(NODE_ASSOCIATE_PATH) || path.equals(CSRF_PATH)
-				|| path.equals(WEBSOCKET_PATH) || path.startsWith(PUB_PATH)) && nodeId == null ) {
+		final Long EdgeId = identityService.getEdgeId();
+		if ( !(path.startsWith(Edge_ASSOCIATE_PATH) || path.equals(CSRF_PATH)
+				|| path.equals(WEBSOCKET_PATH) || path.startsWith(PUB_PATH)) && EdgeId == null ) {
 			// not associated yet, so redirect to associate start
-			response.sendRedirect(request.getContextPath() + NODE_ASSOCIATE_PATH);
-		} else if ( nodeId != null && path.startsWith(NODE_ASSOCIATE_PATH) ) {
+			response.sendRedirect(request.getContextPath() + Edge_ASSOCIATE_PATH);
+		} else if ( EdgeId != null && path.startsWith(Edge_ASSOCIATE_PATH) ) {
 			// not allowed to visit association URLs once associated
 			response.sendError(HttpServletResponse.SC_FORBIDDEN);
 		} else {

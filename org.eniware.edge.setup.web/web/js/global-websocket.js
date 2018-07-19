@@ -25,7 +25,7 @@ EniwareEdge.WebSocket = (function() {
 		headers[csrf.headerName] = csrf.token;
 		client.connect(headers, function(frame) {
 			stompClient = client;
-			console.info('Connected to node WebSocket');
+			console.info('Connected to Edge WebSocket');
 			
 			if ( !pingTask ) {
 				pingTask = setInterval(executePing, 60000);

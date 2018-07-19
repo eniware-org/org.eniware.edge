@@ -77,9 +77,9 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 	 * A format for turning a {@link Backup#getKey()} value into a zip file
 	 * name.
 	 */
-	public static final String ARCHIVE_KEY_NAME_FORMAT = "node-%2$d-backup-%1$s.zip";
+	public static final String ARCHIVE_KEY_NAME_FORMAT = "Edge-%2$d-backup-%1$s.zip";
 
-	private static final String ARCHIVE_NAME_FORMAT = "node-%2$d-backup-%1$tY%1$tm%1$tdT%1$tH%1$tM%1$tS.zip";
+	private static final String ARCHIVE_NAME_FORMAT = "Edge-%2$d-backup-%1$tY%1$tm%1$tdT%1$tH%1$tM%1$tS.zip";
 
 	private final Logger log = LoggerFactory.getLogger(getClass());
 
@@ -131,7 +131,7 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 	}
 
 	private String getArchiveKey(String archiveName) {
-		Matcher m = NODE_AND_DATE_BACKUP_KEY_PATTERN.matcher(archiveName);
+		Matcher m = Edge_AND_DATE_BACKUP_KEY_PATTERN.matcher(archiveName);
 		if ( m.find() ) {
 			return m.group(2);
 		}
@@ -175,8 +175,8 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 		if ( !backupDir.exists() ) {
 			backupDir.mkdirs();
 		}
-		final Long nodeId = nodeIdForArchiveFileName(props);
-		final String archiveName = String.format(ARCHIVE_NAME_FORMAT, now, nodeId);
+		final Long EdgeId = EdgeIdForArchiveFileName(props);
+		final String archiveName = String.format(ARCHIVE_NAME_FORMAT, now, EdgeId);
 		final File archiveFile = new File(backupDir, archiveName);
 		final String archiveKey = getArchiveKey(archiveName);
 		log.info("Starting backup to archive {}", archiveName);
@@ -201,7 +201,7 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 			zos.flush();
 			zos.finish();
 			log.info("Backup complete to archive {}", archiveName);
-			backup = new SimpleBackup(nodeId, now.getTime(), archiveKey, archiveFile.length(), true);
+			backup = new SimpleBackup(EdgeId, now.getTime(), archiveKey, archiveFile.length(), true);
 
 			// clean out older backups
 			File[] backupFiles = getAvailableBackupFiles();
@@ -239,23 +239,23 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 		return backup;
 	}
 
-	private final Long nodeIdForArchiveFileName(Map<String, String> props) {
-		Long nodeId = backupNodeIdFromProps(null, props);
-		if ( nodeId == 0L ) {
-			nodeId = nodeIdForArchiveFileName();
+	private final Long EdgeIdForArchiveFileName(Map<String, String> props) {
+		Long EdgeId = backupEdgeIdFromProps(null, props);
+		if ( EdgeId == 0L ) {
+			EdgeId = EdgeIdForArchiveFileName();
 		}
-		return nodeId;
+		return EdgeId;
 	}
 
-	private final Long nodeIdForArchiveFileName() {
+	private final Long EdgeIdForArchiveFileName() {
 		IdentityService service = (identityService != null ? identityService.service() : null);
-		final Long nodeId = (service != null ? service.getNodeId() : null);
-		return (nodeId != null ? nodeId : 0L);
+		final Long EdgeId = (service != null ? service.getEdgeId() : null);
+		return (EdgeId != null ? EdgeId : 0L);
 	}
 
 	private File getArchiveFileForBackup(final String backupKey) {
-		final Long nodeId = nodeIdForArchiveFileName();
-		if ( nodeId.intValue() == 0 ) {
+		final Long EdgeId = EdgeIdForArchiveFileName();
+		if ( EdgeId.intValue() == 0 ) {
 			// hmm, might be restoring from corrupted db; look for file with matching key only
 			File[] matches = backupDir.listFiles(new FilenameFilter() {
 
@@ -271,7 +271,7 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 			// not found
 			return null;
 		} else {
-			return new File(backupDir, String.format(ARCHIVE_KEY_NAME_FORMAT, backupKey, nodeId));
+			return new File(backupDir, String.format(ARCHIVE_KEY_NAME_FORMAT, backupKey, EdgeId));
 		}
 	}
 
@@ -318,7 +318,7 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 	 * Delete any existing backups.
 	 */
 	public void removeAllBackups() {
-		File[] archives = backupDir.listFiles(new ArchiveFilter(nodeIdForArchiveFileName()));
+		File[] archives = backupDir.listFiles(new ArchiveFilter(EdgeIdForArchiveFileName()));
 		if ( archives == null ) {
 			return;
 		}
@@ -338,7 +338,7 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 	 *         not exist
 	 */
 	private File[] getAvailableBackupFiles() {
-		File[] archives = backupDir.listFiles(new ArchiveFilter(nodeIdForArchiveFileName()));
+		File[] archives = backupDir.listFiles(new ArchiveFilter(EdgeIdForArchiveFileName()));
 		if ( archives != null ) {
 			Arrays.sort(archives, new Comparator<File>() {
 
@@ -353,17 +353,17 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 	}
 
 	private SimpleBackup createBackupForFile(File f, SimpleDateFormat sdf) {
-		Matcher m = NODE_AND_DATE_BACKUP_KEY_PATTERN.matcher(f.getName());
+		Matcher m = Edge_AND_DATE_BACKUP_KEY_PATTERN.matcher(f.getName());
 		if ( m.find() ) {
 			try {
 				Date d = sdf.parse(m.group(2));
-				Long nodeId = 0L;
+				Long EdgeId = 0L;
 				try {
-					nodeId = Long.valueOf(m.group(1));
+					EdgeId = Long.valueOf(m.group(1));
 				} catch ( NumberFormatException e ) {
 					// ignore this
 				}
-				return new SimpleBackup(nodeId, d, m.group(2), f.length(), true);
+				return new SimpleBackup(EdgeId, d, m.group(2), f.length(), true);
 			} catch ( ParseException e ) {
 				log.error("Error parsing date from archive " + f.getName() + ": " + e.getMessage());
 			}
@@ -424,17 +424,17 @@ public class FileSystemBackupService extends BackupServiceSupport implements Set
 
 	private static class ArchiveFilter implements FilenameFilter {
 
-		final Long nodeId;
+		final Long EdgeId;
 
-		private ArchiveFilter(Long nodeId) {
+		private ArchiveFilter(Long EdgeId) {
 			super();
-			this.nodeId = nodeId;
+			this.EdgeId = EdgeId;
 		}
 
 		@Override
 		public boolean accept(File dir, String name) {
-			Matcher m = NODE_AND_DATE_BACKUP_KEY_PATTERN.matcher(name);
-			return (m.find() && (nodeId == null || nodeId.equals(Long.valueOf(m.group(1))))
+			Matcher m = Edge_AND_DATE_BACKUP_KEY_PATTERN.matcher(name);
+			return (m.find() && (EdgeId == null || EdgeId.equals(Long.valueOf(m.group(1))))
 					&& name.endsWith(".zip"));
 		}
 

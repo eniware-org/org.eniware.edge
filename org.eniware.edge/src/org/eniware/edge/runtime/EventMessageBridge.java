@@ -12,7 +12,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.eniware.edge.DatumDataSource;
-import org.eniware.edge.NodeControlProvider;
+import org.eniware.edge.EdgeControlProvider;
 import org.eniware.edge.PlatformService;
 import org.eniware.edge.UploadService;
 import org.eniware.edge.dao.DatumDao;
@@ -36,7 +36,7 @@ import org.eniware.util.StringUtils;
 public class EventMessageBridge implements EventHandler {
 
 	/** A prefix automatically stripped from event topic values. */
-	public static final String NODE_EVENT_PREFIX = "net/eniwarenetwork/node/";
+	public static final String Edge_EVENT_PREFIX = "net/eniwarenetwork/Edge/";
 
 	/** The prefix automatically added to every message topic value. */
 	public static final String MESSAGE_TOPIC_PREFIX = "/topic/";
@@ -59,8 +59,8 @@ public class EventMessageBridge implements EventHandler {
 		map.put(DatumDataSource.EVENT_TOPIC_DATUM_CAPTURED, "datum/captured/{sourceId}");
 		map.put(DatumDao.EVENT_TOPIC_DATUM_STORED, "datum/stored/{sourceId}");
 		map.put(UploadService.EVENT_TOPIC_DATUM_UPLOADED, "datum/uploaded/{sourceId}");
-		map.put(NodeControlProvider.EVENT_TOPIC_CONTROL_INFO_CAPTURED, "control/captured/{controlId}");
-		map.put(NodeControlProvider.EVENT_TOPIC_CONTROL_INFO_CHANGED, "control/changed/{controlId}");
+		map.put(EdgeControlProvider.EVENT_TOPIC_CONTROL_INFO_CAPTURED, "control/captured/{controlId}");
+		map.put(EdgeControlProvider.EVENT_TOPIC_CONTROL_INFO_CHANGED, "control/changed/{controlId}");
 		return Collections.unmodifiableMap(map);
 	}
 
@@ -111,8 +111,8 @@ public class EventMessageBridge implements EventHandler {
 			}
 		}
 		topic = StringUtils.expandTemplateString(topic, data);
-		if ( topic.startsWith(NODE_EVENT_PREFIX) ) {
-			topic = topic.substring(NODE_EVENT_PREFIX.length());
+		if ( topic.startsWith(Edge_EVENT_PREFIX) ) {
+			topic = topic.substring(Edge_EVENT_PREFIX.length());
 		}
 
 		// remove double-slashes
@@ -195,7 +195,7 @@ public class EventMessageBridge implements EventHandler {
 	 * 
 	 * <p>
 	 * The event topic values are first stripped of any
-	 * {@link #NODE_EVENT_PREFIX}, and the resulting value used as a key to
+	 * {@link #Edge_EVENT_PREFIX}, and the resulting value used as a key to
 	 * lookup a message topic value to use from this map. The message topics can
 	 * use template variables as defined in
 	 * {@link StringUtils#expandTemplateString(String, Map)}; all the event

@@ -20,7 +20,7 @@ import org.springframework.jdbc.core.ConnectionCallback;
 import org.eniware.edge.domain.Datum;
 
 /**
- * Class to initialize a database for first-time use by a Eniware Node.
+ * Class to initialize a database for first-time use by a Eniware Edge.
  * 
  * <p>
  * The {@link DatabaseSetup#init()} method should be called once during
