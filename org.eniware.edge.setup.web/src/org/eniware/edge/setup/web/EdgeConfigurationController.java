@@ -24,12 +24,12 @@ import org.eniware.web.domain.Response;
  */
 @RequestMapping("/a")
 @RestController
-public class NodeConfigurationController extends BaseSetupWebServiceController {
+public class EdgeConfigurationController extends BaseSetupWebServiceController {
 
 	private final SetupService setupService;
 
 	@Autowired
-	public NodeConfigurationController(SetupService setupService) {
+	public EdgeConfigurationController(SetupService setupService) {
 		super();
 		this.setupService = setupService;
 	}

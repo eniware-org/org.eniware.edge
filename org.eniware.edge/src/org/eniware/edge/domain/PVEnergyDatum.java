@@ -14,19 +14,19 @@ package org.eniware.edge.domain;
 public interface PVEnergyDatum extends EnergyDatum {
 
 	/**
-	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralEdgeDatumSamples} instantaneous
 	 * sample key for {@link #getDCPower()} values.
 	 */
 	static final String DC_POWER_KEY = "dcPower";
 
 	/**
-	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralEdgeDatumSamples} instantaneous
 	 * sample key for {@link #getDCVoltage()} values.
 	 */
 	static final String DC_VOLTAGE_KEY = "dcVoltage";
 
 	/**
-	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralEdgeDatumSamples} instantaneous
 	 * sample key for {@link #getVoltage()} values.
 	 */
 	static final String VOLTAGE_KEY = "voltage";

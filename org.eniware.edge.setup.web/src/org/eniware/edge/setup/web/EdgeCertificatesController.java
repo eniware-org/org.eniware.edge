@@ -35,7 +35,7 @@ import org.eniware.edge.setup.PKIService;
  */
 @ServiceAwareController
 @RequestMapping("/a/certs")
-public class NodeCertificatesController extends BaseSetupController {
+public class EdgeCertificatesController extends BaseSetupController {
 
 	@Autowired
 	private PKIService pkiService;

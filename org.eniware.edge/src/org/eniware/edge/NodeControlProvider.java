@@ -6,7 +6,7 @@
 package org.eniware.edge;
 
 import java.util.List;
-import org.eniware.domain.NodeControlInfo;
+import org.eniware.domain.EdgeControlInfo;
 
 /**
  * API for control providers to implement.
@@ -21,7 +21,7 @@ public interface NodeControlProvider extends Identifiable {
 
 	/**
 	 * An {@link org.osgi.service.event.Event} topic for when a
-	 * {@link NodeControlInfo} has been read, sampled, or in some way captured
+	 * {@link EdgeControlInfo} has been read, sampled, or in some way captured
 	 * by a {@link NodeControlProvider}. The properties of the event shall be
 	 * any of the JavaBean properties of the NodeControlInfo supported by events
 	 * (i.e. any simple Java property such as numbers and strings) with enums
@@ -56,6 +56,6 @@ public interface NodeControlProvider extends Identifiable {
 	 *        the ID of the control to get the info for
 	 * @return the current value
 	 */
-	NodeControlInfo getCurrentControlInfo(String controlId);
+	EdgeControlInfo getCurrentControlInfo(String controlId);
 
 }

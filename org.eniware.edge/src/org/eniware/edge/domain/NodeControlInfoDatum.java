@@ -8,17 +8,17 @@ package org.eniware.edge.domain;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import org.eniware.domain.NodeControlInfo;
-import org.eniware.domain.NodeControlPropertyType;
+import org.eniware.domain.EdgeControlInfo;
+import org.eniware.domain.EdgeControlPropertyType;
 
 /**
- * Implementation of {@link NodeControlInfo} and {@link Datum}.
+ * Implementation of {@link EdgeControlInfo} and {@link Datum}.
  * 
  * @version 1.1
  */
-public class NodeControlInfoDatum extends BaseDatum implements NodeControlInfo {
+public class NodeControlInfoDatum extends BaseDatum implements EdgeControlInfo {
 
-	private NodeControlPropertyType type;
+	private EdgeControlPropertyType type;
 	private String value;
 	private Boolean readonly;
 	private String unit;
@@ -35,7 +35,7 @@ public class NodeControlInfoDatum extends BaseDatum implements NodeControlInfo {
 	}
 
 	@Override
-	public NodeControlPropertyType getType() {
+	public EdgeControlPropertyType getType() {
 		return type;
 	}
 
@@ -143,7 +143,7 @@ public class NodeControlInfoDatum extends BaseDatum implements NodeControlInfo {
 		return true;
 	}
 
-	public void setType(NodeControlPropertyType type) {
+	public void setType(EdgeControlPropertyType type) {
 		this.type = type;
 	}
 

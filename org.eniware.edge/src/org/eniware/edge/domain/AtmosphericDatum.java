@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 public interface AtmosphericDatum extends Datum {
 
 	/**
-	 * A {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
+	 * A {@link org.eniware.domain.GeneralEdgeDatumSamples} instantaneous
 	 * sample key for {@link AtmosphericDatum#getTemperature()} values.
 	 */
 	static final String TEMPERATURE_KEY = "temp";

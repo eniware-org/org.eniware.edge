@@ -65,3 +65,4 @@ Import-Package:
  org.supercsv.io;version="[2.1,3.0)",
  org.supercsv.prefs;version="[2.1,3.0)",
  org.supercsv.util;version="[2.1,3.0)"
+Automatic-Module-Name: org.eniware.edge.dao.jdbc

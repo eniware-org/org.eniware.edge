@@ -14,3 +14,4 @@ Import-Package:
  org.eniware.edge.reactor;version="1.1.0",
  org.eniware.edge.reactor.support;version="1.2.0",
  org.eniware.edge.support;version="1.13.0"
+Automatic-Module-Name: org.eniware.edge.reactor.io.json

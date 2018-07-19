@@ -73,3 +73,4 @@ Import-Package:
  org.springframework.util;version="[4.2,5.0)",
  org.w3c.dom,
  org.xml.sax
+Automatic-Module-Name: org.eniware.edge

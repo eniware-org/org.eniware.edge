@@ -11,7 +11,7 @@ package org.eniware.edge.setup.web.support;
  * 
  * @version 1.1
  */
-public class AssociateNodeCommand {
+public class AssociateEdgeCommand {
 
 	private String verificationCode;
 	private String keystorePassword;

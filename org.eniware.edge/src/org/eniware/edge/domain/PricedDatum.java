@@ -14,13 +14,13 @@ package org.eniware.edge.domain;
 public interface PricedDatum {
 
 	/**
-	 * A {@link org.eniware.domain.GeneralNodeDatumSamples} status sample
+	 * A {@link org.eniware.domain.GeneralEdgeDatumSamples} status sample
 	 * key for {@link #getPriceLocationId()} values.
 	 */
 	public static final String PRICE_LOCATION_KEY = "priceLocationId";
 
 	/**
-	 * A {@link org.eniware.domain.GeneralNodeDatumSamples} status sample
+	 * A {@link org.eniware.domain.GeneralEdgeDatumSamples} status sample
 	 * key for {@link #getPriceSourceId()} values.
 	 * 
 	 * @since 1.1

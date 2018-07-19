@@ -19,13 +19,13 @@ package org.eniware.edge.domain;
 public interface EnergyDatum extends Datum {
 
 	/**
-	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} accumulating
+	 * The {@link org.eniware.domain.GeneralEdgeDatumSamples} accumulating
 	 * sample key for {@link #getWattHourReading()} values.
 	 */
 	public static final String WATT_HOUR_READING_KEY = "wattHours";
 
 	/**
-	 * The {@link org.eniware.domain.GeneralNodeDatumSamples} instantaneous
+	 * The {@link org.eniware.domain.GeneralEdgeDatumSamples} instantaneous
 	 * sample key for {@link #getWatts()} values.
 	 */
 	public static final String WATTS_KEY = "watts";

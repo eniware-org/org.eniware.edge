@@ -14,7 +14,7 @@ import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 import org.eniware.domain.GeneralDatumSamples;
-import org.eniware.domain.GeneralNodeDatumSamples;
+import org.eniware.domain.GeneralEdgeDatumSamples;
 import org.eniware.edge.domain.GeneralNodeDatum;
 
 import org.eniware.edge.dao.jdbc.AbstractJdbcDatumDao;
@@ -121,9 +121,9 @@ public class JdbcGeneralNodeDatumDao extends AbstractJdbcDatumDao<GeneralNodeDat
 
 				String jdata = rs.getString(++col);
 				if ( jdata != null ) {
-					GeneralNodeDatumSamples s;
+					GeneralEdgeDatumSamples s;
 					try {
-						s = objectMapper.readValue(jdata, GeneralNodeDatumSamples.class);
+						s = objectMapper.readValue(jdata, GeneralEdgeDatumSamples.class);
 						datum.setSamples(s);
 					} catch ( IOException e ) {
 						log.error("Error deserializing JSON into GeneralNodeDatumSamples: {}",

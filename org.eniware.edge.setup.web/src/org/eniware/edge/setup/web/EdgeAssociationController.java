@@ -18,7 +18,7 @@ import java.util.concurrent.Future;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import org.eniware.edge.setup.web.support.AssociateNodeCommand;
+import org.eniware.edge.setup.web.support.AssociateEdgeCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -61,9 +61,9 @@ import org.eniware.web.domain.Response;
  * @version 1.3
  */
 @Controller
-@SessionAttributes({ NodeAssociationController.KEY_DETAILS, NodeAssociationController.KEY_IDENTITY })
+@SessionAttributes({ EdgeAssociationController.KEY_DETAILS, EdgeAssociationController.KEY_IDENTITY })
 @RequestMapping("/associate")
-public class NodeAssociationController extends BaseSetupController {
+public class EdgeAssociationController extends BaseSetupController {
 
 	private static final String BACKUP_KEY_SESSION_KEY = "restoreBackupKey";
 	private static final String PAGE_ENTER_CODE = "associate/enter-code";
@@ -121,7 +121,7 @@ public class NodeAssociationController extends BaseSetupController {
 	 */
 	@RequestMapping(value = "", method = { RequestMethod.GET, RequestMethod.HEAD })
 	public String setupForm(Model model) {
-		model.addAttribute("command", new AssociateNodeCommand());
+		model.addAttribute("command", new AssociateEdgeCommand());
 		model.addAttribute(KEY_NETWORK_URL_MAP, networkURLs);
 		return PAGE_ENTER_CODE;
 	}
@@ -139,7 +139,7 @@ public class NodeAssociationController extends BaseSetupController {
 	 * @return the view name
 	 */
 	@RequestMapping(value = "/preview", method = RequestMethod.POST)
-	public String previewInvitation(@ModelAttribute("command") AssociateNodeCommand command,
+	public String previewInvitation(@ModelAttribute("command") AssociateEdgeCommand command,
 			Errors errors, Model model) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "verificationCode", "field.required");
 		if ( errors.hasErrors() ) {
@@ -172,7 +172,7 @@ public class NodeAssociationController extends BaseSetupController {
 	 * @return the view name
 	 */
 	@RequestMapping(value = "/verify", method = RequestMethod.POST)
-	public String verifyCode(@ModelAttribute("command") AssociateNodeCommand command, Errors errors,
+	public String verifyCode(@ModelAttribute("command") AssociateEdgeCommand command, Errors errors,
 			@ModelAttribute(KEY_DETAILS) NetworkAssociationDetails details, Model model) {
 		// Check expiration date
 		if ( details.getExpiration().getTime() < System.currentTimeMillis() ) {
@@ -213,7 +213,7 @@ public class NodeAssociationController extends BaseSetupController {
 	 * @return the view name
 	 */
 	@RequestMapping(value = "/confirm", method = RequestMethod.POST)
-	public String confirmIdentity(@ModelAttribute("command") AssociateNodeCommand command, Errors errors,
+	public String confirmIdentity(@ModelAttribute("command") AssociateEdgeCommand command, Errors errors,
 			@ModelAttribute(KEY_DETAILS) NetworkAssociationDetails details, Model model) {
 		try {
 

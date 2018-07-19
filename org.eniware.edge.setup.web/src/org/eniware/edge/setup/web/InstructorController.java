@@ -22,7 +22,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.eniware.domain.NodeControlInfo;
+import org.eniware.domain.EdgeControlInfo;
 import org.eniware.edge.NodeControlProvider;
 import org.eniware.edge.reactor.InstructionHandler;
 import org.eniware.edge.reactor.InstructionStatus;
@@ -75,7 +75,7 @@ public class InstructorController {
 		}
 		if ( provider != null ) {
 			model.put(KEY_CONTROL_ID, controlId);
-			NodeControlInfo info = null;
+			EdgeControlInfo info = null;
 			try {
 				info = provider.getCurrentControlInfo(controlId);
 			} catch ( RuntimeException e ) {

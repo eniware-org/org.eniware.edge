@@ -15,7 +15,7 @@
 
 	<osgix:cm-properties id="setup.web.cfg" persistent-id="org.eniware.edge.setup.web">
 		<prop key="mail.sender">nobody@localhost.localdomain</prop>
-		<prop key="link.eniwareuser">https://data.network.eniware.org/eniwareuser</prop>
+		<prop key="link.eniwareuser">https://data.network.eniware.org//eniwareuser</prop>
 	</osgix:cm-properties>
 	
 	<!-- Service References -->

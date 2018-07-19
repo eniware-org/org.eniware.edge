@@ -24,7 +24,7 @@ import org.eniware.edge.IdentityService;
  * 
  * @version 1.2
  */
-public class NodeAssociationFilter extends GenericFilterBean implements Filter {
+public class EdgeAssociationFilter extends GenericFilterBean implements Filter {
 
 	private static final String NODE_ASSOCIATE_PATH = "/associate";
 	private static final String CSRF_PATH = "/csrf";

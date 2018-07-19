@@ -16,8 +16,8 @@ import java.util.Map;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventAdmin;
 import org.springframework.context.MessageSource;
-import org.eniware.domain.NodeControlInfo;
-import org.eniware.domain.NodeControlPropertyType;
+import org.eniware.domain.EdgeControlInfo;
+import org.eniware.domain.EdgeControlPropertyType;
 import org.eniware.edge.NodeControlProvider;
 import org.eniware.edge.domain.NodeControlInfoDatum;
 import org.eniware.edge.io.modbus.ModbusConnection;
@@ -113,7 +113,7 @@ public class ModbusToggler extends ModbusDeviceSupport
 	}
 
 	@Override
-	public NodeControlInfo getCurrentControlInfo(String controlId) {
+	public EdgeControlInfo getCurrentControlInfo(String controlId) {
 		// read the control's current status
 		log.debug("Reading {} status", controlId);
 		NodeControlInfoDatum result = null;
@@ -133,7 +133,7 @@ public class ModbusToggler extends ModbusDeviceSupport
 		NodeControlInfoDatum info = new NodeControlInfoDatum();
 		info.setCreated(new Date());
 		info.setSourceId(controlId);
-		info.setType(NodeControlPropertyType.Boolean);
+		info.setType(EdgeControlPropertyType.Boolean);
 		info.setReadonly(false);
 		info.setValue(status.toString());
 		return info;
