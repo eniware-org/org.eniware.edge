@@ -1,23 +1,22 @@
-<%@ taglib prefix="pack" uri="http://packtag.sf.net" %>
 <setup:url value='/' var="basePath"/>
 <meta name="base-path" content="${fn:endsWith(basePath, '/') 
 	? fn:substring(basePath, 0, fn:length(basePath) - 1) 
 	: basePath}" />
-<pack:style context="${basePath}">
+<style context="${basePath}">
 	/css/bootstrap.css
 	/css/bootstrap-responsive.css
 	/css/ladda.css
 	/css/eniwareedge.css
 	/css/fonts.css
 	/css/font-awesome.css
-</pack:style>
+</style>
 <sec:authorize access="!hasRole('ROLE_USER')">
 	<setup:resources type="text/css"/>
 </sec:authorize>
 <sec:authorize access="hasRole('ROLE_USER')">
 	<setup:resources type="text/css" role='USER'/>
 </sec:authorize>
-<pack:script context="${basePath}"> 
+<script context="${basePath}"> 
 	/js-lib/jquery-1.12.4.js
 	/js-lib/bootstrap.js
 	/js-lib/ladda.js
@@ -34,7 +33,7 @@
 	/js/settings.js
 	/js/new-Edge.js
 	/js/plugins.js
-</pack:script>
+</script>
 <sec:authorize access="!hasRole('ROLE_USER')">
 	<setup:resources type="application/javascript"/>
 </sec:authorize>
