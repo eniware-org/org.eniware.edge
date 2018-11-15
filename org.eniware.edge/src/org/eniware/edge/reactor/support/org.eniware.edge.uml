@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_3_dIQOjlEeilbsvZjylwTQ" name="org_eniware_edge">
+    <eAnnotations xmi:id="_4IHVAOjlEeilbsvZjylwTQ" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_4IHVAejlEeilbsvZjylwTQ" source="codegen">
+        <details xmi:id="_4IH8EOjlEeilbsvZjylwTQ" key="codegenDirectory" value="/org.eniware.edge/src"/>
+        <details xmi:id="_4X3oQOjlEeilbsvZjylwTQ" key="AssociatedSourceCode" value="/org.eniware.edge/src/org/eniware/edge/reactor/support/BasicInstruction.java;3801102331/1;/org.eniware.edge/src/org/eniware/edge/reactor/support/BasicInstructionStatus.java;3892623008/1;/org.eniware.edge/src/org/eniware/edge/reactor/support/DelegatingReactorSerialization.java;2444002990/1;/org.eniware.edge/src/org/eniware/edge/reactor/support/InstructionStatusPropertyEditor.java;3614495506/1;/org.eniware.edge/src/org/eniware/edge/reactor/support/InstructionUtils.java;1590284085/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_4SZ5cOjlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_4SZ5cejlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_4SZ5cujlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_4SaggOjlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_4SaggejlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_4SaggujlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_4Sagg-jlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_4SaghOjlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_4SaghejlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4R8mcOjlEeilbsvZjylwTQ" name="org">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4R8mcejlEeilbsvZjylwTQ" name="eniware">
+        <packagedElement xmi:type="uml:Package" xmi:id="_4R8mcujlEeilbsvZjylwTQ" name="edge">
+          <packagedElement xmi:type="uml:Package" xmi:id="_4R8mc-jlEeilbsvZjylwTQ" name="reactor">
+            <packagedElement xmi:type="uml:Package" xmi:id="_4SA34OjlEeilbsvZjylwTQ" name="support">
+              <packagedElement xmi:type="uml:Class" xmi:id="_4SZSYOjlEeilbsvZjylwTQ" name="BasicInstruction">
+                <ownedComment xmi:id="_4Um44OjlEeilbsvZjylwTQ">
+                  <body>Basic implementation of {@link Instruction}.
+ *
+@version $Revision$</body>
+                </ownedComment>
+                <ownedAttribute xmi:id="_4UTW4OjlEeilbsvZjylwTQ" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_4UTW4ejlEeilbsvZjylwTQ" value="5522509637377814131L"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:id="_4UTW4ujlEeilbsvZjylwTQ" name="id" visibility="private" isLeaf="true" type="_4T01wujlEeilbsvZjylwTQ" isReadOnly="true"/>
+                <ownedAttribute xmi:id="_4UT98ejlEeilbsvZjylwTQ" name="topic" visibility="private" isLeaf="true" isReadOnly="true">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:id="_4UUlAejlEeilbsvZjylwTQ" name="instructionDate" isLeaf="true" type="_4TbNIejlEeilbsvZjylwTQ" isReadOnly="true"/>
+                <ownedAttribute xmi:id="_4UVMFOjlEeilbsvZjylwTQ" name="remoteInstructionId" visibility="private" isLeaf="true" isReadOnly="true">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:id="_4UVzIejlEeilbsvZjylwTQ" name="instructorId" visibility="private" isLeaf="true" isReadOnly="true">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:id="_4UWaMejlEeilbsvZjylwTQ" name="status" visibility="private" isLeaf="true" type="_4TeQcejlEeilbsvZjylwTQ" isReadOnly="true" association="_4Up8MOjlEeilbsvZjylwTQ"/>
+                <ownedAttribute xmi:id="_4UXBQejlEeilbsvZjylwTQ" name="parameters" visibility="private" isLeaf="true" type="_4TcbQejlEeilbsvZjylwTQ" isReadOnly="true" association="_4UqjQejlEeilbsvZjylwTQ">
+                  <qualifier xmi:id="_4UYPYOjlEeilbsvZjylwTQ">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </qualifier>
+                </ownedAttribute>
+                <interfaceRealization xmi:id="_4T0OsOjlEeilbsvZjylwTQ" client="_4SZSYOjlEeilbsvZjylwTQ" supplier="_4TdpYejlEeilbsvZjylwTQ" contract="_4TdpYejlEeilbsvZjylwTQ"/>
+                <interfaceRealization xmi:id="_4T01wOjlEeilbsvZjylwTQ" client="_4SZSYOjlEeilbsvZjylwTQ" supplier="_4TZX8OjlEeilbsvZjylwTQ" contract="_4TZX8OjlEeilbsvZjylwTQ"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UfkIujlEeilbsvZjylwTQ" name="BasicInstruction" specification="_4T2q8OjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UfkI-jlEeilbsvZjylwTQ" name="topic">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UfkJOjlEeilbsvZjylwTQ" name="instructionDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UfkJejlEeilbsvZjylwTQ" name="remoteInstructionId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UfkJujlEeilbsvZjylwTQ" name="instructorId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UfkJ-jlEeilbsvZjylwTQ" name="status" type="_4TeQcejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UfkKOjlEeilbsvZjylwTQ" type="_4SZSYOjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>this(null, topic, instructionDate, remoteInstructionId, instructorId, status);
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UgLMOjlEeilbsvZjylwTQ" name="BasicInstruction" specification="_4T35EOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UgLMejlEeilbsvZjylwTQ" name="id" type="_4T01wujlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UgLMujlEeilbsvZjylwTQ" name="topic">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UgLM-jlEeilbsvZjylwTQ" name="instructionDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UgLNOjlEeilbsvZjylwTQ" name="remoteInstructionId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UgLNejlEeilbsvZjylwTQ" name="instructorId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UgLNujlEeilbsvZjylwTQ" name="status" type="_4TeQcejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UgLN-jlEeilbsvZjylwTQ" type="_4SZSYOjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>this.id = id;
+		this.topic = topic;
+		this.instructionDate = instructionDate;
+		this.remoteInstructionId = remoteInstructionId;
+		this.instructorId = instructorId;
+		this.status = status;
+		this.parameters = new LinkedHashMap&lt;String, List&lt;String>>();
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UgLOOjlEeilbsvZjylwTQ" name="getId" specification="_4ScVsOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UgLOejlEeilbsvZjylwTQ" type="_4T01wujlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return id;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UgLOujlEeilbsvZjylwTQ" name="getTopic" specification="_4Sc8w-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UgLO-jlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>return topic;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UgyQOjlEeilbsvZjylwTQ" name="getRemoteInstructionId" specification="_4Sdj0-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UgyQejlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>return remoteInstructionId;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UgyQujlEeilbsvZjylwTQ" name="getInstructorId" specification="_4SeK5OjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UgyQ-jlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>return instructorId;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UgyROjlEeilbsvZjylwTQ" name="getParameterNames" specification="_4Sex9OjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UgyRejlEeilbsvZjylwTQ" type="_4T4gIejlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return Collections.unmodifiableSet(parameters.keySet());
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UgyRujlEeilbsvZjylwTQ" name="isParameterAvailable" specification="_4SgnIOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UgyR-jlEeilbsvZjylwTQ" name="parameterName">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UgySOjlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>List&lt;String> values = parameters.get(parameterName);
+		return values != null;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UhZUOjlEeilbsvZjylwTQ" name="getParameterValue" specification="_4ShOMujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UhZUejlEeilbsvZjylwTQ" name="parameterName">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UhZUujlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>List&lt;String> values = parameters.get(parameterName);
+		return values == null ? null : values.get(0);
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UhZU-jlEeilbsvZjylwTQ" name="getAllParameterValues" specification="_4Sh1Q-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UhZVOjlEeilbsvZjylwTQ" name="parameterName">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UhZVejlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4UhZVujlEeilbsvZjylwTQ" value="*"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>List&lt;String> values = parameters.get(parameterName);
+		if ( values != null ) {
+			return values.toArray(new String[values.size()]);
+		}
+		return null;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UhZV-jlEeilbsvZjylwTQ" name="getStatus" specification="_4SjDY-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UhZWOjlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return status;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UhZWejlEeilbsvZjylwTQ" name="addParameter" specification="_4Sjqc-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UhZWujlEeilbsvZjylwTQ" name="name">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UhZW-jlEeilbsvZjylwTQ" name="value">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>assert name != null &amp;&amp; value != null;
+		List&lt;String> values = parameters.get(name);
+		if ( values == null ) {
+			values = new ArrayList&lt;String>(3);
+			parameters.put(name, values);
+		}
+		values.add(value);
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_4ScVsOjlEeilbsvZjylwTQ" name="getId" method="_4UgLOOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4T4gIOjlEeilbsvZjylwTQ" type="_4T01wujlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4Sc8w-jlEeilbsvZjylwTQ" name="getTopic" method="_4UgLOujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4Sc8xOjlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4Sdj0-jlEeilbsvZjylwTQ" name="getRemoteInstructionId" method="_4UgyQOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4SeK4OjlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4SeK5OjlEeilbsvZjylwTQ" name="getInstructorId" method="_4UgyQujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4Sex8OjlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4Sex9OjlEeilbsvZjylwTQ" name="getParameterNames" method="_4UgyROjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4T5HMejlEeilbsvZjylwTQ" type="_4T4gIejlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4SgnIOjlEeilbsvZjylwTQ" name="isParameterAvailable" method="_4UgyRujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4SgnIejlEeilbsvZjylwTQ" name="parameterName">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4SgnIujlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4ShOMujlEeilbsvZjylwTQ" name="getParameterValue" method="_4UhZUOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4ShOM-jlEeilbsvZjylwTQ" name="parameterName">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4ShONOjlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4Sh1Q-jlEeilbsvZjylwTQ" name="getAllParameterValues" method="_4UhZU-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4SicUOjlEeilbsvZjylwTQ" name="parameterName">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4SicUejlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4SicUujlEeilbsvZjylwTQ" value="*"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4SjDY-jlEeilbsvZjylwTQ" name="getStatus" method="_4UhZV-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4T5uQOjlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4Sjqc-jlEeilbsvZjylwTQ" name="addParameter" method="_4UhZWejlEeilbsvZjylwTQ">
+                  <ownedComment xmi:id="_4Um44ejlEeilbsvZjylwTQ">
+                    <body>Add a new parameter value.
+	 * 
+	 * @param name the parameter name
+	 * @param value the parameter value</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_4SjqdOjlEeilbsvZjylwTQ" name="name">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4SkRgOjlEeilbsvZjylwTQ" name="value">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4T2q8OjlEeilbsvZjylwTQ" name="BasicInstruction" method="_4UfkIujlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_4T2q9ujlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_4T3SAOjlEeilbsvZjylwTQ" key="create"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_4T2q8ejlEeilbsvZjylwTQ" name="topic">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4T2q8ujlEeilbsvZjylwTQ" name="instructionDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T2q8-jlEeilbsvZjylwTQ" name="remoteInstructionId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4T2q9OjlEeilbsvZjylwTQ" name="instructorId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4T2q9ejlEeilbsvZjylwTQ" name="status" type="_4TeQcejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T3SAejlEeilbsvZjylwTQ" type="_4SZSYOjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4T35EOjlEeilbsvZjylwTQ" name="BasicInstruction" method="_4UgLMOjlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_4T35F-jlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_4T35GOjlEeilbsvZjylwTQ" key="create"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_4T35EejlEeilbsvZjylwTQ" name="id" type="_4T01wujlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T35EujlEeilbsvZjylwTQ" name="topic">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4T35E-jlEeilbsvZjylwTQ" name="instructionDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T35FOjlEeilbsvZjylwTQ" name="remoteInstructionId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4T35FejlEeilbsvZjylwTQ" name="instructorId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4T35FujlEeilbsvZjylwTQ" name="status" type="_4TeQcejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T35GejlEeilbsvZjylwTQ" type="_4SZSYOjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_4Sn74OjlEeilbsvZjylwTQ" name="BasicInstructionStatus">
+                <ownedComment xmi:id="_4Um44ujlEeilbsvZjylwTQ">
+                  <body>Basic implementation of {@link InstructionStatus}.
+
+@version 1.2</body>
+                </ownedComment>
+                <ownedAttribute xmi:id="_4UY2cOjlEeilbsvZjylwTQ" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_4UY2cejlEeilbsvZjylwTQ" value="4584466858414350595L"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:id="_4UY2cujlEeilbsvZjylwTQ" name="instructionId" visibility="private" isLeaf="true" type="_4T01wujlEeilbsvZjylwTQ" isReadOnly="true"/>
+                <ownedAttribute xmi:id="_4UZdgejlEeilbsvZjylwTQ" name="instructionState" visibility="private" isLeaf="true" type="_4T7jcOjlEeilbsvZjylwTQ" isReadOnly="true" association="_4UrKUejlEeilbsvZjylwTQ"/>
+                <ownedAttribute xmi:id="_4UaEkejlEeilbsvZjylwTQ" name="acknowledgedInstructionState" visibility="private" isLeaf="true" type="_4T7jcOjlEeilbsvZjylwTQ" isReadOnly="true" association="_4UrxYejlEeilbsvZjylwTQ"/>
+                <ownedAttribute xmi:id="_4UaroOjlEeilbsvZjylwTQ" name="statusDate" isLeaf="true" type="_4TbNIejlEeilbsvZjylwTQ" isReadOnly="true"/>
+                <ownedAttribute xmi:id="_4UbSs-jlEeilbsvZjylwTQ" name="resultParameters" isLeaf="true" type="_4TdCUejlEeilbsvZjylwTQ" isReadOnly="true" association="_4UsYcejlEeilbsvZjylwTQ"/>
+                <interfaceRealization xmi:id="_4T68YOjlEeilbsvZjylwTQ" client="_4Sn74OjlEeilbsvZjylwTQ" supplier="_4TeQcejlEeilbsvZjylwTQ" contract="_4TeQcejlEeilbsvZjylwTQ"/>
+                <interfaceRealization xmi:id="_4T68YejlEeilbsvZjylwTQ" client="_4Sn74OjlEeilbsvZjylwTQ" supplier="_4TZX8OjlEeilbsvZjylwTQ" contract="_4TZX8OjlEeilbsvZjylwTQ"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UincOjlEeilbsvZjylwTQ" name="BasicInstructionStatus" specification="_4T9YoOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UincejlEeilbsvZjylwTQ" name="instructionId" type="_4T01wujlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UincujlEeilbsvZjylwTQ" name="instructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4Uinc-jlEeilbsvZjylwTQ" name="statusDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UindOjlEeilbsvZjylwTQ" type="_4Sn74OjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>this(instructionId, instructionState, statusDate, null, null);
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UindejlEeilbsvZjylwTQ" name="BasicInstructionStatus" specification="_4T9_sOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UindujlEeilbsvZjylwTQ" name="instructionId" type="_4T01wujlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4Uind-jlEeilbsvZjylwTQ" name="instructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UineOjlEeilbsvZjylwTQ" name="statusDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UineejlEeilbsvZjylwTQ" name="ackInstructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UineujlEeilbsvZjylwTQ" type="_4Sn74OjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>this(instructionId, instructionState, statusDate, ackInstructionState, null);
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Uine-jlEeilbsvZjylwTQ" name="BasicInstructionStatus" specification="_4T_N0OjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UinfOjlEeilbsvZjylwTQ" name="instructionId" type="_4T01wujlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UinfejlEeilbsvZjylwTQ" name="instructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UinfujlEeilbsvZjylwTQ" name="statusDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4Uinf-jlEeilbsvZjylwTQ" name="ackInstructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UingOjlEeilbsvZjylwTQ" name="resultParameters" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UingejlEeilbsvZjylwTQ" type="_4Sn74OjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>this.instructionId = instructionId;
+		this.instructionState = instructionState;
+		this.statusDate = (statusDate == null ? new Date() : statusDate);
+		this.acknowledgedInstructionState = ackInstructionState;
+		this.resultParameters = resultParameters;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UjOgOjlEeilbsvZjylwTQ" name="toString" specification="_4SqYIOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UjOgejlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>StringBuilder builder = new StringBuilder();
+		builder.append(&quot;BasicInstructionStatus{&quot;);
+		if ( instructionId != null ) {
+			builder.append(&quot;instructionId=&quot;);
+			builder.append(instructionId);
+			builder.append(&quot;, &quot;);
+		}
+		if ( instructionState != null ) {
+			builder.append(&quot;instructionState=&quot;);
+			builder.append(instructionState);
+			builder.append(&quot;, &quot;);
+		}
+		if ( acknowledgedInstructionState != null ) {
+			builder.append(&quot;acknowledgedInstructionState=&quot;);
+			builder.append(acknowledgedInstructionState);
+			builder.append(&quot;, &quot;);
+		}
+		if ( statusDate != null ) {
+			builder.append(&quot;statusDate=&quot;);
+			builder.append(statusDate);
+		}
+		builder.append(&quot;}&quot;);
+		return builder.toString();
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UjOgujlEeilbsvZjylwTQ" name="newCopyWithState" specification="_4UAb8ejlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UjOg-jlEeilbsvZjylwTQ" name="newState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UjOhOjlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return new BasicInstructionStatus(this.instructionId, newState, this.statusDate,
+				this.acknowledgedInstructionState, this.resultParameters);
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UjOhejlEeilbsvZjylwTQ" name="newCopyWithAcknowledgedState" specification="_4UBqEujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UjOhujlEeilbsvZjylwTQ" name="newState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UjOh-jlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return new BasicInstructionStatus(this.instructionId, this.instructionState, this.statusDate,
+				newState, this.resultParameters);
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Uj1kOjlEeilbsvZjylwTQ" name="newCopyWithState" specification="_4UC4MOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4Uj1kejlEeilbsvZjylwTQ" name="newState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4Uj1kujlEeilbsvZjylwTQ" name="resultParameters" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4Uj1k-jlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return new BasicInstructionStatus(this.instructionId, newState, this.statusDate,
+				this.acknowledgedInstructionState, resultParameters);
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Uj1lOjlEeilbsvZjylwTQ" name="newCopyWithAcknowledgedState" specification="_4UEGUujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4Uj1lejlEeilbsvZjylwTQ" name="newState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4Uj1lujlEeilbsvZjylwTQ" name="resultParameters" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4Uj1l-jlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return new BasicInstructionStatus(this.instructionId, this.instructionState, this.statusDate,
+				newState, resultParameters);
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Uj1mOjlEeilbsvZjylwTQ" name="getInstructionId" specification="_4SrmQOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4Uj1mejlEeilbsvZjylwTQ" type="_4T01wujlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return instructionId;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Uj1mujlEeilbsvZjylwTQ" name="getInstructionState" specification="_4SsNUujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4Uj1m-jlEeilbsvZjylwTQ" type="_4T7jcOjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return instructionState;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UkcoOjlEeilbsvZjylwTQ" name="getAcknowledgedInstructionState" specification="_4Ss0Y-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UkcoejlEeilbsvZjylwTQ" type="_4T7jcOjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>return acknowledgedInstructionState;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_4SqYIOjlEeilbsvZjylwTQ" name="toString" method="_4UjOgOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4SqYIejlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4SrmQOjlEeilbsvZjylwTQ" name="getInstructionId" method="_4Uj1mOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UF7gOjlEeilbsvZjylwTQ" type="_4T01wujlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4SsNUujlEeilbsvZjylwTQ" name="getInstructionState" method="_4Uj1mujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UF7gejlEeilbsvZjylwTQ" type="_4T7jcOjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4Ss0Y-jlEeilbsvZjylwTQ" name="getAcknowledgedInstructionState" method="_4UkcoOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UF7gujlEeilbsvZjylwTQ" type="_4T7jcOjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4T9YoOjlEeilbsvZjylwTQ" name="BasicInstructionStatus" method="_4UincOjlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_4T9YpOjlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_4T9YpejlEeilbsvZjylwTQ" key="create"/>
+                  </eAnnotations>
+                  <ownedComment xmi:id="_4Um44-jlEeilbsvZjylwTQ">
+                    <body>Constructor.
+	 * 
+	 * @param instructionId
+	 *        the instruction ID
+	 * @param instructionState
+	 *        the instruction state
+	 * @param statusDate
+	 *        the status date</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_4T9YoejlEeilbsvZjylwTQ" name="instructionId" type="_4T01wujlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T9YoujlEeilbsvZjylwTQ" name="instructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T9Yo-jlEeilbsvZjylwTQ" name="statusDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T9YpujlEeilbsvZjylwTQ" type="_4Sn74OjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4T9_sOjlEeilbsvZjylwTQ" name="BasicInstructionStatus" method="_4UindejlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_4T-mwujlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_4T-mw-jlEeilbsvZjylwTQ" key="create"/>
+                  </eAnnotations>
+                  <ownedComment xmi:id="_4Um45OjlEeilbsvZjylwTQ">
+                    <body>Constructor.
+	 * 
+	 * @param instructionId
+	 *        the instruction ID
+	 * @param instructionState
+	 *        the instruction state
+	 * @param statusDate
+	 *        the status date
+	 * @param ackInstructionState
+	 *        the acknowledged state</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_4T9_sejlEeilbsvZjylwTQ" name="instructionId" type="_4T01wujlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T9_sujlEeilbsvZjylwTQ" name="instructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T-mwOjlEeilbsvZjylwTQ" name="statusDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T-mwejlEeilbsvZjylwTQ" name="ackInstructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T-mxOjlEeilbsvZjylwTQ" type="_4Sn74OjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4T_N0OjlEeilbsvZjylwTQ" name="BasicInstructionStatus" method="_4Uine-jlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_4T_04OjlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_4T_04ejlEeilbsvZjylwTQ" key="create"/>
+                  </eAnnotations>
+                  <ownedComment xmi:id="_4Um45ejlEeilbsvZjylwTQ">
+                    <body>Constructor.
+	 * 
+	 * @param instructionId
+	 *        the instruction ID
+	 * @param instructionState
+	 *        the instruction state
+	 * @param statusDate
+	 *        the status date
+	 * @param ackInstructionState
+	 *        the acknowledged state
+	 * @param resultParameters
+	 *        the result parameters
+	 * @since 1.2</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_4T_N0ejlEeilbsvZjylwTQ" name="instructionId" type="_4T01wujlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T_N0ujlEeilbsvZjylwTQ" name="instructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T_N0-jlEeilbsvZjylwTQ" name="statusDate" type="_4TbNIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T_N1OjlEeilbsvZjylwTQ" name="ackInstructionState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T_N1ejlEeilbsvZjylwTQ" name="resultParameters" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4T_04ujlEeilbsvZjylwTQ" type="_4Sn74OjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4UAb8ejlEeilbsvZjylwTQ" name="newCopyWithState" method="_4UjOgujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UAb8ujlEeilbsvZjylwTQ" name="newState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UBDAOjlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4UBqEujlEeilbsvZjylwTQ" name="newCopyWithAcknowledgedState" method="_4UjOhejlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UBqE-jlEeilbsvZjylwTQ" name="newState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UBqFOjlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4UC4MOjlEeilbsvZjylwTQ" name="newCopyWithState" method="_4Uj1kOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UC4MejlEeilbsvZjylwTQ" name="newState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UC4MujlEeilbsvZjylwTQ" name="resultParameters" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UC4M-jlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4UEGUujlEeilbsvZjylwTQ" name="newCopyWithAcknowledgedState" method="_4Uj1lOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UEGU-jlEeilbsvZjylwTQ" name="newState" type="_4T7jcOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UEGVOjlEeilbsvZjylwTQ" name="resultParameters" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UEtYOjlEeilbsvZjylwTQ" type="_4TeQcejlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_4SziEOjlEeilbsvZjylwTQ" name="DelegatingReactorSerialization">
+                <ownedComment xmi:id="_4Unf8OjlEeilbsvZjylwTQ">
+                  <body>{@link ReactorSerializationService} that delegates to a collection of
+other {@link ReactorSerializationService}, making use of the first one
+that handles a given encode / decode request.
+
+&lt;p>In each method of the {@link ReactorSerializationService} API, this
+class will iterate over each configured delegate in the {@code serializers}
+property, calling the same method on each delegate. If the delegate does
+not throw an {@link IllegalArgumentException}, this class stops iterating
+and returns the delgate's result immediately.&lt;/p>
+
+&lt;p>The idea of this class is that many different Reactor IO services can
+be registered at once within the system to support different encodings
+all at the same time. This class is assumed to be published as a service
+with a higher ranking than all other {@link ReactorSerializationService}
+instances, so that consumers of the service use this one instead of any
+individual service directly.&lt;/p>
+
+&lt;p>The configurable properties of this class are:&lt;/p>
+
+&lt;dl class=&quot;class-properties&quot;>
+  &lt;dt>serializers&lt;/dt>
+  &lt;dd>Collection of {@link ReactorSerializationService} to delegate to.&lt;/dd>
+&lt;/dl>
+
+@version $Revision$</body>
+                </ownedComment>
+                <ownedAttribute xmi:id="_4UeWAOjlEeilbsvZjylwTQ" name="serializers" type="_4TpPkejlEeilbsvZjylwTQ" association="_4Us_gejlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_4UeWAujlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_4UeWA-jlEeilbsvZjylwTQ" key="generic_container"/>
+                  </eAnnotations>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4UeWAejlEeilbsvZjylwTQ" value="*"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:id="_4UeWBOjlEeilbsvZjylwTQ" name="log" visibility="private" isLeaf="true" type="_4Tp2oejlEeilbsvZjylwTQ" isReadOnly="true" association="_4UtmkejlEeilbsvZjylwTQ">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_4UeWBejlEeilbsvZjylwTQ" value="LoggerFactory.getLogger(getClass())"/>
+                </ownedAttribute>
+                <interfaceRealization xmi:id="_4UHJoOjlEeilbsvZjylwTQ" client="_4SziEOjlEeilbsvZjylwTQ" supplier="_4TpPkejlEeilbsvZjylwTQ" contract="_4TpPkejlEeilbsvZjylwTQ"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UkcoujlEeilbsvZjylwTQ" name="decodeInstructions" specification="_4UIXwejlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4Ukco-jlEeilbsvZjylwTQ" name="instructorId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UkcpOjlEeilbsvZjylwTQ" name="in" type="_4UHwsOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UkcpejlEeilbsvZjylwTQ" name="type">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UkcpujlEeilbsvZjylwTQ" name="properties" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4Ukcp-jlEeilbsvZjylwTQ" type="_4TdpYejlEeilbsvZjylwTQ" isOrdered="true" direction="return">
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4UkcqOjlEeilbsvZjylwTQ" value="*"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>for ( ReactorSerializationService delegate : serializers ) {
+			try {
+				return delegate.decodeInstructions(instructorId, in, type, properties);
+			} catch ( IllegalArgumentException e ) {
+				if ( log.isDebugEnabled() ) {
+					log.debug(&quot;ReactorSerializationService &quot; +delegate 
+							+&quot; does not support decoding &quot; +type);
+				}
+			}
+		}
+		return null;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UlDsOjlEeilbsvZjylwTQ" name="encodeInstructions" specification="_4UK0AOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UlDsejlEeilbsvZjylwTQ" name="instructions" type="_4ToogOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UlDsujlEeilbsvZjylwTQ" name="type">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UlDs-jlEeilbsvZjylwTQ" name="properties" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UlDtOjlEeilbsvZjylwTQ" type="_4UHwsOjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>for ( ReactorSerializationService delegate : serializers ) {
+			try {
+				return delegate.encodeInstructions(instructions, type, properties);
+			} catch ( IllegalArgumentException e ) {
+				if ( log.isDebugEnabled() ) {
+					log.debug(&quot;ReactorSerializationService &quot; +delegate 
+							+&quot; does not support encoding &quot; +type);
+				}
+			}
+		}
+		return null;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_4UIXwejlEeilbsvZjylwTQ" name="decodeInstructions" method="_4UkcoujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UI-0OjlEeilbsvZjylwTQ" name="instructorId">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UI-0ejlEeilbsvZjylwTQ" name="in" type="_4UHwsOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UI-0ujlEeilbsvZjylwTQ" name="type">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UI-0-jlEeilbsvZjylwTQ" name="properties" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UI-1OjlEeilbsvZjylwTQ" type="_4TdpYejlEeilbsvZjylwTQ" isOrdered="true" direction="return">
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4UI-1ejlEeilbsvZjylwTQ" value="*"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4UK0AOjlEeilbsvZjylwTQ" name="encodeInstructions" method="_4UlDsOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UK0AejlEeilbsvZjylwTQ" name="instructions" type="_4ToogOjlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UK0AujlEeilbsvZjylwTQ" name="type">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UK0A-jlEeilbsvZjylwTQ" name="properties" type="_4TdCUejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UK0BOjlEeilbsvZjylwTQ" type="_4UHwsOjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_4S2lYOjlEeilbsvZjylwTQ" name="InstructionStatusPropertyEditor">
+                <ownedComment xmi:id="_4Unf8ejlEeilbsvZjylwTQ">
+                  <body>PropertyEditor for {@link InstructionStatus} objects.
+
+@version $Revision$</body>
+                </ownedComment>
+                <generalization xmi:id="_4UPFcejlEeilbsvZjylwTQ" general="_4TthAOjlEeilbsvZjylwTQ"/>
+                <interfaceRealization xmi:id="_4UN3UejlEeilbsvZjylwTQ" client="_4S2lYOjlEeilbsvZjylwTQ" supplier="_4UNQQOjlEeilbsvZjylwTQ" contract="_4UNQQOjlEeilbsvZjylwTQ"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UlDtejlEeilbsvZjylwTQ" name="getAsText" specification="_4S3McOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UlDtujlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>Object val = getValue();
+		if ( val == null ) {
+			return null;
+		}
+		if ( val instanceof InstructionStatus  ) {
+			return ((InstructionStatus)val).getInstructionState().toString();
+		} 
+		throw new IllegalArgumentException(&quot;Unsupported duration object [&quot; 
+				+val.getClass() +&quot;]: &quot; +val);
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UlDt-jlEeilbsvZjylwTQ" name="setAsText" specification="_4S3zg-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UlDuOjlEeilbsvZjylwTQ" name="text">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <language>java</language>
+                  <body>InstructionStatus.InstructionState state = 
+				InstructionStatus.InstructionState.valueOf(text);
+		setValue(new BasicInstructionStatus(null, state, new Date()));
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UlqwOjlEeilbsvZjylwTQ" name="clone" specification="_4S4ak-jlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UlqwejlEeilbsvZjylwTQ" type="_4UHwsOjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>try {
+			return super.clone();
+		} catch ( CloneNotSupportedException e ) {
+			// should never get here
+			throw new RuntimeException(e);
+		}
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_4S3McOjlEeilbsvZjylwTQ" name="getAsText" method="_4UlDtejlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4S3McejlEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4S3zg-jlEeilbsvZjylwTQ" name="setAsText" method="_4UlDt-jlEeilbsvZjylwTQ" raisedException="_4UOeYOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4S3zhOjlEeilbsvZjylwTQ" name="text">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4S4ak-jlEeilbsvZjylwTQ" name="clone" method="_4UlqwOjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UPFcOjlEeilbsvZjylwTQ" type="_4UHwsOjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_4S6PwOjlEeilbsvZjylwTQ" name="InstructionUtils" isLeaf="true">
+                <ownedComment xmi:id="_4Unf8ujlEeilbsvZjylwTQ">
+                  <body>Utilities for dealing with common Instruction patterns.
+
+@version 1.1</body>
+                </ownedComment>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UlqwujlEeilbsvZjylwTQ" name="InstructionUtils" specification="_4S620OjlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4Ulqw-jlEeilbsvZjylwTQ" type="_4S6PwOjlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>// can't create me
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UlqxOjlEeilbsvZjylwTQ" name="handleInstruction" specification="_4UPFcujlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UlqxejlEeilbsvZjylwTQ" name="handlers" type="_4T4gIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UlqxujlEeilbsvZjylwTQ" name="instruction" type="_4TdpYejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4Ulqx-jlEeilbsvZjylwTQ" type="_4TvWMejlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>InstructionState result = null;
+		for ( InstructionHandler handler : handlers ) {
+			if ( handler.handlesTopic(instruction.getTopic()) ) {
+				result = handler.processInstruction(instruction);
+			}
+			if ( result != null ) {
+				break;
+			}
+		}
+		return result;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4UmR0OjlEeilbsvZjylwTQ" name="setControlParameter" specification="_4UQTkejlEeilbsvZjylwTQ">
+                  <ownedParameter xmi:id="_4UmR0ejlEeilbsvZjylwTQ" name="handlers" type="_4T4gIejlEeilbsvZjylwTQ">
+                    <eAnnotations xmi:id="_4UmR0ujlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                      <details xmi:id="_4UmR0-jlEeilbsvZjylwTQ" key="final"/>
+                    </eAnnotations>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UmR1OjlEeilbsvZjylwTQ" name="controlId">
+                    <eAnnotations xmi:id="_4UmR1ejlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                      <details xmi:id="_4UmR1ujlEeilbsvZjylwTQ" key="final"/>
+                    </eAnnotations>
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UmR1-jlEeilbsvZjylwTQ" name="controlValue">
+                    <eAnnotations xmi:id="_4UmR2OjlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                      <details xmi:id="_4UmR2ejlEeilbsvZjylwTQ" key="final"/>
+                    </eAnnotations>
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UmR2ujlEeilbsvZjylwTQ" type="_4TvWMejlEeilbsvZjylwTQ" direction="return"/>
+                  <language>java</language>
+                  <body>BasicInstruction instr = new BasicInstruction(InstructionHandler.TOPIC_SET_CONTROL_PARAMETER,
+				new Date(), Instruction.LOCAL_INSTRUCTION_ID, Instruction.LOCAL_INSTRUCTION_ID, null);
+		instr.addParameter(controlId, String.valueOf(controlValue));
+		return InstructionUtils.handleInstruction(handlers, instr);
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_4S620OjlEeilbsvZjylwTQ" name="InstructionUtils" visibility="private" method="_4UlqwujlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_4S620ejlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_4S620ujlEeilbsvZjylwTQ" key="create"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_4S620-jlEeilbsvZjylwTQ" type="_4S6PwOjlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4UPFcujlEeilbsvZjylwTQ" name="handleInstruction" isStatic="true" method="_4UlqxOjlEeilbsvZjylwTQ">
+                  <ownedComment xmi:id="_4Unf8-jlEeilbsvZjylwTQ">
+                    <body>Given a collection of {@link InstructionHandler} objects, find one that
+	 * can handle a specific {@link Instruction}.
+	 * 
+	 * &lt;p>
+	 * This method will iterate over the provided {@code handlers} and ask each
+	 * one if they handle the topic of the provided {@code instruction}. If the
+	 * handler does, it is asked to process the instruction. The first non-null
+	 * result returned by a handler will be returned.
+	 * &lt;/p>
+	 * 
+	 * @param handlers
+	 *        the collection of handlers to search over
+	 * @param instruction
+	 *        the instruction to ask the handlers to perform
+	 * @return the first non-null result of
+	 *         {@link InstructionHandler#processInstruction(Instruction)}, or
+	 *         &lt;em>null&lt;/em> if no handler returns a value</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_4UPsgOjlEeilbsvZjylwTQ" name="handlers" type="_4T4gIejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UPsgejlEeilbsvZjylwTQ" name="instruction" type="_4TdpYejlEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_4UPsgujlEeilbsvZjylwTQ" type="_4TvWMejlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_4UQTkejlEeilbsvZjylwTQ" name="setControlParameter" isStatic="true" method="_4UmR0OjlEeilbsvZjylwTQ">
+                  <ownedComment xmi:id="_4Unf9OjlEeilbsvZjylwTQ">
+                    <body>Given a collection of {@link InstructionHandler} objects, find the first
+	 * one that can handle the
+	 * {@link InstructionHandler#TOPIC_SET_CONTROL_PARAMETER} topic for the
+	 * given {@code controlId} and {@code controlValue}. The
+	 * {@link Instruction#getRemoteInstructionId()} and
+	 * {@link Instruction#getInstructorId()} values are set to
+	 * {@link Instruction#LOCAL_INSTRUCTION_ID}.
+	 * 
+	 * @param handlers
+	 *        the collection of handlers to search over
+	 * @param controlId
+	 *        the ID of the control to set the control value to
+	 * @param controlValue
+	 *        the value to set the control to
+	 * @return the first non-null result of
+	 *         {@link InstructionHandler#processInstruction(Instruction)}, or
+	 *         &lt;em>null&lt;/em> if no handler returns a value</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_4UQ6oOjlEeilbsvZjylwTQ" name="handlers" type="_4T4gIejlEeilbsvZjylwTQ">
+                    <eAnnotations xmi:id="_4UQ6pOjlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                      <details xmi:id="_4UQ6pejlEeilbsvZjylwTQ" key="final"/>
+                    </eAnnotations>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UQ6oejlEeilbsvZjylwTQ" name="controlId">
+                    <eAnnotations xmi:id="_4URhsejlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                      <details xmi:id="_4URhsujlEeilbsvZjylwTQ" key="final"/>
+                    </eAnnotations>
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UQ6oujlEeilbsvZjylwTQ" name="controlValue">
+                    <eAnnotations xmi:id="_4URhs-jlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                      <details xmi:id="_4URhtOjlEeilbsvZjylwTQ" key="final"/>
+                    </eAnnotations>
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_4UQ6o-jlEeilbsvZjylwTQ" type="_4TvWMejlEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_4T7jcOjlEeilbsvZjylwTQ" name="InstructionState"/>
+              <packagedElement xmi:type="uml:Association" xmi:id="_4Up8MOjlEeilbsvZjylwTQ" name="" memberEnd="_4Up8MejlEeilbsvZjylwTQ _4UWaMejlEeilbsvZjylwTQ">
+                <ownedEnd xmi:id="_4Up8MejlEeilbsvZjylwTQ" name="" type="_4SZSYOjlEeilbsvZjylwTQ" association="_4Up8MOjlEeilbsvZjylwTQ"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_4UqjQejlEeilbsvZjylwTQ" name="" memberEnd="_4UqjQujlEeilbsvZjylwTQ _4UXBQejlEeilbsvZjylwTQ">
+                <ownedEnd xmi:id="_4UqjQujlEeilbsvZjylwTQ" name="" type="_4SZSYOjlEeilbsvZjylwTQ" association="_4UqjQejlEeilbsvZjylwTQ"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_4UrKUejlEeilbsvZjylwTQ" name="" memberEnd="_4UrKUujlEeilbsvZjylwTQ _4UZdgejlEeilbsvZjylwTQ">
+                <ownedEnd xmi:id="_4UrKUujlEeilbsvZjylwTQ" name="" type="_4Sn74OjlEeilbsvZjylwTQ" association="_4UrKUejlEeilbsvZjylwTQ"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_4UrxYejlEeilbsvZjylwTQ" name="" memberEnd="_4UrxYujlEeilbsvZjylwTQ _4UaEkejlEeilbsvZjylwTQ">
+                <ownedEnd xmi:id="_4UrxYujlEeilbsvZjylwTQ" name="" type="_4Sn74OjlEeilbsvZjylwTQ" association="_4UrxYejlEeilbsvZjylwTQ"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_4UsYcejlEeilbsvZjylwTQ" name="" memberEnd="_4UsYcujlEeilbsvZjylwTQ _4UbSs-jlEeilbsvZjylwTQ">
+                <ownedEnd xmi:id="_4UsYcujlEeilbsvZjylwTQ" name="" type="_4Sn74OjlEeilbsvZjylwTQ" association="_4UsYcejlEeilbsvZjylwTQ"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_4Us_gejlEeilbsvZjylwTQ" name="" memberEnd="_4Us_gujlEeilbsvZjylwTQ _4UeWAOjlEeilbsvZjylwTQ">
+                <ownedEnd xmi:id="_4Us_gujlEeilbsvZjylwTQ" name="" type="_4SziEOjlEeilbsvZjylwTQ" association="_4Us_gejlEeilbsvZjylwTQ"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_4UtmkejlEeilbsvZjylwTQ" name="" memberEnd="_4UtmkujlEeilbsvZjylwTQ _4UeWBOjlEeilbsvZjylwTQ">
+                <ownedEnd xmi:id="_4UtmkujlEeilbsvZjylwTQ" name="" type="_4SziEOjlEeilbsvZjylwTQ" association="_4UtmkejlEeilbsvZjylwTQ"/>
+              </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_4SNsMOjlEeilbsvZjylwTQ" name="InstructionStatus">
+              <packagedElement xmi:type="uml:Enumeration" xmi:id="_4TvWMejlEeilbsvZjylwTQ" name="InstructionState"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_4TdpYejlEeilbsvZjylwTQ" name="Instruction"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_4TeQcejlEeilbsvZjylwTQ" name="InstructionStatus"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_4TpPkejlEeilbsvZjylwTQ" name="ReactorSerializationService"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_4TuvIOjlEeilbsvZjylwTQ" name="InstructionHandler"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_4SKB0OjlEeilbsvZjylwTQ" name="slf4j">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4Tp2oejlEeilbsvZjylwTQ" name="Logger"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4TqdsejlEeilbsvZjylwTQ" name="LoggerFactory"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4R8mdOjlEeilbsvZjylwTQ" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4R8mdejlEeilbsvZjylwTQ" name="io">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4TZX8OjlEeilbsvZjylwTQ" name="Serializable"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_4R9NgOjlEeilbsvZjylwTQ" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_4TZ_AejlEeilbsvZjylwTQ" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4TamEejlEeilbsvZjylwTQ" name="Collections"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_4TbNIejlEeilbsvZjylwTQ" name="Date"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4Tb0MejlEeilbsvZjylwTQ" name="LinkedHashMap"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4TcbQejlEeilbsvZjylwTQ" name="List"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4TdCUejlEeilbsvZjylwTQ" name="Map"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4ToogOjlEeilbsvZjylwTQ" name="Collection"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_4SL3AOjlEeilbsvZjylwTQ" name="beans">
+        <packagedElement xmi:type="uml:Class" xmi:id="_4TthAOjlEeilbsvZjylwTQ" name="PropertyEditorSupport"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_4T01wejlEeilbsvZjylwTQ" name="lang">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_4T01wujlEeilbsvZjylwTQ" name="Long"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4T4gIejlEeilbsvZjylwTQ" name="Iterable"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4UHwsOjlEeilbsvZjylwTQ" name="Object"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4UNQQOjlEeilbsvZjylwTQ" name="Cloneable"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4UOeYOjlEeilbsvZjylwTQ" name="IllegalArgumentException"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_4IH8EejlEeilbsvZjylwTQ">
+      <eAnnotations xmi:id="_4IH8EujlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_4IIjIOjlEeilbsvZjylwTQ" base_Package="_3_dIQOjlEeilbsvZjylwTQ">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4Sc8wOjlEeilbsvZjylwTQ" base_Element="_4ScVsOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4Sc8wejlEeilbsvZjylwTQ" base_Element="_4ScVsOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4Sc8wujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4Sdj0OjlEeilbsvZjylwTQ" base_Element="_4Sc8w-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4Sdj0ejlEeilbsvZjylwTQ" base_Element="_4Sc8w-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4Sdj0ujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4SeK4ejlEeilbsvZjylwTQ" base_Element="_4Sdj0-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4SeK4ujlEeilbsvZjylwTQ" base_Element="_4Sdj0-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4SeK4-jlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4Sex8ejlEeilbsvZjylwTQ" base_Element="_4SeK5OjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4Sex8ujlEeilbsvZjylwTQ" base_Element="_4SeK5OjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4Sex8-jlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Generics xmi:id="_4SgAEOjlEeilbsvZjylwTQ" genericsValue="String" base_Element="_4Sex9OjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4SgAEejlEeilbsvZjylwTQ" base_Element="_4Sex9OjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4SgAEujlEeilbsvZjylwTQ" base_Element="_4Sex9OjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4SgAE-jlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4SgnI-jlEeilbsvZjylwTQ" base_Element="_4SgnIOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4ShOMOjlEeilbsvZjylwTQ" base_Element="_4SgnIOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4ShOMejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4Sh1QOjlEeilbsvZjylwTQ" base_Element="_4ShOMujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4Sh1QejlEeilbsvZjylwTQ" base_Element="_4ShOMujlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4Sh1QujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Array xmi:id="_4SicU-jlEeilbsvZjylwTQ" base_Element="_4Sh1Q-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4SjDYOjlEeilbsvZjylwTQ" base_Element="_4Sh1Q-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4SjDYejlEeilbsvZjylwTQ" base_Element="_4Sh1Q-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4SjDYujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4SjqcOjlEeilbsvZjylwTQ" base_Element="_4SjDY-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4SjqcejlEeilbsvZjylwTQ" base_Element="_4SjDY-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4SjqcujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4Sq_MOjlEeilbsvZjylwTQ" base_Element="_4SqYIOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4Sq_MejlEeilbsvZjylwTQ" base_Element="_4SqYIOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4Sq_MujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4SrmQejlEeilbsvZjylwTQ" base_Element="_4SrmQOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4SsNUOjlEeilbsvZjylwTQ" base_Element="_4SrmQOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4SsNUejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4Ss0YOjlEeilbsvZjylwTQ" base_Element="_4SsNUujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4Ss0YejlEeilbsvZjylwTQ" base_Element="_4SsNUujlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4Ss0YujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4StbcOjlEeilbsvZjylwTQ" base_Element="_4Ss0Y-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4StbcejlEeilbsvZjylwTQ" base_Element="_4Ss0Y-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4StbcujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4S3zgOjlEeilbsvZjylwTQ" base_Element="_4S3McOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4S3zgejlEeilbsvZjylwTQ" base_Element="_4S3McOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4S3zgujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4S4akOjlEeilbsvZjylwTQ" base_Element="_4S3zg-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4S4akejlEeilbsvZjylwTQ" base_Element="_4S3zg-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4S4akujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4S5BoOjlEeilbsvZjylwTQ" base_Element="_4S4ak-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4S5BoejlEeilbsvZjylwTQ" base_Element="_4S4ak-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4S5BoujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_4TZ_AOjlEeilbsvZjylwTQ" base_Element="_4TZX8OjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TamEOjlEeilbsvZjylwTQ" base_Element="_4TZ_AejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TbNIOjlEeilbsvZjylwTQ" base_Element="_4TamEejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4Tb0MOjlEeilbsvZjylwTQ" base_Element="_4TbNIejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TcbQOjlEeilbsvZjylwTQ" base_Element="_4Tb0MejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TdCUOjlEeilbsvZjylwTQ" base_Element="_4TcbQejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TdpYOjlEeilbsvZjylwTQ" base_Element="_4TdCUejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TeQcOjlEeilbsvZjylwTQ" base_Element="_4TdpYejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4Te3gOjlEeilbsvZjylwTQ" base_Element="_4TeQcejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TpPkOjlEeilbsvZjylwTQ" base_Element="_4ToogOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4Tp2oOjlEeilbsvZjylwTQ" base_Element="_4TpPkejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TqdsOjlEeilbsvZjylwTQ" base_Element="_4Tp2oejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TrEwOjlEeilbsvZjylwTQ" base_Element="_4TqdsejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TuIEOjlEeilbsvZjylwTQ" base_Element="_4TthAOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4TvWMOjlEeilbsvZjylwTQ" base_Element="_4TuvIOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4Tv9QOjlEeilbsvZjylwTQ" base_Element="_4TvWMejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4T1c0OjlEeilbsvZjylwTQ" base_Element="_4T01wujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4T5HMOjlEeilbsvZjylwTQ" base_Element="_4T4gIejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4T8KgOjlEeilbsvZjylwTQ" base_Element="_4T7jcOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4UAb8OjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_4T_N1ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UBDAejlEeilbsvZjylwTQ" base_Element="_4UAb8ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4UBqEOjlEeilbsvZjylwTQ" base_Element="_4UAb8ejlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4UBqEejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UCRIOjlEeilbsvZjylwTQ" base_Element="_4UBqEujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4UCRIejlEeilbsvZjylwTQ" base_Element="_4UBqEujlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4UCRIujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UC4NOjlEeilbsvZjylwTQ" base_Element="_4UC4MOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4UDfQOjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_4UC4MujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4UEGUOjlEeilbsvZjylwTQ" base_Element="_4UC4MOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4UEGUejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UEtYejlEeilbsvZjylwTQ" base_Element="_4UEGUujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4UFUcOjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_4UEGVOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4UFUcejlEeilbsvZjylwTQ" base_Element="_4UEGUujlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4UFUcujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_4UIXwOjlEeilbsvZjylwTQ" base_Element="_4UHwsOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UJl4OjlEeilbsvZjylwTQ" base_Element="_4UIXwejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4UKM8OjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_4UI-0-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4UKM8ejlEeilbsvZjylwTQ" base_Element="_4UIXwejlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4UKM8ujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4ULbEOjlEeilbsvZjylwTQ" base_Element="_4UK0AOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4UMCIOjlEeilbsvZjylwTQ" genericsValue="Instruction" base_Element="_4UK0AejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4UMpMOjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_4UK0A-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4UMpMejlEeilbsvZjylwTQ" base_Element="_4UK0AOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4UMpMujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_4UN3UOjlEeilbsvZjylwTQ" base_Element="_4UNQQOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4UOeYejlEeilbsvZjylwTQ" base_Element="_4UOeYOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4UQTkOjlEeilbsvZjylwTQ" genericsValue="InstructionHandler" base_Element="_4UPsgOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4URhsOjlEeilbsvZjylwTQ" genericsValue="InstructionHandler" base_Element="_4UQ6oOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UT98OjlEeilbsvZjylwTQ" base_Element="_4UTW4ujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UUlAOjlEeilbsvZjylwTQ" base_Element="_4UT98ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UUlAujlEeilbsvZjylwTQ" base_Element="_4UUlAejlEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_4UVMEOjlEeilbsvZjylwTQ" name="getInstructionDate" method="_4UfkIOjlEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_4UVMEejlEeilbsvZjylwTQ" type="_4TbNIejlEeilbsvZjylwTQ" direction="return"/>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_4UVMEujlEeilbsvZjylwTQ" base_Element="_4UVMEOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4UVME-jlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UVzIOjlEeilbsvZjylwTQ" base_Element="_4UVMFOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UWaMOjlEeilbsvZjylwTQ" base_Element="_4UVzIejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UXBQOjlEeilbsvZjylwTQ" base_Element="_4UWaMejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4UXoUOjlEeilbsvZjylwTQ" genericsValue="String" base_Element="_4UXBQejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UXoUejlEeilbsvZjylwTQ" base_Element="_4UXBQejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UZdgOjlEeilbsvZjylwTQ" base_Element="_4UY2cujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UaEkOjlEeilbsvZjylwTQ" base_Element="_4UZdgejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UaEkujlEeilbsvZjylwTQ" base_Element="_4UaEkejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4UaroejlEeilbsvZjylwTQ" base_Element="_4UaroOjlEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_4UaroujlEeilbsvZjylwTQ" name="getStatusDate" method="_4UiAYOjlEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_4UbSsOjlEeilbsvZjylwTQ" type="_4TbNIejlEeilbsvZjylwTQ" direction="return"/>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_4UbSsejlEeilbsvZjylwTQ" base_Element="_4UaroujlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4UbSsujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4Ub5wOjlEeilbsvZjylwTQ" base_Element="_4UbSs-jlEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_4Ucg0ejlEeilbsvZjylwTQ" name="getResultParameters" method="_4UiAYujlEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_4UdH4ejlEeilbsvZjylwTQ" type="_4TdCUejlEeilbsvZjylwTQ" direction="return"/>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Generics xmi:id="_4Ucg0OjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_4UbSs-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_4UdH4OjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_4Ucg0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_4UdH4ujlEeilbsvZjylwTQ" base_Element="_4Ucg0ejlEeilbsvZjylwTQ">
+    <annotations xmi:id="_4Udu8OjlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4Ue9EOjlEeilbsvZjylwTQ" base_Element="_4UeWBOjlEeilbsvZjylwTQ"/>
+  <uml:OpaqueBehavior xmi:id="_4UfkIOjlEeilbsvZjylwTQ" name="getInstructionDate" specification="_4UVMEOjlEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_4UfkIejlEeilbsvZjylwTQ" type="_4TbNIejlEeilbsvZjylwTQ" direction="return"/>
+    <language>java</language>
+    <body>return instructionDate;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_4UiAYOjlEeilbsvZjylwTQ" name="getStatusDate" specification="_4UaroujlEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_4UiAYejlEeilbsvZjylwTQ" type="_4TbNIejlEeilbsvZjylwTQ" direction="return"/>
+    <language>java</language>
+    <body>return statusDate;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_4UiAYujlEeilbsvZjylwTQ" name="getResultParameters" specification="_4Ucg0ejlEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_4UiAY-jlEeilbsvZjylwTQ" type="_4TdCUejlEeilbsvZjylwTQ" direction="return"/>
+    <language>java</language>
+    <body>return resultParameters;
+	</body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:Reference xmi:id="_4UqjQOjlEeilbsvZjylwTQ" base_Element="_4Up8MOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4UrKUOjlEeilbsvZjylwTQ" base_Element="_4UqjQejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4UrxYOjlEeilbsvZjylwTQ" base_Element="_4UrKUejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4UsYcOjlEeilbsvZjylwTQ" base_Element="_4UrxYejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4Us_gOjlEeilbsvZjylwTQ" base_Element="_4UsYcejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4UtmkOjlEeilbsvZjylwTQ" base_Element="_4Us_gejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_4UuNoOjlEeilbsvZjylwTQ" base_Element="_4UtmkejlEeilbsvZjylwTQ"/>
+</xmi:XMI>

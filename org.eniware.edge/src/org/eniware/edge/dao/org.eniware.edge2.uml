@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_mSI6UOjXEeilbsvZjylwTQ" name="org_eniware_edge2">
+    <eAnnotations xmi:id="_mZA-YOjXEeilbsvZjylwTQ" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_mZA-YejXEeilbsvZjylwTQ" source="codegen">
+        <details xmi:id="_mZA-YujXEeilbsvZjylwTQ" key="codegenDirectory" value="/org.eniware.edge/src"/>
+        <details xmi:id="_mkvtQOjXEeilbsvZjylwTQ" key="AssociatedSourceCode" value="/org.eniware.edge/src/org/eniware/edge/dao/BasicBatchOptions.java;1235369369/1;/org.eniware.edge/src/org/eniware/edge/dao/BasicBatchResult.java;3405272669/1;/org.eniware.edge/src/org/eniware/edge/dao/BatchableDao.java;564956689/1;/org.eniware.edge/src/org/eniware/edge/dao/DatumDao.java;852923497/1;/org.eniware.edge/src/org/eniware/edge/dao/SettingDao.java;974596072/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_me8nQOjXEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_me8nQejXEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_me8nQujXEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_me8nQ-jXEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_me9OUOjXEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_me9OUejXEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_me9OUujXEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_me9OU-jXEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_me9OVOjXEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_mehwgOjXEeilbsvZjylwTQ" name="org">
+      <packagedElement xmi:type="uml:Package" xmi:id="_mehwgejXEeilbsvZjylwTQ" name="eniware">
+        <packagedElement xmi:type="uml:Package" xmi:id="_mehwgujXEeilbsvZjylwTQ" name="edge">
+          <packagedElement xmi:type="uml:Package" xmi:id="_meiXkujXEeilbsvZjylwTQ" name="dao">
+            <packagedElement xmi:type="uml:Package" xmi:id="_meiXk-jXEeilbsvZjylwTQ" name="BatchableDao">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_mf_wIejXEeilbsvZjylwTQ" name="BatchOptions"/>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_mgCMYOjXEeilbsvZjylwTQ" name="BatchResult"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_me8AMOjXEeilbsvZjylwTQ" name="BasicBatchOptions">
+              <ownedComment xmi:id="_mgdDIOjXEeilbsvZjylwTQ">
+                <body>Basic implementation of {@link BatchOptions}.
+
+@version 1.0</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_mgVuYOjXEeilbsvZjylwTQ" name="DEFAULT_BATCH_NAME" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mgVuYejXEeilbsvZjylwTQ" value="&quot;Anonymous&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_mgWVcOjXEeilbsvZjylwTQ" name="DEFAULT_BATCH_SIZE" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mgWVcejXEeilbsvZjylwTQ" value="50"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_mgWVcujXEeilbsvZjylwTQ" name="name" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_mgXjkujXEeilbsvZjylwTQ" name="updatable" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mgXjk-jXEeilbsvZjylwTQ" value="false"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_mgYKoejXEeilbsvZjylwTQ" name="batchSize" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mgYKo-jXEeilbsvZjylwTQ" value="DEFAULT_BATCH_SIZE"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_mgZYwOjXEeilbsvZjylwTQ" name="parameters" visibility="private" type="_mgNLgejXEeilbsvZjylwTQ" association="_mggtgOjXEeilbsvZjylwTQ">
+                <qualifier xmi:id="_mgZYwujXEeilbsvZjylwTQ">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </qualifier>
+              </ownedAttribute>
+              <interfaceRealization xmi:id="_mgAXMejXEeilbsvZjylwTQ" client="_me8AMOjXEeilbsvZjylwTQ" supplier="_mfG_UOjXEeilbsvZjylwTQ" contract="_mfG_UOjXEeilbsvZjylwTQ"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mgbN9OjXEeilbsvZjylwTQ" name="BasicBatchOptions" specification="_me-ccOjXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_mgbN9ejXEeilbsvZjylwTQ" type="_me8AMOjXEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>this(DEFAULT_BATCH_NAME);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mgb1AOjXEeilbsvZjylwTQ" name="BasicBatchOptions" specification="_me_DgOjXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_mgb1AejXEeilbsvZjylwTQ" name="name">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgb1AujXEeilbsvZjylwTQ" type="_me8AMOjXEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>this(name, DEFAULT_BATCH_SIZE, false, null);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mgb1A-jXEeilbsvZjylwTQ" name="BasicBatchOptions" specification="_mgOZoOjXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_mgb1BOjXEeilbsvZjylwTQ" name="name">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgb1BejXEeilbsvZjylwTQ" name="batchSize">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgb1BujXEeilbsvZjylwTQ" name="updatable">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgb1B-jXEeilbsvZjylwTQ" name="parameters" type="_mf_JEOjXEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_mgb1COjXEeilbsvZjylwTQ" type="_me8AMOjXEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>super();
+		this.name = name;
+		this.batchSize = batchSize;
+		this.updatable = updatable;
+		this.parameters = parameters;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mgb1CejXEeilbsvZjylwTQ" name="isUpdatable" specification="_me_qkOjXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_mgb1CujXEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>return updatable;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mgccEOjXEeilbsvZjylwTQ" name="getParameters" specification="_mfARo-jXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_mgccEejXEeilbsvZjylwTQ" type="_mf_JEOjXEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>return parameters;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_me-ccOjXEeilbsvZjylwTQ" name="BasicBatchOptions" method="_mgbN9OjXEeilbsvZjylwTQ">
+                <eAnnotations xmi:id="_me-ccejXEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_me-ccujXEeilbsvZjylwTQ" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_mgdqMOjXEeilbsvZjylwTQ">
+                  <body>Default constructor.</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_me-cc-jXEeilbsvZjylwTQ" type="_me8AMOjXEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_me_DgOjXEeilbsvZjylwTQ" name="BasicBatchOptions" method="_mgb1AOjXEeilbsvZjylwTQ">
+                <eAnnotations xmi:id="_me_DgujXEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_me_Dg-jXEeilbsvZjylwTQ" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_mgdqMejXEeilbsvZjylwTQ">
+                  <body>Construct with a name.
+	 * 
+	 * @param name the name</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_me_DgejXEeilbsvZjylwTQ" name="name">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_me_DhOjXEeilbsvZjylwTQ" type="_me8AMOjXEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_me_qkOjXEeilbsvZjylwTQ" name="isUpdatable" method="_mgb1CejXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_me_qkejXEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfARo-jXEeilbsvZjylwTQ" name="getParameters" method="_mgccEOjXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_mgPnwejXEeilbsvZjylwTQ" type="_mf_JEOjXEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mgOZoOjXEeilbsvZjylwTQ" name="BasicBatchOptions" method="_mgb1A-jXEeilbsvZjylwTQ">
+                <eAnnotations xmi:id="_mgOZpejXEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_mgOZpujXEeilbsvZjylwTQ" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_mgdqMujXEeilbsvZjylwTQ">
+                  <body>Construct with values.
+	 * 
+	 * @param name the name
+	 * @param batchSize the size
+	 * @param updatable updatable
+	 * @param parameters the parameters</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_mgOZoejXEeilbsvZjylwTQ" name="name">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgOZoujXEeilbsvZjylwTQ" name="batchSize">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgOZo-jXEeilbsvZjylwTQ" name="updatable">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgOZpOjXEeilbsvZjylwTQ" name="parameters" type="_mf_JEOjXEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_mgOZp-jXEeilbsvZjylwTQ" type="_me8AMOjXEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_mfDU8OjXEeilbsvZjylwTQ" name="BasicBatchResult">
+              <ownedComment xmi:id="_mgdqM-jXEeilbsvZjylwTQ">
+                <body>Basic implementation of {@link BatchResult}.
+ *
+@version 1.0</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_mgZ_0OjXEeilbsvZjylwTQ" name="numProcessed" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mgZ_0ejXEeilbsvZjylwTQ" value="0"/>
+              </ownedAttribute>
+              <interfaceRealization xmi:id="_mgDagOjXEeilbsvZjylwTQ" client="_mfDU8OjXEeilbsvZjylwTQ" supplier="_mfLQw-jXEeilbsvZjylwTQ" contract="_mfLQw-jXEeilbsvZjylwTQ"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mgccEujXEeilbsvZjylwTQ" name="BasicBatchResult" specification="_mfD8AOjXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_mgccE-jXEeilbsvZjylwTQ" name="numProcessed">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgccFOjXEeilbsvZjylwTQ" type="_mfDU8OjXEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>super();
+		this.numProcessed = numProcessed;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mgccFejXEeilbsvZjylwTQ" name="numProcessed" specification="_mfEjFOjXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_mgccFujXEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>return numProcessed;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_mfD8AOjXEeilbsvZjylwTQ" name="BasicBatchResult" method="_mgccEujXEeilbsvZjylwTQ">
+                <eAnnotations xmi:id="_mfEjEejXEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_mfEjEujXEeilbsvZjylwTQ" key="create"/>
+                </eAnnotations>
+                <ownedParameter xmi:id="_mfEjEOjXEeilbsvZjylwTQ" name="numProcessed">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfEjE-jXEeilbsvZjylwTQ" type="_mfDU8OjXEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfEjFOjXEeilbsvZjylwTQ" name="numProcessed" method="_mgccFejXEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_mfEjFejXEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_mfFxMOjXEeilbsvZjylwTQ" name="BatchableDao">
+              <ownedComment xmi:id="_mgdqNOjXEeilbsvZjylwTQ">
+                <body>An API for batch processing domain objects.
+
+@param &lt;T> the domain object type
+@version 1.0</body>
+              </ownedComment>
+              <nestedClassifier xmi:type="uml:Interface" xmi:id="_mfG_UOjXEeilbsvZjylwTQ" name="BatchOptions">
+                <ownedComment xmi:id="_mgdqNejXEeilbsvZjylwTQ">
+                  <body>Batch processing options.</body>
+                </ownedComment>
+                <ownedAttribute xmi:id="_mfHmYejXEeilbsvZjylwTQ" name="batchSize" isReadOnly="true">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:id="_mfINcejXEeilbsvZjylwTQ" name="parameters" type="_mgNLgejXEeilbsvZjylwTQ" association="_mgeRQOjXEeilbsvZjylwTQ">
+                  <qualifier xmi:id="_mfI0gOjXEeilbsvZjylwTQ">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </qualifier>
+                </ownedAttribute>
+                <ownedOperation xmi:id="_mfG_UejXEeilbsvZjylwTQ" name="getName">
+                  <ownedComment xmi:id="_mgdqNujXEeilbsvZjylwTQ">
+                    <body>Get a unique name for this batch operation.
+		 * 
+		 * @return a name</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_mfHmYOjXEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_mfHmYujXEeilbsvZjylwTQ" name="isUpdatable">
+                  <ownedComment xmi:id="_mgdqN-jXEeilbsvZjylwTQ">
+                    <body>If &lt;em>true&lt;/em> the batch should be updatable.
+		 * 
+		 * @return boolean</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_mfINcOjXEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                  </ownedParameter>
+                </ownedOperation>
+              </nestedClassifier>
+              <nestedClassifier xmi:type="uml:Interface" xmi:id="_mfI0gejXEeilbsvZjylwTQ" name="BatchCallback">
+                <ownedComment xmi:id="_mgeRQujXEeilbsvZjylwTQ">
+                  <body>Handler for batch processing.
+	 * 
+	 * @param &lt;T> the domain object type</body>
+                </ownedComment>
+                <ownedOperation xmi:id="_mgRc8ejXEeilbsvZjylwTQ" name="handle">
+                  <ownedComment xmi:id="_mgeRQ-jXEeilbsvZjylwTQ">
+                    <body>Handle a single domain instance batch operation.
+		 * 
+		 * @param domainObject the domain object
+		 * @return the operation results</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_mgRc8ujXEeilbsvZjylwTQ" name="domainObject" type="_mgQ14OjXEeilbsvZjylwTQ"/>
+                  <ownedParameter xmi:id="_mgRc8-jXEeilbsvZjylwTQ" type="_mfKCoOjXEeilbsvZjylwTQ" direction="return"/>
+                </ownedOperation>
+              </nestedClassifier>
+              <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_mfKCoOjXEeilbsvZjylwTQ" name="BatchCallbackResult">
+                <ownedComment xmi:id="_mgeRROjXEeilbsvZjylwTQ">
+                  <body>The result for a single batch operation.</body>
+                </ownedComment>
+                <ownedLiteral xmi:id="_mfKpsejXEeilbsvZjylwTQ" name="CONTINUE"/>
+                <ownedLiteral xmi:id="_mfKpsujXEeilbsvZjylwTQ" name="UPDATE"/>
+                <ownedLiteral xmi:id="_mfLQwOjXEeilbsvZjylwTQ" name="DELETE"/>
+                <ownedLiteral xmi:id="_mfLQwejXEeilbsvZjylwTQ" name="STOP"/>
+                <ownedLiteral xmi:id="_mfLQwujXEeilbsvZjylwTQ" name="UPDATE_STOP"/>
+              </nestedClassifier>
+              <nestedClassifier xmi:type="uml:Interface" xmi:id="_mfLQw-jXEeilbsvZjylwTQ" name="BatchResult">
+                <ownedComment xmi:id="_mge4UOjXEeilbsvZjylwTQ">
+                  <body>The result of the entire batch processing.</body>
+                </ownedComment>
+                <ownedOperation xmi:id="_mfL30OjXEeilbsvZjylwTQ" name="numProcessed">
+                  <ownedComment xmi:id="_mge4UejXEeilbsvZjylwTQ">
+                    <body>Return the number of domain objects processed.
+		 * 
+		 * @return the number of objects processed</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_mfL30ejXEeilbsvZjylwTQ" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                  </ownedParameter>
+                </ownedOperation>
+              </nestedClassifier>
+              <ownedOperation xmi:id="_mgEBkOjXEeilbsvZjylwTQ" name="batchProcess">
+                <ownedComment xmi:id="_mge4UujXEeilbsvZjylwTQ">
+                  <body>Process a set of domain objects in batch.
+     * 
+     * @param callback the batch callback handler
+     * @param options the batch processing options
+     * @return the batch results</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_mgEBkejXEeilbsvZjylwTQ" name="callback" type="_mfI0gejXEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_mgEBkujXEeilbsvZjylwTQ" name="options" type="_mfG_UOjXEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_mgEBk-jXEeilbsvZjylwTQ" type="_mfLQw-jXEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_mfNtAOjXEeilbsvZjylwTQ" name="DatumDao">
+              <ownedComment xmi:id="_mge4U-jXEeilbsvZjylwTQ">
+                <body>Data Access Object (DAO) API for {@link Datum} objects.
+
+@version 1.2
+@param &lt;T>
+       the type of Datum this DAO supports</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_mfOUEejXEeilbsvZjylwTQ" name="EVENT_TOPIC_DATUM_STORED" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mfO7IOjXEeilbsvZjylwTQ" value="&quot;net/eniwarenetwork/Edge/dao/DATUM_STORED&quot;"/>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_mfO7IejXEeilbsvZjylwTQ" name="getDatumType">
+                <ownedComment xmi:id="_mge4VOjXEeilbsvZjylwTQ">
+                  <body>Get the class supported by this Dao.
+	 * 
+	 * @return class</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_mgSrEejXEeilbsvZjylwTQ" type="_mgSEAOjXEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfQJQOjXEeilbsvZjylwTQ" name="getDatumNotUploaded" visibility="package">
+                <ownedComment xmi:id="_mge4VujXEeilbsvZjylwTQ">
+                  <body>Get a List of Datum instances that have not been uploaded yet to a
+	 * specific destination.
+	 * 
+	 * &lt;p>
+	 * This does not need to return all data, it can limit the amount returned
+	 * at one time to conserve memory. This method can be called repeatedly if
+	 * needed.
+	 * &lt;/p>
+	 * 
+	 * @param destination
+	 *        the destination to check
+	 * @return list of Datum, or empty List if none available</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_mfQJQejXEeilbsvZjylwTQ" name="destination">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfQJQujXEeilbsvZjylwTQ" type="_mgQ14OjXEeilbsvZjylwTQ" isOrdered="true" direction="return">
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mfQJQ-jXEeilbsvZjylwTQ" value="*"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfQwUOjXEeilbsvZjylwTQ" name="deleteUploadedDataOlderThan">
+                <ownedComment xmi:id="_mge4WOjXEeilbsvZjylwTQ">
+                  <body>Delete both Datum and DatumUpload objects that have been successfully
+	 * uploaded to at least one destination and are older than the specified
+	 * number of hours.
+	 * 
+	 * &lt;p>
+	 * This is designed to free up space from local database storage for devices
+	 * with limited storage capacity. It will not delete any Datum objects that
+	 * have not been successfully uploaded anywhere.
+	 * &lt;/p>
+	 * 
+	 * @param hours
+	 *        the minimum number of hours old the data must be to delete
+	 * @return the number of Datum (and associated DatumUpload) entities deleted</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_mfQwUejXEeilbsvZjylwTQ" name="hours">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfRXYOjXEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mgSrEujXEeilbsvZjylwTQ" name="storeDatum" visibility="package">
+                <ownedComment xmi:id="_mge4VejXEeilbsvZjylwTQ">
+                  <body>Store (create or update) a datum.
+	 * 
+	 * @param datum
+	 *        the datum to persist
+	 * @return the generated primary key</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_mgSrE-jXEeilbsvZjylwTQ" name="datum" type="_mgQ14OjXEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mgTSIOjXEeilbsvZjylwTQ" name="setDatumUploaded">
+                <ownedComment xmi:id="_mge4V-jXEeilbsvZjylwTQ">
+                  <body>Persist a {@link DatumUpload} instance.
+	 * 
+	 * @param datum
+	 *        the Datum that has been uploaded successfully
+	 * @param date
+	 *        the date it was uploaded
+	 * @param destination
+	 *        the destination the Datum was uploaded to
+	 * @param trackingId
+	 *        the remote tracking ID assigned to the uploaded Datum</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_mgTSIejXEeilbsvZjylwTQ" name="datum" type="_mgQ14OjXEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_mgTSIujXEeilbsvZjylwTQ" name="date" type="_mgF2wOjXEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_mgTSI-jXEeilbsvZjylwTQ" name="destination">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgTSJOjXEeilbsvZjylwTQ" name="trackingId">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_mfSlgOjXEeilbsvZjylwTQ" name="SettingDao">
+              <ownedComment xmi:id="_mgffYOjXEeilbsvZjylwTQ">
+                <body>Data access object API for setting key/value pairs.
+
+&lt;p>
+This DAO is for very simple key/value based settings and other perstitable
+runtime data.
+&lt;/p>
+
+&lt;p>
+It also supports key+type/value pairs, where key and type are separate
+values. This can be useful for grouping sets of keys together, or for adding
+and namespace to prevent key collisions across different packages.
+&lt;/p>
+
+@version 1.2</body>
+              </ownedComment>
+              <generalization xmi:id="_mgJhIejXEeilbsvZjylwTQ" general="_mfFxMOjXEeilbsvZjylwTQ"/>
+              <ownedAttribute xmi:id="_mfSlgejXEeilbsvZjylwTQ" name="EVENT_TOPIC_SETTING_CHANGED">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mfTMkOjXEeilbsvZjylwTQ" value="&quot;net/eniwarenetwork/Edge/dao/SETTING_CHANGED&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_mfTMkujXEeilbsvZjylwTQ" name="SETTING_KEY">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mfTzoOjXEeilbsvZjylwTQ" value="&quot;Key&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_mfTzoujXEeilbsvZjylwTQ" name="SETTING_TYPE">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mfUasOjXEeilbsvZjylwTQ" value="&quot;Type&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_mfUasujXEeilbsvZjylwTQ" name="SETTING_VALUE">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_mfVBwOjXEeilbsvZjylwTQ" value="&quot;Value&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_mfahUujXEeilbsvZjylwTQ" name="mostRecentModificationDate" type="_mgF2wOjXEeilbsvZjylwTQ" isReadOnly="true"/>
+              <ownedOperation xmi:id="_mfVBwujXEeilbsvZjylwTQ" name="storeSetting">
+                <ownedParameter xmi:id="_mfVo0OjXEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfVo0ejXEeilbsvZjylwTQ" name="value">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfVo0ujXEeilbsvZjylwTQ" name="storeSetting">
+                <ownedParameter xmi:id="_mfWP4OjXEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfWP4ejXEeilbsvZjylwTQ" name="type">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfWP4ujXEeilbsvZjylwTQ" name="value">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfW28OjXEeilbsvZjylwTQ" name="readSetting">
+                <ownedParameter xmi:id="_mfW28ejXEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfW28ujXEeilbsvZjylwTQ" name="type">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgUgQejXEeilbsvZjylwTQ" type="_mgITAOjXEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfXeAOjXEeilbsvZjylwTQ" name="getSetting">
+                <ownedParameter xmi:id="_mfXeAejXEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfXeAujXEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfXeA-jXEeilbsvZjylwTQ" name="getSettings">
+                <ownedParameter xmi:id="_mfXeBOjXEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfYFEOjXEeilbsvZjylwTQ" type="_mgI6EejXEeilbsvZjylwTQ" isOrdered="true" direction="return">
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mfYFEejXEeilbsvZjylwTQ" value="*"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfYsIOjXEeilbsvZjylwTQ" name="getSetting">
+                <ownedParameter xmi:id="_mfYsIejXEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfYsIujXEeilbsvZjylwTQ" name="type">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfYsI-jXEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfZTMOjXEeilbsvZjylwTQ" name="deleteSetting">
+                <ownedParameter xmi:id="_mfZTMejXEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfZTMujXEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfZTM-jXEeilbsvZjylwTQ" name="deleteSetting">
+                <ownedParameter xmi:id="_mfZ6QOjXEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfZ6QejXEeilbsvZjylwTQ" name="type">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfZ6QujXEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mfZ6Q-jXEeilbsvZjylwTQ" name="getSettingModificationDate">
+                <ownedParameter xmi:id="_mfahUOjXEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mfahUejXEeilbsvZjylwTQ" name="type">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_mgUgQujXEeilbsvZjylwTQ" type="_mgF2wOjXEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_mgT5MOjXEeilbsvZjylwTQ" name="storeSetting">
+                <ownedParameter xmi:id="_mgUgQOjXEeilbsvZjylwTQ" name="setting" type="_mgITAOjXEeilbsvZjylwTQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_mgQ14OjXEeilbsvZjylwTQ" name="T"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_mgeRQOjXEeilbsvZjylwTQ" name="" memberEnd="_mfINcejXEeilbsvZjylwTQ _mgeRQejXEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_mgeRQejXEeilbsvZjylwTQ" name="" type="_mfG_UOjXEeilbsvZjylwTQ" association="_mgeRQOjXEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_mggtgOjXEeilbsvZjylwTQ" name="" memberEnd="_mggtgejXEeilbsvZjylwTQ _mgZYwOjXEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_mggtgejXEeilbsvZjylwTQ" name="" type="_me8AMOjXEeilbsvZjylwTQ" association="_mggtgOjXEeilbsvZjylwTQ"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_merhgOjXEeilbsvZjylwTQ" name="domain">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_mgHE4ejXEeilbsvZjylwTQ" name="Datum"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_metWsOjXEeilbsvZjylwTQ" name="support">
+            <packagedElement xmi:type="uml:Class" xmi:id="_mgI6EejXEeilbsvZjylwTQ" name="KeyValuePair"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_mgITAOjXEeilbsvZjylwTQ" name="Setting"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_meiXkOjXEeilbsvZjylwTQ" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_meiXkejXEeilbsvZjylwTQ" name="util">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_mf_JEOjXEeilbsvZjylwTQ" name="Map"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_mgF2wOjXEeilbsvZjylwTQ" name="Date"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_mgGd0ejXEeilbsvZjylwTQ" name="List"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_mgNLgOjXEeilbsvZjylwTQ" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_mgNLgejXEeilbsvZjylwTQ" name="Object"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_mgSEAOjXEeilbsvZjylwTQ" name="Class"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_mZA-Y-jXEeilbsvZjylwTQ">
+      <eAnnotations xmi:id="_mZBlcOjXEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_mZBlcejXEeilbsvZjylwTQ" base_Package="_mSI6UOjXEeilbsvZjylwTQ">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mfARoOjXEeilbsvZjylwTQ" base_Element="_me_qkOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_mfARoejXEeilbsvZjylwTQ" base_Element="_me_qkOjXEeilbsvZjylwTQ">
+    <annotations xmi:id="_mfARoujXEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Generics xmi:id="_mfA4sOjXEeilbsvZjylwTQ" genericsValue="String, Object" base_Element="_mfARo-jXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mfBfwOjXEeilbsvZjylwTQ" base_Element="_mfARo-jXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_mfBfwejXEeilbsvZjylwTQ" base_Element="_mfARo-jXEeilbsvZjylwTQ">
+    <annotations xmi:id="_mfBfwujXEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mfFKIOjXEeilbsvZjylwTQ" base_Element="_mfEjFOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_mfFKIejXEeilbsvZjylwTQ" base_Element="_mfEjFOjXEeilbsvZjylwTQ">
+    <annotations xmi:id="_mfFKIujXEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Generics xmi:id="_mfGYQOjXEeilbsvZjylwTQ" genericsValue="T" base_Element="_mfFxMOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_mfJbkOjXEeilbsvZjylwTQ" genericsValue="T" base_Element="_mfI0gejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mfKpsOjXEeilbsvZjylwTQ" base_Element="_mfKCoOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_mfOUEOjXEeilbsvZjylwTQ" genericsValue="T extends Datum" base_Element="_mfNtAOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_mfPiMOjXEeilbsvZjylwTQ" genericsValue="? extends T" base_Element="_mfO7IejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mfTMkejXEeilbsvZjylwTQ" base_Element="_mfSlgejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mfTzoejXEeilbsvZjylwTQ" base_Element="_mfTMkujXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mfUasejXEeilbsvZjylwTQ" base_Element="_mfTzoujXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mfVBwejXEeilbsvZjylwTQ" base_Element="_mfUasujXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mf_wIOjXEeilbsvZjylwTQ" base_Element="_mf_JEOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgAXMOjXEeilbsvZjylwTQ" base_Element="_mf_wIejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgCzcOjXEeilbsvZjylwTQ" base_Element="_mgCMYOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_mgFPsOjXEeilbsvZjylwTQ" genericsValue="T" base_Element="_mgEBkejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgGd0OjXEeilbsvZjylwTQ" base_Element="_mgF2wOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgHE4OjXEeilbsvZjylwTQ" base_Element="_mgGd0ejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgHr8OjXEeilbsvZjylwTQ" base_Element="_mgHE4ejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgI6EOjXEeilbsvZjylwTQ" base_Element="_mgITAOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgJhIOjXEeilbsvZjylwTQ" base_Element="_mgI6EejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_mgKIMOjXEeilbsvZjylwTQ" genericsValue="Setting" base_Element="_mgJhIejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgNykOjXEeilbsvZjylwTQ" base_Element="_mgNLgejXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_mgPnwOjXEeilbsvZjylwTQ" genericsValue="String, Object" base_Element="_mgOZpOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgRc8OjXEeilbsvZjylwTQ" base_Element="_mgQ14OjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_mgSrEOjXEeilbsvZjylwTQ" base_Element="_mgSEAOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mgW8gOjXEeilbsvZjylwTQ" base_Element="_mgWVcujXEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_mgW8gejXEeilbsvZjylwTQ" name="getName" method="_mgbN8OjXEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_mgW8gujXEeilbsvZjylwTQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_mgXjkOjXEeilbsvZjylwTQ" base_Element="_mgW8gejXEeilbsvZjylwTQ">
+    <annotations xmi:id="_mgXjkejXEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mgYKoOjXEeilbsvZjylwTQ" base_Element="_mgXjkujXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mgYKoujXEeilbsvZjylwTQ" base_Element="_mgYKoejXEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_mgYxsOjXEeilbsvZjylwTQ" name="getBatchSize" method="_mgbN8ujXEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_mgYxsejXEeilbsvZjylwTQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_mgYxsujXEeilbsvZjylwTQ" base_Element="_mgYxsOjXEeilbsvZjylwTQ">
+    <annotations xmi:id="_mgYxs-jXEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mgZYwejXEeilbsvZjylwTQ" base_Element="_mgZYwOjXEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_mgam4OjXEeilbsvZjylwTQ" base_Element="_mgZ_0OjXEeilbsvZjylwTQ"/>
+  <uml:OpaqueBehavior xmi:id="_mgbN8OjXEeilbsvZjylwTQ" name="getName" specification="_mgW8gejXEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_mgbN8ejXEeilbsvZjylwTQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return name;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_mgbN8ujXEeilbsvZjylwTQ" name="getBatchSize" specification="_mgYxsOjXEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_mgbN8-jXEeilbsvZjylwTQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return batchSize;
+	</body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:Reference xmi:id="_mghUkOjXEeilbsvZjylwTQ" base_Element="_mggtgOjXEeilbsvZjylwTQ"/>
+</xmi:XMI>

@@ -1,0 +1,2276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_9cFwEOjlEeilbsvZjylwTQ" name="org_eniware_edge">
+    <eAnnotations xmi:id="_9kT38OjlEeilbsvZjylwTQ" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_9kT38ejlEeilbsvZjylwTQ" source="codegen">
+        <details xmi:id="_9kT38ujlEeilbsvZjylwTQ" key="codegenDirectory" value="/org.eniware.edge/src"/>
+        <details xmi:id="_952DEOjlEeilbsvZjylwTQ" key="AssociatedSourceCode" value="/org.eniware.edge/src/org/eniware/edge/runtime/DefaultPlatformService.java;4256430394/1;/org.eniware.edge/src/org/eniware/edge/runtime/EventMessageBridge.java;2387837260/1;/org.eniware.edge/src/org/eniware/edge/runtime/JobServiceRegistrationListener.java;4197580266/1;/org.eniware.edge/src/org/eniware/edge/runtime/JobSettingSpecifierProvider.java;4123966155/1;/org.eniware.edge/src/org/eniware/edge/runtime/JobUtils.java;1086566213/1;/org.eniware.edge/src/org/eniware/edge/runtime/ManagedJobServiceRegistrationListener.java;3591408171/1;/org.eniware.edge/src/org/eniware/edge/runtime/SimplePlatformTaskInfo.java;633371218/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_9urU4OjlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_9urU4ejlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_9ur78OjlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_9ur78ejlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_9ur78ujlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_9ur78-jlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_9ur79OjlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_9ur79ejlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_9ur79ujlEeilbsvZjylwTQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9uLloOjlEeilbsvZjylwTQ" name="org">
+      <packagedElement xmi:type="uml:Package" xmi:id="_9uLloejlEeilbsvZjylwTQ" name="eniware">
+        <packagedElement xmi:type="uml:Package" xmi:id="_9uLloujlEeilbsvZjylwTQ" name="edge">
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uQeIOjlEeilbsvZjylwTQ" name="runtime">
+            <packagedElement xmi:type="uml:Class" xmi:id="_9vChQOjlEeilbsvZjylwTQ" name="DefaultPlatformService">
+              <ownedComment xmi:id="_9zx3UOjlEeilbsvZjylwTQ">
+                <body>Default implementation of {@link PlatformService}.
+
+@version 1.0</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_9zMogOjlEeilbsvZjylwTQ" name="activeState" visibility="private" isLeaf="true" type="_9xYDkejlEeilbsvZjylwTQ" isReadOnly="true" association="_9z4lAOjlEeilbsvZjylwTQ">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zMogejlEeilbsvZjylwTQ" value="new AtomicInteger(PlatformState.Normal.ordinal())"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zNPkejlEeilbsvZjylwTQ" name="activeSingletonTask" visibility="private" isLeaf="true" type="_9xYqoejlEeilbsvZjylwTQ" isReadOnly="true" association="_9z5MEejlEeilbsvZjylwTQ">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zN2oejlEeilbsvZjylwTQ" value="new AtomicReference&lt;PlatformTask&lt;?>>()"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zOdsOjlEeilbsvZjylwTQ" name="singletonExecutorService" visibility="private" type="_9xVnUejlEeilbsvZjylwTQ" association="_9z6aMOjlEeilbsvZjylwTQ">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zOdsejlEeilbsvZjylwTQ" value="defaultSingletonExecutorService()"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zOds-jlEeilbsvZjylwTQ" name="eventAdmin" visibility="private" type="_9xeKMOjlEeilbsvZjylwTQ" association="_9z7BQejlEeilbsvZjylwTQ"/>
+              <ownedAttribute xmi:id="_9zPr0ejlEeilbsvZjylwTQ" name="messageSendingOps" visibility="private" type="_9xeKMOjlEeilbsvZjylwTQ" association="_9z7oUejlEeilbsvZjylwTQ"/>
+              <interfaceRealization xmi:id="_9ydBoOjlEeilbsvZjylwTQ" client="_9vChQOjlEeilbsvZjylwTQ" supplier="_9xZRsejlEeilbsvZjylwTQ" contract="_9xZRsejlEeilbsvZjylwTQ"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9znfQOjlEeilbsvZjylwTQ" name="defaultSingletonExecutorService" specification="_9vDvYOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9znfQejlEeilbsvZjylwTQ" type="_9xVnUejlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>// we want at most one task happening at a time for this service;
+		// size the blocking queue to a reasonable size for a typical Edge
+		return new ThreadPoolExecutor(0, 1, 5, TimeUnit.MINUTES,
+				new ArrayBlockingQueue&lt;Runnable>(10, true),
+				new CustomizableThreadFactory(&quot;PlatformService-Main-&quot;));
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9znfQujlEeilbsvZjylwTQ" name="activePlatformState" specification="_9vEWcOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9znfQ-jlEeilbsvZjylwTQ" type="_9ydosejlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>return PlatformState.values()[activeState.get()];
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9znfROjlEeilbsvZjylwTQ" name="updatePlatformState" specification="_9ye20OjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9znfRejlEeilbsvZjylwTQ" name="state" type="_9ydosejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>PlatformState oldState = PlatformState.values()[activeState.getAndSet(state.ordinal())];
+		if ( oldState == state ) {
+			return;
+		}
+		OptionalService&lt;EventAdmin> optEa = eventAdmin;
+		EventAdmin ea = (optEa != null ? optEa.service() : null);
+		if ( ea == null ) {
+			return;
+		}
+		Map&lt;String, Object> props = new HashMap&lt;String, Object>(2);
+		props.put(PLATFORM_STATE_PROPERTY, state.toString());
+		props.put(OLD_PLATFORM_STATE_PROPERTY, oldState.toString());
+		Event event = new Event(EVENT_TOPIC_PLATFORM_STATE_CHANGED, props);
+		ea.postEvent(event);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zoGUOjlEeilbsvZjylwTQ" name="activePlatformTaskStatus" specification="_9vE9gujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zoGUejlEeilbsvZjylwTQ" type="_9ye20ujlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>return activeSingletonTask.get();
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zoGUujlEeilbsvZjylwTQ" name="activePlatformTaskInfo" specification="_9ygsAOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zoGU-jlEeilbsvZjylwTQ" name="locale" type="_9xTLEejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zoGVOjlEeilbsvZjylwTQ" type="_9ygE8OjlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>PlatformTaskStatus status = activePlatformTaskStatus();
+		if ( status == null ) {
+			return null;
+		}
+		return new SimplePlatformTaskInfo(status, locale);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zoGVejlEeilbsvZjylwTQ" name="subscribeToActivePlatformTaskInfo" specification="_9yhTE-jlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zoGVujlEeilbsvZjylwTQ" name="locale" type="_9xTLEejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>PlatformTask&lt;?> task = activeSingletonTask.get();
+		if ( task != null ) {
+			final Locale loc = (locale != null ? locale : Locale.getDefault());
+			final String lang = (loc != null &amp;&amp; loc.getLanguage() != null ? loc.getLanguage() : &quot;en&quot;);
+			task.registerStatusHandler(new PlatformTaskStatusHandler() {
+
+				@Override
+				public void taskStatusUpdated(PlatformTaskStatus status) {
+					PlatformTaskInfo info = new SimplePlatformTaskInfo(status, loc);
+					postMessage(MSG_TOPIC_PLATFORM_TASK_INFO, info,
+							Collections.&lt;String, Object> singletonMap(&quot;lang&quot;, lang), true);
+				}
+
+			});
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zoGV-jlEeilbsvZjylwTQ" name="postMessage" specification="_9yjIQOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zoGWOjlEeilbsvZjylwTQ" name="dest">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zoGWejlEeilbsvZjylwTQ" name="body" type="_9yihMejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zoGWujlEeilbsvZjylwTQ" name="headers" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zoGW-jlEeilbsvZjylwTQ" name="convert">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>SimpMessageSendingOperations ops = (messageSendingOps != null ? messageSendingOps.service()
+				: null);
+		if ( ops == null ) {
+			return;
+		}
+		if ( convert ) {
+			Result&lt;?> r = (body instanceof Result ? (Result&lt;?>) body : Result.result(body));
+			ops.convertAndSend(dest, r, headers);
+		} else {
+			Message&lt;Object> msg = new GenericMessage&lt;Object>(body, headers);
+			ops.send(dest, msg);
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zotYOjlEeilbsvZjylwTQ" name="performTaskWithState" specification="_9yk9cejlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zotYejlEeilbsvZjylwTQ" name="state" type="_9ydosejlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_9zotYujlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_9zotY-jlEeilbsvZjylwTQ" key="final"/>
+                  </eAnnotations>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zotZOjlEeilbsvZjylwTQ" name="task" type="_9ykWYOjlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_9zotZejlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_9zotZujlEeilbsvZjylwTQ" key="final"/>
+                  </eAnnotations>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zotZ-jlEeilbsvZjylwTQ" type="_9xWOYejlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>return singletonExecutorService.submit(new Callable&lt;T>() {
+
+			@Override
+			public T call() throws Exception {
+				try {
+					if ( !activeSingletonTask.compareAndSet(null, task) ) {
+						throw new IllegalStateException(
+								&quot;Another task is active; cannot start task &quot; + task);
+					}
+					updatePlatformState(state);
+					return task.call();
+				} finally {
+					activeSingletonTask.compareAndSet(task, null);
+					updatePlatformState(
+							task.isComplete() &amp;&amp; task.isRestartRequired() ? PlatformState.Restarting
+									: PlatformState.Normal);
+				}
+			}
+
+		});
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zotaOjlEeilbsvZjylwTQ" name="setSingletonExecutorService" specification="_9ynZsOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zotaejlEeilbsvZjylwTQ" name="singletonExecutorService" type="_9xVnUejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>this.singletonExecutorService = singletonExecutorService;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zotaujlEeilbsvZjylwTQ" name="setEventAdmin" specification="_9ynZsujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zota-jlEeilbsvZjylwTQ" name="eventAdmin" type="_9xeKMOjlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>this.eventAdmin = eventAdmin;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zpUcOjlEeilbsvZjylwTQ" name="setMessageSendingOperations" specification="_9yon0ejlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zpUcejlEeilbsvZjylwTQ" name="messageSendingOps" type="_9xeKMOjlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>this.messageSendingOps = messageSendingOps;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_9vDvYOjlEeilbsvZjylwTQ" name="defaultSingletonExecutorService" visibility="private" isStatic="true" method="_9znfQOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9ydosOjlEeilbsvZjylwTQ" type="_9xVnUejlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9vEWcOjlEeilbsvZjylwTQ" name="activePlatformState" method="_9znfQujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9yePwejlEeilbsvZjylwTQ" type="_9ydosejlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9vE9gujlEeilbsvZjylwTQ" name="activePlatformTaskStatus" method="_9zoGUOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9yfd4ejlEeilbsvZjylwTQ" type="_9ye20ujlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9ye20OjlEeilbsvZjylwTQ" name="updatePlatformState" visibility="private" method="_9znfROjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9ye20ejlEeilbsvZjylwTQ" name="state" type="_9ydosejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9ygsAOjlEeilbsvZjylwTQ" name="activePlatformTaskInfo" method="_9zoGUujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9ygsAejlEeilbsvZjylwTQ" name="locale" type="_9xTLEejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9ygsAujlEeilbsvZjylwTQ" type="_9ygE8OjlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9yhTE-jlEeilbsvZjylwTQ" name="subscribeToActivePlatformTaskInfo" method="_9zoGVejlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9yhTFOjlEeilbsvZjylwTQ" name="locale" type="_9xTLEejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9yjIQOjlEeilbsvZjylwTQ" name="postMessage" visibility="private" method="_9zoGV-jlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9yjIQejlEeilbsvZjylwTQ" name="dest">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9yjIQujlEeilbsvZjylwTQ" name="body" type="_9yihMejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9yjIQ-jlEeilbsvZjylwTQ" name="headers" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9yjIROjlEeilbsvZjylwTQ" name="convert">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9yk9cejlEeilbsvZjylwTQ" name="performTaskWithState" method="_9zotYOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9yk9cujlEeilbsvZjylwTQ" name="state" type="_9ydosejlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_9ymLkejlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_9ymLkujlEeilbsvZjylwTQ" key="final"/>
+                  </eAnnotations>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9yk9c-jlEeilbsvZjylwTQ" name="task" type="_9ykWYOjlEeilbsvZjylwTQ">
+                  <eAnnotations xmi:id="_9ymLk-jlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_9ymLlOjlEeilbsvZjylwTQ" key="final"/>
+                  </eAnnotations>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9ylkgejlEeilbsvZjylwTQ" type="_9xWOYejlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9ynZsOjlEeilbsvZjylwTQ" name="setSingletonExecutorService" method="_9zotaOjlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zx3UejlEeilbsvZjylwTQ">
+                  <body>Configure the {@link ExecutorService} to use for the singleton task
+	 * queue.
+	 * 
+	 * &lt;p>
+	 * This service is expected to perform just one task at a time.
+	 * &lt;/p>
+	 * 
+	 * @param singletonExecutorService
+	 *        the service to use; defaults to a service using an array-based
+	 *        blocking queue with a single thread</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9ynZsejlEeilbsvZjylwTQ" name="singletonExecutorService" type="_9xVnUejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9ynZsujlEeilbsvZjylwTQ" name="setEventAdmin" method="_9zotaujlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zyeYOjlEeilbsvZjylwTQ">
+                  <body>Set the {@link EventAdmin} to use.
+	 * 
+	 * @param eventAdmin
+	 *        the service to use</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9ynZs-jlEeilbsvZjylwTQ" name="eventAdmin" type="_9xeKMOjlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9yon0ejlEeilbsvZjylwTQ" name="setMessageSendingOperations" method="_9zpUcOjlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zyeYejlEeilbsvZjylwTQ">
+                  <body>Set a {@link SimpMessageSendingOperations} for posting messages to.
+	 * 
+	 * @param messageSendingOps
+	 *        the message sender to use</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9yon0ujlEeilbsvZjylwTQ" name="messageSendingOps" type="_9xeKMOjlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9vLEIOjlEeilbsvZjylwTQ" name="EventMessageBridge">
+              <ownedComment xmi:id="_9zyeYujlEeilbsvZjylwTQ">
+                <body>Bridge between OSGi EventAdmin events and a Spring Messaging.
+
+@version 1.1</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_9zQ58OjlEeilbsvZjylwTQ" name="Edge_EVENT_PREFIX" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zRhAOjlEeilbsvZjylwTQ" value="&quot;net/eniwarenetwork/Edge/&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zRhAejlEeilbsvZjylwTQ" name="MESSAGE_TOPIC_PREFIX" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zRhAujlEeilbsvZjylwTQ" value="&quot;/topic/&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zRhA-jlEeilbsvZjylwTQ" name="PUBLIC_MESSAGE_TOPIC_PREFIX" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zSIEOjlEeilbsvZjylwTQ" value="&quot;/pub/topic/&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zSIEejlEeilbsvZjylwTQ" name="messageSendingOps" visibility="private" isLeaf="true" type="_9xeKMOjlEeilbsvZjylwTQ" isReadOnly="true" association="_9z8PYejlEeilbsvZjylwTQ"/>
+              <ownedAttribute xmi:id="_9zTWMOjlEeilbsvZjylwTQ" name="topicMapping" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <qualifier xmi:id="_9zTWMujlEeilbsvZjylwTQ">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </qualifier>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zT9QOjlEeilbsvZjylwTQ" name="publicTopicMapping" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <qualifier xmi:id="_9zT9QujlEeilbsvZjylwTQ">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </qualifier>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zUkUOjlEeilbsvZjylwTQ" name="log" visibility="private" isLeaf="true" type="_9xmtEejlEeilbsvZjylwTQ" isReadOnly="true" association="_9z82cejlEeilbsvZjylwTQ">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zUkUejlEeilbsvZjylwTQ" value="LoggerFactory.getLogger(getClass())"/>
+              </ownedAttribute>
+              <interfaceRealization xmi:id="_9yqdAOjlEeilbsvZjylwTQ" client="_9vLEIOjlEeilbsvZjylwTQ" supplier="_9xmGAejlEeilbsvZjylwTQ" contract="_9xmGAejlEeilbsvZjylwTQ"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zpUcujlEeilbsvZjylwTQ" name="defaultTopicMapping" specification="_9vMSQOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zpUc-jlEeilbsvZjylwTQ" type="_9xTyIejlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>Map&lt;String, String> map = new HashMap&lt;String, String>();
+		map.put(DatumDataSource.EVENT_TOPIC_DATUM_CAPTURED, &quot;datum/captured/{sourceId}&quot;);
+		map.put(DatumDao.EVENT_TOPIC_DATUM_STORED, &quot;datum/stored/{sourceId}&quot;);
+		map.put(UploadService.EVENT_TOPIC_DATUM_UPLOADED, &quot;datum/uploaded/{sourceId}&quot;);
+		map.put(EdgeControlProvider.EVENT_TOPIC_CONTROL_INFO_CAPTURED, &quot;control/captured/{controlId}&quot;);
+		map.put(EdgeControlProvider.EVENT_TOPIC_CONTROL_INFO_CHANGED, &quot;control/changed/{controlId}&quot;);
+		return Collections.unmodifiableMap(map);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zp7gOjlEeilbsvZjylwTQ" name="defaultPublicTopicMapping" specification="_9vNgYOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zp7gejlEeilbsvZjylwTQ" type="_9xTyIejlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>Map&lt;String, String> map = new HashMap&lt;String, String>();
+		map.put(PlatformService.EVENT_TOPIC_PLATFORM_STATE_CHANGED, &quot;platform/state&quot;);
+		return Collections.unmodifiableMap(map);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zp7gujlEeilbsvZjylwTQ" name="EventMessageBridge" specification="_9yrrIejlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zp7g-jlEeilbsvZjylwTQ" name="messageSendingOps" type="_9xeKMOjlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zp7hOjlEeilbsvZjylwTQ" type="_9vLEIOjlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>super();
+		this.messageSendingOps = messageSendingOps;
+		topicMapping = defaultTopicMapping();
+		publicTopicMapping = defaultPublicTopicMapping();
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zp7hejlEeilbsvZjylwTQ" name="handleEvent" specification="_9ys5QOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zp7hujlEeilbsvZjylwTQ" name="event" type="_9xZ4wejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>Map&lt;String, Object> data = mapForEvent(event);
+		String topic = messageTopicForEvent(event, data);
+		if ( topic == null ) {
+			return;
+		}
+		log.debug(&quot;Posting event {} to message topic {} with data {}&quot;, event.getTopic(), topic, data);
+		postMessage(topic, data);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zp7h-jlEeilbsvZjylwTQ" name="messageTopicForEvent" specification="_9ytgUujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zp7iOjlEeilbsvZjylwTQ" name="event" type="_9xZ4wejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zp7iejlEeilbsvZjylwTQ" name="data" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zp7iujlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>boolean pubTopic = false;
+		String topic = event.getTopic();
+		if ( topicMapping != null ) {
+			String val = topicMapping.get(topic);
+			if ( val != null ) {
+				topic = val;
+			}
+		}
+		if ( publicTopicMapping != null ) {
+			String val = publicTopicMapping.get(topic);
+			if ( val != null ) {
+				topic = val;
+				pubTopic = true;
+			}
+		}
+		topic = StringUtils.expandTemplateString(topic, data);
+		if ( topic.startsWith(Edge_EVENT_PREFIX) ) {
+			topic = topic.substring(Edge_EVENT_PREFIX.length());
+		}
+
+		// remove double-slashes
+		topic = topic.replaceAll(&quot;\\/\\/&quot;, &quot;/&quot;);
+
+		return (pubTopic ? PUBLIC_MESSAGE_TOPIC_PREFIX : MESSAGE_TOPIC_PREFIX) + topic;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zqikOjlEeilbsvZjylwTQ" name="mapForEvent" specification="_9yuucejlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zqikejlEeilbsvZjylwTQ" name="event" type="_9xZ4wejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zqikujlEeilbsvZjylwTQ" type="_9xTyIejlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>String[] propNames = event.getPropertyNames();
+		Map&lt;String, Object> map = new LinkedHashMap&lt;String, Object>(propNames.length);
+		for ( String propName : propNames ) {
+			map.put(propName, event.getProperty(propName));
+		}
+		return map;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zqik-jlEeilbsvZjylwTQ" name="postMessage" specification="_9yv8kOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zqilOjlEeilbsvZjylwTQ" name="dest">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zqilejlEeilbsvZjylwTQ" name="body" type="_9yihMejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>postMessage(dest, body, null, true);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zqilujlEeilbsvZjylwTQ" name="postMessage" specification="_9ywjoOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zqil-jlEeilbsvZjylwTQ" name="dest">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zqimOjlEeilbsvZjylwTQ" name="body" type="_9yihMejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zqimejlEeilbsvZjylwTQ" name="headers" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zqimujlEeilbsvZjylwTQ" name="convert">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>SimpMessageSendingOperations ops = (messageSendingOps != null ? messageSendingOps.service()
+				: null);
+		if ( ops == null ) {
+			return;
+		}
+		if ( convert ) {
+			Result&lt;?> r = (body instanceof Result ? (Result&lt;?>) body : Result.result(body));
+			ops.convertAndSend(dest, r, headers);
+		} else {
+			Message&lt;Object> msg = new GenericMessage&lt;Object>(body, headers);
+			ops.send(dest, msg);
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zrJoOjlEeilbsvZjylwTQ" name="setTopicMapping" specification="_9yxxwOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zrJoejlEeilbsvZjylwTQ" name="topicMapping" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>this.topicMapping = topicMapping;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zrJoujlEeilbsvZjylwTQ" name="setPublicTopicMapping" specification="_9yyY0ejlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zrJo-jlEeilbsvZjylwTQ" name="publicTopicMapping" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>this.publicTopicMapping = publicTopicMapping;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_9vMSQOjlEeilbsvZjylwTQ" name="defaultTopicMapping" visibility="private" isStatic="true" method="_9zpUcujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9yrEEOjlEeilbsvZjylwTQ" type="_9xTyIejlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9vNgYOjlEeilbsvZjylwTQ" name="defaultPublicTopicMapping" visibility="private" isStatic="true" method="_9zp7gOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9yrrIOjlEeilbsvZjylwTQ" type="_9xTyIejlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9yrrIejlEeilbsvZjylwTQ" name="EventMessageBridge" method="_9zp7gujlEeilbsvZjylwTQ">
+                <eAnnotations xmi:id="_9yrrI-jlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_9yrrJOjlEeilbsvZjylwTQ" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_9zyeY-jlEeilbsvZjylwTQ">
+                  <body>Constructor.
+	 * 
+	 * @param messageSendingOps
+	 *        the optional message sending service to use</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9yrrIujlEeilbsvZjylwTQ" name="messageSendingOps" type="_9xeKMOjlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9yrrJejlEeilbsvZjylwTQ" type="_9vLEIOjlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9ys5QOjlEeilbsvZjylwTQ" name="handleEvent" method="_9zp7hejlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9ys5QejlEeilbsvZjylwTQ" name="event" type="_9xZ4wejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9ytgUujlEeilbsvZjylwTQ" name="messageTopicForEvent" visibility="private" method="_9zp7h-jlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9ytgU-jlEeilbsvZjylwTQ" name="event" type="_9xZ4wejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9ytgVOjlEeilbsvZjylwTQ" name="data" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9ytgVejlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9yuucejlEeilbsvZjylwTQ" name="mapForEvent" visibility="private" method="_9zqikOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9yuucujlEeilbsvZjylwTQ" name="event" type="_9xZ4wejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9yvVgejlEeilbsvZjylwTQ" type="_9xTyIejlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9yv8kOjlEeilbsvZjylwTQ" name="postMessage" visibility="protected" method="_9zqik-jlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zyeZOjlEeilbsvZjylwTQ">
+                  <body>Post a message without any headers, converting it first.
+	 * 
+	 * &lt;p>
+	 * Will silently ignore the event if no {@link MessageSendingOperations} is
+	 * available.
+	 * &lt;/p>
+	 * 
+	 * @param dest
+	 *        The destination to post to.
+	 * @param body
+	 *        The message body to post. This will be wrapped in a {@link Result}
+	 *        object if it is not one already.
+	 * @see #postMessage(String, Object, Map, boolean)</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9yv8kejlEeilbsvZjylwTQ" name="dest">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9yv8kujlEeilbsvZjylwTQ" name="body" type="_9yihMejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9ywjoOjlEeilbsvZjylwTQ" name="postMessage" visibility="protected" method="_9zqilujlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zyeZejlEeilbsvZjylwTQ">
+                  <body>Post a message. Will silently ignore the event if no
+	 * {@link MessageSendingOperations} is available.
+	 * 
+	 * &lt;p>
+	 * If {@code convert} is {@literal true} the message will be sent via the
+	 * {@link MessageSendingOperations#convertAndSend(Object, Object, Map)}
+	 * method. Otherwise the
+	 * {@link MessageSendingOperations#send(Object, Message)} method will be
+	 * used to send the body as-is.
+	 * &lt;/p>
+	 * 
+	 * @param dest
+	 *        The destination to post to.
+	 * @param body
+	 *        The message body to post. If {@code convert} is {@literal true}
+	 *        then this will be wrapped in a {@link Result} object if it is not
+	 *        one already.
+	 * @param headers
+	 *        an optional set of message headers to include
+	 * @param convert
+	 *        {@literal true} to convert the message before sending,
+	 *        {@literal false} to send without any conversion
+	 * @since 1.1</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9ywjoejlEeilbsvZjylwTQ" name="dest">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9ywjoujlEeilbsvZjylwTQ" name="body" type="_9yihMejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9ywjo-jlEeilbsvZjylwTQ" name="headers" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9ywjpOjlEeilbsvZjylwTQ" name="convert">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9yxxwOjlEeilbsvZjylwTQ" name="setTopicMapping" method="_9zrJoOjlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zyeZujlEeilbsvZjylwTQ">
+                  <body>Set a mapping of event topic values to corresponding message topic
+	 * values.
+	 * 
+	 * &lt;p>
+	 * The event topic values are first stripped of any
+	 * {@link #Edge_EVENT_PREFIX}, and the resulting value used as a key to
+	 * lookup a message topic value to use from this map. The message topics can
+	 * use template variables as defined in
+	 * {@link StringUtils#expandTemplateString(String, Map)}; all the event
+	 * properties are made available to the expansion.
+	 * &lt;/p>
+	 * 
+	 * @param topicMapping
+	 *        the topicMapping to set</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9yxxwejlEeilbsvZjylwTQ" name="topicMapping" type="_9xTyIejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9yyY0ejlEeilbsvZjylwTQ" name="setPublicTopicMapping" method="_9zrJoujlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zyeZ-jlEeilbsvZjylwTQ">
+                  <body>Set the mapping of event topic values to corresponding public message
+	 * topic values.
+	 * 
+	 * &lt;p>
+	 * The same messaging handling rules as documented in
+	 * {@link #setTopicMapping(Map)} apply here, except that the resulting topic
+	 * will have the {@link #PUBLIC_MESSAGE_TOPIC_PREFIX} instead of the
+	 * {@link #MESSAGE_TOPIC_PREFIX}.
+	 * &lt;/p>
+	 * 
+	 * @param publicTopicMapping
+	 *        the public topic mapping to set
+	 * @since 1.1
+	 * @see #setTopicMapping(Map)</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9yyY0ujlEeilbsvZjylwTQ" name="publicTopicMapping" type="_9xTyIejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9vTnAOjlEeilbsvZjylwTQ" name="JobServiceRegistrationListener">
+              <ownedComment xmi:id="_9zzFcOjlEeilbsvZjylwTQ">
+                <body>An OSGi service registration listener for jobs, so they can be automatically
+registered/unregistered with the job scheduler.
+
+&lt;p>
+This class is designed to be registered as a listener for
+{@link TriggerAndJobDetail} beans registered as services. As
+{@link TriggerAndJobDetail} services are discovered, they will be scheduled
+to run in the configured {@link Scheduler}. As those services are removed,
+they will be un-scheduled. In this way bundles can export jobs to be run by
+the &quot;core&quot; {@code Scheduler} provided by this bundle.
+&lt;/p>
+
+&lt;p>
+This class will also register {@link JobSettingSpecifierProvider} for every
+unique bundle symbolic name. This allows the settings UI to expose the
+registered jobs as configurable components.
+&lt;/p>
+
+&lt;p>
+For example, this might be configured via OSGi Blueprint like this:
+&lt;/p>
+
+&lt;pre>
+&amp;lt;reference-list id=&quot;triggers&quot; interface=&quot;org.eniware.edge.job.TriggerAndJobDetail&quot;>
+		&amp;lt;reference-listener bind-method=&quot;onBind&quot; unbind-method=&quot;onUnbind&quot;>
+			&amp;lt;bean class=&quot;org.eniware.edge.runtime.JobServiceRegistrationListener&quot;>
+				&amp;lt;property name=&quot;scheduler&quot; ref=&quot;scheduler&quot;/>
+             &amp;lt;property name=&quot;bundleContext&quot; ref=&quot;bundleContext&quot;/>
+			&amp;lt;/bean>
+		&amp;lt;/reference-listener>
+&amp;lt;/reference-list>
+&lt;/pre>
+
+&lt;p>
+The configurable properties of this class are:
+&lt;/p>
+
+&lt;dl class=&quot;class-properties&quot;>
+&lt;dt>scheduler&lt;/dt>
+&lt;dd>The Quartz {@link Scheduler} for scheduling and un-scheduling jobs with
+as {@link TriggerAndJobDetail} services are registered and
+un-registered.&lt;/dd>
+&lt;/dl>
+
+@version 2.0
+@see ManagedJobServiceRegistrationListener for alternative using
+     settings-based jobs</body>
+              </ownedComment>
+              <generalization xmi:id="_9y4fcujlEeilbsvZjylwTQ" general="_9xyTQejlEeilbsvZjylwTQ"/>
+              <ownedAttribute xmi:id="_9zVLYOjlEeilbsvZjylwTQ" name="scheduler" type="_9x4Z4OjlEeilbsvZjylwTQ" association="_9zzFcejlEeilbsvZjylwTQ"/>
+              <ownedAttribute xmi:id="_9zVLYejlEeilbsvZjylwTQ" name="configurationListenerRef" visibility="private" type="_9x0IcejlEeilbsvZjylwTQ" association="_9z9dgejlEeilbsvZjylwTQ"/>
+              <ownedAttribute xmi:id="_9zWZgejlEeilbsvZjylwTQ" name="providerMap" visibility="private" isLeaf="true" type="_9vX4cOjlEeilbsvZjylwTQ" isReadOnly="true" association="_9z-EkejlEeilbsvZjylwTQ">
+                <qualifier xmi:id="_9zXAkejlEeilbsvZjylwTQ">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </qualifier>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zWZgujlEeilbsvZjylwTQ" value="new TreeMap&lt;String, JobSettingSpecifierProvider>()"/>
+              </ownedAttribute>
+              <interfaceRealization xmi:id="_9y01EOjlEeilbsvZjylwTQ" client="_9vTnAOjlEeilbsvZjylwTQ" supplier="_9x2ksejlEeilbsvZjylwTQ" contract="_9x2ksejlEeilbsvZjylwTQ"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zrJpOjlEeilbsvZjylwTQ" name="pidForSymbolicName" specification="_9vU1IOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zrJpejlEeilbsvZjylwTQ" name="name">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zrJpujlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>return name + &quot;.JOBS&quot;;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zrwsOjlEeilbsvZjylwTQ" name="onBind" specification="_9y1cIOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zrwsejlEeilbsvZjylwTQ" name="trigJob" type="_9xxFIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zrwsujlEeilbsvZjylwTQ" name="properties" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>if ( log.isDebugEnabled() ) {
+			log.debug(&quot;Bind called on [&quot; + trigJob + &quot;] with props &quot; + properties);
+		}
+
+		JobDetail job = trigJob.getJobDetail();
+		Trigger trigger = trigJob.getTrigger();
+
+		final String pid = pidForSymbolicName((String) properties.get(&quot;Bundle-SymbolicName&quot;));
+		String cronExpression = null;
+		String settingKey = null;
+		JobSettingSpecifierProvider provider = null;
+
+		synchronized ( providerMap ) {
+			if ( pid != null ) {
+				provider = providerMap.get(pid);
+				if ( provider == null ) {
+					provider = new JobSettingSpecifierProvider(pid, trigJob.getMessageSource());
+					providerMap.put(pid, provider);
+				}
+
+				if ( configurationListenerRef == null ) {
+					configurationListenerRef = getBundleContext()
+							.registerService(ConfigurationListener.class, this, null);
+				}
+
+				// check for ConfigurationAdmin cron setting for this trigger,
+				// and
+				// use that if available
+				settingKey = JobUtils.triggerKey(trigger);
+				if ( trigger instanceof CronTrigger ) {
+					cronExpression = ((CronTrigger) trigger).getCronExpression();
+					ConfigurationAdmin ca = (ConfigurationAdmin) getBundleContext().getService(
+							getBundleContext().getServiceReference(ConfigurationAdmin.class.getName()));
+					if ( ca != null ) {
+						try {
+							Configuration conf = ca.getConfiguration(pid, null);
+							if ( conf != null ) {
+								@SuppressWarnings(&quot;unchecked&quot;)
+								Dictionary&lt;String, ?> props = conf.getProperties();
+								if ( props != null ) {
+									String newCronExpression = (String) props.get(settingKey);
+									if ( newCronExpression != null ) {
+										cronExpression = newCronExpression;
+									}
+								}
+							}
+						} catch ( IOException e ) {
+							log.warn(&quot;Unable to get configuration for {}&quot;, pid, e);
+						}
+					}
+				}
+			}
+		}
+
+		try {
+			if ( cronExpression != null &amp;&amp; settingKey != null ) {
+				JobUtils.scheduleCronJob(scheduler, (CronTrigger) trigJob.getTrigger(),
+						trigJob.getJobDetail(), cronExpression, null);
+				if ( provider != null ) {
+					provider.addSpecifier(trigJob);
+					RegisteredService&lt;TriggerAndJobDetail> rs = new RegisteredService&lt;TriggerAndJobDetail>(
+							trigJob, properties);
+					Hashtable&lt;String, Object> serviceProps = new Hashtable&lt;String, Object>();
+					serviceProps.put(&quot;settingPid&quot;, provider.getSettingUID());
+					addRegisteredService(rs, provider,
+							new String[] { SettingSpecifierProvider.class.getName() }, serviceProps);
+				}
+			} else {
+				scheduler.scheduleJob(job, trigger);
+			}
+		} catch ( SchedulerException e ) {
+			log.error(&quot;Error scheduling trigger {} for job {}&quot;,
+					new Object[] { trigger.getKey().getName(), trigger.getJobKey().getName(), e });
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zrws-jlEeilbsvZjylwTQ" name="onUnbind" specification="_9y2qQOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zrwtOjlEeilbsvZjylwTQ" name="trigJob" type="_9xxFIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zrwtejlEeilbsvZjylwTQ" name="properties" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>if ( trigJob == null ) {
+			// gemini blueprint calls this when availability=&quot;optional&quot; and there are no services
+			return;
+		}
+		try {
+			scheduler.deleteJob(trigJob.getJobDetail().getKey());
+		} catch ( SchedulerException e ) {
+			log.error(&quot;Unable to un-schedule job &quot; + trigJob);
+			throw new RuntimeException(e);
+		}
+
+		removeRegisteredService(trigJob, properties);
+
+		final String pid = pidForSymbolicName((String) properties.get(&quot;Bundle-SymbolicName&quot;));
+
+		JobSettingSpecifierProvider provider = null;
+		synchronized ( providerMap ) {
+			provider = providerMap.get(pid);
+			if ( provider != null ) {
+				provider.removeSpecifier(trigJob);
+			}
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zrwtujlEeilbsvZjylwTQ" name="configurationEvent" specification="_9y34YOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zrwt-jlEeilbsvZjylwTQ" name="event" type="_9x19oejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>if ( event.getType() == ConfigurationEvent.CM_UPDATED ) {
+			JobSettingSpecifierProvider provider = null;
+			synchronized ( providerMap ) {
+				provider = providerMap.get(event.getPid());
+			}
+			if ( provider != null ) {
+				@SuppressWarnings(&quot;unchecked&quot;)
+				ServiceReference&lt;ConfigurationAdmin> caRef = event.getReference();
+				ConfigurationAdmin ca = getBundleContext().getService(caRef);
+				try {
+					Configuration config = ca.getConfiguration(event.getPid(), null);
+					@SuppressWarnings(&quot;unchecked&quot;)
+					Dictionary&lt;String, ?> props = config.getProperties();
+					log.debug(&quot;CA PID {} updated props: {}&quot;, event.getPid(), props);
+					Enumeration&lt;String> keys = props.keys();
+					while ( keys.hasMoreElements() ) {
+						String key = keys.nextElement();
+						List&lt;RegisteredService&lt;TriggerAndJobDetail>> tjList = getRegisteredServices();
+						synchronized ( tjList ) {
+							for ( RegisteredService&lt;TriggerAndJobDetail> rs : tjList ) {
+								TriggerAndJobDetail tj = rs.getConfig();
+								if ( key.equals(JobUtils.triggerKey(tj.getTrigger())) ) {
+									JobUtils.scheduleCronJob(scheduler, (CronTrigger) tj.getTrigger(),
+											tj.getJobDetail(), (String) props.get(key), null);
+								}
+							}
+
+						}
+					}
+				} catch ( IOException e ) {
+					log.warn(&quot;Exception processing configuration update event&quot;, e);
+				}
+			}
+		}
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_9vU1IOjlEeilbsvZjylwTQ" name="pidForSymbolicName" visibility="private" method="_9zrJpOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9vU1IejlEeilbsvZjylwTQ" name="name">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9vU1IujlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9y1cIOjlEeilbsvZjylwTQ" name="onBind" method="_9zrwsOjlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zzFc-jlEeilbsvZjylwTQ">
+                  <body>Callback when a trigger has been registered.
+	 * 
+	 * @param trigJob
+	 *        the trigger and job
+	 * @param properties
+	 *        the service properties</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9y1cIejlEeilbsvZjylwTQ" name="trigJob" type="_9xxFIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9y1cIujlEeilbsvZjylwTQ" name="properties" type="_9xTyIejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9y2qQOjlEeilbsvZjylwTQ" name="onUnbind" method="_9zrws-jlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zzFdOjlEeilbsvZjylwTQ">
+                  <body>Callback when a trigger has been un-registered.
+	 * 
+	 * @param trigJob
+	 *        the trigger and job
+	 * @param properties
+	 *        the service properties</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9y2qQejlEeilbsvZjylwTQ" name="trigJob" type="_9xxFIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9y2qQujlEeilbsvZjylwTQ" name="properties" type="_9xTyIejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9y34YOjlEeilbsvZjylwTQ" name="configurationEvent" method="_9zrwtujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9y34YejlEeilbsvZjylwTQ" name="event" type="_9x19oejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9vX4cOjlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider">
+              <ownedComment xmi:id="_9zzsgOjlEeilbsvZjylwTQ">
+                <body>{@link SettingSpecifierProvider} for Quartz job triggers.
+
+&lt;p>
+This class allows a set of related Quartz Trigger instances to be exposed as
+a {@link SettingSpecifierProvider} and managed by the Edge's setting UI. For
+example the triggers might be grouped by the bundle they were published from.
+It works with {@link TriggerAndJobDetail} services. Call
+{@link #addSpecifier(TriggerAndJobDetail)} and
+{@link #removeSpecifier(TriggerAndJobDetail)} as {@link TriggerAndJobDetail}
+services are registered/unregistered with the system.
+&lt;/p>
+
+&lt;p>
+Currently only {@link CronTrigger} triggers are supported. Localized messages
+are not supported.
+&lt;/p>
+
+@version 2.0</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_9zXnoOjlEeilbsvZjylwTQ" name="TITLE_SUFFIX" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zXnoejlEeilbsvZjylwTQ" value="&quot; Jobs&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zXnoujlEeilbsvZjylwTQ" name="JOBS_PID_SUFFIX" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zXno-jlEeilbsvZjylwTQ" value="&quot;.JOBS&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zYOsOjlEeilbsvZjylwTQ" name="SN_Edge_PREFIX" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zYOsejlEeilbsvZjylwTQ" value="&quot;org.eniware.edge.&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zYOsujlEeilbsvZjylwTQ" name="settingUID" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zZc0ujlEeilbsvZjylwTQ" name="messageSource" type="_9x_uoejlEeilbsvZjylwTQ" isReadOnly="true" association="_9z-roejlEeilbsvZjylwTQ">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zZc1OjlEeilbsvZjylwTQ" value="null"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zaq8OjlEeilbsvZjylwTQ" name="specifiers" type="_9x95cejlEeilbsvZjylwTQ" isOrdered="true" association="_9z_SsejlEeilbsvZjylwTQ">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9zaq8ejlEeilbsvZjylwTQ" value="*"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zaq8ujlEeilbsvZjylwTQ" value="new ArrayList&lt;SettingSpecifier>()"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zaq8-jlEeilbsvZjylwTQ" name="messages" visibility="private" isLeaf="true" type="_9x8EQOjlEeilbsvZjylwTQ" isReadOnly="true" association="_9z_5wejlEeilbsvZjylwTQ">
+                <qualifier xmi:id="_9zbSAujlEeilbsvZjylwTQ">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </qualifier>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zbSAOjlEeilbsvZjylwTQ" value="new HashMap&lt;String, MessageFormat>()"/>
+              </ownedAttribute>
+              <interfaceRealization xmi:id="_9y5tkOjlEeilbsvZjylwTQ" client="_9vX4cOjlEeilbsvZjylwTQ" supplier="_9xxsMejlEeilbsvZjylwTQ" contract="_9xxsMejlEeilbsvZjylwTQ"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zsXxOjlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider" specification="_9vZGkOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zsXxejlEeilbsvZjylwTQ" name="settingUID">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zsXxujlEeilbsvZjylwTQ" type="_9vX4cOjlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>this(settingUID, null);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zs-0OjlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider" specification="_9y67sOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zs-0ejlEeilbsvZjylwTQ" name="settingUID">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zs-0ujlEeilbsvZjylwTQ" name="source" type="_9x_uoejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zs-0-jlEeilbsvZjylwTQ" type="_9vX4cOjlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>super();
+		this.settingUID = settingUID;
+		this.messageSource = source;
+		if ( source == null || !hasMessage(source, &quot;title&quot;) ) {
+			messages.put(&quot;title&quot;, new MessageFormat(titleValue(settingUID)));
+		}
+
+		AbstractMessageSource msgSource = new AbstractMessageSource() {
+
+			@Override
+			protected MessageFormat resolveCode(String code, Locale locale) {
+				return messages.get(code);
+			}
+		};
+		msgSource.setParentMessageSource(source);
+		this.messageSource = msgSource;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zs-1OjlEeilbsvZjylwTQ" name="hasMessage" specification="_9y7iwOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zs-1ejlEeilbsvZjylwTQ" name="source" type="_9x_uoejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zs-1ujlEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zs-1-jlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>if ( source == null ) {
+			return false;
+		}
+		try {
+			source.getMessage(key, null, Locale.getDefault());
+			return true;
+		} catch ( NoSuchMessageException e ) {
+			return false;
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zs-2OjlEeilbsvZjylwTQ" name="titleValue" specification="_9vaUsOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zs-2ejlEeilbsvZjylwTQ" name="settingUID">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zs-2ujlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>if ( settingUID.startsWith(SN_Edge_PREFIX) &amp;&amp; settingUID.length() > SN_Edge_PREFIX.length() ) {
+			String subPackage = settingUID.substring(SN_Edge_PREFIX.length());
+			if ( subPackage.endsWith(JOBS_PID_SUFFIX)
+					&amp;&amp; subPackage.length() > JOBS_PID_SUFFIX.length() ) {
+				subPackage = subPackage.substring(0, subPackage.length() - JOBS_PID_SUFFIX.length());
+			}
+			if ( subPackage.indexOf('.') &lt; 0 ) {
+				// capitalize first letter
+				subPackage = Character.toUpperCase(subPackage.charAt(0)) + subPackage.substring(1)
+						+ TITLE_SUFFIX;
+				return subPackage;
+			}
+			return subPackage;
+		}
+		return settingUID;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9ztl4OjlEeilbsvZjylwTQ" name="addSpecifier" specification="_9y8J0OjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9ztl4ejlEeilbsvZjylwTQ" name="trigJob" type="_9xxFIejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>Trigger trig = trigJob.getTrigger();
+		if ( trig instanceof CronTrigger ) {
+			CronTrigger ct = (CronTrigger) trig;
+			final String key = JobUtils.triggerKey(ct);
+			BasicTextFieldSettingSpecifier tf = new BasicTextFieldSettingSpecifier(key,
+					ct.getCronExpression());
+			tf.setTitle(ct.getKey().getName());
+			final String labelKey = key + &quot;.key&quot;;
+			final String descKey = key + &quot;.desc&quot;;
+			if ( !hasMessage(this.messageSource, labelKey) ) {
+				if ( hasMessage(trigJob.getMessageSource(), labelKey) ) {
+					messages.put(labelKey, new MessageFormat(
+							trigJob.getMessageSource().getMessage(labelKey, null, Locale.getDefault())));
+				} else {
+					messages.put(labelKey, new MessageFormat(ct.getKey().getName()));
+				}
+			}
+			if ( !hasMessage(this.messageSource, descKey) ) {
+				if ( hasMessage(trigJob.getMessageSource(), labelKey) ) {
+					messages.put(descKey, new MessageFormat(
+							trigJob.getMessageSource().getMessage(descKey, null, Locale.getDefault())));
+				} else {
+					messages.put(descKey, new MessageFormat(
+							StringUtils.hasText(ct.getDescription()) ? ct.getDescription() : &quot;&quot;));
+				}
+			}
+			synchronized ( specifiers ) {
+				specifiers.add(tf);
+			}
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9ztl4ujlEeilbsvZjylwTQ" name="removeSpecifier" specification="_9y8w4OjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9ztl4-jlEeilbsvZjylwTQ" name="trigJob" type="_9xxFIejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>Trigger trig = trigJob.getTrigger();
+		if ( trig instanceof CronTrigger ) {
+			CronTrigger ct = (CronTrigger) trig;
+			final String key = JobUtils.triggerKey(ct);
+			synchronized ( specifiers ) {
+				for ( Iterator&lt;SettingSpecifier> itr = specifiers.iterator(); itr.hasNext(); ) {
+					TextFieldSettingSpecifier tf = (TextFieldSettingSpecifier) itr.next();
+					if ( tf.getKey().equals(key) ) {
+						itr.remove();
+						break;
+					}
+				}
+			}
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9ztl5OjlEeilbsvZjylwTQ" name="getDisplayName" specification="_9va7wOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9ztl5ejlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>return settingUID;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9ztl5ujlEeilbsvZjylwTQ" name="getSettingSpecifiers" specification="_9vbi0-jlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9ztl5-jlEeilbsvZjylwTQ" type="_9x95cejlEeilbsvZjylwTQ" isOrdered="true" direction="return">
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9ztl6OjlEeilbsvZjylwTQ" value="*"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>synchronized ( specifiers ) {
+			return Collections.unmodifiableList(specifiers);
+		}
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_9vZGkOjlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider" method="_9zsXxOjlEeilbsvZjylwTQ">
+                <eAnnotations xmi:id="_9vZtoOjlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_9vZtoejlEeilbsvZjylwTQ" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_9zzsgejlEeilbsvZjylwTQ">
+                  <body>Construct with settings UID.
+	 * 
+	 * @param settingUID
+	 *        the setting UID</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9vZGkejlEeilbsvZjylwTQ" name="settingUID">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9vZtoujlEeilbsvZjylwTQ" type="_9vX4cOjlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9vaUsOjlEeilbsvZjylwTQ" name="titleValue" visibility="private" isStatic="true" method="_9zs-2OjlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zzsg-jlEeilbsvZjylwTQ">
+                  <body>Construct a display title based on a setting UID.
+	 * 
+	 * &lt;p>
+	 * The display title is generated from the setting UID itself, by first
+	 * removing the {@link #SN_Edge_PREFIX} prefix and {@link #JOBS_PID_SUFFIX}
+	 * suffix, capitalizing the remaining value, and appending
+	 * {@link #TITLE_SUFFIX}. For example, the UID
+	 * &lt;code>org.eniware.edge.power.JOBS&lt;/code> will result in
+	 * &lt;code>Power Jobs&lt;/code>.
+	 * &lt;/p>
+	 * 
+	 * 
+	 * @param settingUID
+	 *        the setting UID value
+	 * @return the generated title value</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9vaUsejlEeilbsvZjylwTQ" name="settingUID">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9vaUsujlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9va7wOjlEeilbsvZjylwTQ" name="getDisplayName" method="_9ztl5OjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9va7wejlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9vbi0-jlEeilbsvZjylwTQ" name="getSettingSpecifiers" method="_9ztl5ujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9vcJ4OjlEeilbsvZjylwTQ" type="_9x95cejlEeilbsvZjylwTQ" isOrdered="true" direction="return">
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9vcJ4ejlEeilbsvZjylwTQ" value="*"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9y67sOjlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider" method="_9zs-0OjlEeilbsvZjylwTQ">
+                <eAnnotations xmi:id="_9y67s-jlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_9y67tOjlEeilbsvZjylwTQ" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_9zzsgujlEeilbsvZjylwTQ">
+                  <body>Construct with settings UID.
+	 * 
+	 * @param settingUID
+	 *        the setting UID
+	 * @param source
+	 *        a message source</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9y67sejlEeilbsvZjylwTQ" name="settingUID">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9y67sujlEeilbsvZjylwTQ" name="source" type="_9x_uoejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9y67tejlEeilbsvZjylwTQ" type="_9vX4cOjlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9y7iwOjlEeilbsvZjylwTQ" name="hasMessage" visibility="private" isStatic="true" method="_9zs-1OjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9y7iwejlEeilbsvZjylwTQ" name="source" type="_9x_uoejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9y7iwujlEeilbsvZjylwTQ" name="key">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9y7iw-jlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9y8J0OjlEeilbsvZjylwTQ" name="addSpecifier" method="_9ztl4OjlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zzshOjlEeilbsvZjylwTQ">
+                  <body>Create appropriate {@link SettingSpecifier} instances for a given
+	 * {@link TriggerAndJobDetail}.
+	 * 
+	 * &lt;p>
+	 * Call this method for every {@link TriggerAndJobDetail} published in the
+	 * system.
+	 * &lt;/p>
+	 * 
+	 * @param trigJob
+	 *        the service to generate specifiers for</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9y8J0ejlEeilbsvZjylwTQ" name="trigJob" type="_9xxFIejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9y8w4OjlEeilbsvZjylwTQ" name="removeSpecifier" method="_9ztl4ujlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9zzshejlEeilbsvZjylwTQ">
+                  <body>Remove {@link SettingSpecifier} instances previously registered via
+	 * {@link #addSpecifier(TriggerAndJobDetail)} for a given
+	 * {@link TriggerAndJobDetail}.
+	 * 
+	 * &lt;p>
+	 * Call this method for every {@link TriggerAndJobDetail} unregistered in
+	 * the system.
+	 * &lt;/p>
+	 * 
+	 * @param trigJob
+	 *        the service to generate specifiers for</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9y8w4ejlEeilbsvZjylwTQ" name="trigJob" type="_9xxFIejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9vf0QOjlEeilbsvZjylwTQ" name="JobUtils">
+              <ownedComment xmi:id="_9zzshujlEeilbsvZjylwTQ">
+                <body>Utility methods for dealing with Quartz jobs.
+
+@version 2.0</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_9zb5EOjlEeilbsvZjylwTQ" name="log" visibility="private" isLeaf="true" isStatic="true" type="_9xmtEejlEeilbsvZjylwTQ" isReadOnly="true" association="_90Ag0ejlEeilbsvZjylwTQ">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zb5EejlEeilbsvZjylwTQ" value="LoggerFactory.getLogger(JobUtils.class)"/>
+              </ownedAttribute>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zuM8OjlEeilbsvZjylwTQ" name="triggerKey" specification="_9y-mEOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zuM8ejlEeilbsvZjylwTQ" name="t" type="_9x5A8ujlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zuM8ujlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>StringBuilder buf = new StringBuilder();
+		final TriggerKey triggerKey = t.getKey();
+		final JobKey jobKey = t.getJobKey();
+		if ( jobKey != null &amp;&amp; jobKey.getGroup() != null
+				&amp;&amp; !Scheduler.DEFAULT_GROUP.equals(jobKey.getGroup()) ) {
+			buf.append(jobKey.getGroup());
+		}
+		if ( jobKey != null &amp;&amp; jobKey.getName() != null ) {
+			if ( buf.length() > 0 ) {
+				buf.append('.');
+			}
+			buf.append(jobKey.getName());
+		}
+		if ( triggerKey.getGroup() != null &amp;&amp; !Scheduler.DEFAULT_GROUP.equals(triggerKey.getGroup()) ) {
+			if ( buf.length() > 0 ) {
+				buf.append('.');
+			}
+			buf.append(triggerKey.getGroup());
+		}
+		if ( buf.length() > 0 ) {
+			buf.append('.');
+		}
+		buf.append(triggerKey.getName());
+		return buf.toString();
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zuM8-jlEeilbsvZjylwTQ" name="scheduleCronJob" specification="_9y_NIOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zuM9OjlEeilbsvZjylwTQ" name="scheduler" type="_9x4Z4OjlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zuM9ejlEeilbsvZjylwTQ" name="trigger" type="_9x3LwejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zuM9ujlEeilbsvZjylwTQ" name="jobDetail" type="_9x3y0ejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zuM9-jlEeilbsvZjylwTQ" name="newCronExpression">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zuM-OjlEeilbsvZjylwTQ" name="newJobDataMap" type="_9yHDYOjlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>// has the trigger value actually changed?
+		CronTrigger ct = trigger;
+		boolean reschedule = false;
+		try {
+			Trigger runtimeTrigger = scheduler.getTrigger(trigger.getKey());
+			if ( runtimeTrigger != null ) {
+				reschedule = true;
+				ct = (CronTrigger) runtimeTrigger;
+			}
+		} catch ( SchedulerException e ) {
+			log.warn(&quot;Error getting trigger {}.{}&quot;,
+					new Object[] { trigger.getKey().getGroup(), trigger.getKey().getName(), e });
+		}
+
+		String baseCronExpression = null;
+		String currentCronExpression = ct.getCronExpression();
+		if ( ct.getJobDataMap()
+				.containsKey(RandomizedCronTriggerFactoryBean.BASE_CRON_EXPRESSION_KEY) ) {
+			baseCronExpression = ct.getJobDataMap()
+					.getString(RandomizedCronTriggerFactoryBean.BASE_CRON_EXPRESSION_KEY);
+			currentCronExpression = baseCronExpression;
+		}
+		boolean triggerChanged = false;
+		if ( !newCronExpression.equals(currentCronExpression) ) {
+			log.info(&quot;Trigger {} cron changed from {} to {}&quot;,
+					new Object[] { triggerKey(trigger), currentCronExpression, newCronExpression });
+			triggerChanged = true;
+		}
+		if ( newJobDataMap != null &amp;&amp; !newJobDataMap.equals(ct.getJobDataMap()) ) {
+			log.info(&quot;Trigger {} job data changed&quot;, triggerKey(trigger));
+			triggerChanged = true;
+		}
+		if ( reschedule &amp;&amp; !triggerChanged ) {
+			// unchanged
+			return;
+		}
+		if ( reschedule ) {
+			CronTriggerFactoryBean newTrigger;
+			if ( baseCronExpression != null ) {
+				RandomizedCronTriggerFactoryBean r = new RandomizedCronTriggerFactoryBean();
+				r.setRandomSecond(true);
+				newTrigger = r;
+			} else {
+				newTrigger = new CronTriggerFactoryBean();
+			}
+			newTrigger.setName(ct.getKey().getName());
+			newTrigger.setGroup(ct.getKey().getGroup());
+			newTrigger.setDescription(ct.getDescription());
+			newTrigger.setMisfireInstruction(ct.getMisfireInstruction());
+			newTrigger.setCronExpression(newCronExpression);
+			newTrigger.setJobDetail(jobDetail);
+			if ( newJobDataMap != null ) {
+				newTrigger.setJobDataMap(newJobDataMap);
+			}
+			try {
+				newTrigger.afterPropertiesSet();
+				CronTrigger newCt = newTrigger.getObject();
+				scheduler.rescheduleJob(ct.getKey(), newCt);
+			} catch ( ParseException e ) {
+				log.error(&quot;Error in cron expression [{}]&quot;, newCronExpression, e);
+			} catch ( SchedulerException e ) {
+				log.error(&quot;Error re-scheduling trigger {} for job {}&quot;,
+						new Object[] { ct.getKey().getName(), jobDetail.getKey().getName(), e });
+			}
+		} else {
+			log.info(&quot;Scheduling trigger {} as cron {}&quot;,
+					new Object[] { triggerKey(trigger), newCronExpression });
+			try {
+				scheduler.scheduleJob(jobDetail, ct);
+			} catch ( SchedulerException e ) {
+				log.error(&quot;Error scheduling trigger {} for job {}&quot;,
+						new Object[] { ct.getKey().getName(), jobDetail.getKey().getName(), e });
+			}
+		}
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_9y-mEOjlEeilbsvZjylwTQ" name="triggerKey" isStatic="true" method="_9zuM8OjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9y-mEejlEeilbsvZjylwTQ" name="t" type="_9x5A8ujlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9y-mEujlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9y_NIOjlEeilbsvZjylwTQ" name="scheduleCronJob" isStatic="true" method="_9zuM8-jlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9y_NIejlEeilbsvZjylwTQ" name="scheduler" type="_9x4Z4OjlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9y_NIujlEeilbsvZjylwTQ" name="trigger" type="_9x3LwejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9y_NI-jlEeilbsvZjylwTQ" name="jobDetail" type="_9x3y0ejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9y_0MOjlEeilbsvZjylwTQ" name="newCronExpression">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9y_0MejlEeilbsvZjylwTQ" name="newJobDataMap" type="_9yHDYOjlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9viQgOjlEeilbsvZjylwTQ" name="ManagedJobServiceRegistrationListener">
+              <ownedComment xmi:id="_9zzsh-jlEeilbsvZjylwTQ">
+                <body>An OSGi service registration listener for {@link ManagedTriggerAndJobDetail},
+so they can be automatically registered/unregistered with the job scheduler.
+
+&lt;p>
+This class is designed to be registered as a listener for
+{@link ManagedTriggerAndJobDetail} beans registered as services. It only
+works with {@link CronTrigger} triggers. As
+{@link ManagedTriggerAndJobDetail} services are discovered, they will be
+scheduled to run in the configured {@link Scheduler}. As the services are
+removed, they will be un-scheduled. In this way bundles can export jobs to be
+run by the &quot;core&quot; {@code Scheduler} provided by this bundle.
+&lt;/p>
+
+&lt;p>
+For example, this might be configured via OSGi Blueprint like this:
+&lt;/p>
+
+&lt;pre>
+&amp;lt;reference-list id=&quot;managedJobs&quot; interface=&quot;org.eniware.edge.job.ManagedTriggerAndJobDetail&quot;>
+		&amp;lt;reference-listener bind-method=&quot;onBind&quot; unbind-method=&quot;onUnbind&quot;>
+			&amp;lt;bean class=&quot;org.eniware.edge.runtime.ManagedJobServiceRegistrationListener&quot;>
+				&amp;lt;property name=&quot;scheduler&quot; ref=&quot;scheduler&quot;/>
+             &amp;lt;property name=&quot;bundleContext&quot; ref=&quot;bundleContext&quot;/>
+			&amp;lt;/bean>
+		&amp;lt;/reference-listener>
+&amp;lt;/reference-list>
+&lt;/pre>
+
+&lt;p>
+This class also implements {@link ConfigurationListener} and will
+automatically register itself for {@link ConfigurationEvent} updates. If the
+cron expression associated with a registered job changes, the job will be
+automatically rescheduled with the new cron expression.
+&lt;/p>
+
+&lt;p>
+As {@link ManagedTriggerAndJobDetail} implements {@link ServiceProvider} as
+well, any service configurations returned by
+{@link ServiceProvider#getServiceConfigurations()} will be automatically
+registered along with the job. When the job is unregistered the associated
+services will be unregistered as well.
+&lt;/p>
+
+&lt;p>
+The configurable properties of this class are:
+&lt;/p>
+
+&lt;dl class=&quot;class-properties&quot;>
+&lt;dt>scheduler&lt;/dt>
+&lt;dd>The Quartz {@link Scheduler} for scheduling and un-scheduling jobs with
+as {@link ManagedTriggerAndJobDetail} services are registered and
+un-registered.&lt;/dd>
+
+&lt;dt>bundleContext&lt;/dt>
+&lt;dd>The {@link BundleContext} to register for {@link ConfigurationEvent}
+notifications with.&lt;/dd>
+&lt;/dl>
+
+@version 2.1</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_9zcgIOjlEeilbsvZjylwTQ" name="scheduler" visibility="private" type="_9x4Z4OjlEeilbsvZjylwTQ" association="_90BH4ejlEeilbsvZjylwTQ"/>
+              <ownedAttribute xmi:id="_9zdHMejlEeilbsvZjylwTQ" name="bundleContext" visibility="private" type="_9yOYIejlEeilbsvZjylwTQ" association="_90Bu8ejlEeilbsvZjylwTQ"/>
+              <ownedAttribute xmi:id="_9zduQOjlEeilbsvZjylwTQ" name="configurationListenerRef" visibility="private" type="_9x0IcejlEeilbsvZjylwTQ" association="_90CWAejlEeilbsvZjylwTQ"/>
+              <ownedAttribute xmi:id="_9zeVUejlEeilbsvZjylwTQ" name="registeredServices" visibility="private" isLeaf="true" type="_9xv3AejlEeilbsvZjylwTQ" isReadOnly="true" association="_90C9EejlEeilbsvZjylwTQ">
+                <qualifier xmi:id="_9zfjcejlEeilbsvZjylwTQ">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </qualifier>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9ze8YejlEeilbsvZjylwTQ" value="new HashMap&lt;String, List&lt;ServiceRegistration&lt;?>>>()"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zfjcujlEeilbsvZjylwTQ" name="pidMap" visibility="private" isLeaf="true" type="_9yNKAejlEeilbsvZjylwTQ" isReadOnly="true" association="_90ELMejlEeilbsvZjylwTQ">
+                <qualifier xmi:id="_9zgKgejlEeilbsvZjylwTQ">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </qualifier>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zfjc-jlEeilbsvZjylwTQ" value="new HashMap&lt;String, ManagedTriggerAndJobDetail>()"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zgKgujlEeilbsvZjylwTQ" name="log" visibility="private" isLeaf="true" type="_9xmtEejlEeilbsvZjylwTQ" isReadOnly="true" association="_90EyQejlEeilbsvZjylwTQ">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_9zgxkOjlEeilbsvZjylwTQ" value="LoggerFactory.getLogger(getClass())"/>
+              </ownedAttribute>
+              <interfaceRealization xmi:id="_9zAbQOjlEeilbsvZjylwTQ" client="_9viQgOjlEeilbsvZjylwTQ" supplier="_9x2ksejlEeilbsvZjylwTQ" contract="_9x2ksejlEeilbsvZjylwTQ"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zu0AOjlEeilbsvZjylwTQ" name="finish" specification="_9vjeoOjlEeilbsvZjylwTQ">
+                <language>java</language>
+                <body>if ( configurationListenerRef != null ) {
+			configurationListenerRef.unregister();
+			configurationListenerRef = null;
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zu0AejlEeilbsvZjylwTQ" name="onBind" specification="_9zBpYOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zu0AujlEeilbsvZjylwTQ" name="trigJob" type="_9yNKAejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zu0A-jlEeilbsvZjylwTQ" name="properties" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>log.debug(&quot;Bind called on [{}] with props {}&quot;, trigJob, properties);
+
+		if ( !(trigJob.getTrigger() instanceof CronTrigger) ) {
+			log.warn(&quot;Trigger {} is not a CronTrigger! Not scheduling.&quot;,
+					JobUtils.triggerKey(trigJob.getTrigger()));
+			return;
+		}
+
+		final CronTrigger origTrigger = (CronTrigger) trigJob.getTrigger();
+		final JobDetail origJobDetail = trigJob.getJobDetail();
+		final String pid = (String) properties.get(Constants.SERVICE_PID);
+
+		// rename job name and trigger name to account for instance
+		final CronTrigger instanceTrigger = origTrigger.getTriggerBuilder().withIdentity(pid).forJob(pid)
+				.build();
+		final JobDetail instanceJobDetail = origJobDetail.getJobBuilder().withIdentity(pid).build();
+
+		synchronized ( this ) {
+			if ( configurationListenerRef == null ) {
+				configurationListenerRef = bundleContext.registerService(ConfigurationListener.class,
+						this, null);
+			}
+
+			pidMap.put(pid, trigJob);
+		}
+
+		Collection&lt;ServiceProvider.ServiceConfiguration> services = trigJob.getServiceConfigurations();
+		if ( services != null ) {
+			for ( ServiceProvider.ServiceConfiguration conf : services ) {
+				Object service = conf.getService();
+				String[] interfaces = conf.getInterfaces();
+				Dictionary&lt;String, ?> props = dictionaryForMap(conf.getProperties());
+				if ( service != null &amp;&amp; interfaces != null &amp;&amp; interfaces.length > 0 ) {
+					log.debug(&quot;Registering managed service {} as {} with props {}&quot;, service,
+							Arrays.toString(interfaces), props);
+					ServiceRegistration&lt;?> ref = bundleContext.registerService(interfaces, service,
+							props);
+					synchronized ( this ) {
+						List&lt;ServiceRegistration&lt;?>> refs = registeredServices.get(pid);
+						if ( refs == null ) {
+							refs = new ArrayList&lt;ServiceRegistration&lt;?>>(services.size());
+							registeredServices.put(pid, refs);
+						}
+						refs.add(ref);
+					}
+				}
+			}
+		}
+
+		JobUtils.scheduleCronJob(scheduler, instanceTrigger, instanceJobDetail,
+				instanceTrigger.getCronExpression(), instanceTrigger.getJobDataMap());
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zu0BOjlEeilbsvZjylwTQ" name="dictionaryForMap" specification="_9zCQcejlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zu0BejlEeilbsvZjylwTQ" name="map" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zu0BujlEeilbsvZjylwTQ" type="_9xuB0ejlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>if ( map == null ) {
+			return null;
+		}
+		return new Hashtable&lt;String, Object>(map);
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zu0B-jlEeilbsvZjylwTQ" name="onUnbind" specification="_9zEFoejlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zu0COjlEeilbsvZjylwTQ" name="trigJob" type="_9yNKAejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zu0CejlEeilbsvZjylwTQ" name="properties" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>if ( trigJob == null ) {
+			// gemini blueprint calls this when availability=&quot;optional&quot; and there are no services
+			return;
+		}
+		final String pid = (String) properties.get(Constants.SERVICE_PID);
+
+		try {
+			boolean deletedJob = scheduler.deleteJob(new JobKey(pid));
+			if ( deletedJob ) {
+				log.debug(&quot;Un-scheduled job {}&quot;, pid);
+			} else {
+				log.warn(&quot;Attempted to un-schedule job {} that wasn't found&quot;, pid);
+			}
+		} catch ( SchedulerException e ) {
+			log.error(&quot;Unable to un-schedule job &quot; + trigJob);
+			throw new RuntimeException(e);
+		}
+
+		synchronized ( this ) {
+			pidMap.remove(pid);
+			List&lt;ServiceRegistration&lt;?>> refs = registeredServices.get(pid);
+			if ( refs != null ) {
+				for ( ServiceRegistration&lt;?> reg : refs ) {
+					log.debug(&quot;Unregistering managed service &quot; + reg);
+					reg.unregister();
+				}
+				registeredServices.remove(pid);
+			}
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zvbEOjlEeilbsvZjylwTQ" name="configurationEvent" specification="_9zFTwOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zvbEejlEeilbsvZjylwTQ" name="event" type="_9x19oejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>if ( event.getType() == ConfigurationEvent.CM_UPDATED ) {
+			final String pid = event.getPid();
+			ManagedTriggerAndJobDetail trigJob = null;
+			synchronized ( pidMap ) {
+				trigJob = pidMap.get(pid);
+			}
+			if ( trigJob == null ) {
+				return;
+			}
+			final CronTrigger origTrigger = (CronTrigger) trigJob.getTrigger();
+			final JobDetail origJobDetail = trigJob.getJobDetail();
+
+			// rename job name and trigger name to account for instance
+			final CronTrigger instanceTrigger = origTrigger.getTriggerBuilder().withIdentity(pid)
+					.forJob(pid).build();
+			final JobDetail instanceJobDetail = origJobDetail.getJobBuilder().withIdentity(pid).build();
+
+			// even though the cron expression is also updated by ConfigurationAdmin, it can happen in a different thread
+			// so it might not be updated yet so we must extract the current value from ConfigurationAdmin
+			String newCronExpression = origTrigger.getCronExpression();
+			JobDataMap newJobDataMap = (JobDataMap) origJobDetail.getJobDataMap().clone();
+			@SuppressWarnings(&quot;unchecked&quot;)
+			ServiceReference&lt;ConfigurationAdmin> caRef = event.getReference();
+			ConfigurationAdmin ca = bundleContext.getService(caRef);
+			try {
+				Configuration config = ca.getConfiguration(pid, null);
+				@SuppressWarnings(&quot;unchecked&quot;)
+				Dictionary&lt;String, ?> props = config.getProperties();
+
+				// first look for expression on common attribute names
+				String propCronExpression = (String) props.get(&quot;triggerCronExpression&quot;);
+				if ( propCronExpression == null ) {
+					// legacy property name
+					propCronExpression = (String) props.get(&quot;trigger.cronExpression&quot;);
+				}
+
+				// get JobDataMap
+				Enumeration&lt;String> keyEnum = props.keys();
+				Pattern pat = Pattern.compile(&quot;trigger\\.jobDataMap\\['([a-zA-Z0-9_]*)'\\].*&quot;);
+				while ( keyEnum.hasMoreElements() ) {
+					String key = keyEnum.nextElement();
+					Matcher m = pat.matcher(key);
+					if ( m.matches() ) {
+						newJobDataMap.put(m.group(1), props.get(key));
+					}
+
+					// if cron expression not already found, search for any key containing &quot;cronexpression&quot;
+					if ( propCronExpression == null ) {
+						if ( key.toLowerCase().contains(&quot;cronexpression&quot;) ) {
+							propCronExpression = (String) props.get(key);
+						}
+					}
+				}
+
+				if ( propCronExpression != null ) {
+					newCronExpression = propCronExpression;
+				}
+			} catch ( IOException e ) {
+				log.warn(&quot;Exception processing configuration update event&quot;, e);
+			}
+			if ( newCronExpression != null ) {
+				JobUtils.scheduleCronJob(scheduler, instanceTrigger, instanceJobDetail,
+						newCronExpression, newJobDataMap);
+			}
+
+		}
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zvbEujlEeilbsvZjylwTQ" name="setScheduler" specification="_9zF60ujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zvbE-jlEeilbsvZjylwTQ" name="scheduler" type="_9x4Z4OjlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>this.scheduler = scheduler;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zvbFOjlEeilbsvZjylwTQ" name="setBundleContext" specification="_9zGh4OjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zvbFejlEeilbsvZjylwTQ" name="bundleContext" type="_9yOYIejlEeilbsvZjylwTQ"/>
+                <language>java</language>
+                <body>this.bundleContext = bundleContext;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_9vjeoOjlEeilbsvZjylwTQ" name="finish" method="_9zu0AOjlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9z0TkOjlEeilbsvZjylwTQ">
+                  <body>Call to close down this instance.</body>
+                </ownedComment>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9zBpYOjlEeilbsvZjylwTQ" name="onBind" method="_9zu0AejlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9z0TkejlEeilbsvZjylwTQ">
+                  <body>Callback when a trigger has been registered.
+	 * 
+	 * @param trigJob
+	 *        the trigger and job
+	 * @param properties
+	 *        the service properties</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9zBpYejlEeilbsvZjylwTQ" name="trigJob" type="_9yNKAejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zBpYujlEeilbsvZjylwTQ" name="properties" type="_9xTyIejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9zCQcejlEeilbsvZjylwTQ" name="dictionaryForMap" visibility="private" method="_9zu0BOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zCQcujlEeilbsvZjylwTQ" name="map" type="_9xTyIejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zDekOjlEeilbsvZjylwTQ" type="_9xuB0ejlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9zEFoejlEeilbsvZjylwTQ" name="onUnbind" method="_9zu0B-jlEeilbsvZjylwTQ">
+                <ownedComment xmi:id="_9z0TkujlEeilbsvZjylwTQ">
+                  <body>Callback when a trigger has been un-registered.
+	 * 
+	 * @param trigJob
+	 *        the trigger and job
+	 * @param properties
+	 *        the service properties</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9zEFoujlEeilbsvZjylwTQ" name="trigJob" type="_9yNKAejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zEFo-jlEeilbsvZjylwTQ" name="properties" type="_9xTyIejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9zFTwOjlEeilbsvZjylwTQ" name="configurationEvent" method="_9zvbEOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zFTwejlEeilbsvZjylwTQ" name="event" type="_9x19oejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9zF60ujlEeilbsvZjylwTQ" name="setScheduler" method="_9zvbEujlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zF60-jlEeilbsvZjylwTQ" name="scheduler" type="_9x4Z4OjlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9zGh4OjlEeilbsvZjylwTQ" name="setBundleContext" method="_9zvbFOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zGh4ejlEeilbsvZjylwTQ" name="bundleContext" type="_9yOYIejlEeilbsvZjylwTQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9vnwEOjlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo">
+              <ownedComment xmi:id="_9z0Tk-jlEeilbsvZjylwTQ">
+                <body>Simple implementation of {@link PlatformTaskInfo}.
+
+@version 1.0</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_9zhYoOjlEeilbsvZjylwTQ" name="taskId" isLeaf="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zimwOjlEeilbsvZjylwTQ" name="title" isLeaf="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zjN0-jlEeilbsvZjylwTQ" name="message" isLeaf="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zkb8ujlEeilbsvZjylwTQ" name="percentComplete" isLeaf="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zlqEOjlEeilbsvZjylwTQ" name="complete" visibility="private" isLeaf="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_9zlqEujlEeilbsvZjylwTQ" name="restartRequired" visibility="private" isLeaf="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedAttribute>
+              <interfaceRealization xmi:id="_9zHwAOjlEeilbsvZjylwTQ" client="_9vnwEOjlEeilbsvZjylwTQ" supplier="_9yT3sOjlEeilbsvZjylwTQ" contract="_9yT3sOjlEeilbsvZjylwTQ"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zwpMOjlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo" specification="_9vplQOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zwpMejlEeilbsvZjylwTQ" name="taskId">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zwpMujlEeilbsvZjylwTQ" name="title">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zwpM-jlEeilbsvZjylwTQ" name="message">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zwpNOjlEeilbsvZjylwTQ" name="percentComplete">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zwpNejlEeilbsvZjylwTQ" name="complete">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zwpNujlEeilbsvZjylwTQ" name="restartRequired">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9zwpN-jlEeilbsvZjylwTQ" type="_9vnwEOjlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>super();
+		this.taskId = taskId;
+		this.title = title;
+		this.message = message;
+		this.percentComplete = percentComplete;
+		this.complete = complete;
+		this.restartRequired = restartRequired;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zwpOOjlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo" specification="_9zIXEOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zwpOejlEeilbsvZjylwTQ" name="status" type="_9yUewOjlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zwpOujlEeilbsvZjylwTQ" name="locale" type="_9xTLEejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zwpO-jlEeilbsvZjylwTQ" type="_9vnwEOjlEeilbsvZjylwTQ" direction="return"/>
+                <language>java</language>
+                <body>this(status.getTaskId(), status.getTitle(locale), status.getMessage(locale),
+				status.getPercentComplete(), status.isComplete(), status.isRestartRequired());
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zwpPOjlEeilbsvZjylwTQ" name="isComplete" specification="_9vqzYOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zwpPejlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>return complete;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9zxQQOjlEeilbsvZjylwTQ" name="isRestartRequired" specification="_9vrac-jlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9zxQQejlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>return restartRequired;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_9vplQOjlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo" method="_9zwpMOjlEeilbsvZjylwTQ">
+                <eAnnotations xmi:id="_9vqMUujlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_9vqMU-jlEeilbsvZjylwTQ" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_9z0TlOjlEeilbsvZjylwTQ">
+                  <body>Construct from values.
+	 * 
+	 * @param taskId
+	 *        the task ID
+	 * @param title
+	 *        the title
+	 * @param message
+	 *        the message
+	 * @param percentComplete
+	 *        the percent complete
+	 * @param restartRequired
+	 *        the restart required flag</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9vplQejlEeilbsvZjylwTQ" name="taskId">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9vplQujlEeilbsvZjylwTQ" name="title">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9vplQ-jlEeilbsvZjylwTQ" name="message">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9vplROjlEeilbsvZjylwTQ" name="percentComplete">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9vqMUOjlEeilbsvZjylwTQ" name="complete">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9vqMUejlEeilbsvZjylwTQ" name="restartRequired">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_9vqMVOjlEeilbsvZjylwTQ" type="_9vnwEOjlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9vqzYOjlEeilbsvZjylwTQ" name="isComplete" method="_9zwpPOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9vqzYejlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9vrac-jlEeilbsvZjylwTQ" name="isRestartRequired" method="_9zxQQOjlEeilbsvZjylwTQ">
+                <ownedParameter xmi:id="_9vradOjlEeilbsvZjylwTQ" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_9zIXEOjlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo" method="_9zwpOOjlEeilbsvZjylwTQ">
+                <eAnnotations xmi:id="_9zI-IOjlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_9zI-IejlEeilbsvZjylwTQ" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_9z0TlejlEeilbsvZjylwTQ">
+                  <body>Construct from a status and locale.
+	 * 
+	 * @param status
+	 *        the status
+	 * @param locale
+	 *        the desired locale</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_9zIXEejlEeilbsvZjylwTQ" name="status" type="_9yUewOjlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zIXEujlEeilbsvZjylwTQ" name="locale" type="_9xTLEejlEeilbsvZjylwTQ"/>
+                <ownedParameter xmi:id="_9zI-IujlEeilbsvZjylwTQ" type="_9vnwEOjlEeilbsvZjylwTQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9ydosejlEeilbsvZjylwTQ" name="PlatformState"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9ye20ujlEeilbsvZjylwTQ" name="PlatformTaskStatus"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9ygE8OjlEeilbsvZjylwTQ" name="PlatformTaskInfo"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9ykWYOjlEeilbsvZjylwTQ" name="PlatformTask"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9zzFcejlEeilbsvZjylwTQ" name="" memberEnd="_9zVLYOjlEeilbsvZjylwTQ _9zzFcujlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9zzFcujlEeilbsvZjylwTQ" name="" type="_9vTnAOjlEeilbsvZjylwTQ" association="_9zzFcejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z4lAOjlEeilbsvZjylwTQ" name="" memberEnd="_9z4lAejlEeilbsvZjylwTQ _9zMogOjlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z4lAejlEeilbsvZjylwTQ" name="" type="_9vChQOjlEeilbsvZjylwTQ" association="_9z4lAOjlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z5MEejlEeilbsvZjylwTQ" name="" memberEnd="_9z5MEujlEeilbsvZjylwTQ _9zNPkejlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z5MEujlEeilbsvZjylwTQ" name="" type="_9vChQOjlEeilbsvZjylwTQ" association="_9z5MEejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z6aMOjlEeilbsvZjylwTQ" name="" memberEnd="_9z6aMejlEeilbsvZjylwTQ _9zOdsOjlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z6aMejlEeilbsvZjylwTQ" name="" type="_9vChQOjlEeilbsvZjylwTQ" association="_9z6aMOjlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z7BQejlEeilbsvZjylwTQ" name="" memberEnd="_9z7BQujlEeilbsvZjylwTQ _9zOds-jlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z7BQujlEeilbsvZjylwTQ" name="" type="_9vChQOjlEeilbsvZjylwTQ" association="_9z7BQejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z7oUejlEeilbsvZjylwTQ" name="" memberEnd="_9z7oUujlEeilbsvZjylwTQ _9zPr0ejlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z7oUujlEeilbsvZjylwTQ" name="" type="_9vChQOjlEeilbsvZjylwTQ" association="_9z7oUejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z8PYejlEeilbsvZjylwTQ" name="" memberEnd="_9z8PYujlEeilbsvZjylwTQ _9zSIEejlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z8PYujlEeilbsvZjylwTQ" name="" type="_9vLEIOjlEeilbsvZjylwTQ" association="_9z8PYejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z82cejlEeilbsvZjylwTQ" name="" memberEnd="_9z82cujlEeilbsvZjylwTQ _9zUkUOjlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z82cujlEeilbsvZjylwTQ" name="" type="_9vLEIOjlEeilbsvZjylwTQ" association="_9z82cejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z9dgejlEeilbsvZjylwTQ" name="" memberEnd="_9z9dgujlEeilbsvZjylwTQ _9zVLYejlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z9dgujlEeilbsvZjylwTQ" name="" type="_9vTnAOjlEeilbsvZjylwTQ" association="_9z9dgejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z-EkejlEeilbsvZjylwTQ" name="" memberEnd="_9z-EkujlEeilbsvZjylwTQ _9zWZgejlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z-EkujlEeilbsvZjylwTQ" name="" type="_9vTnAOjlEeilbsvZjylwTQ" association="_9z-EkejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z-roejlEeilbsvZjylwTQ" name="" memberEnd="_9z-roujlEeilbsvZjylwTQ _9zZc0ujlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z-roujlEeilbsvZjylwTQ" name="" type="_9vX4cOjlEeilbsvZjylwTQ" association="_9z-roejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z_SsejlEeilbsvZjylwTQ" name="" memberEnd="_9z_SsujlEeilbsvZjylwTQ _9zaq8OjlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z_SsujlEeilbsvZjylwTQ" name="" type="_9vX4cOjlEeilbsvZjylwTQ" association="_9z_SsejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_9z_5wejlEeilbsvZjylwTQ" name="" memberEnd="_9z_5wujlEeilbsvZjylwTQ _9zaq8-jlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_9z_5wujlEeilbsvZjylwTQ" name="" type="_9vX4cOjlEeilbsvZjylwTQ" association="_9z_5wejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_90Ag0ejlEeilbsvZjylwTQ" name="" memberEnd="_90Ag0ujlEeilbsvZjylwTQ _9zb5EOjlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_90Ag0ujlEeilbsvZjylwTQ" name="" type="_9vf0QOjlEeilbsvZjylwTQ" association="_90Ag0ejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_90BH4ejlEeilbsvZjylwTQ" name="" memberEnd="_90BH4ujlEeilbsvZjylwTQ _9zcgIOjlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_90BH4ujlEeilbsvZjylwTQ" name="" type="_9viQgOjlEeilbsvZjylwTQ" association="_90BH4ejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_90Bu8ejlEeilbsvZjylwTQ" name="" memberEnd="_90Bu8ujlEeilbsvZjylwTQ _9zdHMejlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_90Bu8ujlEeilbsvZjylwTQ" name="" type="_9viQgOjlEeilbsvZjylwTQ" association="_90Bu8ejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_90CWAejlEeilbsvZjylwTQ" name="" memberEnd="_90CWAujlEeilbsvZjylwTQ _9zduQOjlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_90CWAujlEeilbsvZjylwTQ" name="" type="_9viQgOjlEeilbsvZjylwTQ" association="_90CWAejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_90C9EejlEeilbsvZjylwTQ" name="" memberEnd="_90C9EujlEeilbsvZjylwTQ _9zeVUejlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_90C9EujlEeilbsvZjylwTQ" name="" type="_9viQgOjlEeilbsvZjylwTQ" association="_90C9EejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_90ELMejlEeilbsvZjylwTQ" name="" memberEnd="_90ELMujlEeilbsvZjylwTQ _9zfjcujlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_90ELMujlEeilbsvZjylwTQ" name="" type="_9viQgOjlEeilbsvZjylwTQ" association="_90ELMejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_90EyQejlEeilbsvZjylwTQ" name="" memberEnd="_90EyQujlEeilbsvZjylwTQ _9zgKgujlEeilbsvZjylwTQ">
+              <ownedEnd xmi:id="_90EyQujlEeilbsvZjylwTQ" name="" type="_9viQgOjlEeilbsvZjylwTQ" association="_90EyQejlEeilbsvZjylwTQ"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uS6YOjlEeilbsvZjylwTQ" name="dao">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9xle8ejlEeilbsvZjylwTQ" name="DatumDao"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uYZ8OjlEeilbsvZjylwTQ" name="job">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9xxFIejlEeilbsvZjylwTQ" name="TriggerAndJobDetail"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9yGcUejlEeilbsvZjylwTQ" name="RandomizedCronTriggerFactoryBean"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9yNKAejlEeilbsvZjylwTQ" name="ManagedTriggerAndJobDetail"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9yNxEejlEeilbsvZjylwTQ" name="ServiceProvider"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uYZ8ejlEeilbsvZjylwTQ" name="settings">
+            <packagedElement xmi:type="uml:Package" xmi:id="_9ucrYOjlEeilbsvZjylwTQ" name="support">
+              <packagedElement xmi:type="uml:Class" xmi:id="_9x_HkejlEeilbsvZjylwTQ" name="BasicTextFieldSettingSpecifier"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9xxsMejlEeilbsvZjylwTQ" name="SettingSpecifierProvider"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9x95cejlEeilbsvZjylwTQ" name="SettingSpecifier"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9x-ggejlEeilbsvZjylwTQ" name="TextFieldSettingSpecifier"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uYZ8ujlEeilbsvZjylwTQ" name="util">
+            <packagedElement xmi:type="uml:Class" xmi:id="_9xyTQejlEeilbsvZjylwTQ" name="BaseServiceListener"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9xy6UejlEeilbsvZjylwTQ" name="RegisteredService"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uo4oOjlEeilbsvZjylwTQ" name="PlatformService">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9yT3sOjlEeilbsvZjylwTQ" name="PlatformTaskInfo"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xZRsejlEeilbsvZjylwTQ" name="PlatformService"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xjpwejlEeilbsvZjylwTQ" name="DatumDataSource"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xkQ0ejlEeilbsvZjylwTQ" name="EdgeControlProvider"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xk34ejlEeilbsvZjylwTQ" name="UploadService"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_9uMzxujlEeilbsvZjylwTQ" name="domain">
+          <packagedElement xmi:type="uml:Class" xmi:id="_9xdjIejlEeilbsvZjylwTQ" name="Result"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_9uNa0OjlEeilbsvZjylwTQ" name="util">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xeKMOjlEeilbsvZjylwTQ" name="OptionalService"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9xoiQejlEeilbsvZjylwTQ" name="StringUtils"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9uMMsujlEeilbsvZjylwTQ" name="osgi">
+        <packagedElement xmi:type="uml:Package" xmi:id="_9uMMs-jlEeilbsvZjylwTQ" name="service">
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uMMtOjlEeilbsvZjylwTQ" name="event">
+            <packagedElement xmi:type="uml:Class" xmi:id="_9xZ4wejlEeilbsvZjylwTQ" name="Event"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9xaf0ejlEeilbsvZjylwTQ" name="EventAdmin"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9xmGAejlEeilbsvZjylwTQ" name="EventHandler"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uZBAOjlEeilbsvZjylwTQ" name="cm">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9x0vgejlEeilbsvZjylwTQ" name="Configuration"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9x1WkejlEeilbsvZjylwTQ" name="ConfigurationAdmin"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9x19oejlEeilbsvZjylwTQ" name="ConfigurationEvent"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9x2ksejlEeilbsvZjylwTQ" name="ConfigurationListener"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_9uYZ8-jlEeilbsvZjylwTQ" name="framework">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xzhYejlEeilbsvZjylwTQ" name="ServiceReference"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9x0IcejlEeilbsvZjylwTQ" name="ServiceRegistration"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9yOYIejlEeilbsvZjylwTQ" name="BundleContext"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9yO_MejlEeilbsvZjylwTQ" name="Constants"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9uMzwOjlEeilbsvZjylwTQ" name="springframework">
+        <packagedElement xmi:type="uml:Package" xmi:id="_9uMzwejlEeilbsvZjylwTQ" name="messaging">
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uMzwujlEeilbsvZjylwTQ" name="simp">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9xbt8ejlEeilbsvZjylwTQ" name="SimpMessageSendingOperations"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uMzw-jlEeilbsvZjylwTQ" name="support">
+            <packagedElement xmi:type="uml:Class" xmi:id="_9xcVAejlEeilbsvZjylwTQ" name="GenericMessage"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uS6YujlEeilbsvZjylwTQ" name="core">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_9xn7MejlEeilbsvZjylwTQ" name="MessageSendingOperations"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xbG4ejlEeilbsvZjylwTQ" name="Message"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_9uMzxOjlEeilbsvZjylwTQ" name="scheduling">
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uMzxejlEeilbsvZjylwTQ" name="concurrent">
+            <packagedElement xmi:type="uml:Class" xmi:id="_9xc8EejlEeilbsvZjylwTQ" name="CustomizableThreadFactory"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uiyAOjlEeilbsvZjylwTQ" name="quartz">
+            <packagedElement xmi:type="uml:Class" xmi:id="_9yI4kOjlEeilbsvZjylwTQ" name="CronTriggerFactoryBean"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_9udScOjlEeilbsvZjylwTQ" name="context">
+          <packagedElement xmi:type="uml:Package" xmi:id="_9udScejlEeilbsvZjylwTQ" name="support">
+            <packagedElement xmi:type="uml:Class" xmi:id="_9yA8wejlEeilbsvZjylwTQ" name="AbstractMessageSource"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9x_uoejlEeilbsvZjylwTQ" name="MessageSource"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9yAVsejlEeilbsvZjylwTQ" name="NoSuchMessageException"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_9udScujlEeilbsvZjylwTQ" name="util">
+          <packagedElement xmi:type="uml:Class" xmi:id="_9yBj0ejlEeilbsvZjylwTQ" name="StringUtils"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9uS6YejlEeilbsvZjylwTQ" name="slf4j">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9xmtEejlEeilbsvZjylwTQ" name="Logger"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9xnUIejlEeilbsvZjylwTQ" name="LoggerFactory"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9uZBAejlEeilbsvZjylwTQ" name="quartz">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9x3LwejlEeilbsvZjylwTQ" name="CronTrigger"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9x3y0ejlEeilbsvZjylwTQ" name="JobDetail"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9x4Z4OjlEeilbsvZjylwTQ" name="Scheduler"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9x5A8OjlEeilbsvZjylwTQ" name="SchedulerException"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9x5A8ujlEeilbsvZjylwTQ" name="Trigger"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9yHDYOjlEeilbsvZjylwTQ" name="JobDataMap"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9yHqcOjlEeilbsvZjylwTQ" name="JobKey"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9yIRgOjlEeilbsvZjylwTQ" name="TriggerKey"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9uLlo-jlEeilbsvZjylwTQ" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_9uLlpOjlEeilbsvZjylwTQ" name="util">
+        <packagedElement xmi:type="uml:Package" xmi:id="_9uMMsOjlEeilbsvZjylwTQ" name="concurrent">
+          <packagedElement xmi:type="uml:Package" xmi:id="_9uMMsejlEeilbsvZjylwTQ" name="atomic">
+            <packagedElement xmi:type="uml:Class" xmi:id="_9xYDkejlEeilbsvZjylwTQ" name="AtomicInteger"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_9xYqoejlEeilbsvZjylwTQ" name="AtomicReference"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9xUZMejlEeilbsvZjylwTQ" name="ArrayBlockingQueue"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xVAQejlEeilbsvZjylwTQ" name="Callable"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xVnUejlEeilbsvZjylwTQ" name="ExecutorService"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_9xWOYejlEeilbsvZjylwTQ" name="Future"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9xW1cejlEeilbsvZjylwTQ" name="ThreadPoolExecutor"/>
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_9xXcgejlEeilbsvZjylwTQ" name="TimeUnit"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_9uknMOjlEeilbsvZjylwTQ" name="regex">
+          <packagedElement xmi:type="uml:Class" xmi:id="_9yL74ejlEeilbsvZjylwTQ" name="Matcher"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9yMi8ejlEeilbsvZjylwTQ" name="Pattern"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9xR88OjlEeilbsvZjylwTQ" name="Collections"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9xSkAejlEeilbsvZjylwTQ" name="HashMap"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9xTLEejlEeilbsvZjylwTQ" name="Locale"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9xTyIejlEeilbsvZjylwTQ" name="Map"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9xjCsOjlEeilbsvZjylwTQ" name="LinkedHashMap"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9xuB0ejlEeilbsvZjylwTQ" name="Dictionary"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9xuo4ejlEeilbsvZjylwTQ" name="Enumeration"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9xvP8ejlEeilbsvZjylwTQ" name="Hashtable"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9xv3AejlEeilbsvZjylwTQ" name="List"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9xweEejlEeilbsvZjylwTQ" name="TreeMap"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9x8rUejlEeilbsvZjylwTQ" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9x9SYejlEeilbsvZjylwTQ" name="Iterator"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9yKtwOjlEeilbsvZjylwTQ" name="Arrays"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9yLU0ejlEeilbsvZjylwTQ" name="Collection"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9uXy4OjlEeilbsvZjylwTQ" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_9xtawOjlEeilbsvZjylwTQ" name="IOException"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9ucEUOjlEeilbsvZjylwTQ" name="text">
+        <packagedElement xmi:type="uml:Class" xmi:id="_9x8EQOjlEeilbsvZjylwTQ" name="MessageFormat"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9yF1QOjlEeilbsvZjylwTQ" name="ParseException"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9yihMOjlEeilbsvZjylwTQ" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_9yihMejlEeilbsvZjylwTQ" name="Object"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9usjAOjlEeilbsvZjylwTQ" name="PlatformService">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_9yUewOjlEeilbsvZjylwTQ" name="PlatformTaskStatus"/>
+    </packagedElement>
+    <profileApplication xmi:id="_9kT38-jlEeilbsvZjylwTQ">
+      <eAnnotations xmi:id="_9kT39OjlEeilbsvZjylwTQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_9kUfAOjlEeilbsvZjylwTQ" base_Package="_9cFwEOjlEeilbsvZjylwTQ">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9vEWcejlEeilbsvZjylwTQ" base_Element="_9vEWcOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9vE9gOjlEeilbsvZjylwTQ" base_Element="_9vEWcOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9vE9gejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9vE9g-jlEeilbsvZjylwTQ" base_Element="_9vE9gujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9vFkkOjlEeilbsvZjylwTQ" base_Element="_9vE9gujlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9vFkkejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Generics xmi:id="_9vM5UOjlEeilbsvZjylwTQ" genericsValue="String, String" base_Element="_9vMSQOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9vOHcOjlEeilbsvZjylwTQ" genericsValue="String, String" base_Element="_9vNgYOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9vbi0OjlEeilbsvZjylwTQ" base_Element="_9va7wOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9vbi0ejlEeilbsvZjylwTQ" base_Element="_9va7wOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9vbi0ujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9vcJ4ujlEeilbsvZjylwTQ" base_Element="_9vbi0-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9vcw8OjlEeilbsvZjylwTQ" base_Element="_9vbi0-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9vcw8ejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9vracOjlEeilbsvZjylwTQ" base_Element="_9vqzYOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9vracejlEeilbsvZjylwTQ" base_Element="_9vqzYOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9vracujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9vsBgOjlEeilbsvZjylwTQ" base_Element="_9vrac-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9vsBgejlEeilbsvZjylwTQ" base_Element="_9vrac-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9vsBgujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_9xSkAOjlEeilbsvZjylwTQ" base_Element="_9xR88OjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xTLEOjlEeilbsvZjylwTQ" base_Element="_9xSkAejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xTyIOjlEeilbsvZjylwTQ" base_Element="_9xTLEejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xUZMOjlEeilbsvZjylwTQ" base_Element="_9xTyIejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xVAQOjlEeilbsvZjylwTQ" base_Element="_9xUZMejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xVnUOjlEeilbsvZjylwTQ" base_Element="_9xVAQejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xWOYOjlEeilbsvZjylwTQ" base_Element="_9xVnUejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xW1cOjlEeilbsvZjylwTQ" base_Element="_9xWOYejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xXcgOjlEeilbsvZjylwTQ" base_Element="_9xW1cejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xYDkOjlEeilbsvZjylwTQ" base_Element="_9xXcgejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xYqoOjlEeilbsvZjylwTQ" base_Element="_9xYDkejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xZRsOjlEeilbsvZjylwTQ" base_Element="_9xYqoejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xZ4wOjlEeilbsvZjylwTQ" base_Element="_9xZRsejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xaf0OjlEeilbsvZjylwTQ" base_Element="_9xZ4wejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xbG4OjlEeilbsvZjylwTQ" base_Element="_9xaf0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xbt8OjlEeilbsvZjylwTQ" base_Element="_9xbG4ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xcVAOjlEeilbsvZjylwTQ" base_Element="_9xbt8ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xc8EOjlEeilbsvZjylwTQ" base_Element="_9xcVAejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xdjIOjlEeilbsvZjylwTQ" base_Element="_9xc8EejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xdjIujlEeilbsvZjylwTQ" base_Element="_9xdjIejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xeKMejlEeilbsvZjylwTQ" base_Element="_9xeKMOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xjpwOjlEeilbsvZjylwTQ" base_Element="_9xjCsOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xkQ0OjlEeilbsvZjylwTQ" base_Element="_9xjpwejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xk34OjlEeilbsvZjylwTQ" base_Element="_9xkQ0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xle8OjlEeilbsvZjylwTQ" base_Element="_9xk34ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xmGAOjlEeilbsvZjylwTQ" base_Element="_9xle8ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xmtEOjlEeilbsvZjylwTQ" base_Element="_9xmGAejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xnUIOjlEeilbsvZjylwTQ" base_Element="_9xmtEejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xn7MOjlEeilbsvZjylwTQ" base_Element="_9xnUIejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xoiQOjlEeilbsvZjylwTQ" base_Element="_9xn7MejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xpJUOjlEeilbsvZjylwTQ" base_Element="_9xoiQejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xuB0OjlEeilbsvZjylwTQ" base_Element="_9xtawOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xuo4OjlEeilbsvZjylwTQ" base_Element="_9xuB0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xvP8OjlEeilbsvZjylwTQ" base_Element="_9xuo4ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xv3AOjlEeilbsvZjylwTQ" base_Element="_9xvP8ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xweEOjlEeilbsvZjylwTQ" base_Element="_9xv3AejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xxFIOjlEeilbsvZjylwTQ" base_Element="_9xweEejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xxsMOjlEeilbsvZjylwTQ" base_Element="_9xxFIejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xyTQOjlEeilbsvZjylwTQ" base_Element="_9xxsMejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xy6UOjlEeilbsvZjylwTQ" base_Element="_9xyTQejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9xzhYOjlEeilbsvZjylwTQ" base_Element="_9xy6UejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x0IcOjlEeilbsvZjylwTQ" base_Element="_9xzhYejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x0vgOjlEeilbsvZjylwTQ" base_Element="_9x0IcejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x1WkOjlEeilbsvZjylwTQ" base_Element="_9x0vgejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x19oOjlEeilbsvZjylwTQ" base_Element="_9x1WkejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x2ksOjlEeilbsvZjylwTQ" base_Element="_9x19oejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x3LwOjlEeilbsvZjylwTQ" base_Element="_9x2ksejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x3y0OjlEeilbsvZjylwTQ" base_Element="_9x3LwejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x3y0ujlEeilbsvZjylwTQ" base_Element="_9x3y0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x4Z4ejlEeilbsvZjylwTQ" base_Element="_9x4Z4OjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x5A8ejlEeilbsvZjylwTQ" base_Element="_9x5A8OjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x5oAOjlEeilbsvZjylwTQ" base_Element="_9x5A8ujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x8rUOjlEeilbsvZjylwTQ" base_Element="_9x8EQOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x9SYOjlEeilbsvZjylwTQ" base_Element="_9x8rUejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x95cOjlEeilbsvZjylwTQ" base_Element="_9x9SYejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x-ggOjlEeilbsvZjylwTQ" base_Element="_9x95cejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x_HkOjlEeilbsvZjylwTQ" base_Element="_9x-ggejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9x_uoOjlEeilbsvZjylwTQ" base_Element="_9x_HkejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yAVsOjlEeilbsvZjylwTQ" base_Element="_9x_uoejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yA8wOjlEeilbsvZjylwTQ" base_Element="_9yAVsejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yBj0OjlEeilbsvZjylwTQ" base_Element="_9yA8wejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yCK4OjlEeilbsvZjylwTQ" base_Element="_9yBj0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yGcUOjlEeilbsvZjylwTQ" base_Element="_9yF1QOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yGcUujlEeilbsvZjylwTQ" base_Element="_9yGcUejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yHDYejlEeilbsvZjylwTQ" base_Element="_9yHDYOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yHqcejlEeilbsvZjylwTQ" base_Element="_9yHqcOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yIRgejlEeilbsvZjylwTQ" base_Element="_9yIRgOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yJfoOjlEeilbsvZjylwTQ" base_Element="_9yI4kOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yLU0OjlEeilbsvZjylwTQ" base_Element="_9yKtwOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yL74OjlEeilbsvZjylwTQ" base_Element="_9yLU0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yMi8OjlEeilbsvZjylwTQ" base_Element="_9yL74ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yNKAOjlEeilbsvZjylwTQ" base_Element="_9yMi8ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yNxEOjlEeilbsvZjylwTQ" base_Element="_9yNKAejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yOYIOjlEeilbsvZjylwTQ" base_Element="_9yNxEejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yO_MOjlEeilbsvZjylwTQ" base_Element="_9yOYIejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yPmQOjlEeilbsvZjylwTQ" base_Element="_9yO_MejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yT3sejlEeilbsvZjylwTQ" base_Element="_9yT3sOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yVF0OjlEeilbsvZjylwTQ" base_Element="_9yUewOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yePwOjlEeilbsvZjylwTQ" base_Element="_9ydosejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yfd4OjlEeilbsvZjylwTQ" base_Element="_9ye20ujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9ygE8ejlEeilbsvZjylwTQ" base_Element="_9ygE8OjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9yhTEOjlEeilbsvZjylwTQ" base_Element="_9ygsAOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9yhTEejlEeilbsvZjylwTQ" base_Element="_9ygsAOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9yhTEujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9yh6IOjlEeilbsvZjylwTQ" base_Element="_9yhTE-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9yh6IejlEeilbsvZjylwTQ" base_Element="_9yhTE-jlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9yh6IujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_9yihMujlEeilbsvZjylwTQ" base_Element="_9yihMejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9yjvUOjlEeilbsvZjylwTQ" genericsValue="String, Object" base_Element="_9yjIQ-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9yk9cOjlEeilbsvZjylwTQ" base_Element="_9ykWYOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:TypeParameterDeclaration xmi:id="_9yk9dOjlEeilbsvZjylwTQ" typeParameterDeclarationValue="T" base_Operation="_9yk9cejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9ylkgOjlEeilbsvZjylwTQ" genericsValue="T" base_Element="_9yk9cejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9ymLkOjlEeilbsvZjylwTQ" base_Element="_9yk9cejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9ymyoOjlEeilbsvZjylwTQ" genericsValue="T" base_Element="_9yk9c-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9ymyoejlEeilbsvZjylwTQ" base_Element="_9yk9cejlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9ymyoujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Generics xmi:id="_9yon0OjlEeilbsvZjylwTQ" genericsValue="EventAdmin" base_Element="_9ynZs-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9ypO4OjlEeilbsvZjylwTQ" genericsValue="SimpMessageSendingOperations" base_Element="_9yon0ujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9ysSMOjlEeilbsvZjylwTQ" genericsValue="SimpMessageSendingOperations" base_Element="_9yrrIujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9ys5QujlEeilbsvZjylwTQ" base_Element="_9ys5QOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9ytgUOjlEeilbsvZjylwTQ" base_Element="_9ys5QOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9ytgUejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Generics xmi:id="_9yuucOjlEeilbsvZjylwTQ" genericsValue="String, Object" base_Element="_9ytgVOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9yvVgOjlEeilbsvZjylwTQ" genericsValue="String, Object" base_Element="_9yuucejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9yxKsOjlEeilbsvZjylwTQ" genericsValue="String, Object" base_Element="_9ywjo-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9yyY0OjlEeilbsvZjylwTQ" genericsValue="String, String" base_Element="_9yxxwejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9yzm8OjlEeilbsvZjylwTQ" genericsValue="String, String" base_Element="_9yyY0ujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9y2DMOjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_9y1cIujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9y3RUOjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_9y2qQujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9y34YujlEeilbsvZjylwTQ" base_Element="_9y34YOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9y4fcOjlEeilbsvZjylwTQ" base_Element="_9y34YOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9y4fcejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Generics xmi:id="_9y5GgOjlEeilbsvZjylwTQ" genericsValue="TriggerAndJobDetail, RegisteredService&lt;TriggerAndJobDetail>" base_Element="_9y4fcujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zCQcOjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_9zBpYujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zC3gOjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_9zCQcejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zEFoOjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_9zCQcujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zEssOjlEeilbsvZjylwTQ" genericsValue="String, ?" base_Element="_9zEFo-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zFTwujlEeilbsvZjylwTQ" base_Element="_9zFTwOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Annotations xmi:id="_9zF60OjlEeilbsvZjylwTQ" base_Element="_9zFTwOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9zF60ejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zNPkOjlEeilbsvZjylwTQ" base_Element="_9zMogOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zN2oOjlEeilbsvZjylwTQ" genericsValue="PlatformTask&lt;?>" base_Element="_9zNPkejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zN2oujlEeilbsvZjylwTQ" base_Element="_9zNPkejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zOdsujlEeilbsvZjylwTQ" base_Element="_9zOdsOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zPEwOjlEeilbsvZjylwTQ" genericsValue="EventAdmin" base_Element="_9zOds-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zPr0OjlEeilbsvZjylwTQ" base_Element="_9zOds-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zQS4OjlEeilbsvZjylwTQ" genericsValue="SimpMessageSendingOperations" base_Element="_9zPr0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zQS4ejlEeilbsvZjylwTQ" base_Element="_9zPr0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zSvIOjlEeilbsvZjylwTQ" genericsValue="SimpMessageSendingOperations" base_Element="_9zSIEejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zSvIejlEeilbsvZjylwTQ" base_Element="_9zSIEejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zTWMejlEeilbsvZjylwTQ" base_Element="_9zTWMOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zT9QejlEeilbsvZjylwTQ" base_Element="_9zT9QOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zUkUujlEeilbsvZjylwTQ" base_Element="_9zUkUOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zVycOjlEeilbsvZjylwTQ" genericsValue="ConfigurationListener" base_Element="_9zVLYejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zWZgOjlEeilbsvZjylwTQ" base_Element="_9zVLYejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zXAkOjlEeilbsvZjylwTQ" base_Element="_9zWZgejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zY1wOjlEeilbsvZjylwTQ" base_Element="_9zYOsujlEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_9zY1wejlEeilbsvZjylwTQ" name="getSettingUID" method="_9zsXwOjlEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_9zY1wujlEeilbsvZjylwTQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_9zZc0OjlEeilbsvZjylwTQ" base_Element="_9zY1wejlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9zZc0ejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zZc0-jlEeilbsvZjylwTQ" base_Element="_9zZc0ujlEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_9zaD4OjlEeilbsvZjylwTQ" name="getMessageSource" method="_9zsXwujlEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_9zaD4ejlEeilbsvZjylwTQ" type="_9x_uoejlEeilbsvZjylwTQ" direction="return"/>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_9zaD4ujlEeilbsvZjylwTQ" base_Element="_9zaD4OjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9zaD4-jlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zbSAejlEeilbsvZjylwTQ" base_Element="_9zaq8-jlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zdHMOjlEeilbsvZjylwTQ" base_Element="_9zcgIOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zdHMujlEeilbsvZjylwTQ" base_Element="_9zdHMejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9zduQejlEeilbsvZjylwTQ" genericsValue="ConfigurationListener" base_Element="_9zduQOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zeVUOjlEeilbsvZjylwTQ" base_Element="_9zduQOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Generics xmi:id="_9ze8YOjlEeilbsvZjylwTQ" genericsValue="ServiceRegistration&lt;?>" base_Element="_9zeVUejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zfjcOjlEeilbsvZjylwTQ" base_Element="_9zeVUejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zgKgOjlEeilbsvZjylwTQ" base_Element="_9zfjcujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zgxkejlEeilbsvZjylwTQ" base_Element="_9zgKgujlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zhYoejlEeilbsvZjylwTQ" base_Element="_9zhYoOjlEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_9zh_sOjlEeilbsvZjylwTQ" name="getTaskId" method="_9zwCIOjlEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_9zh_sejlEeilbsvZjylwTQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_9zh_sujlEeilbsvZjylwTQ" base_Element="_9zh_sOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9zh_s-jlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zimwejlEeilbsvZjylwTQ" base_Element="_9zimwOjlEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_9zimwujlEeilbsvZjylwTQ" name="getTitle" method="_9zwCIujlEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_9zjN0OjlEeilbsvZjylwTQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_9zjN0ejlEeilbsvZjylwTQ" base_Element="_9zimwujlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9zjN0ujlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zj04OjlEeilbsvZjylwTQ" base_Element="_9zjN0-jlEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_9zj04ejlEeilbsvZjylwTQ" name="getMessage" method="_9zwCJOjlEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_9zj04ujlEeilbsvZjylwTQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_9zkb8OjlEeilbsvZjylwTQ" base_Element="_9zj04ejlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9zkb8ejlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zkb8-jlEeilbsvZjylwTQ" base_Element="_9zkb8ujlEeilbsvZjylwTQ">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_9zlDAOjlEeilbsvZjylwTQ" name="getPercentComplete" method="_9zwCJujlEeilbsvZjylwTQ">
+      <ownedParameter xmi:id="_9zlDAejlEeilbsvZjylwTQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_9zlDAujlEeilbsvZjylwTQ" base_Element="_9zlDAOjlEeilbsvZjylwTQ">
+    <annotations xmi:id="_9zlDA-jlEeilbsvZjylwTQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zlqEejlEeilbsvZjylwTQ" base_Element="_9zlqEOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_9zmRIOjlEeilbsvZjylwTQ" base_Element="_9zlqEujlEeilbsvZjylwTQ"/>
+  <uml:OpaqueBehavior xmi:id="_9zsXwOjlEeilbsvZjylwTQ" name="getSettingUID" specification="_9zY1wejlEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_9zsXwejlEeilbsvZjylwTQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return settingUID;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_9zsXwujlEeilbsvZjylwTQ" name="getMessageSource" specification="_9zaD4OjlEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_9zsXw-jlEeilbsvZjylwTQ" type="_9x_uoejlEeilbsvZjylwTQ" direction="return"/>
+    <language>java</language>
+    <body>return messageSource;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_9zwCIOjlEeilbsvZjylwTQ" name="getTaskId" specification="_9zh_sOjlEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_9zwCIejlEeilbsvZjylwTQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return taskId;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_9zwCIujlEeilbsvZjylwTQ" name="getTitle" specification="_9zimwujlEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_9zwCI-jlEeilbsvZjylwTQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return title;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_9zwCJOjlEeilbsvZjylwTQ" name="getMessage" specification="_9zj04ejlEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_9zwCJejlEeilbsvZjylwTQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return message;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_9zwCJujlEeilbsvZjylwTQ" name="getPercentComplete" specification="_9zlDAOjlEeilbsvZjylwTQ">
+    <ownedParameter xmi:id="_9zwCJ-jlEeilbsvZjylwTQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return percentComplete;
+	</body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:Reference xmi:id="_9z5MEOjlEeilbsvZjylwTQ" base_Element="_9z4lAOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z5zIOjlEeilbsvZjylwTQ" base_Element="_9z5MEejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z7BQOjlEeilbsvZjylwTQ" base_Element="_9z6aMOjlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z7oUOjlEeilbsvZjylwTQ" base_Element="_9z7BQejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z8PYOjlEeilbsvZjylwTQ" base_Element="_9z7oUejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z82cOjlEeilbsvZjylwTQ" base_Element="_9z8PYejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z9dgOjlEeilbsvZjylwTQ" base_Element="_9z82cejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z-EkOjlEeilbsvZjylwTQ" base_Element="_9z9dgejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z-roOjlEeilbsvZjylwTQ" base_Element="_9z-EkejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z_SsOjlEeilbsvZjylwTQ" base_Element="_9z-roejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_9z_5wOjlEeilbsvZjylwTQ" base_Element="_9z_SsejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_90Ag0OjlEeilbsvZjylwTQ" base_Element="_9z_5wejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_90BH4OjlEeilbsvZjylwTQ" base_Element="_90Ag0ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_90Bu8OjlEeilbsvZjylwTQ" base_Element="_90BH4ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_90CWAOjlEeilbsvZjylwTQ" base_Element="_90Bu8ejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_90C9EOjlEeilbsvZjylwTQ" base_Element="_90CWAejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_90ELMOjlEeilbsvZjylwTQ" base_Element="_90C9EejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_90EyQOjlEeilbsvZjylwTQ" base_Element="_90ELMejlEeilbsvZjylwTQ"/>
+  <UMLLabProfile:Reference xmi:id="_90FZUOjlEeilbsvZjylwTQ" base_Element="_90EyQejlEeilbsvZjylwTQ"/>
+</xmi:XMI>

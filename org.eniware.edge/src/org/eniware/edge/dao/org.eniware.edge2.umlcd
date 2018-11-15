@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_mSYx8OjXEeilbsvZjylwTQ">
+  <modelElement href="org.eniware.edge2.uml#_meiXkujXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mkzXoejXEeilbsvZjylwTQ" targetItem="_mk0lwOjXEeilbsvZjylwTQ" sourceItem="_mkzXoOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mk3pEejXEeilbsvZjylwTQ" targetItem="_mk8hkOjXEeilbsvZjylwTQ" sourceItem="_mk3pEOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlLyIejXEeilbsvZjylwTQ" targetItem="_mlQqoOjXEeilbsvZjylwTQ" sourceItem="_mlLyIOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlMZMejXEeilbsvZjylwTQ" targetItem="_mlQqv-jXEeilbsvZjylwTQ" sourceItem="_mlMZMOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlMZM-jXEeilbsvZjylwTQ" targetItem="_mlQqxejXEeilbsvZjylwTQ" sourceItem="_mlMZMujXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlOOYOjXEeilbsvZjylwTQ" targetItem="_mlQq3ejXEeilbsvZjylwTQ" sourceItem="_mlNnUOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_mlQDkOjXEeilbsvZjylwTQ" source="_mlQqoOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mggtgOjXEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_mlQDkejXEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge2.uml#_mghUkOjXEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_mlQDkujXEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_mlQDk-jXEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge2.uml#_mggtgejXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mlQDlOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQDlejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_mlQDlujXEeilbsvZjylwTQ" aggregationKind="NONE" name="parameters" navigable="true">
+      <modelElement href="org.eniware.edge2.uml#_mgZYwOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mlQDl-jXEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_mlQDmOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <qualifierHelper xmi:id="_mlQDmejXEeilbsvZjylwTQ">
+        <qualifiers xmi:id="_mlQDmujXEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge2.uml#_mgZYwujXEeilbsvZjylwTQ"/>
+          <visibility xmi:id="_mlQDm-jXEeilbsvZjylwTQ" label="+"/>
+          <cardinality xmi:id="_mlQDnOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+          <type xmi:id="_mlQDnejXEeilbsvZjylwTQ" name="String">
+            <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </type>
+        </qualifiers>
+      </qualifierHelper>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlaboOjXEeilbsvZjylwTQ" targetItem="_mliXcOjXEeilbsvZjylwTQ" sourceItem="_mlZ0kOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_mlaboejXEeilbsvZjylwTQ" sourceAnchor="421.0,364.0" targetAnchor="13.0,0.0" superClass="_mliXcOjXEeilbsvZjylwTQ" subClass="_mk8hkOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgJhIejXEeilbsvZjylwTQ"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlbCsejXEeilbsvZjylwTQ" targetItem="_mliXdOjXEeilbsvZjylwTQ" sourceItem="_mlbCsOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlbCs-jXEeilbsvZjylwTQ" targetItem="_mloeEOjXEeilbsvZjylwTQ" sourceItem="_mlbCsujXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_mlbpwOjXEeilbsvZjylwTQ" sourceAnchor="0.0,132.0" targetAnchor="118.0,143.0" dashed="true" superClass="_mloeEOjXEeilbsvZjylwTQ" subClass="_mlQqoOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgAXMejXEeilbsvZjylwTQ"/>
+    <bendpoints xmi:id="_5J-jAOjXEeilbsvZjylwTQ" sourceX="-183" targetY="184"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_mlbpwejXEeilbsvZjylwTQ" target="_mloeEOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgeRQOjXEeilbsvZjylwTQ"/>
+    <nameVisual xmi:id="_mletEOjXEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_mletEejXEeilbsvZjylwTQ" aggregationKind="NONE" name="parameters" navigable="true">
+      <modelElement href="org.eniware.edge2.uml#_mfINcejXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mlgiQ-jXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlgiQujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <qualifierHelper xmi:id="_mlgiQOjXEeilbsvZjylwTQ">
+        <qualifiers xmi:id="_mlgiQejXEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge2.uml#_mfI0gOjXEeilbsvZjylwTQ"/>
+          <visibility xmi:id="_mlhwYejXEeilbsvZjylwTQ" label="+"/>
+          <cardinality xmi:id="_mlhwYujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+          <type xmi:id="_mlhwYOjXEeilbsvZjylwTQ" name="String">
+            <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </type>
+        </qualifiers>
+      </qualifierHelper>
+    </sourceRole>
+    <targetRole xmi:id="_mletEujXEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge2.uml#_mgeRQejXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mlgiRejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlgiROjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlbpw-jXEeilbsvZjylwTQ" targetItem="_mlsIcOjXEeilbsvZjylwTQ" sourceItem="_mlbpwujXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlcQ0ejXEeilbsvZjylwTQ" targetItem="_mluksOjXEeilbsvZjylwTQ" sourceItem="_mlcQ0OjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlc34ejXEeilbsvZjylwTQ" targetItem="_mlwZ4OjXEeilbsvZjylwTQ" sourceItem="_mlc34OjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_mlc34ujXEeilbsvZjylwTQ" sourceAnchor="186.0,0.0" targetAnchor="107.0,76.0" dashed="true" superClass="_mlwZ4OjXEeilbsvZjylwTQ" subClass="_mk0lwOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgDagOjXEeilbsvZjylwTQ"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlde8ejXEeilbsvZjylwTQ" targetItem="_mloeG-jXEeilbsvZjylwTQ" sourceItem="_mlde8OjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mleGAejXEeilbsvZjylwTQ" targetItem="_mloeIOjXEeilbsvZjylwTQ" sourceItem="_mleGAOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlfUIejXEeilbsvZjylwTQ" targetItem="_mlsIdOjXEeilbsvZjylwTQ" sourceItem="_mlfUIOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlfUI-jXEeilbsvZjylwTQ" targetItem="_mlwZ4-jXEeilbsvZjylwTQ" sourceItem="_mlfUIujXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlxoAejXEeilbsvZjylwTQ" targetItem="_ml0rUOjXEeilbsvZjylwTQ" sourceItem="_mlxoAOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlyPEejXEeilbsvZjylwTQ" targetItem="_ml0rWOjXEeilbsvZjylwTQ" sourceItem="_mlyPEOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mly2IejXEeilbsvZjylwTQ" targetItem="_ml0rXujXEeilbsvZjylwTQ" sourceItem="_mly2IOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mly2I-jXEeilbsvZjylwTQ" targetItem="_ml0rZujXEeilbsvZjylwTQ" sourceItem="_mly2IujXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_mlzdMejXEeilbsvZjylwTQ" targetItem="_ml0rbujXEeilbsvZjylwTQ" sourceItem="_mlzdMOjXEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ml0EQejXEeilbsvZjylwTQ" targetItem="_ml0rdOjXEeilbsvZjylwTQ" sourceItem="_ml0EQOjXEeilbsvZjylwTQ"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mkzXoOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mkzXoejXEeilbsvZjylwTQ" text="Basic implementation of {@link BatchResult}.&#xA; *&#xA;@version 1.0" item="_mk0lwOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgdqM-jXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mk3pEOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mk3pEejXEeilbsvZjylwTQ" text="Data access object API for setting key/value pairs.&#xA;&#xA;&lt;p>&#xA;This DAO is for very simple key/value based settings and other perstitable&#xA;runtime data.&#xA;&lt;/p>&#xA;&#xA;&lt;p>&#xA;It also supports key+type/value pairs, where key and type are separate&#xA;values. This can be useful for grouping sets of keys together, or for adding&#xA;and namespace to prevent key collisions across different packages.&#xA;&lt;/p>&#xA;&#xA;@version 1.2" item="_mk8hkOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgffYOjXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlLyIOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlLyIejXEeilbsvZjylwTQ" text="Basic implementation of {@link BatchOptions}.&#xA;&#xA;@version 1.0" item="_mlQqoOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgdDIOjXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlMZMOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlMZMejXEeilbsvZjylwTQ" text="Default constructor." item="_mlQqv-jXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgdqMOjXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlMZMujXEeilbsvZjylwTQ" sourceConnectionVisual="_mlMZM-jXEeilbsvZjylwTQ" text="Construct with a name.&#xA;&#x9; * &#xA;&#x9; * @param name the name" item="_mlQqxejXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgdqMejXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlNnUOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlOOYOjXEeilbsvZjylwTQ" text="Construct with values.&#xA;&#x9; * &#xA;&#x9; * @param name the name&#xA;&#x9; * @param batchSize the size&#xA;&#x9; * @param updatable updatable&#xA;&#x9; * @param parameters the parameters" item="_mlQq3ejXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgdqMujXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlZ0kOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlaboOjXEeilbsvZjylwTQ" text="An API for batch processing domain objects.&#xA;&#xA;@param &lt;T> the domain object type&#xA;@version 1.0" item="_mliXcOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgdqNOjXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlbCsOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlbCsejXEeilbsvZjylwTQ" text="Process a set of domain objects in batch.&#xA;     * &#xA;     * @param callback the batch callback handler&#xA;     * @param options the batch processing options&#xA;     * @return the batch results" item="_mliXdOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mge4UujXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlbCsujXEeilbsvZjylwTQ" sourceConnectionVisual="_mlbCs-jXEeilbsvZjylwTQ" text="Batch processing options." item="_mloeEOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgdqNejXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlbpwujXEeilbsvZjylwTQ" sourceConnectionVisual="_mlbpw-jXEeilbsvZjylwTQ" text="Handler for batch processing.&#xA;&#x9; * &#xA;&#x9; * @param &lt;T> the domain object type" item="_mlsIcOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgeRQujXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlcQ0OjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlcQ0ejXEeilbsvZjylwTQ" text="The result for a single batch operation." item="_mluksOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgeRROjXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlc34OjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlc34ejXEeilbsvZjylwTQ" text="The result of the entire batch processing." item="_mlwZ4OjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mge4UOjXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlde8OjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlde8ejXEeilbsvZjylwTQ" text="Get a unique name for this batch operation.&#xA;&#x9;&#x9; * &#xA;&#x9;&#x9; * @return a name" item="_mloeG-jXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgdqNujXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mleGAOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mleGAejXEeilbsvZjylwTQ" text="If &lt;em>true&lt;/em> the batch should be updatable.&#xA;&#x9;&#x9; * &#xA;&#x9;&#x9; * @return boolean" item="_mloeIOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgdqN-jXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlfUIOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlfUIejXEeilbsvZjylwTQ" text="Handle a single domain instance batch operation.&#xA;&#x9;&#x9; * &#xA;&#x9;&#x9; * @param domainObject the domain object&#xA;&#x9;&#x9; * @return the operation results" item="_mlsIdOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mgeRQ-jXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlfUIujXEeilbsvZjylwTQ" sourceConnectionVisual="_mlfUI-jXEeilbsvZjylwTQ" text="Return the number of domain objects processed.&#xA;&#x9;&#x9; * &#xA;&#x9;&#x9; * @return the number of objects processed" item="_mlwZ4-jXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mge4UejXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlxoAOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlxoAejXEeilbsvZjylwTQ" text="Data Access Object (DAO) API for {@link Datum} objects.&#xA;&#xA;@version 1.2&#xA;@param &lt;T>&#xA;       the type of Datum this DAO supports" item="_ml0rUOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mge4U-jXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlyPEOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlyPEejXEeilbsvZjylwTQ" text="Get the class supported by this Dao.&#xA;&#x9; * &#xA;&#x9; * @return class" item="_ml0rWOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mge4VOjXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mly2IOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mly2IejXEeilbsvZjylwTQ" text="Get a List of Datum instances that have not been uploaded yet to a&#xA;&#x9; * specific destination.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * This does not need to return all data, it can limit the amount returned&#xA;&#x9; * at one time to conserve memory. This method can be called repeatedly if&#xA;&#x9; * needed.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * @param destination&#xA;&#x9; *        the destination to check&#xA;&#x9; * @return list of Datum, or empty List if none available" item="_ml0rXujXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mge4VujXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mly2IujXEeilbsvZjylwTQ" sourceConnectionVisual="_mly2I-jXEeilbsvZjylwTQ" text="Delete both Datum and DatumUpload objects that have been successfully&#xA;&#x9; * uploaded to at least one destination and are older than the specified&#xA;&#x9; * number of hours.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * This is designed to free up space from local database storage for devices&#xA;&#x9; * with limited storage capacity. It will not delete any Datum objects that&#xA;&#x9; * have not been successfully uploaded anywhere.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * @param hours&#xA;&#x9; *        the minimum number of hours old the data must be to delete&#xA;&#x9; * @return the number of Datum (and associated DatumUpload) entities deleted" item="_ml0rZujXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mge4WOjXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_mlzdMOjXEeilbsvZjylwTQ" sourceConnectionVisual="_mlzdMejXEeilbsvZjylwTQ" text="Store (create or update) a datum.&#xA;&#x9; * &#xA;&#x9; * @param datum&#xA;&#x9; *        the datum to persist&#xA;&#x9; * @return the generated primary key" item="_ml0rbujXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mge4VejXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ml0EQOjXEeilbsvZjylwTQ" sourceConnectionVisual="_ml0EQejXEeilbsvZjylwTQ" text="Persist a {@link DatumUpload} instance.&#xA;&#x9; * &#xA;&#x9; * @param datum&#xA;&#x9; *        the Datum that has been uploaded successfully&#xA;&#x9; * @param date&#xA;&#x9; *        the date it was uploaded&#xA;&#x9; * @param destination&#xA;&#x9; *        the destination the Datum was uploaded to&#xA;&#x9; * @param trackingId&#xA;&#x9; *        the remote tracking ID assigned to the uploaded Datum" item="_ml0rdOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mge4V-jXEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_mloeEOjXEeilbsvZjylwTQ" comments="_mlbCsujXEeilbsvZjylwTQ" targetConnectionVisual="_mlbCs-jXEeilbsvZjylwTQ" name="BatchOptions" associationsIn="_mlbpwejXEeilbsvZjylwTQ" subclassedBy="_mlbpwOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mfG_UOjXEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_mloeEejXEeilbsvZjylwTQ" position="-1179.0,-341.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_mloeEujXEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_mloeE-jXEeilbsvZjylwTQ" name="batchSize">
+      <modelElement href="org.eniware.edge2.uml#_mfHmYejXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mloeFOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mloeFejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mloeFujXEeilbsvZjylwTQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mloeF-jXEeilbsvZjylwTQ" name="parameters">
+      <modelElement href="org.eniware.edge2.uml#_mfINcejXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mloeGOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mloeGejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mloeGujXEeilbsvZjylwTQ" name="Object">
+        <modelElement href="org.eniware.edge2.uml#_mgNLgejXEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_mloeG-jXEeilbsvZjylwTQ" comments="_mlde8OjXEeilbsvZjylwTQ" targetConnectionVisual="_mlde8ejXEeilbsvZjylwTQ" name="getName">
+      <modelElement href="org.eniware.edge2.uml#_mfG_UejXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mloeHOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mloeHejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mloeHujXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfHmYOjXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mloeH-jXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_mloeIOjXEeilbsvZjylwTQ" comments="_mleGAOjXEeilbsvZjylwTQ" targetConnectionVisual="_mleGAejXEeilbsvZjylwTQ" name="isUpdatable">
+      <modelElement href="org.eniware.edge2.uml#_mfHmYujXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mloeIejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mloeIujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mloeI-jXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfINcOjXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mloeJOjXEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:EnumerationVisual" xmi:id="_mluksOjXEeilbsvZjylwTQ" comments="_mlcQ0OjXEeilbsvZjylwTQ" targetConnectionVisual="_mlcQ0ejXEeilbsvZjylwTQ" name="BatchCallbackResult">
+    <modelElement href="org.eniware.edge2.uml#_mfKCoOjXEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_mluksejXEeilbsvZjylwTQ" position="521.0,-212.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_mluksujXEeilbsvZjylwTQ" name="LegacyStyledElement">
+      <modelElement href="org.eniware.edge2.uml#_mfKpsOjXEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <visibility xmi:id="_mluks-jXEeilbsvZjylwTQ" label="+"/>
+    <literals xmi:id="_mluktOjXEeilbsvZjylwTQ" name="CONTINUE">
+      <modelElement href="org.eniware.edge2.uml#_mfKpsejXEeilbsvZjylwTQ"/>
+    </literals>
+    <literals xmi:id="_mluktejXEeilbsvZjylwTQ" name="UPDATE">
+      <modelElement href="org.eniware.edge2.uml#_mfKpsujXEeilbsvZjylwTQ"/>
+    </literals>
+    <literals xmi:id="_mluktujXEeilbsvZjylwTQ" name="DELETE">
+      <modelElement href="org.eniware.edge2.uml#_mfLQwOjXEeilbsvZjylwTQ"/>
+    </literals>
+    <literals xmi:id="_mlukt-jXEeilbsvZjylwTQ" name="STOP">
+      <modelElement href="org.eniware.edge2.uml#_mfLQwejXEeilbsvZjylwTQ"/>
+    </literals>
+    <literals xmi:id="_mlukuOjXEeilbsvZjylwTQ" name="UPDATE_STOP">
+      <modelElement href="org.eniware.edge2.uml#_mfLQwujXEeilbsvZjylwTQ"/>
+    </literals>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_mlsIcOjXEeilbsvZjylwTQ" comments="_mlbpwujXEeilbsvZjylwTQ" targetConnectionVisual="_mlbpw-jXEeilbsvZjylwTQ" name="BatchCallback">
+    <modelElement href="org.eniware.edge2.uml#_mfI0gejXEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_mlsIcejXEeilbsvZjylwTQ" position="-848.0,-328.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_mlsIcujXEeilbsvZjylwTQ" name="Generics">
+      <modelElement href="org.eniware.edge2.uml#_mfJbkOjXEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <visibility xmi:id="_mlsIc-jXEeilbsvZjylwTQ" label="+"/>
+    <operations xmi:id="_mlsIdOjXEeilbsvZjylwTQ" comments="_mlfUIOjXEeilbsvZjylwTQ" targetConnectionVisual="_mlfUIejXEeilbsvZjylwTQ" name="handle">
+      <modelElement href="org.eniware.edge2.uml#_mgRc8ejXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mlsIdejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlsIdujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mlsId-jXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mgRc8-jXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mlsIeOjXEeilbsvZjylwTQ" name="BatchCallbackResult">
+          <modelElement href="org.eniware.edge2.uml#_mfKCoOjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mlsIeejXEeilbsvZjylwTQ" name="domainObject">
+        <modelElement href="org.eniware.edge2.uml#_mgRc8ujXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mlsIeujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mlsIe-jXEeilbsvZjylwTQ" name="T">
+          <modelElement href="org.eniware.edge2.uml#_mgQ14OjXEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_ml0rUOjXEeilbsvZjylwTQ" comments="_mlxoAOjXEeilbsvZjylwTQ" targetConnectionVisual="_mlxoAejXEeilbsvZjylwTQ" name="DatumDao">
+    <modelElement href="org.eniware.edge2.uml#_mfNtAOjXEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_ml0rUejXEeilbsvZjylwTQ" position="-341.0,-423.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_ml0rUujXEeilbsvZjylwTQ" name="Generics">
+      <modelElement href="org.eniware.edge2.uml#_mfOUEOjXEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <visibility xmi:id="_ml0rU-jXEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_ml0rVOjXEeilbsvZjylwTQ" defaultValue="&quot;net/eniwarenetwork/Edge/dao/DATUM_STORED&quot;" name="EVENT_TOPIC_DATUM_STORED" staticAttribute="true">
+      <modelElement href="org.eniware.edge2.uml#_mfOUEejXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_ml0rVejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_ml0rVujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_ml0rV-jXEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_ml0rWOjXEeilbsvZjylwTQ" comments="_mlyPEOjXEeilbsvZjylwTQ" targetConnectionVisual="_mlyPEejXEeilbsvZjylwTQ" name="getDatumType">
+      <modelElement href="org.eniware.edge2.uml#_mfO7IejXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_ml0rWejXEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge2.uml#_mfPiMOjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_ml0rWujXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_ml0rW-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ml0rXOjXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mgSrEejXEeilbsvZjylwTQ"/>
+        <type xmi:id="_ml0rXejXEeilbsvZjylwTQ" name="Class">
+          <modelElement href="org.eniware.edge2.uml#_mgSEAOjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_ml0rXujXEeilbsvZjylwTQ" comments="_mly2IOjXEeilbsvZjylwTQ" targetConnectionVisual="_mly2IejXEeilbsvZjylwTQ" name="getDatumNotUploaded">
+      <modelElement href="org.eniware.edge2.uml#_mfQJQOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_ml0rX-jXEeilbsvZjylwTQ" label="~"/>
+      <cardinality xmi:id="_ml0rYOjXEeilbsvZjylwTQ" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_ml0rYejXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfQJQujXEeilbsvZjylwTQ"/>
+        <type xmi:id="_ml0rYujXEeilbsvZjylwTQ" name="T">
+          <modelElement href="org.eniware.edge2.uml#_mgQ14OjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_ml0rY-jXEeilbsvZjylwTQ" name="destination">
+        <modelElement href="org.eniware.edge2.uml#_mfQJQejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_ml0rZOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_ml0rZejXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ml0rZujXEeilbsvZjylwTQ" comments="_mly2IujXEeilbsvZjylwTQ" targetConnectionVisual="_mly2I-jXEeilbsvZjylwTQ" name="deleteUploadedDataOlderThan">
+      <modelElement href="org.eniware.edge2.uml#_mfQwUOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_ml0rZ-jXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_ml0raOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ml0raejXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfRXYOjXEeilbsvZjylwTQ"/>
+        <type xmi:id="_ml0raujXEeilbsvZjylwTQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_ml0ra-jXEeilbsvZjylwTQ" name="hours">
+        <modelElement href="org.eniware.edge2.uml#_mfQwUejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_ml0rbOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_ml0rbejXEeilbsvZjylwTQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ml0rbujXEeilbsvZjylwTQ" comments="_mlzdMOjXEeilbsvZjylwTQ" targetConnectionVisual="_mlzdMejXEeilbsvZjylwTQ" name="storeDatum">
+      <modelElement href="org.eniware.edge2.uml#_mgSrEujXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_ml0rb-jXEeilbsvZjylwTQ" label="~"/>
+      <cardinality xmi:id="_ml0rcOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_ml0rcejXEeilbsvZjylwTQ" name="datum">
+        <modelElement href="org.eniware.edge2.uml#_mgSrE-jXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_ml0rcujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_ml0rc-jXEeilbsvZjylwTQ" name="T">
+          <modelElement href="org.eniware.edge2.uml#_mgQ14OjXEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ml0rdOjXEeilbsvZjylwTQ" comments="_ml0EQOjXEeilbsvZjylwTQ" targetConnectionVisual="_ml0EQejXEeilbsvZjylwTQ" name="setDatumUploaded">
+      <modelElement href="org.eniware.edge2.uml#_mgTSIOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_ml0rdejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_ml0rdujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_ml0rd-jXEeilbsvZjylwTQ" name="datum">
+        <modelElement href="org.eniware.edge2.uml#_mgTSIejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_ml0reOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_ml0reejXEeilbsvZjylwTQ" name="T">
+          <modelElement href="org.eniware.edge2.uml#_mgQ14OjXEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ml0reujXEeilbsvZjylwTQ" name="date">
+        <modelElement href="org.eniware.edge2.uml#_mgTSIujXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_ml0re-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_ml0rfOjXEeilbsvZjylwTQ" name="Date">
+          <modelElement href="org.eniware.edge2.uml#_mgF2wOjXEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ml0rfejXEeilbsvZjylwTQ" name="destination">
+        <modelElement href="org.eniware.edge2.uml#_mgTSI-jXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_ml0rfujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_ml0rf-jXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ml0rgOjXEeilbsvZjylwTQ" name="trackingId">
+        <modelElement href="org.eniware.edge2.uml#_mgTSJOjXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_ml0rgejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_ml0rgujXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_mk8hkOjXEeilbsvZjylwTQ" comments="_mk3pEOjXEeilbsvZjylwTQ" targetConnectionVisual="_mk3pEejXEeilbsvZjylwTQ" name="SettingDao" generalizations="_mlaboejXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mfSlgOjXEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_mk8hkejXEeilbsvZjylwTQ" position="367.0,-616.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_mk8hkujXEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_mk8hk-jXEeilbsvZjylwTQ" defaultValue="&quot;net/eniwarenetwork/Edge/dao/SETTING_CHANGED&quot;" name="EVENT_TOPIC_SETTING_CHANGED">
+      <modelElement href="org.eniware.edge2.uml#_mfSlgejXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mk8hlOjXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mfTMkejXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mk8hlejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8hlujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mk8hl-jXEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mk8hmOjXEeilbsvZjylwTQ" defaultValue="&quot;Key&quot;" name="SETTING_KEY">
+      <modelElement href="org.eniware.edge2.uml#_mfTMkujXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mk8hmejXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mfTzoejXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mk8hmujXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8hm-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mk8hnOjXEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mk8hnejXEeilbsvZjylwTQ" defaultValue="&quot;Type&quot;" name="SETTING_TYPE">
+      <modelElement href="org.eniware.edge2.uml#_mfTzoujXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mk8hnujXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mfUasejXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mk8hn-jXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8hoOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mk8hoejXEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mk8houjXEeilbsvZjylwTQ" defaultValue="&quot;Value&quot;" name="SETTING_VALUE">
+      <modelElement href="org.eniware.edge2.uml#_mfUasujXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mk8ho-jXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mfVBwejXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mk8hpOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8hpejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mk8hpujXEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mk8hp-jXEeilbsvZjylwTQ" name="mostRecentModificationDate">
+      <modelElement href="org.eniware.edge2.uml#_mfahUujXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8hqOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8hqejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mk8hqujXEeilbsvZjylwTQ" name="Date">
+        <modelElement href="org.eniware.edge2.uml#_mgF2wOjXEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_mk8hq-jXEeilbsvZjylwTQ" name="storeSetting">
+      <modelElement href="org.eniware.edge2.uml#_mfVBwujXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8hrOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8hrejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_mk8hrujXEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge2.uml#_mfVo0OjXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8hr-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8hsOjXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mk8hsejXEeilbsvZjylwTQ" name="value">
+        <modelElement href="org.eniware.edge2.uml#_mfVo0ejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8hsujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8hs-jXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk8htOjXEeilbsvZjylwTQ" name="storeSetting">
+      <modelElement href="org.eniware.edge2.uml#_mfVo0ujXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8htejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8htujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_mk8ht-jXEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge2.uml#_mfWP4OjXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8huOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8huejXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mk8huujXEeilbsvZjylwTQ" name="type">
+        <modelElement href="org.eniware.edge2.uml#_mfWP4ejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8hu-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8hvOjXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mk8hvejXEeilbsvZjylwTQ" name="value">
+        <modelElement href="org.eniware.edge2.uml#_mfWP4ujXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8hvujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8hv-jXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk8hwOjXEeilbsvZjylwTQ" name="readSetting">
+      <modelElement href="org.eniware.edge2.uml#_mfW28OjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8hwejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8hwujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mk8hw-jXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mgUgQejXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mk8hxOjXEeilbsvZjylwTQ" name="Setting">
+          <modelElement href="org.eniware.edge2.uml#_mgITAOjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mk8hxejXEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge2.uml#_mfW28ejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8hxujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8hx-jXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mk8hyOjXEeilbsvZjylwTQ" name="type">
+        <modelElement href="org.eniware.edge2.uml#_mfW28ujXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8hyejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8hyujXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk8hy-jXEeilbsvZjylwTQ" name="getSetting">
+      <modelElement href="org.eniware.edge2.uml#_mfXeAOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8hzOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8hzejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mk8hzujXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfXeAujXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mk8hz-jXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mk8h0OjXEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge2.uml#_mfXeAejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8h0ejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8h0ujXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk8h0-jXEeilbsvZjylwTQ" name="getSettings">
+      <modelElement href="org.eniware.edge2.uml#_mfXeA-jXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8h1OjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8h1ejXEeilbsvZjylwTQ" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_mk8h1ujXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfYFEOjXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mk8h1-jXEeilbsvZjylwTQ" name="KeyValuePair">
+          <modelElement href="org.eniware.edge2.uml#_mgI6EejXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mk8h2OjXEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge2.uml#_mfXeBOjXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8h2ejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8h2ujXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk8h2-jXEeilbsvZjylwTQ" name="getSetting">
+      <modelElement href="org.eniware.edge2.uml#_mfYsIOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8h3OjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8h3ejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mk8h3ujXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfYsI-jXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mk8h3-jXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mk8h4OjXEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge2.uml#_mfYsIejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8h4ejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8h4ujXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mk8h4-jXEeilbsvZjylwTQ" name="type">
+        <modelElement href="org.eniware.edge2.uml#_mfYsIujXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8h5OjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8h5ejXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk8h5ujXEeilbsvZjylwTQ" name="deleteSetting">
+      <modelElement href="org.eniware.edge2.uml#_mfZTMOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8h5-jXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8h6OjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mk8h6ejXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfZTMujXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mk8h6ujXEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mk8h6-jXEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge2.uml#_mfZTMejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8h7OjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8h7ejXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk8h7ujXEeilbsvZjylwTQ" name="deleteSetting">
+      <modelElement href="org.eniware.edge2.uml#_mfZTM-jXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8h7-jXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8h8OjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mk8h8ejXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfZ6QujXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mk8h8ujXEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mk8h8-jXEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge2.uml#_mfZ6QOjXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8h9OjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8h9ejXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mk8h9ujXEeilbsvZjylwTQ" name="type">
+        <modelElement href="org.eniware.edge2.uml#_mfZ6QejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8h9-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8h-OjXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk8h-ejXEeilbsvZjylwTQ" name="getSettingModificationDate">
+      <modelElement href="org.eniware.edge2.uml#_mfZ6Q-jXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8h-ujXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8h--jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mk8h_OjXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mgUgQujXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mk8h_ejXEeilbsvZjylwTQ" name="Date">
+          <modelElement href="org.eniware.edge2.uml#_mgF2wOjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mk8h_ujXEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge2.uml#_mfahUOjXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8h_-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8iAOjXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mk8iAejXEeilbsvZjylwTQ" name="type">
+        <modelElement href="org.eniware.edge2.uml#_mfahUejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8iAujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8iA-jXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk8iBOjXEeilbsvZjylwTQ" name="storeSetting">
+      <modelElement href="org.eniware.edge2.uml#_mgT5MOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mk8iBejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk8iBujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_mk8iB-jXEeilbsvZjylwTQ" name="setting">
+        <modelElement href="org.eniware.edge2.uml#_mgUgQOjXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk8iCOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk8iCejXEeilbsvZjylwTQ" name="Setting">
+          <modelElement href="org.eniware.edge2.uml#_mgITAOjXEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_mliXcOjXEeilbsvZjylwTQ" comments="_mlZ0kOjXEeilbsvZjylwTQ" targetConnectionVisual="_mlaboOjXEeilbsvZjylwTQ" name="BatchableDao" subclassedBy="_mlaboejXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mfFxMOjXEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_mliXcejXEeilbsvZjylwTQ" position="775.0,-203.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_mliXcujXEeilbsvZjylwTQ" name="Generics">
+      <modelElement href="org.eniware.edge2.uml#_mfGYQOjXEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <visibility xmi:id="_mliXc-jXEeilbsvZjylwTQ" label="+"/>
+    <operations xmi:id="_mliXdOjXEeilbsvZjylwTQ" comments="_mlbCsOjXEeilbsvZjylwTQ" targetConnectionVisual="_mlbCsejXEeilbsvZjylwTQ" name="batchProcess">
+      <modelElement href="org.eniware.edge2.uml#_mgEBkOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mliXdejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mliXdujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mliXd-jXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mgEBk-jXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mliXeOjXEeilbsvZjylwTQ" name="BatchResult">
+          <modelElement href="org.eniware.edge2.uml#_mfLQw-jXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mliXeejXEeilbsvZjylwTQ" name="callback">
+        <modelElement href="org.eniware.edge2.uml#_mgEBkejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mliXeujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mliXe-jXEeilbsvZjylwTQ" name="BatchCallback">
+          <modelElement href="org.eniware.edge2.uml#_mfI0gejXEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mliXfOjXEeilbsvZjylwTQ" name="options">
+        <modelElement href="org.eniware.edge2.uml#_mgEBkujXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mliXfejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mliXfujXEeilbsvZjylwTQ" name="BatchOptions">
+          <modelElement href="org.eniware.edge2.uml#_mfG_UOjXEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <memberTypes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_mliXf-jXEeilbsvZjylwTQ" name="BatchOptions">
+      <modelElement href="org.eniware.edge2.uml#_mfG_UOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mliXgOjXEeilbsvZjylwTQ" label="+"/>
+      <attributes xmi:id="_mliXgejXEeilbsvZjylwTQ" name="batchSize">
+        <modelElement href="org.eniware.edge2.uml#_mfHmYejXEeilbsvZjylwTQ"/>
+        <visibility xmi:id="_mliXgujXEeilbsvZjylwTQ" label="+"/>
+        <cardinality xmi:id="_mliXg-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mliXhOjXEeilbsvZjylwTQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </attributes>
+      <attributes xmi:id="_mliXhejXEeilbsvZjylwTQ" name="parameters">
+        <modelElement href="org.eniware.edge2.uml#_mfINcejXEeilbsvZjylwTQ"/>
+        <visibility xmi:id="_mliXhujXEeilbsvZjylwTQ" label="+"/>
+        <cardinality xmi:id="_mliXh-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mliXiOjXEeilbsvZjylwTQ" name="Object">
+          <modelElement href="org.eniware.edge2.uml#_mgNLgejXEeilbsvZjylwTQ"/>
+        </type>
+      </attributes>
+      <operations xmi:id="_mliXiejXEeilbsvZjylwTQ" name="getName">
+        <modelElement href="org.eniware.edge2.uml#_mfG_UejXEeilbsvZjylwTQ"/>
+        <visibility xmi:id="_mliXiujXEeilbsvZjylwTQ" label="+"/>
+        <cardinality xmi:id="_mliXi-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <outParameters xmi:id="_mliXjOjXEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge2.uml#_mfHmYOjXEeilbsvZjylwTQ"/>
+          <type xmi:id="_mliXjejXEeilbsvZjylwTQ" name="String">
+            <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </type>
+        </outParameters>
+      </operations>
+      <operations xmi:id="_mliXjujXEeilbsvZjylwTQ" name="isUpdatable">
+        <modelElement href="org.eniware.edge2.uml#_mfHmYujXEeilbsvZjylwTQ"/>
+        <visibility xmi:id="_mliXj-jXEeilbsvZjylwTQ" label="+"/>
+        <cardinality xmi:id="_mliXkOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <outParameters xmi:id="_mliXkejXEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge2.uml#_mfINcOjXEeilbsvZjylwTQ"/>
+          <type xmi:id="_mliXkujXEeilbsvZjylwTQ" name="boolean">
+            <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </type>
+        </outParameters>
+      </operations>
+    </memberTypes>
+    <memberTypes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_mliXk-jXEeilbsvZjylwTQ" name="BatchCallback">
+      <modelElement href="org.eniware.edge2.uml#_mfI0gejXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mliXlOjXEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge2.uml#_mfJbkOjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mliXlejXEeilbsvZjylwTQ" label="+"/>
+      <operations xmi:id="_mliXlujXEeilbsvZjylwTQ" name="handle">
+        <modelElement href="org.eniware.edge2.uml#_mgRc8ejXEeilbsvZjylwTQ"/>
+        <visibility xmi:id="_mliXl-jXEeilbsvZjylwTQ" label="+"/>
+        <cardinality xmi:id="_mliXmOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <outParameters xmi:id="_mliXmejXEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge2.uml#_mgRc8-jXEeilbsvZjylwTQ"/>
+          <type xmi:id="_mliXmujXEeilbsvZjylwTQ" name="BatchCallbackResult">
+            <modelElement href="org.eniware.edge2.uml#_mfKCoOjXEeilbsvZjylwTQ"/>
+          </type>
+        </outParameters>
+        <parameters xmi:id="_mliXm-jXEeilbsvZjylwTQ" name="domainObject">
+          <modelElement href="org.eniware.edge2.uml#_mgRc8ujXEeilbsvZjylwTQ"/>
+          <cardinality xmi:id="_mliXnOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+          <type xmi:id="_mliXnejXEeilbsvZjylwTQ" name="T">
+            <modelElement href="org.eniware.edge2.uml#_mgQ14OjXEeilbsvZjylwTQ"/>
+          </type>
+        </parameters>
+      </operations>
+    </memberTypes>
+    <memberTypes xsi:type="com.yattasolutions.uml.diagrams.classifier:EnumerationVisual" xmi:id="_mliXnujXEeilbsvZjylwTQ" name="BatchCallbackResult">
+      <modelElement href="org.eniware.edge2.uml#_mfKCoOjXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mliXn-jXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mfKpsOjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mliXoOjXEeilbsvZjylwTQ" label="+"/>
+      <literals xmi:id="_mliXoejXEeilbsvZjylwTQ" name="CONTINUE">
+        <modelElement href="org.eniware.edge2.uml#_mfKpsejXEeilbsvZjylwTQ"/>
+      </literals>
+      <literals xmi:id="_mliXoujXEeilbsvZjylwTQ" name="UPDATE">
+        <modelElement href="org.eniware.edge2.uml#_mfKpsujXEeilbsvZjylwTQ"/>
+      </literals>
+      <literals xmi:id="_mliXo-jXEeilbsvZjylwTQ" name="DELETE">
+        <modelElement href="org.eniware.edge2.uml#_mfLQwOjXEeilbsvZjylwTQ"/>
+      </literals>
+      <literals xmi:id="_mliXpOjXEeilbsvZjylwTQ" name="STOP">
+        <modelElement href="org.eniware.edge2.uml#_mfLQwejXEeilbsvZjylwTQ"/>
+      </literals>
+      <literals xmi:id="_mliXpejXEeilbsvZjylwTQ" name="UPDATE_STOP">
+        <modelElement href="org.eniware.edge2.uml#_mfLQwujXEeilbsvZjylwTQ"/>
+      </literals>
+    </memberTypes>
+    <memberTypes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_mliXpujXEeilbsvZjylwTQ" name="BatchResult">
+      <modelElement href="org.eniware.edge2.uml#_mfLQw-jXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mliXp-jXEeilbsvZjylwTQ" label="+"/>
+      <operations xmi:id="_mliXqOjXEeilbsvZjylwTQ" name="numProcessed">
+        <modelElement href="org.eniware.edge2.uml#_mfL30OjXEeilbsvZjylwTQ"/>
+        <visibility xmi:id="_mliXqejXEeilbsvZjylwTQ" label="+"/>
+        <cardinality xmi:id="_mliXqujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <outParameters xmi:id="_mliXq-jXEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge2.uml#_mfL30ejXEeilbsvZjylwTQ"/>
+          <type xmi:id="_mliXrOjXEeilbsvZjylwTQ" name="int">
+            <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </type>
+        </outParameters>
+      </operations>
+    </memberTypes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_mlwZ4OjXEeilbsvZjylwTQ" comments="_mlc34OjXEeilbsvZjylwTQ" targetConnectionVisual="_mlc34ejXEeilbsvZjylwTQ" name="BatchResult" subclassedBy="_mlc34ujXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mfLQw-jXEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_mlwZ4ejXEeilbsvZjylwTQ" position="1114.0,-587.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_mlwZ4ujXEeilbsvZjylwTQ" label="+"/>
+    <operations xmi:id="_mlwZ4-jXEeilbsvZjylwTQ" comments="_mlfUIujXEeilbsvZjylwTQ" targetConnectionVisual="_mlfUI-jXEeilbsvZjylwTQ" name="numProcessed">
+      <modelElement href="org.eniware.edge2.uml#_mfL30OjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mlwZ5OjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlwZ5ejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mlwZ5ujXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfL30ejXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mlwZ5-jXEeilbsvZjylwTQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_mk0lwOjXEeilbsvZjylwTQ" comments="_mkzXoOjXEeilbsvZjylwTQ" targetConnectionVisual="_mkzXoejXEeilbsvZjylwTQ" name="BasicBatchResult" generalizations="_mlc34ujXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_mfDU8OjXEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_mk0lwejXEeilbsvZjylwTQ" position="1035.0,-412.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_mk0lwujXEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_mk0lw-jXEeilbsvZjylwTQ" defaultValue="0" name="numProcessed">
+      <modelElement href="org.eniware.edge2.uml#_mgZ_0OjXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mk0lxOjXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mgam4OjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mk0lxejXEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_mk0lxujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mk0lx-jXEeilbsvZjylwTQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_mk0lyOjXEeilbsvZjylwTQ" name="BasicBatchResult">
+      <modelElement href="org.eniware.edge2.uml#_mfD8AOjXEeilbsvZjylwTQ"/>
+      <keywords xmi:id="_mk0lyejXEeilbsvZjylwTQ" keyword="create"/>
+      <visibility xmi:id="_mk0lyujXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk0ly-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mk0lzOjXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfEjE-jXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mk0lzejXEeilbsvZjylwTQ" name="BasicBatchResult">
+          <modelElement href="org.eniware.edge2.uml#_mfDU8OjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mk0lzujXEeilbsvZjylwTQ" name="numProcessed">
+        <modelElement href="org.eniware.edge2.uml#_mfEjEOjXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mk0lz-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mk0l0OjXEeilbsvZjylwTQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mk0l0ejXEeilbsvZjylwTQ" name="numProcessed">
+      <modelElement href="org.eniware.edge2.uml#_mfEjFOjXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mk0l0ujXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mfFKIOjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_mk0l0-jXEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge2.uml#_mfFKIejXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mk0l1OjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mk0l1ejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mk0l1ujXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mfEjFejXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mk0l1-jXEeilbsvZjylwTQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_mlQqoOjXEeilbsvZjylwTQ" comments="_mlLyIOjXEeilbsvZjylwTQ" targetConnectionVisual="_mlLyIejXEeilbsvZjylwTQ" name="BasicBatchOptions" associationsOut="_mlQDkOjXEeilbsvZjylwTQ" generalizations="_mlbpwOjXEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge2.uml#_me8AMOjXEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_mlQqoejXEeilbsvZjylwTQ" position="-878.0,-146.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_mlQqoujXEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_mlQqo-jXEeilbsvZjylwTQ" defaultValue="&quot;Anonymous&quot;" name="DEFAULT_BATCH_NAME" staticAttribute="true">
+      <modelElement href="org.eniware.edge2.uml#_mgVuYOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mlQqpOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQqpejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mlQqpujXEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mlQqp-jXEeilbsvZjylwTQ" defaultValue="50" name="DEFAULT_BATCH_SIZE" staticAttribute="true">
+      <modelElement href="org.eniware.edge2.uml#_mgWVcOjXEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_mlQqqOjXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQqqejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mlQqqujXEeilbsvZjylwTQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mlQqq-jXEeilbsvZjylwTQ" name="name">
+      <modelElement href="org.eniware.edge2.uml#_mgWVcujXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mlQqrOjXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mgW8gOjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mlQqrejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQqrujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mlQqr-jXEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mlQqsOjXEeilbsvZjylwTQ" defaultValue="false" name="updatable">
+      <modelElement href="org.eniware.edge2.uml#_mgXjkujXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mlQqsejXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mgYKoOjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mlQqsujXEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_mlQqs-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mlQqtOjXEeilbsvZjylwTQ" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mlQqtejXEeilbsvZjylwTQ" defaultValue="DEFAULT_BATCH_SIZE" name="batchSize">
+      <modelElement href="org.eniware.edge2.uml#_mgYKoejXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mlQqtujXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mgYKoujXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mlQqt-jXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQquOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mlQquejXEeilbsvZjylwTQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_mlQquujXEeilbsvZjylwTQ" name="parameters">
+      <modelElement href="org.eniware.edge2.uml#_mgZYwOjXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mlQqu-jXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mgZYwejXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mlQqvOjXEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_mlQqvejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_mlQqvujXEeilbsvZjylwTQ" name="Object">
+        <modelElement href="org.eniware.edge2.uml#_mgNLgejXEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_mlQqv-jXEeilbsvZjylwTQ" comments="_mlMZMOjXEeilbsvZjylwTQ" targetConnectionVisual="_mlMZMejXEeilbsvZjylwTQ" name="BasicBatchOptions">
+      <modelElement href="org.eniware.edge2.uml#_me-ccOjXEeilbsvZjylwTQ"/>
+      <keywords xmi:id="_mlQqwOjXEeilbsvZjylwTQ" keyword="create"/>
+      <visibility xmi:id="_mlQqwejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQqwujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mlQqw-jXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_me-cc-jXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mlQqxOjXEeilbsvZjylwTQ" name="BasicBatchOptions">
+          <modelElement href="org.eniware.edge2.uml#_me8AMOjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_mlQqxejXEeilbsvZjylwTQ" comments="_mlMZMujXEeilbsvZjylwTQ" targetConnectionVisual="_mlMZM-jXEeilbsvZjylwTQ" name="BasicBatchOptions">
+      <modelElement href="org.eniware.edge2.uml#_me_DgOjXEeilbsvZjylwTQ"/>
+      <keywords xmi:id="_mlQqxujXEeilbsvZjylwTQ" keyword="create"/>
+      <visibility xmi:id="_mlQqx-jXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQqyOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mlQqyejXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_me_DhOjXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mlQqyujXEeilbsvZjylwTQ" name="BasicBatchOptions">
+          <modelElement href="org.eniware.edge2.uml#_me8AMOjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mlQqy-jXEeilbsvZjylwTQ" name="name">
+        <modelElement href="org.eniware.edge2.uml#_me_DgejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mlQqzOjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mlQqzejXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_mlQqzujXEeilbsvZjylwTQ" name="isUpdatable">
+      <modelElement href="org.eniware.edge2.uml#_me_qkOjXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mlQqz-jXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mfARoOjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_mlQq0OjXEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge2.uml#_mfARoejXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mlQq0ejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQq0ujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mlQq0-jXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_me_qkejXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mlQq1OjXEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_mlQq1ejXEeilbsvZjylwTQ" name="getParameters">
+      <modelElement href="org.eniware.edge2.uml#_mfARo-jXEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_mlQq1ujXEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge2.uml#_mfA4sOjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_mlQq1-jXEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge2.uml#_mfBfwOjXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_mlQq2OjXEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge2.uml#_mfBfwejXEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_mlQq2ejXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQq2ujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mlQq2-jXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mgPnwejXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mlQq3OjXEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge2.uml#_mf_JEOjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_mlQq3ejXEeilbsvZjylwTQ" comments="_mlNnUOjXEeilbsvZjylwTQ" targetConnectionVisual="_mlOOYOjXEeilbsvZjylwTQ" name="BasicBatchOptions">
+      <modelElement href="org.eniware.edge2.uml#_mgOZoOjXEeilbsvZjylwTQ"/>
+      <keywords xmi:id="_mlQq3ujXEeilbsvZjylwTQ" keyword="create"/>
+      <visibility xmi:id="_mlQq3-jXEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_mlQq4OjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_mlQq4ejXEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge2.uml#_mgOZp-jXEeilbsvZjylwTQ"/>
+        <type xmi:id="_mlQq4ujXEeilbsvZjylwTQ" name="BasicBatchOptions">
+          <modelElement href="org.eniware.edge2.uml#_me8AMOjXEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_mlQq4-jXEeilbsvZjylwTQ" name="name">
+        <modelElement href="org.eniware.edge2.uml#_mgOZoejXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mlQq5OjXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mlQq5ejXEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mlQq5ujXEeilbsvZjylwTQ" name="batchSize">
+        <modelElement href="org.eniware.edge2.uml#_mgOZoujXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mlQq5-jXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mlQq6OjXEeilbsvZjylwTQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mlQq6ejXEeilbsvZjylwTQ" name="updatable">
+        <modelElement href="org.eniware.edge2.uml#_mgOZo-jXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mlQq6ujXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mlQq6-jXEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_mlQq7OjXEeilbsvZjylwTQ" name="parameters">
+        <modelElement href="org.eniware.edge2.uml#_mgOZpOjXEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_mlQq7ejXEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_mlQq7ujXEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge2.uml#_mf_JEOjXEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

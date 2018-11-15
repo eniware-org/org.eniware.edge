@@ -1,0 +1,1800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_9cVnsOjlEeilbsvZjylwTQ">
+  <modelElement href="org.eniware.edge.uml#_9uQeIOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_99ZGUejlEeilbsvZjylwTQ" targetItem="_99cwvujlEeilbsvZjylwTQ" sourceItem="_99ZGUOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_99ZtYejlEeilbsvZjylwTQ" targetItem="_99cw2OjlEeilbsvZjylwTQ" sourceItem="_99ZtYOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_99ZtY-jlEeilbsvZjylwTQ" targetItem="_99cw4ejlEeilbsvZjylwTQ" sourceItem="_99ZtYujlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_99bikOjlEeilbsvZjylwTQ" target="_99cwvujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzFcejlEeilbsvZjylwTQ"/>
+    <nameVisual xmi:id="_99bikejlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_99bikujlEeilbsvZjylwTQ" aggregationKind="NONE" name="scheduler" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zVLYOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99bik-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99bilOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_99bilejlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9zzFcujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99bilujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99bil-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_99cJoOjlEeilbsvZjylwTQ" source="_99cwvujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z9dgejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_99cJoejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z-EkOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_99cJoujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_99cJo-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z9dgujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99cJpOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99cJpejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_99cJpujlEeilbsvZjylwTQ" aggregationKind="NONE" name="configurationListenerRef" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zVLYejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99cJp-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99cJqOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_99cwsOjlEeilbsvZjylwTQ" sourceAnchor="242.0,0.0" targetAnchor="0.0,172.0" target="_9-hHvujlEeilbsvZjylwTQ" source="_99cwvujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z-EkejlEeilbsvZjylwTQ"/>
+    <bendpoints xmi:id="_-L1yAOjlEeilbsvZjylwTQ" sourceY="-227" targetX="-334"/>
+    <stereotypes xmi:id="_99cwsejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z-roOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_99cwsujlEeilbsvZjylwTQ" text="">
+      <visualProperties xmi:id="_-L2ZEOjlEeilbsvZjylwTQ" position="-26.653756513187545,137.3041068334768"/>
+    </nameVisual>
+    <sourceRole xmi:id="_99cws-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z-EkujlEeilbsvZjylwTQ"/>
+      <visualProperties xmi:id="_-L1yAejlEeilbsvZjylwTQ" position="-18.16881606724536,-79.603778125672"/>
+      <visibility xmi:id="_99cwtOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99cwtejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_99cwtujlEeilbsvZjylwTQ" aggregationKind="NONE" name="providerMap" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zWZgejlEeilbsvZjylwTQ"/>
+      <visualProperties xmi:id="_-L2ZEejlEeilbsvZjylwTQ" position="-396.61695856853873,103.58700696696145"/>
+      <visibility xmi:id="_99cwt-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99cwuOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <qualifierHelper xmi:id="_99cwuejlEeilbsvZjylwTQ">
+        <qualifiers xmi:id="_99cwuujlEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge.uml#_9zXAkejlEeilbsvZjylwTQ"/>
+          <visibility xmi:id="_99cwu-jlEeilbsvZjylwTQ" label="+"/>
+          <cardinality xmi:id="_99cwvOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+          <type xmi:id="_99cwvejlEeilbsvZjylwTQ" name="String">
+            <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </type>
+        </qualifiers>
+      </qualifierHelper>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_99iQQejlEeilbsvZjylwTQ" targetItem="_99qMGejlEeilbsvZjylwTQ" sourceItem="_99iQQOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_99iQQujlEeilbsvZjylwTQ" source="_99qMGejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_90BH4ejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_99lTk-jlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_90Bu8OjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_99lTkOjlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_99lTkejlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_90BH4ujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99l6o-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99l6oujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_99lTkujlEeilbsvZjylwTQ" aggregationKind="NONE" name="scheduler" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zcgIOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99mhsejlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99mhsOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_99i3UOjlEeilbsvZjylwTQ" source="_99qMGejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_90CWAejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_99l6oejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_90C9EOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_99lTlOjlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_99lTlejlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_90CWAujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99mhtOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99mhs-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_99l6oOjlEeilbsvZjylwTQ" aggregationKind="NONE" name="configurationListenerRef" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zduQOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99mhtujlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99mhtejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_99i3UujlEeilbsvZjylwTQ" targetItem="_99qMPOjlEeilbsvZjylwTQ" sourceItem="_99i3UejlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_99i3VOjlEeilbsvZjylwTQ" targetItem="_99qMP-jlEeilbsvZjylwTQ" sourceItem="_99i3U-jlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_99jeYejlEeilbsvZjylwTQ" targetItem="_99qMUejlEeilbsvZjylwTQ" sourceItem="_99jeYOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_99nv0OjlEeilbsvZjylwTQ" source="_99qMGejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_90Bu8ejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_99nv0ejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_90CWAOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_99nv0ujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_99nv0-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_90Bu8ujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99nv1OjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99nv1ejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_99nv1ujlEeilbsvZjylwTQ" aggregationKind="NONE" name="bundleContext" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zdHMejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99nv1-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99nv2OjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_99oW4OjlEeilbsvZjylwTQ" source="_99qMGejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_90C9EejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_99oW4ejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_90ELMOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_99oW4ujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_99oW4-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_90C9EujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99oW5OjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99oW5ejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_99oW5ujlEeilbsvZjylwTQ" aggregationKind="NONE" name="registeredServices" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zeVUejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99oW5-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99oW6OjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <qualifierHelper xmi:id="_99oW6ejlEeilbsvZjylwTQ">
+        <qualifiers xmi:id="_99oW6ujlEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge.uml#_9zfjcejlEeilbsvZjylwTQ"/>
+          <visibility xmi:id="_99oW6-jlEeilbsvZjylwTQ" label="+"/>
+          <cardinality xmi:id="_99oW7OjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+          <type xmi:id="_99oW7ejlEeilbsvZjylwTQ" name="String">
+            <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </type>
+        </qualifiers>
+      </qualifierHelper>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_99plAOjlEeilbsvZjylwTQ" source="_99qMGejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_90ELMejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_99plAejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_90EyQOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_99plAujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_99plA-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_90ELMujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99plBOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99plBejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_99plBujlEeilbsvZjylwTQ" aggregationKind="NONE" name="pidMap" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zfjcujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99plB-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99plCOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <qualifierHelper xmi:id="_99plCejlEeilbsvZjylwTQ">
+        <qualifiers xmi:id="_99plCujlEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge.uml#_9zgKgejlEeilbsvZjylwTQ"/>
+          <visibility xmi:id="_99plC-jlEeilbsvZjylwTQ" label="+"/>
+          <cardinality xmi:id="_99plDOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+          <type xmi:id="_99plDejlEeilbsvZjylwTQ" name="String">
+            <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </type>
+        </qualifiers>
+      </qualifierHelper>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_99qMEOjlEeilbsvZjylwTQ" source="_99qMGejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_90EyQejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_99qMEejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_90FZUOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_99qMEujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_99qME-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_90EyQujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99qMFOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99qMFejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_99qMFujlEeilbsvZjylwTQ" aggregationKind="NONE" name="log" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zgKgujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99qMF-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99qMGOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_990kIejlEeilbsvZjylwTQ" targetItem="_993AYOjlEeilbsvZjylwTQ" sourceItem="_990kIOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_991LMOjlEeilbsvZjylwTQ" source="_993AYOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_90Ag0ejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_992ZUOjlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_90BH4OjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_991yQOjlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_991yQejlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_90Ag0ujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_992ZUujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_992ZUejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_991yQujlEeilbsvZjylwTQ" aggregationKind="NONE" name="log" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zb5EOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_992ZVOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_992ZU-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_995coejlEeilbsvZjylwTQ" targetItem="_998f8OjlEeilbsvZjylwTQ" sourceItem="_995coOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_996DsejlEeilbsvZjylwTQ" targetItem="_998gEejlEeilbsvZjylwTQ" sourceItem="_996DsOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_996qwejlEeilbsvZjylwTQ" targetItem="_998gN-jlEeilbsvZjylwTQ" sourceItem="_996qwOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-EbwejlEeilbsvZjylwTQ" targetItem="_9-KiaejlEeilbsvZjylwTQ" sourceItem="_9-EbwOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-EbwujlEeilbsvZjylwTQ" source="_9-KiaejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z82cejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-ItM-jlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z9dgOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-ItMOjlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-ItMejlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z82cujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-JUQejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-JUQOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-ItMujlEeilbsvZjylwTQ" aggregationKind="NONE" name="log" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zUkUOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-J7UOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-JUQujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-Fp4OjlEeilbsvZjylwTQ" targetItem="_9-LJdOjlEeilbsvZjylwTQ" sourceItem="_9-FC0OjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-GQ8ejlEeilbsvZjylwTQ" targetItem="_9-LJmejlEeilbsvZjylwTQ" sourceItem="_9-GQ8OjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-G4AejlEeilbsvZjylwTQ" targetItem="_9-LJoujlEeilbsvZjylwTQ" sourceItem="_9-G4AOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-G4A-jlEeilbsvZjylwTQ" targetItem="_9-LJsejlEeilbsvZjylwTQ" sourceItem="_9-G4AujlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-HfEejlEeilbsvZjylwTQ" targetItem="_9-LJt-jlEeilbsvZjylwTQ" sourceItem="_9-HfEOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-KiYOjlEeilbsvZjylwTQ" source="_9-KiaejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z8PYejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-KiYejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z82cOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-KiYujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-KiY-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z8PYujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-KiZOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-KiZejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-KiZujlEeilbsvZjylwTQ" aggregationKind="NONE" name="messageSendingOps" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zSIEejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-KiZ-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-KiaOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-bBEejlEeilbsvZjylwTQ" targetItem="_9-hHvujlEeilbsvZjylwTQ" sourceItem="_9-bBEOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-boIejlEeilbsvZjylwTQ" targetItem="_9-hH4OjlEeilbsvZjylwTQ" sourceItem="_9-boIOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-cPMOjlEeilbsvZjylwTQ" targetItem="_9-hH6ejlEeilbsvZjylwTQ" sourceItem="_9-boIujlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-c2QejlEeilbsvZjylwTQ" targetItem="_9-hH_-jlEeilbsvZjylwTQ" sourceItem="_9-c2QOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-ddUejlEeilbsvZjylwTQ" targetItem="_9-hIFujlEeilbsvZjylwTQ" sourceItem="_9-ddUOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-ddU-jlEeilbsvZjylwTQ" targetItem="_9-huwujlEeilbsvZjylwTQ" sourceItem="_9-ddUujlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-f5kOjlEeilbsvZjylwTQ" source="_9-hHvujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z-roejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-f5kejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z_SsOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-f5kujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-f5k-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z-roujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-f5lOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-f5lejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-f5lujlEeilbsvZjylwTQ" aggregationKind="NONE" name="messageSource" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zZc0ujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-f5l-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-f5mOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-ggoOjlEeilbsvZjylwTQ" source="_9-hHvujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z_SsejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-ggoejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z_5wOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-ggoujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-ggo-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z_SsujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-ggpOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-ggpejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-ggpujlEeilbsvZjylwTQ" aggregationKind="NONE" name="specifiers" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zaq8OjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-ggp-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-ggqOjlEeilbsvZjylwTQ" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-hHsOjlEeilbsvZjylwTQ" source="_9-hHvujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z_5wejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-hHsejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_90Ag0OjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-hHsujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-hHs-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z_5wujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-hHtOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hHtejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-hHtujlEeilbsvZjylwTQ" aggregationKind="NONE" name="messages" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zaq8-jlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-hHt-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-hHuOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <qualifierHelper xmi:id="_9-hHuejlEeilbsvZjylwTQ">
+        <qualifiers xmi:id="_9-hHuujlEeilbsvZjylwTQ">
+          <modelElement href="org.eniware.edge.uml#_9zbSAujlEeilbsvZjylwTQ"/>
+          <visibility xmi:id="_9-hHu-jlEeilbsvZjylwTQ" label="+"/>
+          <cardinality xmi:id="_9-hHvOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+          <type xmi:id="_9-hHvejlEeilbsvZjylwTQ" name="String">
+            <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </type>
+        </qualifiers>
+      </qualifierHelper>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-vKIejlEeilbsvZjylwTQ" targetItem="_9-4UEOjlEeilbsvZjylwTQ" sourceItem="_9-vKIOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-vKIujlEeilbsvZjylwTQ" source="_9-4UEOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z7BQejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-zbk-jlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z7oUOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-zbkOjlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-zbkejlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z7BQujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-0psejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-0psOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-zbkujlEeilbsvZjylwTQ" aggregationKind="NONE" name="eventAdmin" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zOds-jlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-0ps-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-0psujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-vKI-jlEeilbsvZjylwTQ" source="_9-4UEOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z7oUejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-zbl-jlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z8PYOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-zblOjlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-zblejlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z7oUujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-1QwejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-1QwOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-zblujlEeilbsvZjylwTQ" aggregationKind="NONE" name="messageSendingOps" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zPr0ejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-1Qw-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-1QwujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-xmYejlEeilbsvZjylwTQ" targetItem="_9-4UeujlEeilbsvZjylwTQ" sourceItem="_9-xmYOjlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-yNcOjlEeilbsvZjylwTQ" targetItem="_9-4UgOjlEeilbsvZjylwTQ" sourceItem="_9-xmYujlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_9-yNcujlEeilbsvZjylwTQ" targetItem="_9-4UhujlEeilbsvZjylwTQ" sourceItem="_9-yNcejlEeilbsvZjylwTQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-2e4OjlEeilbsvZjylwTQ" source="_9-4UEOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z4lAOjlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-2e4ejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z5MEOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-2e4ujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-2e4-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z4lAejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-2e5OjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-2e5ejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-2e5ujlEeilbsvZjylwTQ" aggregationKind="NONE" name="activeState" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zMogOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-2e5-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-2e6OjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-3F8OjlEeilbsvZjylwTQ" source="_9-4UEOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z5MEejlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-3F8ejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z5zIOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-3F8ujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-3F8-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z5MEujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-3F9OjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-3F9ejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-3F9ujlEeilbsvZjylwTQ" aggregationKind="NONE" name="activeSingletonTask" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zNPkejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-3F9-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-3F-OjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_9-3tAOjlEeilbsvZjylwTQ" source="_9-4UEOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z6aMOjlEeilbsvZjylwTQ"/>
+    <stereotypes xmi:id="_9-3tAejlEeilbsvZjylwTQ" name="Reference">
+      <modelElement href="org.eniware.edge.uml#_9z7BQOjlEeilbsvZjylwTQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_9-3tAujlEeilbsvZjylwTQ" text=""/>
+    <sourceRole xmi:id="_9-3tA-jlEeilbsvZjylwTQ" aggregationKind="NONE" name="">
+      <modelElement href="org.eniware.edge.uml#_9z6aMejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-3tBOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-3tBejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_9-3tBujlEeilbsvZjylwTQ" aggregationKind="NONE" name="singletonExecutorService" navigable="true">
+      <modelElement href="org.eniware.edge.uml#_9zOdsOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-3tB-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-3tCOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_99ZGUOjlEeilbsvZjylwTQ" sourceConnectionVisual="_99ZGUejlEeilbsvZjylwTQ" text="An OSGi service registration listener for jobs, so they can be automatically&#xA;registered/unregistered with the job scheduler.&#xA;&#xA;&lt;p>&#xA;This class is designed to be registered as a listener for&#xA;{@link TriggerAndJobDetail} beans registered as services. As&#xA;{@link TriggerAndJobDetail} services are discovered, they will be scheduled&#xA;to run in the configured {@link Scheduler}. As those services are removed,&#xA;they will be un-scheduled. In this way bundles can export jobs to be run by&#xA;the &quot;core&quot; {@code Scheduler} provided by this bundle.&#xA;&lt;/p>&#xA;&#xA;&lt;p>&#xA;This class will also register {@link JobSettingSpecifierProvider} for every&#xA;unique bundle symbolic name. This allows the settings UI to expose the&#xA;registered jobs as configurable components.&#xA;&lt;/p>&#xA;&#xA;&lt;p>&#xA;For example, this might be configured via OSGi Blueprint like this:&#xA;&lt;/p>&#xA;&#xA;&lt;pre>&#xA;&amp;lt;reference-list id=&quot;triggers&quot; interface=&quot;org.eniware.edge.job.TriggerAndJobDetail&quot;>&#xA;&#x9;&#x9;&amp;lt;reference-listener bind-method=&quot;onBind&quot; unbind-method=&quot;onUnbind&quot;>&#xA;&#x9;&#x9;&#x9;&amp;lt;bean class=&quot;org.eniware.edge.runtime.JobServiceRegistrationListener&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&amp;lt;property name=&quot;scheduler&quot; ref=&quot;scheduler&quot;/>&#xA;             &amp;lt;property name=&quot;bundleContext&quot; ref=&quot;bundleContext&quot;/>&#xA;&#x9;&#x9;&#x9;&amp;lt;/bean>&#xA;&#x9;&#x9;&amp;lt;/reference-listener>&#xA;&amp;lt;/reference-list>&#xA;&lt;/pre>&#xA;&#xA;&lt;p>&#xA;The configurable properties of this class are:&#xA;&lt;/p>&#xA;&#xA;&lt;dl class=&quot;class-properties&quot;>&#xA;&lt;dt>scheduler&lt;/dt>&#xA;&lt;dd>The Quartz {@link Scheduler} for scheduling and un-scheduling jobs with&#xA;as {@link TriggerAndJobDetail} services are registered and&#xA;un-registered.&lt;/dd>&#xA;&lt;/dl>&#xA;&#xA;@version 2.0&#xA;@see ManagedJobServiceRegistrationListener for alternative using&#xA;     settings-based jobs" item="_99cwvujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzFcOjlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_99ZtYOjlEeilbsvZjylwTQ" sourceConnectionVisual="_99ZtYejlEeilbsvZjylwTQ" text="Callback when a trigger has been registered.&#xA;&#x9; * &#xA;&#x9; * @param trigJob&#xA;&#x9; *        the trigger and job&#xA;&#x9; * @param properties&#xA;&#x9; *        the service properties" item="_99cw2OjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzFc-jlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_99ZtYujlEeilbsvZjylwTQ" sourceConnectionVisual="_99ZtY-jlEeilbsvZjylwTQ" text="Callback when a trigger has been un-registered.&#xA;&#x9; * &#xA;&#x9; * @param trigJob&#xA;&#x9; *        the trigger and job&#xA;&#x9; * @param properties&#xA;&#x9; *        the service properties" item="_99cw4ejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzFdOjlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_99iQQOjlEeilbsvZjylwTQ" sourceConnectionVisual="_99iQQejlEeilbsvZjylwTQ" text="An OSGi service registration listener for {@link ManagedTriggerAndJobDetail},&#xA;so they can be automatically registered/unregistered with the job scheduler.&#xA;&#xA;&lt;p>&#xA;This class is designed to be registered as a listener for&#xA;{@link ManagedTriggerAndJobDetail} beans registered as services. It only&#xA;works with {@link CronTrigger} triggers. As&#xA;{@link ManagedTriggerAndJobDetail} services are discovered, they will be&#xA;scheduled to run in the configured {@link Scheduler}. As the services are&#xA;removed, they will be un-scheduled. In this way bundles can export jobs to be&#xA;run by the &quot;core&quot; {@code Scheduler} provided by this bundle.&#xA;&lt;/p>&#xA;&#xA;&lt;p>&#xA;For example, this might be configured via OSGi Blueprint like this:&#xA;&lt;/p>&#xA;&#xA;&lt;pre>&#xA;&amp;lt;reference-list id=&quot;managedJobs&quot; interface=&quot;org.eniware.edge.job.ManagedTriggerAndJobDetail&quot;>&#xA;&#x9;&#x9;&amp;lt;reference-listener bind-method=&quot;onBind&quot; unbind-method=&quot;onUnbind&quot;>&#xA;&#x9;&#x9;&#x9;&amp;lt;bean class=&quot;org.eniware.edge.runtime.ManagedJobServiceRegistrationListener&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&amp;lt;property name=&quot;scheduler&quot; ref=&quot;scheduler&quot;/>&#xA;             &amp;lt;property name=&quot;bundleContext&quot; ref=&quot;bundleContext&quot;/>&#xA;&#x9;&#x9;&#x9;&amp;lt;/bean>&#xA;&#x9;&#x9;&amp;lt;/reference-listener>&#xA;&amp;lt;/reference-list>&#xA;&lt;/pre>&#xA;&#xA;&lt;p>&#xA;This class also implements {@link ConfigurationListener} and will&#xA;automatically register itself for {@link ConfigurationEvent} updates. If the&#xA;cron expression associated with a registered job changes, the job will be&#xA;automatically rescheduled with the new cron expression.&#xA;&lt;/p>&#xA;&#xA;&lt;p>&#xA;As {@link ManagedTriggerAndJobDetail} implements {@link ServiceProvider} as&#xA;well, any service configurations returned by&#xA;{@link ServiceProvider#getServiceConfigurations()} will be automatically&#xA;registered along with the job. When the job is unregistered the associated&#xA;services will be unregistered as well.&#xA;&lt;/p>&#xA;&#xA;&lt;p>&#xA;The configurable properties of this class are:&#xA;&lt;/p>&#xA;&#xA;&lt;dl class=&quot;class-properties&quot;>&#xA;&lt;dt>scheduler&lt;/dt>&#xA;&lt;dd>The Quartz {@link Scheduler} for scheduling and un-scheduling jobs with&#xA;as {@link ManagedTriggerAndJobDetail} services are registered and&#xA;un-registered.&lt;/dd>&#xA;&#xA;&lt;dt>bundleContext&lt;/dt>&#xA;&lt;dd>The {@link BundleContext} to register for {@link ConfigurationEvent}&#xA;notifications with.&lt;/dd>&#xA;&lt;/dl>&#xA;&#xA;@version 2.1" item="_99qMGejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzsh-jlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_99i3UejlEeilbsvZjylwTQ" sourceConnectionVisual="_99i3UujlEeilbsvZjylwTQ" text="Call to close down this instance." item="_99qMPOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z0TkOjlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_99i3U-jlEeilbsvZjylwTQ" sourceConnectionVisual="_99i3VOjlEeilbsvZjylwTQ" text="Callback when a trigger has been registered.&#xA;&#x9; * &#xA;&#x9; * @param trigJob&#xA;&#x9; *        the trigger and job&#xA;&#x9; * @param properties&#xA;&#x9; *        the service properties" item="_99qMP-jlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z0TkejlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_99jeYOjlEeilbsvZjylwTQ" sourceConnectionVisual="_99jeYejlEeilbsvZjylwTQ" text="Callback when a trigger has been un-registered.&#xA;&#x9; * &#xA;&#x9; * @param trigJob&#xA;&#x9; *        the trigger and job&#xA;&#x9; * @param properties&#xA;&#x9; *        the service properties" item="_99qMUejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z0TkujlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_990kIOjlEeilbsvZjylwTQ" sourceConnectionVisual="_990kIejlEeilbsvZjylwTQ" text="Utility methods for dealing with Quartz jobs.&#xA;&#xA;@version 2.0" item="_993AYOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzshujlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_995coOjlEeilbsvZjylwTQ" sourceConnectionVisual="_995coejlEeilbsvZjylwTQ" text="Simple implementation of {@link PlatformTaskInfo}.&#xA;&#xA;@version 1.0" item="_998f8OjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z0Tk-jlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_996DsOjlEeilbsvZjylwTQ" sourceConnectionVisual="_996DsejlEeilbsvZjylwTQ" text="Construct from values.&#xA;&#x9; * &#xA;&#x9; * @param taskId&#xA;&#x9; *        the task ID&#xA;&#x9; * @param title&#xA;&#x9; *        the title&#xA;&#x9; * @param message&#xA;&#x9; *        the message&#xA;&#x9; * @param percentComplete&#xA;&#x9; *        the percent complete&#xA;&#x9; * @param restartRequired&#xA;&#x9; *        the restart required flag" item="_998gEejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z0TlOjlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_996qwOjlEeilbsvZjylwTQ" sourceConnectionVisual="_996qwejlEeilbsvZjylwTQ" text="Construct from a status and locale.&#xA;&#x9; * &#xA;&#x9; * @param status&#xA;&#x9; *        the status&#xA;&#x9; * @param locale&#xA;&#x9; *        the desired locale" item="_998gN-jlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9z0TlejlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-EbwOjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-EbwejlEeilbsvZjylwTQ" text="Bridge between OSGi EventAdmin events and a Spring Messaging.&#xA;&#xA;@version 1.1" item="_9-KiaejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zyeYujlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-FC0OjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-Fp4OjlEeilbsvZjylwTQ" text="Constructor.&#xA;&#x9; * &#xA;&#x9; * @param messageSendingOps&#xA;&#x9; *        the optional message sending service to use" item="_9-LJdOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zyeY-jlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-GQ8OjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-GQ8ejlEeilbsvZjylwTQ" text="Post a message without any headers, converting it first.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * Will silently ignore the event if no {@link MessageSendingOperations} is&#xA;&#x9; * available.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * @param dest&#xA;&#x9; *        The destination to post to.&#xA;&#x9; * @param body&#xA;&#x9; *        The message body to post. This will be wrapped in a {@link Result}&#xA;&#x9; *        object if it is not one already.&#xA;&#x9; * @see #postMessage(String, Object, Map, boolean)" item="_9-LJmejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zyeZOjlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-G4AOjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-G4AejlEeilbsvZjylwTQ" text="Post a message. Will silently ignore the event if no&#xA;&#x9; * {@link MessageSendingOperations} is available.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * If {@code convert} is {@literal true} the message will be sent via the&#xA;&#x9; * {@link MessageSendingOperations#convertAndSend(Object, Object, Map)}&#xA;&#x9; * method. Otherwise the&#xA;&#x9; * {@link MessageSendingOperations#send(Object, Message)} method will be&#xA;&#x9; * used to send the body as-is.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * @param dest&#xA;&#x9; *        The destination to post to.&#xA;&#x9; * @param body&#xA;&#x9; *        The message body to post. If {@code convert} is {@literal true}&#xA;&#x9; *        then this will be wrapped in a {@link Result} object if it is not&#xA;&#x9; *        one already.&#xA;&#x9; * @param headers&#xA;&#x9; *        an optional set of message headers to include&#xA;&#x9; * @param convert&#xA;&#x9; *        {@literal true} to convert the message before sending,&#xA;&#x9; *        {@literal false} to send without any conversion&#xA;&#x9; * @since 1.1" item="_9-LJoujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zyeZejlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-G4AujlEeilbsvZjylwTQ" sourceConnectionVisual="_9-G4A-jlEeilbsvZjylwTQ" text="Set a mapping of event topic values to corresponding message topic&#xA;&#x9; * values.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * The event topic values are first stripped of any&#xA;&#x9; * {@link #Edge_EVENT_PREFIX}, and the resulting value used as a key to&#xA;&#x9; * lookup a message topic value to use from this map. The message topics can&#xA;&#x9; * use template variables as defined in&#xA;&#x9; * {@link StringUtils#expandTemplateString(String, Map)}; all the event&#xA;&#x9; * properties are made available to the expansion.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * @param topicMapping&#xA;&#x9; *        the topicMapping to set" item="_9-LJsejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zyeZujlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-HfEOjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-HfEejlEeilbsvZjylwTQ" text="Set the mapping of event topic values to corresponding public message&#xA;&#x9; * topic values.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * The same messaging handling rules as documented in&#xA;&#x9; * {@link #setTopicMapping(Map)} apply here, except that the resulting topic&#xA;&#x9; * will have the {@link #PUBLIC_MESSAGE_TOPIC_PREFIX} instead of the&#xA;&#x9; * {@link #MESSAGE_TOPIC_PREFIX}.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * @param publicTopicMapping&#xA;&#x9; *        the public topic mapping to set&#xA;&#x9; * @since 1.1&#xA;&#x9; * @see #setTopicMapping(Map)" item="_9-LJt-jlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zyeZ-jlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-bBEOjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-bBEejlEeilbsvZjylwTQ" text="{@link SettingSpecifierProvider} for Quartz job triggers.&#xA;&#xA;&lt;p>&#xA;This class allows a set of related Quartz Trigger instances to be exposed as&#xA;a {@link SettingSpecifierProvider} and managed by the Edge's setting UI. For&#xA;example the triggers might be grouped by the bundle they were published from.&#xA;It works with {@link TriggerAndJobDetail} services. Call&#xA;{@link #addSpecifier(TriggerAndJobDetail)} and&#xA;{@link #removeSpecifier(TriggerAndJobDetail)} as {@link TriggerAndJobDetail}&#xA;services are registered/unregistered with the system.&#xA;&lt;/p>&#xA;&#xA;&lt;p>&#xA;Currently only {@link CronTrigger} triggers are supported. Localized messages&#xA;are not supported.&#xA;&lt;/p>&#xA;&#xA;@version 2.0" item="_9-hHvujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzsgOjlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-boIOjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-boIejlEeilbsvZjylwTQ" text="Construct with settings UID.&#xA;&#x9; * &#xA;&#x9; * @param settingUID&#xA;&#x9; *        the setting UID" item="_9-hH4OjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzsgejlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-boIujlEeilbsvZjylwTQ" sourceConnectionVisual="_9-cPMOjlEeilbsvZjylwTQ" text="Construct a display title based on a setting UID.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * The display title is generated from the setting UID itself, by first&#xA;&#x9; * removing the {@link #SN_Edge_PREFIX} prefix and {@link #JOBS_PID_SUFFIX}&#xA;&#x9; * suffix, capitalizing the remaining value, and appending&#xA;&#x9; * {@link #TITLE_SUFFIX}. For example, the UID&#xA;&#x9; * &lt;code>org.eniware.edge.power.JOBS&lt;/code> will result in&#xA;&#x9; * &lt;code>Power Jobs&lt;/code>.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * &#xA;&#x9; * @param settingUID&#xA;&#x9; *        the setting UID value&#xA;&#x9; * @return the generated title value" item="_9-hH6ejlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzsg-jlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-c2QOjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-c2QejlEeilbsvZjylwTQ" text="Construct with settings UID.&#xA;&#x9; * &#xA;&#x9; * @param settingUID&#xA;&#x9; *        the setting UID&#xA;&#x9; * @param source&#xA;&#x9; *        a message source" item="_9-hH_-jlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzsgujlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-ddUOjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-ddUejlEeilbsvZjylwTQ" text="Create appropriate {@link SettingSpecifier} instances for a given&#xA;&#x9; * {@link TriggerAndJobDetail}.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * Call this method for every {@link TriggerAndJobDetail} published in the&#xA;&#x9; * system.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * @param trigJob&#xA;&#x9; *        the service to generate specifiers for" item="_9-hIFujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzshOjlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-ddUujlEeilbsvZjylwTQ" sourceConnectionVisual="_9-ddU-jlEeilbsvZjylwTQ" text="Remove {@link SettingSpecifier} instances previously registered via&#xA;&#x9; * {@link #addSpecifier(TriggerAndJobDetail)} for a given&#xA;&#x9; * {@link TriggerAndJobDetail}.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * Call this method for every {@link TriggerAndJobDetail} unregistered in&#xA;&#x9; * the system.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * @param trigJob&#xA;&#x9; *        the service to generate specifiers for" item="_9-huwujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zzshejlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-vKIOjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-vKIejlEeilbsvZjylwTQ" text="Default implementation of {@link PlatformService}.&#xA;&#xA;@version 1.0" item="_9-4UEOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zx3UOjlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-xmYOjlEeilbsvZjylwTQ" sourceConnectionVisual="_9-xmYejlEeilbsvZjylwTQ" text="Configure the {@link ExecutorService} to use for the singleton task&#xA;&#x9; * queue.&#xA;&#x9; * &#xA;&#x9; * &lt;p>&#xA;&#x9; * This service is expected to perform just one task at a time.&#xA;&#x9; * &lt;/p>&#xA;&#x9; * &#xA;&#x9; * @param singletonExecutorService&#xA;&#x9; *        the service to use; defaults to a service using an array-based&#xA;&#x9; *        blocking queue with a single thread" item="_9-4UeujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zx3UejlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-xmYujlEeilbsvZjylwTQ" sourceConnectionVisual="_9-yNcOjlEeilbsvZjylwTQ" text="Set the {@link EventAdmin} to use.&#xA;&#x9; * &#xA;&#x9; * @param eventAdmin&#xA;&#x9; *        the service to use" item="_9-4UgOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zyeYOjlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9-yNcejlEeilbsvZjylwTQ" sourceConnectionVisual="_9-yNcujlEeilbsvZjylwTQ" text="Set a {@link SimpMessageSendingOperations} for posting messages to.&#xA;&#x9; * &#xA;&#x9; * @param messageSendingOps&#xA;&#x9; *        the message sender to use" item="_9-4UhujlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9zyeYejlEeilbsvZjylwTQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_99cwvujlEeilbsvZjylwTQ" comments="_99ZGUOjlEeilbsvZjylwTQ" targetConnectionVisual="_99ZGUejlEeilbsvZjylwTQ" name="JobServiceRegistrationListener" associationsIn="_99bikOjlEeilbsvZjylwTQ" associationsOut="_99cJoOjlEeilbsvZjylwTQ _99cwsOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9vTnAOjlEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_99cwv-jlEeilbsvZjylwTQ" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_99cwwOjlEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_99cwwejlEeilbsvZjylwTQ" name="scheduler">
+      <modelElement href="org.eniware.edge.uml#_9zVLYOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99cwwujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99cww-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_99cwxOjlEeilbsvZjylwTQ" name="Scheduler">
+        <modelElement href="org.eniware.edge.uml#_9x4Z4OjlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_99cwxejlEeilbsvZjylwTQ" name="configurationListenerRef">
+      <modelElement href="org.eniware.edge.uml#_9zVLYejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99cwxujlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9zVycOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_99cwx-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zWZgOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99cwyOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99cwyejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_99cwyujlEeilbsvZjylwTQ" name="ServiceRegistration">
+        <modelElement href="org.eniware.edge.uml#_9x0IcejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_99cwy-jlEeilbsvZjylwTQ" defaultValue="new TreeMap&lt;String, JobSettingSpecifierProvider>()" name="providerMap">
+      <modelElement href="org.eniware.edge.uml#_9zWZgejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99cwzOjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zXAkOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99cwzejlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99cwzujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_99cwz-jlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider">
+        <modelElement href="org.eniware.edge.uml#_9vX4cOjlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_99cw0OjlEeilbsvZjylwTQ" name="pidForSymbolicName">
+      <modelElement href="org.eniware.edge.uml#_9vU1IOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99cw0ejlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99cw0ujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_99cw0-jlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9vU1IujlEeilbsvZjylwTQ"/>
+        <type xmi:id="_99cw1OjlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_99cw1ejlEeilbsvZjylwTQ" name="name">
+        <modelElement href="org.eniware.edge.uml#_9vU1IejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99cw1ujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99cw1-jlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_99cw2OjlEeilbsvZjylwTQ" comments="_99ZtYOjlEeilbsvZjylwTQ" targetConnectionVisual="_99ZtYejlEeilbsvZjylwTQ" name="onBind">
+      <modelElement href="org.eniware.edge.uml#_9y1cIOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99cw2ejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99cw2ujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_99cw2-jlEeilbsvZjylwTQ" name="trigJob">
+        <modelElement href="org.eniware.edge.uml#_9y1cIejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99cw3OjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99cw3ejlEeilbsvZjylwTQ" name="TriggerAndJobDetail">
+          <modelElement href="org.eniware.edge.uml#_9xxFIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_99cw3ujlEeilbsvZjylwTQ" name="properties">
+        <modelElement href="org.eniware.edge.uml#_9y1cIujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99cw3-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99cw4OjlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_99cw4ejlEeilbsvZjylwTQ" comments="_99ZtYujlEeilbsvZjylwTQ" targetConnectionVisual="_99ZtY-jlEeilbsvZjylwTQ" name="onUnbind">
+      <modelElement href="org.eniware.edge.uml#_9y2qQOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99cw4ujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99cw4-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_99cw5OjlEeilbsvZjylwTQ" name="trigJob">
+        <modelElement href="org.eniware.edge.uml#_9y2qQejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99cw5ejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99cw5ujlEeilbsvZjylwTQ" name="TriggerAndJobDetail">
+          <modelElement href="org.eniware.edge.uml#_9xxFIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_99cw5-jlEeilbsvZjylwTQ" name="properties">
+        <modelElement href="org.eniware.edge.uml#_9y2qQujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99cw6OjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99cw6ejlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_99cw6ujlEeilbsvZjylwTQ" name="configurationEvent">
+      <modelElement href="org.eniware.edge.uml#_9y34YOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99cw6-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9y34YujlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_99cw7OjlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9y4fcOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99cw7ejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99cw7ujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_99cw7-jlEeilbsvZjylwTQ" name="event">
+        <modelElement href="org.eniware.edge.uml#_9y34YejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99cw8OjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99cw8ejlEeilbsvZjylwTQ" name="ConfigurationEvent">
+          <modelElement href="org.eniware.edge.uml#_9x19oejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_99qMGejlEeilbsvZjylwTQ" comments="_99iQQOjlEeilbsvZjylwTQ" targetConnectionVisual="_99iQQejlEeilbsvZjylwTQ" name="ManagedJobServiceRegistrationListener" associationsOut="_99iQQujlEeilbsvZjylwTQ _99i3UOjlEeilbsvZjylwTQ _99nv0OjlEeilbsvZjylwTQ _99oW4OjlEeilbsvZjylwTQ _99plAOjlEeilbsvZjylwTQ _99qMEOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9viQgOjlEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_99qMGujlEeilbsvZjylwTQ" position="-3.0,306.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_99qMG-jlEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_99qMHOjlEeilbsvZjylwTQ" name="scheduler">
+      <modelElement href="org.eniware.edge.uml#_9zcgIOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99qMHejlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zdHMOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99qMHujlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99qMH-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_99qMIOjlEeilbsvZjylwTQ" name="Scheduler">
+        <modelElement href="org.eniware.edge.uml#_9x4Z4OjlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_99qMIejlEeilbsvZjylwTQ" name="bundleContext">
+      <modelElement href="org.eniware.edge.uml#_9zdHMejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99qMIujlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zdHMujlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99qMI-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99qMJOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_99qMJejlEeilbsvZjylwTQ" name="BundleContext">
+        <modelElement href="org.eniware.edge.uml#_9yOYIejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_99qMJujlEeilbsvZjylwTQ" name="configurationListenerRef">
+      <modelElement href="org.eniware.edge.uml#_9zduQOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99qMJ-jlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9zduQejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_99qMKOjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zeVUOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99qMKejlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99qMKujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_99qMK-jlEeilbsvZjylwTQ" name="ServiceRegistration">
+        <modelElement href="org.eniware.edge.uml#_9x0IcejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_99qMLOjlEeilbsvZjylwTQ" defaultValue="new HashMap&lt;String, List&lt;ServiceRegistration&lt;?>>>()" name="registeredServices">
+      <modelElement href="org.eniware.edge.uml#_9zeVUejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99qMLejlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9ze8YOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_99qMLujlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zfjcOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99qML-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99qMMOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_99qMMejlEeilbsvZjylwTQ" name="List">
+        <modelElement href="org.eniware.edge.uml#_9xv3AejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_99qMMujlEeilbsvZjylwTQ" defaultValue="new HashMap&lt;String, ManagedTriggerAndJobDetail>()" name="pidMap">
+      <modelElement href="org.eniware.edge.uml#_9zfjcujlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99qMM-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zgKgOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99qMNOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99qMNejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_99qMNujlEeilbsvZjylwTQ" name="ManagedTriggerAndJobDetail">
+        <modelElement href="org.eniware.edge.uml#_9yNKAejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_99qMN-jlEeilbsvZjylwTQ" defaultValue="LoggerFactory.getLogger(getClass())" name="log">
+      <modelElement href="org.eniware.edge.uml#_9zgKgujlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99qMOOjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zgxkejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99qMOejlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99qMOujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_99qMO-jlEeilbsvZjylwTQ" name="Logger">
+        <modelElement href="org.eniware.edge.uml#_9xmtEejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_99qMPOjlEeilbsvZjylwTQ" comments="_99i3UejlEeilbsvZjylwTQ" targetConnectionVisual="_99i3UujlEeilbsvZjylwTQ" name="finish">
+      <modelElement href="org.eniware.edge.uml#_9vjeoOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99qMPejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99qMPujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_99qMP-jlEeilbsvZjylwTQ" comments="_99i3U-jlEeilbsvZjylwTQ" targetConnectionVisual="_99i3VOjlEeilbsvZjylwTQ" name="onBind">
+      <modelElement href="org.eniware.edge.uml#_9zBpYOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99qMQOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99qMQejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_99qMQujlEeilbsvZjylwTQ" name="trigJob">
+        <modelElement href="org.eniware.edge.uml#_9zBpYejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99qMQ-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99qMROjlEeilbsvZjylwTQ" name="ManagedTriggerAndJobDetail">
+          <modelElement href="org.eniware.edge.uml#_9yNKAejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_99qMRejlEeilbsvZjylwTQ" name="properties">
+        <modelElement href="org.eniware.edge.uml#_9zBpYujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99qMRujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99qMR-jlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_99qMSOjlEeilbsvZjylwTQ" name="dictionaryForMap">
+      <modelElement href="org.eniware.edge.uml#_9zCQcejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99qMSejlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9zC3gOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99qMSujlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_99qMS-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_99qMTOjlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9zDekOjlEeilbsvZjylwTQ"/>
+        <type xmi:id="_99qMTejlEeilbsvZjylwTQ" name="Dictionary">
+          <modelElement href="org.eniware.edge.uml#_9xuB0ejlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_99qMTujlEeilbsvZjylwTQ" name="map">
+        <modelElement href="org.eniware.edge.uml#_9zCQcujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99qMT-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99qMUOjlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_99qMUejlEeilbsvZjylwTQ" comments="_99jeYOjlEeilbsvZjylwTQ" targetConnectionVisual="_99jeYejlEeilbsvZjylwTQ" name="onUnbind">
+      <modelElement href="org.eniware.edge.uml#_9zEFoejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99qMUujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99qMU-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_99qMVOjlEeilbsvZjylwTQ" name="trigJob">
+        <modelElement href="org.eniware.edge.uml#_9zEFoujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99qMVejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99qMVujlEeilbsvZjylwTQ" name="ManagedTriggerAndJobDetail">
+          <modelElement href="org.eniware.edge.uml#_9yNKAejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_99qMV-jlEeilbsvZjylwTQ" name="properties">
+        <modelElement href="org.eniware.edge.uml#_9zEFo-jlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99qMWOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99qMWejlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_99qMWujlEeilbsvZjylwTQ" name="configurationEvent">
+      <modelElement href="org.eniware.edge.uml#_9zFTwOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_99qMW-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zFTwujlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_99qMXOjlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9zF60OjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_99qMXejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99qMXujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_99qMX-jlEeilbsvZjylwTQ" name="event">
+        <modelElement href="org.eniware.edge.uml#_9zFTwejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99qMYOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99qMYejlEeilbsvZjylwTQ" name="ConfigurationEvent">
+          <modelElement href="org.eniware.edge.uml#_9x19oejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_99qMYujlEeilbsvZjylwTQ" name="setScheduler">
+      <modelElement href="org.eniware.edge.uml#_9zF60ujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99qMY-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99qMZOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_99qMZejlEeilbsvZjylwTQ" name="scheduler">
+        <modelElement href="org.eniware.edge.uml#_9zF60-jlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99qMZujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99qMZ-jlEeilbsvZjylwTQ" name="Scheduler">
+          <modelElement href="org.eniware.edge.uml#_9x4Z4OjlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_99qMaOjlEeilbsvZjylwTQ" name="setBundleContext">
+      <modelElement href="org.eniware.edge.uml#_9zGh4OjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_99qMaejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_99qMaujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_99qMa-jlEeilbsvZjylwTQ" name="bundleContext">
+        <modelElement href="org.eniware.edge.uml#_9zGh4ejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_99qMbOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_99qMbejlEeilbsvZjylwTQ" name="BundleContext">
+          <modelElement href="org.eniware.edge.uml#_9yOYIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_993AYOjlEeilbsvZjylwTQ" comments="_990kIOjlEeilbsvZjylwTQ" targetConnectionVisual="_990kIejlEeilbsvZjylwTQ" name="JobUtils" associationsOut="_991LMOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9vf0QOjlEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_993AYejlEeilbsvZjylwTQ" position="-302.0,730.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_993AYujlEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_993AY-jlEeilbsvZjylwTQ" defaultValue="LoggerFactory.getLogger(JobUtils.class)" name="log" staticAttribute="true">
+      <modelElement href="org.eniware.edge.uml#_9zb5EOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_993AZOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_993AZejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_993AZujlEeilbsvZjylwTQ" name="Logger">
+        <modelElement href="org.eniware.edge.uml#_9xmtEejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_993AZ-jlEeilbsvZjylwTQ" name="triggerKey" staticOperation="true">
+      <modelElement href="org.eniware.edge.uml#_9y-mEOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_993AaOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_993AaejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_993AaujlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9y-mEujlEeilbsvZjylwTQ"/>
+        <type xmi:id="_993Aa-jlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_993AbOjlEeilbsvZjylwTQ" name="t">
+        <modelElement href="org.eniware.edge.uml#_9y-mEejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_993AbejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_993AbujlEeilbsvZjylwTQ" name="Trigger">
+          <modelElement href="org.eniware.edge.uml#_9x5A8ujlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_993Ab-jlEeilbsvZjylwTQ" name="scheduleCronJob" staticOperation="true">
+      <modelElement href="org.eniware.edge.uml#_9y_NIOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_993AcOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_993AcejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_993AcujlEeilbsvZjylwTQ" name="scheduler">
+        <modelElement href="org.eniware.edge.uml#_9y_NIejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_993Ac-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_993AdOjlEeilbsvZjylwTQ" name="Scheduler">
+          <modelElement href="org.eniware.edge.uml#_9x4Z4OjlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_993AdejlEeilbsvZjylwTQ" name="trigger">
+        <modelElement href="org.eniware.edge.uml#_9y_NIujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_993AdujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_993Ad-jlEeilbsvZjylwTQ" name="CronTrigger">
+          <modelElement href="org.eniware.edge.uml#_9x3LwejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_993AeOjlEeilbsvZjylwTQ" name="jobDetail">
+        <modelElement href="org.eniware.edge.uml#_9y_NI-jlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_993AeejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_993AeujlEeilbsvZjylwTQ" name="JobDetail">
+          <modelElement href="org.eniware.edge.uml#_9x3y0ejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_993Ae-jlEeilbsvZjylwTQ" name="newCronExpression">
+        <modelElement href="org.eniware.edge.uml#_9y_0MOjlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_993AfOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_993AfejlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_993AfujlEeilbsvZjylwTQ" name="newJobDataMap">
+        <modelElement href="org.eniware.edge.uml#_9y_0MejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_993Af-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_993AgOjlEeilbsvZjylwTQ" name="JobDataMap">
+          <modelElement href="org.eniware.edge.uml#_9yHDYOjlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_998f8OjlEeilbsvZjylwTQ" comments="_995coOjlEeilbsvZjylwTQ" targetConnectionVisual="_995coejlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo">
+    <modelElement href="org.eniware.edge.uml#_9vnwEOjlEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_998f8ejlEeilbsvZjylwTQ" position="-351.0,926.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_998f8ujlEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_998f8-jlEeilbsvZjylwTQ" name="taskId">
+      <modelElement href="org.eniware.edge.uml#_9zhYoOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_998f9OjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zhYoejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_998f9ejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_998f9ujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_998f9-jlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_998f-OjlEeilbsvZjylwTQ" name="title">
+      <modelElement href="org.eniware.edge.uml#_9zimwOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_998f-ejlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zimwejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_998f-ujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_998f--jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_998f_OjlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_998f_ejlEeilbsvZjylwTQ" name="message">
+      <modelElement href="org.eniware.edge.uml#_9zjN0-jlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_998f_ujlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zj04OjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_998f_-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_998gAOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_998gAejlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_998gAujlEeilbsvZjylwTQ" name="percentComplete">
+      <modelElement href="org.eniware.edge.uml#_9zkb8ujlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_998gA-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zkb8-jlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_998gBOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_998gBejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_998gBujlEeilbsvZjylwTQ" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_998gB-jlEeilbsvZjylwTQ" name="complete">
+      <modelElement href="org.eniware.edge.uml#_9zlqEOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_998gCOjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zlqEejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_998gCejlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_998gCujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_998gC-jlEeilbsvZjylwTQ" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_998gDOjlEeilbsvZjylwTQ" name="restartRequired">
+      <modelElement href="org.eniware.edge.uml#_9zlqEujlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_998gDejlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zmRIOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_998gDujlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_998gD-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_998gEOjlEeilbsvZjylwTQ" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_998gEejlEeilbsvZjylwTQ" comments="_996DsOjlEeilbsvZjylwTQ" targetConnectionVisual="_996DsejlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo">
+      <modelElement href="org.eniware.edge.uml#_9vplQOjlEeilbsvZjylwTQ"/>
+      <keywords xmi:id="_998gEujlEeilbsvZjylwTQ" keyword="create"/>
+      <visibility xmi:id="_998gE-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_998gFOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_998gFejlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9vqMVOjlEeilbsvZjylwTQ"/>
+        <type xmi:id="_998gFujlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo">
+          <modelElement href="org.eniware.edge.uml#_9vnwEOjlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_998gF-jlEeilbsvZjylwTQ" name="taskId">
+        <modelElement href="org.eniware.edge.uml#_9vplQejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_998gGOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_998gGejlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_998gGujlEeilbsvZjylwTQ" name="title">
+        <modelElement href="org.eniware.edge.uml#_9vplQujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_998gG-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_998gHOjlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_998gHejlEeilbsvZjylwTQ" name="message">
+        <modelElement href="org.eniware.edge.uml#_9vplQ-jlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_998gHujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_998gH-jlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_998gIOjlEeilbsvZjylwTQ" name="percentComplete">
+        <modelElement href="org.eniware.edge.uml#_9vplROjlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_998gIejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_998gIujlEeilbsvZjylwTQ" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_998gI-jlEeilbsvZjylwTQ" name="complete">
+        <modelElement href="org.eniware.edge.uml#_9vqMUOjlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_998gJOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_998gJejlEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_998gJujlEeilbsvZjylwTQ" name="restartRequired">
+        <modelElement href="org.eniware.edge.uml#_9vqMUejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_998gJ-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_998gKOjlEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_998gKejlEeilbsvZjylwTQ" name="isComplete">
+      <modelElement href="org.eniware.edge.uml#_9vqzYOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_998gKujlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9vracOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_998gK-jlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9vracejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_998gLOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_998gLejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_998gLujlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9vqzYejlEeilbsvZjylwTQ"/>
+        <type xmi:id="_998gL-jlEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_998gMOjlEeilbsvZjylwTQ" name="isRestartRequired">
+      <modelElement href="org.eniware.edge.uml#_9vrac-jlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_998gMejlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9vsBgOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_998gMujlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9vsBgejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_998gM-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_998gNOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_998gNejlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9vradOjlEeilbsvZjylwTQ"/>
+        <type xmi:id="_998gNujlEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_998gN-jlEeilbsvZjylwTQ" comments="_996qwOjlEeilbsvZjylwTQ" targetConnectionVisual="_996qwejlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo">
+      <modelElement href="org.eniware.edge.uml#_9zIXEOjlEeilbsvZjylwTQ"/>
+      <keywords xmi:id="_998gOOjlEeilbsvZjylwTQ" keyword="create"/>
+      <visibility xmi:id="_998gOejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_998gOujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_998gO-jlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9zI-IujlEeilbsvZjylwTQ"/>
+        <type xmi:id="_998gPOjlEeilbsvZjylwTQ" name="SimplePlatformTaskInfo">
+          <modelElement href="org.eniware.edge.uml#_9vnwEOjlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_998gPejlEeilbsvZjylwTQ" name="status">
+        <modelElement href="org.eniware.edge.uml#_9zIXEejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_998gPujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_998gP-jlEeilbsvZjylwTQ" name="PlatformTaskStatus">
+          <modelElement href="org.eniware.edge.uml#_9yUewOjlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_998gQOjlEeilbsvZjylwTQ" name="locale">
+        <modelElement href="org.eniware.edge.uml#_9zIXEujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_998gQejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_998gQujlEeilbsvZjylwTQ" name="Locale">
+          <modelElement href="org.eniware.edge.uml#_9xTLEejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_9-KiaejlEeilbsvZjylwTQ" comments="_9-EbwOjlEeilbsvZjylwTQ" targetConnectionVisual="_9-EbwejlEeilbsvZjylwTQ" name="EventMessageBridge" associationsOut="_9-EbwujlEeilbsvZjylwTQ _9-KiYOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9vLEIOjlEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_9-KiaujlEeilbsvZjylwTQ" position="-755.0,-60.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_9-Kia-jlEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_9-KibOjlEeilbsvZjylwTQ" defaultValue="&quot;net/eniwarenetwork/Edge/&quot;" name="Edge_EVENT_PREFIX" staticAttribute="true">
+      <modelElement href="org.eniware.edge.uml#_9zQ58OjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-KibejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-KibujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-Kib-jlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-KicOjlEeilbsvZjylwTQ" defaultValue="&quot;/topic/&quot;" name="MESSAGE_TOPIC_PREFIX" staticAttribute="true">
+      <modelElement href="org.eniware.edge.uml#_9zRhAejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-KicejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-KicujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-Kic-jlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-KidOjlEeilbsvZjylwTQ" defaultValue="&quot;/pub/topic/&quot;" name="PUBLIC_MESSAGE_TOPIC_PREFIX" staticAttribute="true">
+      <modelElement href="org.eniware.edge.uml#_9zRhA-jlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-KidejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-KidujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-Kid-jlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-KieOjlEeilbsvZjylwTQ" name="messageSendingOps">
+      <modelElement href="org.eniware.edge.uml#_9zSIEejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-KieejlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9zSvIOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-KieujlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zSvIejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-Kie-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-KifOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-KifejlEeilbsvZjylwTQ" name="OptionalService">
+        <modelElement href="org.eniware.edge.uml#_9xeKMOjlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-KifujlEeilbsvZjylwTQ" name="topicMapping">
+      <modelElement href="org.eniware.edge.uml#_9zTWMOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-Kif-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zTWMejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-KigOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-KigejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-KigujlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-Kig-jlEeilbsvZjylwTQ" name="publicTopicMapping">
+      <modelElement href="org.eniware.edge.uml#_9zT9QOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-KihOjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zT9QejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-KihejlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-KihujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-Kih-jlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-KiiOjlEeilbsvZjylwTQ" defaultValue="LoggerFactory.getLogger(getClass())" name="log">
+      <modelElement href="org.eniware.edge.uml#_9zUkUOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-KiiejlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zUkUujlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-KiiujlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-Kii-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-KijOjlEeilbsvZjylwTQ" name="Logger">
+        <modelElement href="org.eniware.edge.uml#_9xmtEejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_9-KijejlEeilbsvZjylwTQ" name="defaultTopicMapping" staticOperation="true">
+      <modelElement href="org.eniware.edge.uml#_9vMSQOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-KijujlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9vM5UOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-Kij-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-KikOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-KikejlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9yrEEOjlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-KikujlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_9-Kik-jlEeilbsvZjylwTQ" name="defaultPublicTopicMapping" staticOperation="true">
+      <modelElement href="org.eniware.edge.uml#_9vNgYOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-KilOjlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9vOHcOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-LJcOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-LJcejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-LJcujlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9yrrIOjlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-LJc-jlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_9-LJdOjlEeilbsvZjylwTQ" comments="_9-FC0OjlEeilbsvZjylwTQ" targetConnectionVisual="_9-Fp4OjlEeilbsvZjylwTQ" name="EventMessageBridge">
+      <modelElement href="org.eniware.edge.uml#_9yrrIejlEeilbsvZjylwTQ"/>
+      <keywords xmi:id="_9-LJdejlEeilbsvZjylwTQ" keyword="create"/>
+      <visibility xmi:id="_9-LJdujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-LJd-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-LJeOjlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9yrrJejlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-LJeejlEeilbsvZjylwTQ" name="EventMessageBridge">
+          <modelElement href="org.eniware.edge.uml#_9vLEIOjlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9-LJeujlEeilbsvZjylwTQ" name="messageSendingOps">
+        <modelElement href="org.eniware.edge.uml#_9yrrIujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJe-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJfOjlEeilbsvZjylwTQ" name="OptionalService">
+          <modelElement href="org.eniware.edge.uml#_9xeKMOjlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-LJfejlEeilbsvZjylwTQ" name="handleEvent">
+      <modelElement href="org.eniware.edge.uml#_9ys5QOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-LJfujlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9ys5QujlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-LJf-jlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9ytgUOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-LJgOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-LJgejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-LJgujlEeilbsvZjylwTQ" name="event">
+        <modelElement href="org.eniware.edge.uml#_9ys5QejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJg-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJhOjlEeilbsvZjylwTQ" name="Event">
+          <modelElement href="org.eniware.edge.uml#_9xZ4wejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-LJhejlEeilbsvZjylwTQ" name="messageTopicForEvent">
+      <modelElement href="org.eniware.edge.uml#_9ytgUujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-LJhujlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-LJh-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-LJiOjlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9ytgVejlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-LJiejlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9-LJiujlEeilbsvZjylwTQ" name="event">
+        <modelElement href="org.eniware.edge.uml#_9ytgU-jlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJi-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJjOjlEeilbsvZjylwTQ" name="Event">
+          <modelElement href="org.eniware.edge.uml#_9xZ4wejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-LJjejlEeilbsvZjylwTQ" name="data">
+        <modelElement href="org.eniware.edge.uml#_9ytgVOjlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJjujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJj-jlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-LJkOjlEeilbsvZjylwTQ" name="mapForEvent">
+      <modelElement href="org.eniware.edge.uml#_9yuucejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-LJkejlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9yvVgOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-LJkujlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-LJk-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-LJlOjlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9yvVgejlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-LJlejlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9-LJlujlEeilbsvZjylwTQ" name="event">
+        <modelElement href="org.eniware.edge.uml#_9yuucujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJl-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJmOjlEeilbsvZjylwTQ" name="Event">
+          <modelElement href="org.eniware.edge.uml#_9xZ4wejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-LJmejlEeilbsvZjylwTQ" comments="_9-GQ8OjlEeilbsvZjylwTQ" targetConnectionVisual="_9-GQ8ejlEeilbsvZjylwTQ" name="postMessage">
+      <modelElement href="org.eniware.edge.uml#_9yv8kOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-LJmujlEeilbsvZjylwTQ" label="#"/>
+      <cardinality xmi:id="_9-LJm-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-LJnOjlEeilbsvZjylwTQ" name="dest">
+        <modelElement href="org.eniware.edge.uml#_9yv8kejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJnejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJnujlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-LJn-jlEeilbsvZjylwTQ" name="body">
+        <modelElement href="org.eniware.edge.uml#_9yv8kujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJoOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJoejlEeilbsvZjylwTQ" name="Object">
+          <modelElement href="org.eniware.edge.uml#_9yihMejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-LJoujlEeilbsvZjylwTQ" comments="_9-G4AOjlEeilbsvZjylwTQ" targetConnectionVisual="_9-G4AejlEeilbsvZjylwTQ" name="postMessage">
+      <modelElement href="org.eniware.edge.uml#_9ywjoOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-LJo-jlEeilbsvZjylwTQ" label="#"/>
+      <cardinality xmi:id="_9-LJpOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-LJpejlEeilbsvZjylwTQ" name="dest">
+        <modelElement href="org.eniware.edge.uml#_9ywjoejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJpujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJp-jlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-LJqOjlEeilbsvZjylwTQ" name="body">
+        <modelElement href="org.eniware.edge.uml#_9ywjoujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJqejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJqujlEeilbsvZjylwTQ" name="Object">
+          <modelElement href="org.eniware.edge.uml#_9yihMejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-LJq-jlEeilbsvZjylwTQ" name="headers">
+        <modelElement href="org.eniware.edge.uml#_9ywjo-jlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJrOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJrejlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-LJrujlEeilbsvZjylwTQ" name="convert">
+        <modelElement href="org.eniware.edge.uml#_9ywjpOjlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJr-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJsOjlEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-LJsejlEeilbsvZjylwTQ" comments="_9-G4AujlEeilbsvZjylwTQ" targetConnectionVisual="_9-G4A-jlEeilbsvZjylwTQ" name="setTopicMapping">
+      <modelElement href="org.eniware.edge.uml#_9yxxwOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-LJsujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-LJs-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-LJtOjlEeilbsvZjylwTQ" name="topicMapping">
+        <modelElement href="org.eniware.edge.uml#_9yxxwejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJtejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJtujlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-LJt-jlEeilbsvZjylwTQ" comments="_9-HfEOjlEeilbsvZjylwTQ" targetConnectionVisual="_9-HfEejlEeilbsvZjylwTQ" name="setPublicTopicMapping">
+      <modelElement href="org.eniware.edge.uml#_9yyY0ejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-LJuOjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-LJuejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-LJuujlEeilbsvZjylwTQ" name="publicTopicMapping">
+        <modelElement href="org.eniware.edge.uml#_9yyY0ujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-LJu-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-LJvOjlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_9-hHvujlEeilbsvZjylwTQ" comments="_9-bBEOjlEeilbsvZjylwTQ" targetConnectionVisual="_9-bBEejlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider" associationsIn="_99cwsOjlEeilbsvZjylwTQ" associationsOut="_9-f5kOjlEeilbsvZjylwTQ _9-ggoOjlEeilbsvZjylwTQ _9-hHsOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9vX4cOjlEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_9-hHv-jlEeilbsvZjylwTQ" position="606.0,-369.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_9-hHwOjlEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_9-hHwejlEeilbsvZjylwTQ" defaultValue="&quot; Jobs&quot;" name="TITLE_SUFFIX" staticAttribute="true">
+      <modelElement href="org.eniware.edge.uml#_9zXnoOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-hHwujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hHw-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-hHxOjlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-hHxejlEeilbsvZjylwTQ" defaultValue="&quot;.JOBS&quot;" name="JOBS_PID_SUFFIX" staticAttribute="true">
+      <modelElement href="org.eniware.edge.uml#_9zXnoujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-hHxujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hHx-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-hHyOjlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-hHyejlEeilbsvZjylwTQ" defaultValue="&quot;org.eniware.edge.&quot;" name="SN_Edge_PREFIX" staticAttribute="true">
+      <modelElement href="org.eniware.edge.uml#_9zYOsOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-hHyujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hHy-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-hHzOjlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-hHzejlEeilbsvZjylwTQ" name="settingUID">
+      <modelElement href="org.eniware.edge.uml#_9zYOsujlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-hHzujlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zY1wOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-hHz-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hH0OjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-hH0ejlEeilbsvZjylwTQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-hH0ujlEeilbsvZjylwTQ" defaultValue="null" name="messageSource">
+      <modelElement href="org.eniware.edge.uml#_9zZc0ujlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-hH0-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zZc0-jlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-hH1OjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hH1ejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-hH1ujlEeilbsvZjylwTQ" name="MessageSource">
+        <modelElement href="org.eniware.edge.uml#_9x_uoejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-hH1-jlEeilbsvZjylwTQ" defaultValue="new ArrayList&lt;SettingSpecifier>()" name="specifiers">
+      <modelElement href="org.eniware.edge.uml#_9zaq8OjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-hH2OjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hH2ejlEeilbsvZjylwTQ" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_9-hH2ujlEeilbsvZjylwTQ" name="SettingSpecifier">
+        <modelElement href="org.eniware.edge.uml#_9x95cejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-hH2-jlEeilbsvZjylwTQ" defaultValue="new HashMap&lt;String, MessageFormat>()" name="messages">
+      <modelElement href="org.eniware.edge.uml#_9zaq8-jlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-hH3OjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zbSAejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-hH3ejlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-hH3ujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-hH3-jlEeilbsvZjylwTQ" name="MessageFormat">
+        <modelElement href="org.eniware.edge.uml#_9x8EQOjlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_9-hH4OjlEeilbsvZjylwTQ" comments="_9-boIOjlEeilbsvZjylwTQ" targetConnectionVisual="_9-boIejlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider">
+      <modelElement href="org.eniware.edge.uml#_9vZGkOjlEeilbsvZjylwTQ"/>
+      <keywords xmi:id="_9-hH4ejlEeilbsvZjylwTQ" keyword="create"/>
+      <visibility xmi:id="_9-hH4ujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hH4-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-hH5OjlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9vZtoujlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-hH5ejlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider">
+          <modelElement href="org.eniware.edge.uml#_9vX4cOjlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9-hH5ujlEeilbsvZjylwTQ" name="settingUID">
+        <modelElement href="org.eniware.edge.uml#_9vZGkejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-hH5-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-hH6OjlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-hH6ejlEeilbsvZjylwTQ" comments="_9-boIujlEeilbsvZjylwTQ" targetConnectionVisual="_9-cPMOjlEeilbsvZjylwTQ" name="titleValue" staticOperation="true">
+      <modelElement href="org.eniware.edge.uml#_9vaUsOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-hH6ujlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-hH6-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-hH7OjlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9vaUsujlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-hH7ejlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9-hH7ujlEeilbsvZjylwTQ" name="settingUID">
+        <modelElement href="org.eniware.edge.uml#_9vaUsejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-hH7-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-hH8OjlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-hH8ejlEeilbsvZjylwTQ" name="getDisplayName">
+      <modelElement href="org.eniware.edge.uml#_9va7wOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-hH8ujlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9vbi0OjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-hH8-jlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9vbi0ejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-hH9OjlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hH9ejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-hH9ujlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9va7wejlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-hH9-jlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_9-hH-OjlEeilbsvZjylwTQ" name="getSettingSpecifiers">
+      <modelElement href="org.eniware.edge.uml#_9vbi0-jlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-hH-ejlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9vcJ4ujlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-hH-ujlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9vcw8OjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-hH--jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hH_OjlEeilbsvZjylwTQ" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_9-hH_ejlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9vcJ4OjlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-hH_ujlEeilbsvZjylwTQ" name="SettingSpecifier">
+          <modelElement href="org.eniware.edge.uml#_9x95cejlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_9-hH_-jlEeilbsvZjylwTQ" comments="_9-c2QOjlEeilbsvZjylwTQ" targetConnectionVisual="_9-c2QejlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider">
+      <modelElement href="org.eniware.edge.uml#_9y67sOjlEeilbsvZjylwTQ"/>
+      <keywords xmi:id="_9-hIAOjlEeilbsvZjylwTQ" keyword="create"/>
+      <visibility xmi:id="_9-hIAejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hIAujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-hIA-jlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9y67tejlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-hIBOjlEeilbsvZjylwTQ" name="JobSettingSpecifierProvider">
+          <modelElement href="org.eniware.edge.uml#_9vX4cOjlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9-hIBejlEeilbsvZjylwTQ" name="settingUID">
+        <modelElement href="org.eniware.edge.uml#_9y67sejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-hIBujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-hIB-jlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-hICOjlEeilbsvZjylwTQ" name="source">
+        <modelElement href="org.eniware.edge.uml#_9y67sujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-hICejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-hICujlEeilbsvZjylwTQ" name="MessageSource">
+          <modelElement href="org.eniware.edge.uml#_9x_uoejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-hIC-jlEeilbsvZjylwTQ" name="hasMessage" staticOperation="true">
+      <modelElement href="org.eniware.edge.uml#_9y7iwOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-hIDOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-hIDejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-hIDujlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9y7iw-jlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-hID-jlEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9-hIEOjlEeilbsvZjylwTQ" name="source">
+        <modelElement href="org.eniware.edge.uml#_9y7iwejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-hIEejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-hIEujlEeilbsvZjylwTQ" name="MessageSource">
+          <modelElement href="org.eniware.edge.uml#_9x_uoejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-hIE-jlEeilbsvZjylwTQ" name="key">
+        <modelElement href="org.eniware.edge.uml#_9y7iwujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-hIFOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-hIFejlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-hIFujlEeilbsvZjylwTQ" comments="_9-ddUOjlEeilbsvZjylwTQ" targetConnectionVisual="_9-ddUejlEeilbsvZjylwTQ" name="addSpecifier">
+      <modelElement href="org.eniware.edge.uml#_9y8J0OjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-hIF-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-hIGOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-hIGejlEeilbsvZjylwTQ" name="trigJob">
+        <modelElement href="org.eniware.edge.uml#_9y8J0ejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-huwOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-huwejlEeilbsvZjylwTQ" name="TriggerAndJobDetail">
+          <modelElement href="org.eniware.edge.uml#_9xxFIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-huwujlEeilbsvZjylwTQ" comments="_9-ddUujlEeilbsvZjylwTQ" targetConnectionVisual="_9-ddU-jlEeilbsvZjylwTQ" name="removeSpecifier">
+      <modelElement href="org.eniware.edge.uml#_9y8w4OjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-huw-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-huxOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-huxejlEeilbsvZjylwTQ" name="trigJob">
+        <modelElement href="org.eniware.edge.uml#_9y8w4ejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-huxujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-hux-jlEeilbsvZjylwTQ" name="TriggerAndJobDetail">
+          <modelElement href="org.eniware.edge.uml#_9xxFIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_9-4UEOjlEeilbsvZjylwTQ" comments="_9-vKIOjlEeilbsvZjylwTQ" targetConnectionVisual="_9-vKIejlEeilbsvZjylwTQ" name="DefaultPlatformService" associationsOut="_9-vKIujlEeilbsvZjylwTQ _9-vKI-jlEeilbsvZjylwTQ _9-2e4OjlEeilbsvZjylwTQ _9-3F8OjlEeilbsvZjylwTQ _9-3tAOjlEeilbsvZjylwTQ">
+    <modelElement href="org.eniware.edge.uml#_9vChQOjlEeilbsvZjylwTQ"/>
+    <visualProperties xmi:id="_9-4UEejlEeilbsvZjylwTQ" position="624.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_9-4UEujlEeilbsvZjylwTQ" label="+"/>
+    <attributes xmi:id="_9-4UE-jlEeilbsvZjylwTQ" defaultValue="new AtomicInteger(PlatformState.Normal.ordinal())" name="activeState">
+      <modelElement href="org.eniware.edge.uml#_9zMogOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4UFOjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zNPkOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4UFejlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-4UFujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-4UF-jlEeilbsvZjylwTQ" name="AtomicInteger">
+        <modelElement href="org.eniware.edge.uml#_9xYDkejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-4UGOjlEeilbsvZjylwTQ" defaultValue="new AtomicReference&lt;PlatformTask&lt;?>>()" name="activeSingletonTask">
+      <modelElement href="org.eniware.edge.uml#_9zNPkejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4UGejlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9zN2oOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4UGujlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zN2oujlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4UG-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-4UHOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-4UHejlEeilbsvZjylwTQ" name="AtomicReference">
+        <modelElement href="org.eniware.edge.uml#_9xYqoejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-4UHujlEeilbsvZjylwTQ" defaultValue="defaultSingletonExecutorService()" name="singletonExecutorService">
+      <modelElement href="org.eniware.edge.uml#_9zOdsOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4UH-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zOdsujlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4UIOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-4UIejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-4UIujlEeilbsvZjylwTQ" name="ExecutorService">
+        <modelElement href="org.eniware.edge.uml#_9xVnUejlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-4UI-jlEeilbsvZjylwTQ" name="eventAdmin">
+      <modelElement href="org.eniware.edge.uml#_9zOds-jlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4UJOjlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9zPEwOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4UJejlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zPr0OjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4UJujlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-4UJ-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-4UKOjlEeilbsvZjylwTQ" name="OptionalService">
+        <modelElement href="org.eniware.edge.uml#_9xeKMOjlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_9-4UKejlEeilbsvZjylwTQ" name="messageSendingOps">
+      <modelElement href="org.eniware.edge.uml#_9zPr0ejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4UKujlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9zQS4OjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4UK-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9zQS4ejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4ULOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-4ULejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <type xmi:id="_9-4ULujlEeilbsvZjylwTQ" name="OptionalService">
+        <modelElement href="org.eniware.edge.uml#_9xeKMOjlEeilbsvZjylwTQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_9-4UL-jlEeilbsvZjylwTQ" name="defaultSingletonExecutorService" staticOperation="true">
+      <modelElement href="org.eniware.edge.uml#_9vDvYOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-4UMOjlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-4UMejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-4UMujlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9ydosOjlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-4UM-jlEeilbsvZjylwTQ" name="ExecutorService">
+          <modelElement href="org.eniware.edge.uml#_9xVnUejlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_9-4UNOjlEeilbsvZjylwTQ" name="activePlatformState">
+      <modelElement href="org.eniware.edge.uml#_9vEWcOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4UNejlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9vEWcejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4UNujlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9vE9gOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4UN-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-4UOOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-4UOejlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9yePwejlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-4UOujlEeilbsvZjylwTQ" name="PlatformState">
+          <modelElement href="org.eniware.edge.uml#_9ydosejlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_9-4UO-jlEeilbsvZjylwTQ" name="activePlatformTaskStatus">
+      <modelElement href="org.eniware.edge.uml#_9vE9gujlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4UPOjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9vE9g-jlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4UPejlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9vFkkOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4UPujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-4UP-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-4UQOjlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9yfd4ejlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-4UQejlEeilbsvZjylwTQ" name="PlatformTaskStatus">
+          <modelElement href="org.eniware.edge.uml#_9ye20ujlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_9-4UQujlEeilbsvZjylwTQ" name="updatePlatformState">
+      <modelElement href="org.eniware.edge.uml#_9ye20OjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-4UQ-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-4UROjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-4URejlEeilbsvZjylwTQ" name="state">
+        <modelElement href="org.eniware.edge.uml#_9ye20ejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4URujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UR-jlEeilbsvZjylwTQ" name="PlatformState">
+          <modelElement href="org.eniware.edge.uml#_9ydosejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-4USOjlEeilbsvZjylwTQ" name="activePlatformTaskInfo">
+      <modelElement href="org.eniware.edge.uml#_9ygsAOjlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4USejlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9yhTEOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4USujlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9yhTEejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4US-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-4UTOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-4UTejlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9ygsAujlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-4UTujlEeilbsvZjylwTQ" name="PlatformTaskInfo">
+          <modelElement href="org.eniware.edge.uml#_9ygE8OjlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9-4UT-jlEeilbsvZjylwTQ" name="locale">
+        <modelElement href="org.eniware.edge.uml#_9ygsAejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4UUOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UUejlEeilbsvZjylwTQ" name="Locale">
+          <modelElement href="org.eniware.edge.uml#_9xTLEejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-4UUujlEeilbsvZjylwTQ" name="subscribeToActivePlatformTaskInfo">
+      <modelElement href="org.eniware.edge.uml#_9yhTE-jlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4UU-jlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9yh6IOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4UVOjlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9yh6IejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4UVejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-4UVujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-4UV-jlEeilbsvZjylwTQ" name="locale">
+        <modelElement href="org.eniware.edge.uml#_9yhTFOjlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4UWOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UWejlEeilbsvZjylwTQ" name="Locale">
+          <modelElement href="org.eniware.edge.uml#_9xTLEejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-4UWujlEeilbsvZjylwTQ" name="postMessage">
+      <modelElement href="org.eniware.edge.uml#_9yjIQOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-4UW-jlEeilbsvZjylwTQ" label="-"/>
+      <cardinality xmi:id="_9-4UXOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-4UXejlEeilbsvZjylwTQ" name="dest">
+        <modelElement href="org.eniware.edge.uml#_9yjIQejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4UXujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UX-jlEeilbsvZjylwTQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-4UYOjlEeilbsvZjylwTQ" name="body">
+        <modelElement href="org.eniware.edge.uml#_9yjIQujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4UYejlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UYujlEeilbsvZjylwTQ" name="Object">
+          <modelElement href="org.eniware.edge.uml#_9yihMejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-4UY-jlEeilbsvZjylwTQ" name="headers">
+        <modelElement href="org.eniware.edge.uml#_9yjIQ-jlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4UZOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UZejlEeilbsvZjylwTQ" name="Map">
+          <modelElement href="org.eniware.edge.uml#_9xTyIejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-4UZujlEeilbsvZjylwTQ" name="convert">
+        <modelElement href="org.eniware.edge.uml#_9yjIROjlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4UZ-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UaOjlEeilbsvZjylwTQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-4UaejlEeilbsvZjylwTQ" name="performTaskWithState">
+      <modelElement href="org.eniware.edge.uml#_9yk9cejlEeilbsvZjylwTQ"/>
+      <stereotypes xmi:id="_9-4UaujlEeilbsvZjylwTQ" name="TypeParameterDeclaration">
+        <modelElement href="org.eniware.edge.uml#_9yk9dOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4Ua-jlEeilbsvZjylwTQ" name="Generics">
+        <modelElement href="org.eniware.edge.uml#_9ylkgOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4UbOjlEeilbsvZjylwTQ" name="LegacyStyledElement">
+        <modelElement href="org.eniware.edge.uml#_9ymLkOjlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_9-4UbejlEeilbsvZjylwTQ" name="Annotations">
+        <modelElement href="org.eniware.edge.uml#_9ymyoejlEeilbsvZjylwTQ"/>
+      </stereotypes>
+      <visibility xmi:id="_9-4UbujlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-4Ub-jlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9-4UcOjlEeilbsvZjylwTQ">
+        <modelElement href="org.eniware.edge.uml#_9ylkgejlEeilbsvZjylwTQ"/>
+        <type xmi:id="_9-4UcejlEeilbsvZjylwTQ" name="Future">
+          <modelElement href="org.eniware.edge.uml#_9xWOYejlEeilbsvZjylwTQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9-4UcujlEeilbsvZjylwTQ" name="state">
+        <modelElement href="org.eniware.edge.uml#_9yk9cujlEeilbsvZjylwTQ"/>
+        <keywords xmi:id="_9-4Uc-jlEeilbsvZjylwTQ" keyword="final"/>
+        <cardinality xmi:id="_9-4UdOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UdejlEeilbsvZjylwTQ" name="PlatformState">
+          <modelElement href="org.eniware.edge.uml#_9ydosejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_9-4UdujlEeilbsvZjylwTQ" name="task">
+        <modelElement href="org.eniware.edge.uml#_9yk9c-jlEeilbsvZjylwTQ"/>
+        <keywords xmi:id="_9-4Ud-jlEeilbsvZjylwTQ" keyword="final"/>
+        <cardinality xmi:id="_9-4UeOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UeejlEeilbsvZjylwTQ" name="PlatformTask">
+          <modelElement href="org.eniware.edge.uml#_9ykWYOjlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-4UeujlEeilbsvZjylwTQ" comments="_9-xmYOjlEeilbsvZjylwTQ" targetConnectionVisual="_9-xmYejlEeilbsvZjylwTQ" name="setSingletonExecutorService">
+      <modelElement href="org.eniware.edge.uml#_9ynZsOjlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-4Ue-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-4UfOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-4UfejlEeilbsvZjylwTQ" name="singletonExecutorService">
+        <modelElement href="org.eniware.edge.uml#_9ynZsejlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4UfujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4Uf-jlEeilbsvZjylwTQ" name="ExecutorService">
+          <modelElement href="org.eniware.edge.uml#_9xVnUejlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-4UgOjlEeilbsvZjylwTQ" comments="_9-xmYujlEeilbsvZjylwTQ" targetConnectionVisual="_9-yNcOjlEeilbsvZjylwTQ" name="setEventAdmin">
+      <modelElement href="org.eniware.edge.uml#_9ynZsujlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-4UgejlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-4UgujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-4Ug-jlEeilbsvZjylwTQ" name="eventAdmin">
+        <modelElement href="org.eniware.edge.uml#_9ynZs-jlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4UhOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4UhejlEeilbsvZjylwTQ" name="OptionalService">
+          <modelElement href="org.eniware.edge.uml#_9xeKMOjlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_9-4UhujlEeilbsvZjylwTQ" comments="_9-yNcejlEeilbsvZjylwTQ" targetConnectionVisual="_9-yNcujlEeilbsvZjylwTQ" name="setMessageSendingOperations">
+      <modelElement href="org.eniware.edge.uml#_9yon0ejlEeilbsvZjylwTQ"/>
+      <visibility xmi:id="_9-4Uh-jlEeilbsvZjylwTQ" label="+"/>
+      <cardinality xmi:id="_9-4UiOjlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_9-4UiejlEeilbsvZjylwTQ" name="messageSendingOps">
+        <modelElement href="org.eniware.edge.uml#_9yon0ujlEeilbsvZjylwTQ"/>
+        <cardinality xmi:id="_9-4UiujlEeilbsvZjylwTQ" label="1" max="1" min="1"/>
+        <type xmi:id="_9-4Ui-jlEeilbsvZjylwTQ" name="OptionalService">
+          <modelElement href="org.eniware.edge.uml#_9xeKMOjlEeilbsvZjylwTQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
