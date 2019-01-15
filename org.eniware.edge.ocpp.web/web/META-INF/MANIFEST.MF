@@ -24,7 +24,6 @@ Import-Package:
  org.eniware.edge;version="1.16",
  org.eniware.edge.ocpp;version="0.4.0",
  org.eniware.edge.ocpp.support;version="0.3.0",
- org.eniware.edge.ocpp.web.config;resolution:=optional,
  org.eniware.edge.settings;version="1.5",
  org.eniware.edge.settings.support;version="1.4.0",
  org.eniware.edge.util;version="1.6.0",
